@@ -12,27 +12,6 @@ creates the finding first. The reviewer receives a redacted, size-bounded source
 excerpt plus precomputed read-only definitions, callers, and authentication
 context. It cannot execute commands, access the network, or suppress findings.
 
-The original holdout and the separate follow-up reserve have both been consumed.
-Their frozen manifests, predictions, and results are retained as historical
-evidence; neither is an untouched test set for further tuning. Normal unit tests
-do not scan those corpora.
-
-## Final project results
-
-- [Results report (PDF)](deliverables/Final_Project_Results.pdf) or
-  [readable Markdown](deliverables/Final_Project_Results.md).
-- [Short results slides (PDF)](deliverables/Final_Results_Slide_Content.pdf) or
-  [copy-ready slide content](deliverables/Final_Results_Slide_Content.md).
-- [Follow-up validation](deliverables/Followup_Validation_Report.md) and
-  [original validation](deliverables/Final_Validation_Report.md).
-
-On the previously exposed 50-label development set, recall improved from 43.3%
-to 53.3% and false alarms fell from one to zero. The subsequent ten-file reserve
-missed both positive labels because handwritten JSON-RPC tools were not
-recognized. These measurements have different scopes and are reported separately.
-The live demo below runs a fresh static scan of the supplied file or directory
-and prints a link to its HTML report.
-
 A static security scanner for **MCP (Model Context Protocol)** projects. It scans Python source, MCP configuration, and dependency manifests against a versioned catalog based on the OWASP MCP Top 10 and official MCP security guidance.
 
 ## What is MCP?
@@ -160,10 +139,9 @@ to expand its evidence and recommendation. Colors match the CLI severity scheme:
 critical red, high yellow, medium blue, low green, and informational gray.
 Both HTML reports have a **Download JSON** button that works offline, even if the
 HTML file is moved. The fix download includes before/after scans and fix details.
-JSON results are also saved beside the HTML files. Choosing both categories currently
-clears the samples' MCP03 and MCP06 findings; other categories remain for manual
-review. MCP06 repairs follow supported local HTTP, file, subprocess and SQLite
-values to return expressions. Structured JSON and database outputs keep their
+JSON output is also saved beside the HTML files. Findings outside the selected
+categories remain for manual review. MCP06 repairs follow supported local HTTP,
+file, subprocess and SQLite values to return expressions. Structured JSON and database outputs keep their
 lists, dictionaries, tuples and scalar types while text values receive an
 untrusted-data boundary. Unknown helpers, custom factories and unsupported
 control flow can still require manual review on other projects. These changes
@@ -292,41 +270,6 @@ cost.
 python -m mcp_scanner scan server.py --check
 
 # Returns exit code 1 if issues found, 0 if clean
-```
-
-## Example Output
-
-```
-================================================================
-          MCP Security Scanner v2.0
-    OWASP MCP Top 10 + MCP Security Best Practices
-================================================================
-
-Scan Information:
-  Files scanned: 1
-  Tools analyzed: 9
-  Target: vulnerable_server.py
-
-[!!!] CRITICAL: Tool Poisoning: Hidden instruction marker in brackets
-    Location: vulnerable_server.py:19 (function: add)
-    Issue: Suspicious pattern detected in tool docstring.
-    Match: "[Important]"
-    Fix: Remove bracketed instruction markers.
-
-[!!] HIGH: Prompt Injection Risk: HTTP response returned directly
-    Location: vulnerable_server.py:27 (function: fetch_webpage)
-    Issue: External data returned without sanitization.
-    Match: "return requests.get(url).text"
-    Fix: Sanitize HTTP response content before returning.
-
-------------------------------------------------------------
-Summary:
-  Total findings: 30
-    CRITICAL: 8
-    HIGH: 13
-    MEDIUM: 9
-
-  Risk Level: CRITICAL - Immediate action required!
 ```
 
 ## Project Structure

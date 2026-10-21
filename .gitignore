@@ -56,10 +56,6 @@ evaluation/*-llm-*.json
 
 # Submission book is an intentional published project deliverable.
 !/deliverables/MCP_Project_Book.pdf
-!/deliverables/Final_Project_Results.pdf
-!/deliverables/Final_Results_Slide_Content.pdf
-!/deliverables/Final_Presentation_Revision_Plan.pdf
-!/deliverables/Final_Validation_Report.pdf
 
 # Keep downloaded third-party corpora and document work files local.
 # Pinned source manifests, reports and acquisition scripts are versioned.

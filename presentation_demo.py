@@ -66,11 +66,11 @@ footer{margin-top:30px;border-top:1px solid #34435d;padding-top:18px;color:#b6c5
 @media print{section[hidden]{display:block}button{display:none}body{background:white;color:black}pre{background:#eee}section{break-before:page}}
 </style><header><p class="eyebrow">TECHNION · B.Sc. ELECTRICAL AND COMPUTER ENGINEERING</p>
 <h1>MCP Security Scanner</h1><p class="sub">Bar David &amp; Noam Ben Lulu · Static source analysis → evidence → targeted remediation → verification</p>
-<p class="sub">Actual results from the local scanner. These illustrative fixtures are separate from the final evaluation. No target server is executed; no API key or network is needed.</p></header>''' + "".join(sections) + '''
+<p class="sub">Actual results from the local scanner. These are illustrative fixtures. No target server is executed; no API key or network is needed.</p></header>''' + "".join(sections) + '''
 <nav><button id="previous">← Previous</button><button id="next">Next →</button></nav>
 <footer><strong>What to explain:</strong> A finding is heuristic evidence. “No finding” is not proof of safety. Only selected high-confidence MCP03/MCP06 findings support automatic fixes.
 <p>The command-injection comparison selects MCP05 only; other risks, such as raw process output and missing audit logs, may remain.</p>
-<p>Reproduce: <code>python presentation_demo.py</code> · <a href="Final_Validation_Report.html">Final results report</a></p>
+<p>Reproduce: <code>python presentation_demo.py</code></p>
 <p>Verified in this run: dry run preserves the file · backup matches the original · repaired source parses · repeat fix makes no changes.</p></footer>
 <script>let step=0;const panels=[...document.querySelectorAll('section')];function show(){panels.forEach((p,i)=>p.hidden=i!==step);document.querySelector('#previous').disabled=step===0;document.querySelector('#next').disabled=step===panels.length-1;}
 document.querySelector('#previous').onclick=()=>{step--;show()};document.querySelector('#next').onclick=()=>{step++;show()};document.addEventListener('keydown',e=>{if(e.key==='ArrowRight'&&step<panels.length-1){step++;show()}if(e.key==='ArrowLeft'&&step>0){step--;show()}});show();</script></html>'''

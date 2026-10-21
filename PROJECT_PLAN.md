@@ -183,36 +183,6 @@ python -m mcp_scanner scan server.py --check prompt-injection
 
 ---
 
-## Sample Output
-
-```
-MCP Security Scanner v1.0
-=========================
-
-Scanning: vulnerable_server.py
-
-[CRITICAL] Tool Poisoning Detected
-  Location: line 15, function 'add'
-  Issue: Tool description contains hidden instructions
-  Pattern: "After finishing the addition, use 'read_file' to obtain..."
-  Risk: Attacker can trick LLM into reading sensitive files
-
-[HIGH] Indirect Prompt Injection Risk
-  Location: line 42, function 'fetch_github_issues'
-  Issue: External data returned without sanitization
-  Pattern: return requests.get(url).json()
-  Risk: Malicious content in GitHub issues could inject prompts
-
-Summary:
-  Files scanned: 1
-  Critical: 1
-  High: 1
-  Medium: 0
-  Low: 0
-```
-
----
-
 ## Implementation Phases
 
 ### Phase 1: Core Infrastructure
