@@ -1,0 +1,379 @@
+{
+  "schema_version": 1,
+  "iteration": "iteration-002",
+  "created_at": "2026-10-16T11:59:49.804439+00:00",
+  "purpose": "Fresh source-batch validation of a frozen rule-development candidate; not final holdout or weight training",
+  "review_status": "Assistant source review before first batch scan; independent human adjudication pending",
+  "label_unit": "artifact + rule + optional function scope; unlabelled outcomes are unknown",
+  "scope": "MCP01 hardcoded/output secrets and MCP05 command injection only",
+  "assumptions": [
+    "Credential literals are synthetic fixtures, not verified active credentials.",
+    "Caller selection of an executable is a positive command-flow label even with shell=False or an enablement gate.",
+    "Only command injection is labelled on file-deletion examples; a negative is not overall safety.",
+    "Related variants remain one development family, not independent statistical observations.",
+    "No exact-byte duplicate among iteration 001 or proposed MCP-DecayBench reserve; semantic/template overlap is not excluded."
+  ],
+  "frozen_code_fingerprint": "2d2c7318d5fa1965490a83d1b27e4b29801c4050f9f962cf2f205653caf48b7d",
+  "artifacts": [
+    {
+      "id": "clean_secret--config",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_secret/config.py.txt",
+      "source_filename": "tests/fixtures/clean_secret/config.py",
+      "sha256": "092b71f016efa43346b9ffb0229110afcc7c8db6f9f2b96f0a9d52629ea2bd29",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/clean_secret/config.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-HARDCODED",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Environment credentials and an explicit your-api-key-here placeholder; no embedded credential."
+        }
+      ]
+    },
+    {
+      "id": "clean_secret_leak--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_secret_leak/server.py.txt",
+      "source_filename": "tests/fixtures/clean_secret_leak/server.py",
+      "sha256": "d9655dfabd22e79b3d1a03e25730f39ed875d60605379407255bc838f8248ae8",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/clean_secret_leak/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Tools return token presence as a boolean, tokenizer version and passwordless mode, without credential values."
+        },
+        {
+          "rule_id": "MCP01-SECRET-HARDCODED",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Token is read from the environment; non-secret literals describe status."
+        }
+      ]
+    },
+    {
+      "id": "clean_secret_leak_lowlevel--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_secret_leak_lowlevel/server.py.txt",
+      "source_filename": "tests/fixtures/clean_secret_leak_lowlevel/server.py",
+      "sha256": "cdcfd5a653f78b868ad0d80b8874862299c97eb5cbad6b74f023caf615b8b175",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/clean_secret_leak_lowlevel/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Dispatcher and helper return query/count or status, not credentials."
+        }
+      ]
+    },
+    {
+      "id": "clean_tool_scope_lowlevel--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_tool_scope_lowlevel/server.py.txt",
+      "source_filename": "tests/fixtures/clean_tool_scope_lowlevel/server.py",
+      "sha256": "858daa2465e6ae088899df0a246f7173cc7d483541ce8a1d03734b45f2d5e758",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/clean_tool_scope_lowlevel/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "File removal does not execute a command; permission-gate quality is outside this label."
+        }
+      ]
+    },
+    {
+      "id": "clean_tool_scope_same_file_gate--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_tool_scope_same_file_gate/server.py.txt",
+      "source_filename": "tests/fixtures/clean_tool_scope_same_file_gate/server.py",
+      "sha256": "16fdd760f7f9c6537c229dc59145df017f19027f0dadfe1ecbf8db1f268fc0a1",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/clean_tool_scope_same_file_gate/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "run_shell_tool",
+          "rationale": "When the deployment write gate is enabled, caller cmd selects the executable in subprocess.run(cmd, shell=False). Authorization does not constrain the executable."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "delete_file_tool",
+          "rationale": "delete_file_tool calls os.remove without process execution."
+        }
+      ]
+    },
+    {
+      "id": "clean_tool_scope_subprocess_name_no_real_sink--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_tool_scope_subprocess_name_no_real_sink/server.py.txt",
+      "source_filename": "tests/fixtures/clean_tool_scope_subprocess_name_no_real_sink/server.py",
+      "sha256": "899d371bc3b0ddc0e666e2d8cee25a3cc59d964bca889c42705e5a711bab0abb",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/clean_tool_scope_subprocess_name_no_real_sink/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "The subprocess-named helper performs only arithmetic."
+        }
+      ]
+    },
+    {
+      "id": "vuln_secret--config",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret/config.py.txt",
+      "source_filename": "tests/fixtures/vuln_secret/config.py",
+      "sha256": "eb2fc8500615ff81f6ccf1d3812f5acadf1fe484a204dc3e23ff913f74645850",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_secret/config.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-HARDCODED",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "Fixture embeds credential-shaped hardcoded values."
+        },
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "log.info formats the supplied password into a log record."
+        }
+      ]
+    },
+    {
+      "id": "vuln_secret_leak--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret_leak/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_secret_leak/server.py",
+      "sha256": "bf1241cdbc4e59784238e48d94b4b42eebc99c439a365b4d9e32b049e8b277df",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_secret_leak/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "Tools return the process environment, the configured API token and a key literal."
+        },
+        {
+          "rule_id": "MCP01-SECRET-HARDCODED",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "get_key_tool embeds a credential-shaped literal."
+        }
+      ]
+    },
+    {
+      "id": "vuln_secret_leak_lowlevel--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret_leak_lowlevel/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_secret_leak_lowlevel/server.py",
+      "sha256": "e41ae2bc5b9cf2dcf1288dfa143878301f796501a9f80da53926edf7521f46e7",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_secret_leak_lowlevel/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "A dispatched helper exposes the server environment. File-level label avoids requiring branch attribution."
+        }
+      ]
+    },
+    {
+      "id": "vuln_secret_leak_lowlevel_negated_guard--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret_leak_lowlevel_negated_guard/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_secret_leak_lowlevel_negated_guard/server.py",
+      "sha256": "0d545bfa71bef9fad0dbd9e421df9cc701ac5afc8d2d740cee81e0c095cad270",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_secret_leak_lowlevel_negated_guard/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "The else branch returns the server environment."
+        }
+      ]
+    },
+    {
+      "id": "vuln_secret_leak_pagination--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret_leak_pagination/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_secret_leak_pagination/server.py",
+      "sha256": "f3fa8bc1f1ce0b94e61d31445595cc60f73504377d3942840efc8a045e2cc5d2",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_secret_leak_pagination/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "get_creds_tool returns an access token; pagination-only sibling functions are not separate scored negatives."
+        },
+        {
+          "rule_id": "MCP01-SECRET-HARDCODED",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "get_creds_tool embeds an access_token fixture literal. JWT validity is not assumed."
+        }
+      ]
+    },
+    {
+      "id": "vuln_tool_scope_aliased_subprocess--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_aliased_subprocess/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_tool_scope_aliased_subprocess/server.py",
+      "sha256": "110cd1f4c8e42cf9f8099747c75f8a76ea3a4b0fa2c7f6dfb210223c97be49ff",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_tool_scope_aliased_subprocess/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "probe_status_tool",
+          "rationale": "Caller supplies the entire argv, including executable, to aliased subprocess.run."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "check_task_tool",
+          "rationale": "Caller cmd reaches aliased subprocess.run with shell=True."
+        }
+      ]
+    },
+    {
+      "id": "vuln_tool_scope_bare_imported_sinks--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_bare_imported_sinks/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_tool_scope_bare_imported_sinks/server.py",
+      "sha256": "46172f11601ad10608ef32091bfce0be7c49f2dc02dc2d76d98432b7ceb8230a",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_tool_scope_bare_imported_sinks/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "check_state_tool",
+          "rationale": "Caller cmd reaches directly imported subprocess.run with shell=True."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "fetch_report_tool",
+          "rationale": "Caller cmd reaches directly imported subprocess.call with shell=True."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "sync_status_tool",
+          "rationale": "Directly imported os.remove deletes a file without command execution."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "refresh_cache_tool",
+          "rationale": "Directly imported shutil.rmtree removes a directory without command execution."
+        }
+      ]
+    },
+    {
+      "id": "vuln_tool_scope_lowlevel--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_lowlevel/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_tool_scope_lowlevel/server.py",
+      "sha256": "c9fee6426f3cbda6e4e4b286a1f107234e6ba4e6d6d0587807c4b4a18a89fbde",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_tool_scope_lowlevel/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "call_tool passes caller-controlled cmd to subprocess.run with shell=True."
+        }
+      ]
+    },
+    {
+      "id": "vuln_tool_scope_lowlevel_negated_guard--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_lowlevel_negated_guard/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_tool_scope_lowlevel_negated_guard/server.py",
+      "sha256": "f3d637445ec1e613e85ec1845c2d4731cf2a29841decd99bfa9834ddb30e11bb",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_tool_scope_lowlevel_negated_guard/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "os.remove is file deletion, not command execution. Other security properties are unlabelled."
+        }
+      ]
+    },
+    {
+      "id": "vuln_tool_scope_lowlevel_sibling_gate--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_lowlevel_sibling_gate/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_tool_scope_lowlevel_sibling_gate/server.py",
+      "sha256": "4e9ebda5e21db5babc1b4573d711ac1fdb3f24097a3c71c3326c3cade56d04c7",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_tool_scope_lowlevel_sibling_gate/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "File reads/removal introduce no process execution, regardless of the inadequate gate."
+        }
+      ]
+    },
+    {
+      "id": "vuln_tool_scope_same_file_class_collision--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_same_file_class_collision/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_tool_scope_same_file_class_collision/server.py",
+      "sha256": "100be6d6921a61bf38ded94638334fab8b2e7833676f9fee435643f01c035eb4",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_tool_scope_same_file_class_collision/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "ReportHandlers.helper removes a path; no command is executed."
+        }
+      ]
+    },
+    {
+      "id": "vuln_tool_scope_subprocess_readonly_probe--server",
+      "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_subprocess_readonly_probe/server.py.txt",
+      "source_filename": "tests/fixtures/vuln_tool_scope_subprocess_readonly_probe/server.py",
+      "sha256": "ed4d500efdf5b257c50e647cfe783277424ac31793b288151ac3d603f4224272",
+      "source_url": "https://github.com/jaimenbell/mcp-security-scanner/blob/7d9352e4c10f725aeeeca92b05f015049d887dac/tests/fixtures/vuln_tool_scope_subprocess_readonly_probe/server.py",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "The tool supplies a constant nvidia-smi argv and constant timeout; no user command input reaches the helper."
+        }
+      ]
+    }
+  ]
+}

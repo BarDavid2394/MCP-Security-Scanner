@@ -1,0 +1,1204 @@
+{
+  "sources": [
+    {
+      "repository": "glatinone/mcp-security-preflight",
+      "revision": "aa3950cd9891b741c4ae31e6e87a521c1caf0686",
+      "license_api": null,
+      "retrieved": "2026-10-11",
+      "role": "research candidate only; not scanned, not admitted as ground truth",
+      "requested_files": 7
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "license_api": null,
+      "retrieved": "2026-10-11",
+      "role": "research candidate only; not scanned, not admitted as ground truth",
+      "requested_files": 26
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "license_api": "Apache-2.0",
+      "retrieved": "2026-10-11",
+      "role": "research candidate only; not scanned, not admitted as ground truth",
+      "requested_files": 15
+    },
+    {
+      "repository": "mzquadri/mcp-policy-gateway",
+      "revision": "e15fa0df31cd4a0c38e3dec84ce40fe62c977201",
+      "license_api": "MIT",
+      "retrieved": "2026-10-11",
+      "role": "research candidate only; not scanned, not admitted as ground truth",
+      "requested_files": 4
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "license_api": "MIT",
+      "retrieved": "2026-10-11",
+      "role": "research candidate only; not scanned, not admitted as ground truth",
+      "requested_files": 43
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "license_api": "MIT",
+      "retrieved": "2026-10-11",
+      "role": "research candidate only; not scanned, not admitted as ground truth",
+      "requested_files": 20
+    }
+  ],
+  "artifacts": [
+    {
+      "repository": "glatinone/mcp-security-preflight",
+      "revision": "aa3950cd9891b741c4ae31e6e87a521c1caf0686",
+      "original_path": "README.md",
+      "url": "https://raw.githubusercontent.com/glatinone/mcp-security-preflight/aa3950cd9891b741c4ae31e6e87a521c1caf0686/README.md",
+      "local_path": "deliverables/new_samples/glatinone__mcp-security-preflight/README.md.txt",
+      "bytes": 1548,
+      "sha256": "f3ef131969f70087d498058fd841b685a57b3787bb9d31128c43d4d40ffd71f9",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "glatinone/mcp-security-preflight",
+      "revision": "aa3950cd9891b741c4ae31e6e87a521c1caf0686",
+      "original_path": "benchmark/RESULTS.md",
+      "url": "https://raw.githubusercontent.com/glatinone/mcp-security-preflight/aa3950cd9891b741c4ae31e6e87a521c1caf0686/benchmark/RESULTS.md",
+      "local_path": "deliverables/new_samples/glatinone__mcp-security-preflight/benchmark/RESULTS.md.txt",
+      "bytes": 971,
+      "sha256": "b98ec42c4bc307c0555ff877955f5ad8b160873a85ee7138b1cb98239e21332b",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "glatinone/mcp-security-preflight",
+      "revision": "aa3950cd9891b741c4ae31e6e87a521c1caf0686",
+      "original_path": "benchmark/fixtures/leaky_agent.json",
+      "url": "https://raw.githubusercontent.com/glatinone/mcp-security-preflight/aa3950cd9891b741c4ae31e6e87a521c1caf0686/benchmark/fixtures/leaky_agent.json",
+      "local_path": "deliverables/new_samples/glatinone__mcp-security-preflight/benchmark/fixtures/leaky_agent.json.txt",
+      "bytes": 1000,
+      "sha256": "90e46c8d6c3d1eb7e7e09e065332a848723fb1bd9e8fe16e6bab59cafad37050",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "glatinone/mcp-security-preflight",
+      "revision": "aa3950cd9891b741c4ae31e6e87a521c1caf0686",
+      "original_path": "benchmark/fixtures/mixed_shop.json",
+      "url": "https://raw.githubusercontent.com/glatinone/mcp-security-preflight/aa3950cd9891b741c4ae31e6e87a521c1caf0686/benchmark/fixtures/mixed_shop.json",
+      "local_path": "deliverables/new_samples/glatinone__mcp-security-preflight/benchmark/fixtures/mixed_shop.json.txt",
+      "bytes": 706,
+      "sha256": "e1c9a8580c2b9fa63f9364a4c3c0093c338b71283e9352ab3b375031be92f81d",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "glatinone/mcp-security-preflight",
+      "revision": "aa3950cd9891b741c4ae31e6e87a521c1caf0686",
+      "original_path": "benchmark/fixtures/payment_tools.json",
+      "url": "https://raw.githubusercontent.com/glatinone/mcp-security-preflight/aa3950cd9891b741c4ae31e6e87a521c1caf0686/benchmark/fixtures/payment_tools.json",
+      "local_path": "deliverables/new_samples/glatinone__mcp-security-preflight/benchmark/fixtures/payment_tools.json.txt",
+      "bytes": 546,
+      "sha256": "5227f3bb5a383874162b1e7dff34873d1165ddb010c3c3323011e6acea79ad1b",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "glatinone/mcp-security-preflight",
+      "revision": "aa3950cd9891b741c4ae31e6e87a521c1caf0686",
+      "original_path": "benchmark/fixtures/risky_ops.json",
+      "url": "https://raw.githubusercontent.com/glatinone/mcp-security-preflight/aa3950cd9891b741c4ae31e6e87a521c1caf0686/benchmark/fixtures/risky_ops.json",
+      "local_path": "deliverables/new_samples/glatinone__mcp-security-preflight/benchmark/fixtures/risky_ops.json.txt",
+      "bytes": 472,
+      "sha256": "462c744f7fcc56499cd001a263e72e42ed6367d5d35e4e442cad05cc8a024591",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "glatinone/mcp-security-preflight",
+      "revision": "aa3950cd9891b741c4ae31e6e87a521c1caf0686",
+      "original_path": "benchmark/fixtures/safe_notes.json",
+      "url": "https://raw.githubusercontent.com/glatinone/mcp-security-preflight/aa3950cd9891b741c4ae31e6e87a521c1caf0686/benchmark/fixtures/safe_notes.json",
+      "local_path": "deliverables/new_samples/glatinone__mcp-security-preflight/benchmark/fixtures/safe_notes.json.txt",
+      "bytes": 231,
+      "sha256": "48123310915353baf8c7c3445e7507c9e71b249b2619f45306dc7e5829db62d3",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "bench/README.md",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/bench/README.md",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/bench/README.md.txt",
+      "bytes": 13409,
+      "sha256": "3eb64c70abdf4d72ebfae0d40aa25e8e8bf7f55ddc16ef064952cef5256410eb",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "bench/clean_tools.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/bench/clean_tools.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/bench/clean_tools.json.txt",
+      "bytes": 6158,
+      "sha256": "38b8fbf265e49147a6865836d1eff3796278625599ee47f3ffb2eb7b5f037348",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-001.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-001.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-001.json.txt",
+      "bytes": 1096,
+      "sha256": "46eaa7c1b63ad1bd22c5680c23e6bc0eac3be504f37e24a2e521a8761cf105d9",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-002.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-002.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-002.json.txt",
+      "bytes": 1066,
+      "sha256": "5deb33722e4da6e9cd7dbefe0a45a0143f690aff0d77b57edd0271f82d8fd0d9",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-003.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-003.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-003.json.txt",
+      "bytes": 1066,
+      "sha256": "b516ce72390acc4c9bf6d39a12e9d27439e90965c0cc58a0606fb0d254a095e9",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-004.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-004.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-004.json.txt",
+      "bytes": 1081,
+      "sha256": "9693a8765deed4ebb0b2b34a7805726648511807bd4066c84af86e58db7943ea",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-005.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-005.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-005.json.txt",
+      "bytes": 1195,
+      "sha256": "1849d74b77227009da1659dd797b541077c4a89dd7786796ec884907e2005a71",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-006.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-006.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-006.json.txt",
+      "bytes": 1196,
+      "sha256": "3648e6f50adf2b38e317e2e01c754d74c660c33560168787ff49ff4c51996d3c",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-007.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-007.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-007.json.txt",
+      "bytes": 1246,
+      "sha256": "2e1c39f8f01dd9c80d7b42644921afecd750d29d09095ec17975733d1f9fea72",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-008.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-008.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-008.json.txt",
+      "bytes": 1275,
+      "sha256": "199d314b580de13903df19d89db6c36a9ac0827211b5e9f4e9d08772543da009",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-009.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-009.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-009.json.txt",
+      "bytes": 1202,
+      "sha256": "4002c9a058bca834c4a6e5e29412af31d61eeb4cd182a335a872ca4b94b42e99",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-010.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-010.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-010.json.txt",
+      "bytes": 1203,
+      "sha256": "559d2cafe568d9876342333bea2e02a837fe5c96ef096188f94c2b88f309faa8",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-011.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-011.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-011.json.txt",
+      "bytes": 1263,
+      "sha256": "ad32e8a6bedaee2b7c35c4eaf1bd426e82d21c8dc77dc9e99febb9994aed4b9e",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-012.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-012.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-012.json.txt",
+      "bytes": 1267,
+      "sha256": "6d7f327130fea973eb8844e33581e3665f55668a3c2880641e908bf61d67dc1c",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-013.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-013.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-013.json.txt",
+      "bytes": 1313,
+      "sha256": "cdd6f7824571ae0ad99993fbba5aa5d736051ec975de4e33ac59307f8f59235e",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-014.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-014.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-014.json.txt",
+      "bytes": 1201,
+      "sha256": "e3ff6918228463979fbeb537084ae42e1e49c772fed8b3cf6012f4574e38bc94",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-015.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-015.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-015.json.txt",
+      "bytes": 1267,
+      "sha256": "c9f1dba575f9b69ea96f0b78131a14f3f8c070b696c7aab98481b0ce2ff1753e",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-016.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-016.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-016.json.txt",
+      "bytes": 1286,
+      "sha256": "6816696385baa061ed4b064f88f6ac92cd3b282f6e92c4505f0c2cccd70b15c2",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-017.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-017.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-017.json.txt",
+      "bytes": 1390,
+      "sha256": "7b5c38ac87f5a88071091e132727c1580d909b2cb7414cc81b2107702db305d6",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-018.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-018.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-018.json.txt",
+      "bytes": 1167,
+      "sha256": "e085c1606107937724a0f614541db69158c57f251bd16c8f65e097aba8ed1758",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-019.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-019.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-019.json.txt",
+      "bytes": 1177,
+      "sha256": "0408ee1ca9eed71df6249dbfde1871083262cf240c72a89bc0c7a66ad0a7d6f6",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-020.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-020.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-020.json.txt",
+      "bytes": 1263,
+      "sha256": "30d7a8a71215c43f5d4fda1b7593ae4adb9cdb0a241a8633fabe1092422e3602",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-021.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-021.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-021.json.txt",
+      "bytes": 1272,
+      "sha256": "d44a63f0e76fa700360461dce2e586051efdfde5875d897198cdfdf1e242b812",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-022.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-022.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-022.json.txt",
+      "bytes": 1920,
+      "sha256": "25f6cc061eb34c6d623696af617b43f626130312165a2abcbffa2a147370d4a7",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-023.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-023.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-023.json.txt",
+      "bytes": 1687,
+      "sha256": "2e6ca3a1b07e3f18580e09beec17bdd19da57bd8401e659d511f7046624effa3",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "ksek87/fuzzd",
+      "revision": "f739e120cd7dc253fead2a1f13668f9535e4d8a5",
+      "original_path": "corpus/tool_poisoning/TPA-024.json",
+      "url": "https://raw.githubusercontent.com/ksek87/fuzzd/f739e120cd7dc253fead2a1f13668f9535e4d8a5/corpus/tool_poisoning/TPA-024.json",
+      "local_path": "deliverables/new_samples/ksek87__fuzzd/corpus/tool_poisoning/TPA-024.json.txt",
+      "bytes": 1619,
+      "sha256": "d6c7a56a04d65041693068f65a5b2e7e33c0c086abeb08f395e73774680f0a5a",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/LICENSE",
+      "local_path": "deliverables/new_samples/m4vic__detonate/LICENSE.txt",
+      "bytes": 11335,
+      "sha256": "0736e48378db2138fc7630a00d1f9c598dc446b86bd150c9a06f6c4f125e192b",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/README.md",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/README.md",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/README.md.txt",
+      "bytes": 9159,
+      "sha256": "2987c7fba0d32db92555553a3887adb200aecae483bade0279738b1df8a7ee29",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-covert/ground-truth.yaml",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-covert/ground-truth.yaml",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-covert/ground-truth.yaml.txt",
+      "bytes": 1137,
+      "sha256": "58f756f9de568a9e9c7633591a5a4a46a007bebbd92f5a24a0df2ce01e59e963",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-covert/server.py",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-covert/server.py",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-covert/server.py.txt",
+      "bytes": 4258,
+      "sha256": "cb0e229ae2c822a39568cb7f8c327688cddc7718254b73c3baab4fd6b7019f57",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-encoding/ground-truth.yaml",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-encoding/ground-truth.yaml",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-encoding/ground-truth.yaml.txt",
+      "bytes": 3532,
+      "sha256": "369b916ec94b201d6ff987b89d3b8703e31c847af4a882c28cae3ac2449528ab",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-encoding/server.py",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-encoding/server.py",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-encoding/server.py.txt",
+      "bytes": 4737,
+      "sha256": "02bdf8db8de32ffcc4a473a40228a2ea5f965d9140e9cc20d89d9af9350b12eb",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-exfil-file/ground-truth.yaml",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-exfil-file/ground-truth.yaml",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-exfil-file/ground-truth.yaml.txt",
+      "bytes": 672,
+      "sha256": "d8cfa8279ee0d50a5065bfde1228f973a5f7bca55ac7512f837f535f6aef1eab",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-exfil-file/server.py",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-exfil-file/server.py",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-exfil-file/server.py.txt",
+      "bytes": 1829,
+      "sha256": "c2b1ac29a03aec9dd5c528ec6127d69fe15c8255b29052ef44f58d83899fb297",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-injection/ground-truth.yaml",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-injection/ground-truth.yaml",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-injection/ground-truth.yaml.txt",
+      "bytes": 2161,
+      "sha256": "69d5af03ab8cd806a100e223f266dfa3041c7fbb6853310c3cd0a70e2e0eb0f2",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-injection/server.py",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-injection/server.py",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-injection/server.py.txt",
+      "bytes": 3061,
+      "sha256": "20d4426c796a1e43d029c7f781ffd2e0692f6cfd09f6ac44de41ed69192f89e2",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-postmark/ground-truth.yaml",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-postmark/ground-truth.yaml",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-postmark/ground-truth.yaml.txt",
+      "bytes": 1815,
+      "sha256": "a7cac2e9df871b06f0fa12a1bed9dbb8fd204b0fb77a89fe637edb498799d9e6",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp-postmark/server.py",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp-postmark/server.py",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp-postmark/server.py.txt",
+      "bytes": 4117,
+      "sha256": "702d9850c39ff0c5f7e6c88aa908d67ac383dd875a3483f7b3c7520bf4b2c7d3",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp/ground-truth.yaml",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp/ground-truth.yaml",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp/ground-truth.yaml.txt",
+      "bytes": 3496,
+      "sha256": "0a9410be2d38a398f8398348010cd4ddd7c15ee90c35c08f4566f9dbc51b9c4c",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/corpus/evil-mcp/server.py",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/corpus/evil-mcp/server.py",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/corpus/evil-mcp/server.py.txt",
+      "bytes": 6464,
+      "sha256": "bba94ee6f998dd89022568605239ada518db4ebffe43947e94cbb01d2d1aed30",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "m4vic/detonate",
+      "revision": "4a54502d2a9ed177028d9a817fd86128d265dc6e",
+      "original_path": "testdata/honest/server.py",
+      "url": "https://raw.githubusercontent.com/m4vic/detonate/4a54502d2a9ed177028d9a817fd86128d265dc6e/testdata/honest/server.py",
+      "local_path": "deliverables/new_samples/m4vic__detonate/testdata/honest/server.py.txt",
+      "bytes": 2274,
+      "sha256": "9ec3263e94292ba649da1414a46f2fbc9cf551923bbf9e7a2a54f619ec350f73",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "mzquadri/mcp-policy-gateway",
+      "revision": "e15fa0df31cd4a0c38e3dec84ce40fe62c977201",
+      "original_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/mzquadri/mcp-policy-gateway/e15fa0df31cd4a0c38e3dec84ce40fe62c977201/LICENSE",
+      "local_path": "deliverables/new_samples/mzquadri__mcp-policy-gateway/LICENSE.txt",
+      "bytes": 1074,
+      "sha256": "68427412485267cfcf39181787ac0581f57d0e1a71d42cb8e0bc9c2f5f8ec87d",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "mzquadri/mcp-policy-gateway",
+      "revision": "e15fa0df31cd4a0c38e3dec84ce40fe62c977201",
+      "original_path": "README.md",
+      "url": "https://raw.githubusercontent.com/mzquadri/mcp-policy-gateway/e15fa0df31cd4a0c38e3dec84ce40fe62c977201/README.md",
+      "local_path": "deliverables/new_samples/mzquadri__mcp-policy-gateway/README.md.txt",
+      "bytes": 16724,
+      "sha256": "dd5c55f1daba95a7d8de0c286e4d8b91972c30959749338afa828921cf91e244",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "mzquadri/mcp-policy-gateway",
+      "revision": "e15fa0df31cd4a0c38e3dec84ce40fe62c977201",
+      "original_path": "corpus/attacks.py",
+      "url": "https://raw.githubusercontent.com/mzquadri/mcp-policy-gateway/e15fa0df31cd4a0c38e3dec84ce40fe62c977201/corpus/attacks.py",
+      "local_path": "deliverables/new_samples/mzquadri__mcp-policy-gateway/corpus/attacks.py.txt",
+      "bytes": 13916,
+      "sha256": "19599617f507e8c01de1967ffecc27aef6622435e8f07ef506dca433a0989dce",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "mzquadri/mcp-policy-gateway",
+      "revision": "e15fa0df31cd4a0c38e3dec84ce40fe62c977201",
+      "original_path": "corpus/benign.py",
+      "url": "https://raw.githubusercontent.com/mzquadri/mcp-policy-gateway/e15fa0df31cd4a0c38e3dec84ce40fe62c977201/corpus/benign.py",
+      "local_path": "deliverables/new_samples/mzquadri__mcp-policy-gateway/corpus/benign.py.txt",
+      "bytes": 11907,
+      "sha256": "fddde9457e98c746a48cb06ec382b5d97a9733dd8456e1548ca5a0271a61ccd3",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/LICENSE",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/LICENSE.txt",
+      "bytes": 1065,
+      "sha256": "03d5e260a2901f98c72c3760c49f13c14649bf3ce4fcf4cfe6d8e972fc4d581c",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/BENCHMARK_SUMMARY.md",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/BENCHMARK_SUMMARY.md",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/BENCHMARK_SUMMARY.md.txt",
+      "bytes": 8216,
+      "sha256": "4f4c1a20a11d15c0dff2d5b3230755e5bb41359eee88cbce95ae9f003c2e73a5",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_01_weather_lookup.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_01_weather_lookup.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_01_weather_lookup.json.txt",
+      "bytes": 818,
+      "sha256": "1e74a01ba81a607700ac0a7746733d2554e747e8b1f95e88cf5b167648e23483",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_02_calculator.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_02_calculator.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_02_calculator.json.txt",
+      "bytes": 843,
+      "sha256": "8b03e083396a9306fef230e9ee4cd3757fa99a50e58aa27150d8a4f6799e21e1",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_03_calendar_reader.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_03_calendar_reader.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_03_calendar_reader.json.txt",
+      "bytes": 896,
+      "sha256": "e29335cf3baeeaff0e75f7cc9f4aea00907916ebba01cee5c6c2a4e78fcc3c6d",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_04_public_search.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_04_public_search.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_04_public_search.json.txt",
+      "bytes": 817,
+      "sha256": "4377227c6dc1b338828df47aa0d93026231c906d1b83bc78c88ba9cf77439c0a",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_05_unit_converter.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_05_unit_converter.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_05_unit_converter.json.txt",
+      "bytes": 895,
+      "sha256": "8c246f751850b8e7dc6b17f057eeb2645a2419fd61d1fada1e0bb69f7bf2b143",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_06_dictionary_lookup.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_06_dictionary_lookup.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_06_dictionary_lookup.json.txt",
+      "bytes": 767,
+      "sha256": "5fa705494258fc8e8e65b275779a670d3d01b0b4778102a542feeb262a8e011f",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_07_timezone_helper.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_07_timezone_helper.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_07_timezone_helper.json.txt",
+      "bytes": 881,
+      "sha256": "141dfec0b340a7beb349d9d68b0addcf34afe5662e09f64f373b0e731ca51cbb",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_08_notes_app.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_08_notes_app.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_08_notes_app.json.txt",
+      "bytes": 839,
+      "sha256": "f283d972b0450b7d4960262b53140e77046d545ae1142561e223f4f385edd5d4",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_09_todo_list.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_09_todo_list.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_09_todo_list.json.txt",
+      "bytes": 747,
+      "sha256": "aee61ee0b2c80e09ede2283d1d6289fedc601a971bd1cca52ba545ad4b27fda8",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_10_currency_exchange.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_10_currency_exchange.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_10_currency_exchange.json.txt",
+      "bytes": 873,
+      "sha256": "2b51837829b80a0d5d64f1a022076a9393ee45c87b390d944e491f3cc0f217ae",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_11_qr_code_generator.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_11_qr_code_generator.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_11_qr_code_generator.json.txt",
+      "bytes": 802,
+      "sha256": "d180cc56c2ee3d5b6a269a5f90fb084a284636cbd23b9780912ae37a5419103f",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_12_markdown_formatter.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_12_markdown_formatter.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_12_markdown_formatter.json.txt",
+      "bytes": 851,
+      "sha256": "52e0b4e27920ec8d8a015f9c66425fd98f3d9c425766f24bbcb0ca0a80ef237d",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_13_spell_checker.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_13_spell_checker.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_13_spell_checker.json.txt",
+      "bytes": 812,
+      "sha256": "9d1918a38917611b6404b020362fe35a56da6e6d707c374d8fb4566beb5deedf",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_14_rss_reader.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_14_rss_reader.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_14_rss_reader.json.txt",
+      "bytes": 843,
+      "sha256": "17aeb947e4c56f4427fd5da37a4575e5592cf105ff13fd1d6f79637c19e34fc5",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_15_joke_generator.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_15_joke_generator.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_15_joke_generator.json.txt",
+      "bytes": 879,
+      "sha256": "77d82aad36fef8bfde0964eb193d0eae28fefed8c0b28b0b56be34c8336f6d30",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_16_recipe_finder.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_16_recipe_finder.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_16_recipe_finder.json.txt",
+      "bytes": 854,
+      "sha256": "69bb4432db6c83850d8e565e60948c34d151b2a475b571f9da11b92abb2c30ff",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_17_transit_schedule.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_17_transit_schedule.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_17_transit_schedule.json.txt",
+      "bytes": 778,
+      "sha256": "8efb0d073594bea13fb954a101f2294c2aa8b58c93c455402d99b8af445810f2",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_18_file_reader_sandboxed.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_18_file_reader_sandboxed.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_18_file_reader_sandboxed.json.txt",
+      "bytes": 918,
+      "sha256": "8bd7b7a5776e2addae00c469091a857770a188a4f89ee6fd7ccdef6d6b078e24",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_19_news_summarizer.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_19_news_summarizer.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_19_news_summarizer.json.txt",
+      "bytes": 832,
+      "sha256": "1c52301cd93c53d31adfb22b4f866c1a8b95d6731ed11c175c763f8063c75ac4",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/clean/clean_20_password_strength_checker.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/clean/clean_20_password_strength_checker.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/clean/clean_20_password_strength_checker.json.txt",
+      "bytes": 892,
+      "sha256": "8521f32e536b47fd4541fb5124dca9cfab4f2bdce9e84fc89f5ccd1ec943b72c",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_command_injection_1_image_convert.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_command_injection_1_image_convert.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_command_injection_1_image_convert.json.txt",
+      "bytes": 779,
+      "sha256": "ead0109d3762f2dd79e0cbfecedd55c4960634cba914a800f9d9fb10b6911796",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_command_injection_2_run_diagnostics_cmd.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_command_injection_2_run_diagnostics_cmd.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_command_injection_2_run_diagnostics_cmd.json.txt",
+      "bytes": 595,
+      "sha256": "688f8c603ac11d961102679de54a21df1534944473d1cf76f5d97f5b720ee13c",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_credential_exfiltration_1_debug_diagnostics.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_credential_exfiltration_1_debug_diagnostics.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_credential_exfiltration_1_debug_diagnostics.json.txt",
+      "bytes": 835,
+      "sha256": "204d396495be0fdca4289dbd163f0dd17e03a83c3f16d04041528d95b0cbddb2",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_credential_exfiltration_2_config_backup.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_credential_exfiltration_2_config_backup.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_credential_exfiltration_2_config_backup.json.txt",
+      "bytes": 748,
+      "sha256": "135a60e18c42d1ec2c535f05a8be3872e6e959cfcc0b1a6f346b29b1f6b1de9f",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_cross_origin_exfiltration_1_render_profile.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_cross_origin_exfiltration_1_render_profile.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_cross_origin_exfiltration_1_render_profile.json.txt",
+      "bytes": 694,
+      "sha256": "dbdc455e9b90c888ca8c524e8a7c90e1fbe489e879d66d98d45ebc06ac44d09d",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_cross_origin_exfiltration_2_citation_formatter.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_cross_origin_exfiltration_2_citation_formatter.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_cross_origin_exfiltration_2_citation_formatter.json.txt",
+      "bytes": 749,
+      "sha256": "5117cd69f277076f51a1f4b98449413395b335e4314615107c38fc2f1658f6c3",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_dos_resource_exhaustion_1_recursive_expand.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_dos_resource_exhaustion_1_recursive_expand.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_dos_resource_exhaustion_1_recursive_expand.json.txt",
+      "bytes": 611,
+      "sha256": "9068500895727ad934458cbf10d24196ab3566987b1c0bf1c626fedd39f372e2",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_dos_resource_exhaustion_2_bulk_export.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_dos_resource_exhaustion_2_bulk_export.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_dos_resource_exhaustion_2_bulk_export.json.txt",
+      "bytes": 610,
+      "sha256": "9c1779e2e4bc53ee41547f871bad6520180009993d4a8102fc1ae536d8ca0aa8",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_excessive_permission_scope_1_notes_admin.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_excessive_permission_scope_1_notes_admin.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_excessive_permission_scope_1_notes_admin.json.txt",
+      "bytes": 428,
+      "sha256": "a701afa62005e3c0c092e007b2c5e74ce31c0da680bf2f98526b0abd7006a0bc",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_excessive_permission_scope_2_photo_organizer.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_excessive_permission_scope_2_photo_organizer.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_excessive_permission_scope_2_photo_organizer.json.txt",
+      "bytes": 481,
+      "sha256": "3ac1246a39d52058cb14e844b1e07ed9bd76aed317f94d670837847cbe469a2a",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_indirect_injection_output_1_fetch_ticket.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_indirect_injection_output_1_fetch_ticket.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_indirect_injection_output_1_fetch_ticket.json.txt",
+      "bytes": 1013,
+      "sha256": "53601dddb6b1d88d066d4fd1a73645fc02747231d3ec95d0691ce36f4b1797b0",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_indirect_injection_output_2_fetch_pr_comments.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_indirect_injection_output_2_fetch_pr_comments.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_indirect_injection_output_2_fetch_pr_comments.json.txt",
+      "bytes": 967,
+      "sha256": "b2fbe0bfb352d1f85638b12f036f2a5bb8071fadb516808fbf428ab26320718d",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_prompt_injection_description_1_helpdesk_search.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_prompt_injection_description_1_helpdesk_search.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_prompt_injection_description_1_helpdesk_search.json.txt",
+      "bytes": 574,
+      "sha256": "255ce4dbdd614de1e17036bae341eef0186dd1ac875c67eb7e4a34342936c888",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_prompt_injection_description_2_translate_text.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_prompt_injection_description_2_translate_text.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_prompt_injection_description_2_translate_text.json.txt",
+      "bytes": 583,
+      "sha256": "8bc048a5d99bfcad6c33c64bacf5a25802e9f0e0e80be2e74410732ea79f999d",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_rug_pull_schema_mutation_1_analytics_query.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_rug_pull_schema_mutation_1_analytics_query.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_rug_pull_schema_mutation_1_analytics_query.json.txt",
+      "bytes": 761,
+      "sha256": "250c44fc4e051c2a56aea62d920e2da0b41d212c6036a7fd03e53bd0a1a179a0",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_rug_pull_schema_mutation_2_file_sync.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_rug_pull_schema_mutation_2_file_sync.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_rug_pull_schema_mutation_2_file_sync.json.txt",
+      "bytes": 881,
+      "sha256": "6bb827fb0eced7fde5ad11c794616d48f5bd65a261c3c614e292665da7a53e1b",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_tool_poisoning_schema_1_report_export.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_tool_poisoning_schema_1_report_export.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_tool_poisoning_schema_1_report_export.json.txt",
+      "bytes": 812,
+      "sha256": "64eb74449959c7e54f4da6316fd1d25523ff4c7a8c34a1f023fb81271b4746ea",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_tool_poisoning_schema_2_invoice_create.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_tool_poisoning_schema_2_invoice_create.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_tool_poisoning_schema_2_invoice_create.json.txt",
+      "bytes": 566,
+      "sha256": "bbadd8ed1d3b0d7904597d4f14d14d5124f66bb8c8c516355fe61c7ec439b8ee",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_typosquatting_1_filesystem_lookalike.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_typosquatting_1_filesystem_lookalike.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_typosquatting_1_filesystem_lookalike.json.txt",
+      "bytes": 586,
+      "sha256": "34e5d9d440dc41fc4f2a2a47de2ba53738ba51f500b37467b001dfa3c3db8dc7",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/malicious/mal_typosquatting_2_github-lookalike.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/malicious/mal_typosquatting_2_github-lookalike.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/malicious/mal_typosquatting_2_github-lookalike.json.txt",
+      "bytes": 734,
+      "sha256": "5c33f2587417ced58e419a04e5f2acc89439bd19d4ae81e838200e7e1bd86bb5",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "Ventrova/sentinel-scan-cli",
+      "revision": "5cde4b12221178b0ac41213a6b332f9c03fdccc4",
+      "original_path": "fixtures/benchmark/manifest.json",
+      "url": "https://raw.githubusercontent.com/Ventrova/sentinel-scan-cli/5cde4b12221178b0ac41213a6b332f9c03fdccc4/fixtures/benchmark/manifest.json",
+      "local_path": "deliverables/new_samples/Ventrova__sentinel-scan-cli/fixtures/benchmark/manifest.json.txt",
+      "bytes": 7724,
+      "sha256": "28666ac87a566654d7f4b48c1afcd2c94a12eb9685087606ae6b58f4e859815e",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/LICENSE",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/LICENSE.txt",
+      "bytes": 1066,
+      "sha256": "56fb76e663bb49e403d4770521d742799a691cb3282a510866a268fc178a0a5b",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "README.md",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/README.md",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/README.md.txt",
+      "bytes": 17262,
+      "sha256": "39a88ec58d7de52db72cc3c7327225762ce19236f618933e8ac927d7d2be7138",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "runner/expected-findings.json",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/runner/expected-findings.json",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/runner/expected-findings.json.txt",
+      "bytes": 4326,
+      "sha256": "2b449a4386d980fc54e2c12982ab1c7f76ad4294de91c85cfadef91166de15a2",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/normal-realistic/server.py",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/normal-realistic/server.py",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/normal-realistic/server.py.txt",
+      "bytes": 1801,
+      "sha256": "68c6a21f90e1a597f21c9ceff925c7d22d7d9eb17318813d1cb9ad25fdd3de98",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/normal-strict/server.py",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/normal-strict/server.py",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/normal-strict/server.py.txt",
+      "bytes": 1160,
+      "sha256": "2e402d7de5faa9a72aca40897ab1127f59b4acde694d64d84aa2c4dfe76ec954",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/normal-tricky/server.py",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/normal-tricky/server.py",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/normal-tricky/server.py.txt",
+      "bytes": 1893,
+      "sha256": "0164e9f3db72c789ccc302cdaedeededc26f10bd6ec406c030d1a6adb74c41cf",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-allowlist-bypass/package.json",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-allowlist-bypass/package.json",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-allowlist-bypass/package.json.txt",
+      "bytes": 366,
+      "sha256": "c278871f57cb77072d339749cc53dca60d5f5819aab325a3ab2e3bba3d1f0b7e",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-allowlist-bypass/src/server.ts",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-allowlist-bypass/src/server.ts",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-allowlist-bypass/src/server.ts.txt",
+      "bytes": 4742,
+      "sha256": "3ff56b7715eff6ee4e53c639e969350c0699cd50af7585731d64d27334672849",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-allowlist-bypass/tsconfig.json",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-allowlist-bypass/tsconfig.json",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-allowlist-bypass/tsconfig.json.txt",
+      "bytes": 287,
+      "sha256": "71f3cc91ac699b98a6a352f79ec2a40fedc6dc1cd800d21169654adabec10685",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-authless/server.py",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-authless/server.py",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-authless/server.py.txt",
+      "bytes": 1750,
+      "sha256": "5a9322887c8853943bd1bdd91071b4a98802f3922be0d816ecdfde516d2e9ea2",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-config-exec/server.py",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-config-exec/server.py",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-config-exec/server.py.txt",
+      "bytes": 2942,
+      "sha256": "8d277037b4c2b3acadba7aa19a77353848999ce33ab2408590f7a82fec0af04e",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-exec/server.py",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-exec/server.py",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-exec/server.py.txt",
+      "bytes": 1722,
+      "sha256": "69f20bae1f51a4a6e019872e6d08b350f81a04e5e3ef4f760c24a5fca4104377",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-filesystem/server.py",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-filesystem/server.py",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-filesystem/server.py.txt",
+      "bytes": 1552,
+      "sha256": "0de859e830d1d7ebedb9c964963e7bdb4f5bef9b3a20dc6f85b34850c84a3a13",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-hidden-transport/package.json",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-hidden-transport/package.json",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-hidden-transport/package.json.txt",
+      "bytes": 366,
+      "sha256": "96431c4b7e2e0982dd0ef8c6016003c382afb9ae862f829c45a8800dab0a409e",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-hidden-transport/src/server.ts",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-hidden-transport/src/server.ts",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-hidden-transport/src/server.ts.txt",
+      "bytes": 4233,
+      "sha256": "178db9d63208a901022388c8793732f2ce7a244564893b4562c8a9f51bd404b3",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-hidden-transport/tsconfig.json",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-hidden-transport/tsconfig.json",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-hidden-transport/tsconfig.json.txt",
+      "bytes": 287,
+      "sha256": "71f3cc91ac699b98a6a352f79ec2a40fedc6dc1cd800d21169654adabec10685",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-network/package.json",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-network/package.json",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-network/package.json.txt",
+      "bytes": 437,
+      "sha256": "dfbfab5d44e521c93ecc1ee0a2f38b3dc88bbaa73f77b37c5fdc8d71b1ba331f",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-network/src/server.ts",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-network/src/server.ts",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-network/src/server.ts.txt",
+      "bytes": 4636,
+      "sha256": "885b791d125e1e4ce1a2b84553ed62981f168f0f35b999d067f800f2632a2372",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-network/tsconfig.json",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-network/tsconfig.json",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-network/tsconfig.json.txt",
+      "bytes": 287,
+      "sha256": "71f3cc91ac699b98a6a352f79ec2a40fedc6dc1cd800d21169654adabec10685",
+      "status": "downloaded-as-text"
+    },
+    {
+      "repository": "windshock/mcpscan",
+      "revision": "e696db0ff8f54d3b84307d69c927a000583d6808",
+      "original_path": "servers/vuln-runtime-only/server.py",
+      "url": "https://raw.githubusercontent.com/windshock/mcpscan/e696db0ff8f54d3b84307d69c927a000583d6808/servers/vuln-runtime-only/server.py",
+      "local_path": "deliverables/new_samples/windshock__mcpscan/servers/vuln-runtime-only/server.py.txt",
+      "bytes": 2629,
+      "sha256": "858570ddb8bc38898372a0d901a9cb1e4339ae52bf3e9cdd29fe88b2c06e7308",
+      "status": "downloaded-as-text"
+    }
+  ]
+}

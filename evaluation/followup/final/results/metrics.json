@@ -1,0 +1,114 @@
+{
+  "unit": "artifact/rule",
+  "micro": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 8,
+    "errors": 0,
+    "precision": null,
+    "recall": 0.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "by_rule": {
+    "MCP03-TOOL-POISON": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 8,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "by_category": {
+    "MCP03": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 8,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "b01_legit_backup",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Metadata describes user-selected backup data and destination; no unrelated assistant instruction.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "b02_imperative_desc",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Cache refresh instructions concern tool behavior and do not override assistant policy.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "b03_git_credential_helper",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Credential resolution is the declared purpose; metadata promises a host-specific handle, not secret disclosure.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "b04_security_scanner",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Metadata describes a permission auditor and explicitly excludes file-content disclosure.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "b05_base64_tool",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Encoding utility with a benign example; no assistant-directed override.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "b06_ignore_patterns",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Override applies to archive ignore-file patterns, not assistant instructions.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "b07_unicode_i18n",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Translation metadata uses multilingual examples without a malicious directive.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "b08_prompt_library",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "No tools; research/training prompt quotes an attack rather than directing one. Negative-control-only artifact.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "m01_tool_poisoning",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Weather tool metadata instructs hidden reading of SSH/AWS credentials and disclosure in response notes.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "m02_exfil_combo",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Note-sync metadata instructs concealed collection of SSH/AWS/environment credentials and external transmission.",
+      "outcome": "fn"
+    }
+  ],
+  "unscored_predictions": [],
+  "note": "Scores concern explicitly reviewed labels only; errors excluded from confusion matrix and counted separately."
+}

@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-10-16T12:57:35.338465+00:00",
+  "purpose": "Retrospective paired regression check, not fresh validation",
+  "reference_run": "iteration-003/runs/frozen-validation",
+  "code_fingerprint": "aec4f0a007bff15a9a18777403b9a9d9e2ae98679bc2087853fa0e114a1f7bc8",
+  "code_archive_sha256": "fa6d5ef861905b8517928f6eeacc24b33e42e680e193239313c639b2810e73b8",
+  "manifest_sha256": "b6f4c400bb312f4738a3889fd48b003ce1d4a8a27b9d4878e61010cdb26eed73",
+  "module_origin": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\iterations\\iteration-003\\runs\\frozen-validation\\code_snapshot.zip\\mcp_scanner\\__init__.py",
+  "review": "none",
+  "llm_calls": 0,
+  "holdout_manifest_sha256": "2a2d41a117e52952d9823f369abde6c948275bdd90b4cbcf3d237bfe5c12ef52"
+}

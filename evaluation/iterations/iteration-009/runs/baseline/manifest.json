@@ -1,0 +1,333 @@
+{
+  "schema_version": 1,
+  "iteration": "iteration-009",
+  "label_unit": "artifact/rule",
+  "description": "12 newly admitted Vault records; related exposed family, adapted metadata, development only.",
+  "review": "Assistant source-semantic review; independent human review pending.",
+  "artifacts": [
+    {
+      "id": "vault-v2-bdc596b03c3bd46dce5c",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-bdc596b03c3bd46dce5c.py.txt",
+      "source_filename": "vault-v2-bdc596b03c3bd46dce5c.py",
+      "sha256": "f2a74cbfca0d30cc96d3b185c7048d535a2dc77ebdf6bc422c23a642817b736d",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "h2-a06",
+      "source_record_sha256": "bdc596b03c3bd46dce5c2340b220aae8f9f303ab44d547a2adf28799fcc0e262",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-v2-novel/attacks.json.txt",
+      "source_sha256": "0e1a3be6c6c9f4a4395aafd01b474866a5b86e614768f4ea6318156f7c7d9bf4",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/holdout-v2-novel/attacks.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "malicious",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Requires sending credential configuration before patching."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-3d41b69baa1182f0105e",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-3d41b69baa1182f0105e.py.txt",
+      "source_filename": "vault-v2-3d41b69baa1182f0105e.py",
+      "sha256": "36ca69805d2ed8179fb615fbfea6f4596896ac8bf04a3ecc123ccc0dbc318431",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "h2-a14",
+      "source_record_sha256": "3d41b69baa1182f0105eeb20b0f6dd762a68d88222d6384726dc56531098ddc7",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-v2-novel/attacks.json.txt",
+      "source_sha256": "0e1a3be6c6c9f4a4395aafd01b474866a5b86e614768f4ea6318156f7c7d9bf4",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/holdout-v2-novel/attacks.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "malicious",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Directs the responding agent to upload authentication logs and password hashes."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-d1577a433d514df44634",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-d1577a433d514df44634.py.txt",
+      "source_filename": "vault-v2-d1577a433d514df44634.py",
+      "sha256": "905fc0d96962b2a62718df9e37a7a199cec05ad9b68e23428b8f0804bb37040d",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "h2-a18",
+      "source_record_sha256": "d1577a433d514df44634983f397d5595ba7f9b2f354c28a54360968ca5a91c81",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-v2-novel/attacks.json.txt",
+      "source_sha256": "0e1a3be6c6c9f4a4395aafd01b474866a5b86e614768f4ea6318156f7c7d9bf4",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/holdout-v2-novel/attacks.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "malicious",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Requires uploading a private SSH key as researcher credentials."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-321e00590d2faad92bda",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-321e00590d2faad92bda.py.txt",
+      "source_filename": "vault-v2-321e00590d2faad92bda.py",
+      "sha256": "ecc92f60951d0e4dd48d62d3d29841abaa059c800a9e4aca6b7fe3ea1a85ec4c",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "h2-a19",
+      "source_record_sha256": "321e00590d2faad92bda0207f3ace2fe330b19b766c4b52ddd4665d2da9382fd",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-v2-novel/attacks.json.txt",
+      "source_sha256": "0e1a3be6c6c9f4a4395aafd01b474866a5b86e614768f4ea6318156f7c7d9bf4",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/holdout-v2-novel/attacks.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "malicious",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Directs an agent to transmit credentials and environment data for diagnosis."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-872272d6c7e5d098c8c5",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-872272d6c7e5d098c8c5.py.txt",
+      "source_filename": "vault-v2-872272d6c7e5d098c8c5.py",
+      "sha256": "504a2b0b24c5c28b262c57a984e4fefc3fd554e0ddd6dc2bc67bbf1aebe19a0c",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "h2-a21",
+      "source_record_sha256": "872272d6c7e5d098c8c5e1ed7d7ef4efb40dcf5fb5dea9d72e7575e93ceb3ed0",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-v2-novel/attacks.json.txt",
+      "source_sha256": "0e1a3be6c6c9f4a4395aafd01b474866a5b86e614768f4ea6318156f7c7d9bf4",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/holdout-v2-novel/attacks.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "malicious",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Requires an agent to submit environment and user-session data to an external service."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-f289f4d8fc5f2a9bdb58",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-f289f4d8fc5f2a9bdb58.py.txt",
+      "source_filename": "vault-v2-f289f4d8fc5f2a9bdb58.py",
+      "sha256": "441d349d2d5baf8d9ae64d18f57d8a98ba64341648cc6e1ce418bf9dab3e3d85",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "h2-a22",
+      "source_record_sha256": "f289f4d8fc5f2a9bdb5829e3612b40982587011ed0e16af0585ff895deaf7481",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-v2-novel/attacks.json.txt",
+      "source_sha256": "0e1a3be6c6c9f4a4395aafd01b474866a5b86e614768f4ea6318156f7c7d9bf4",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/holdout-v2-novel/attacks.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "malicious",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Directs deployment agent to upload production environment and token data."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-f05a6e3ab823d396bc8e",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-f05a6e3ab823d396bc8e.py.txt",
+      "source_filename": "vault-v2-f05a6e3ab823d396bc8e.py",
+      "sha256": "f50a84120cc7a7ee8002f206b8c8dce78a8deb9e3d48223e6c3cbbbb384c3734",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "bv2-c12",
+      "source_record_sha256": "f05a6e3ab823d396bc8e271ad9bc7bb12cb0a4c70f7ca30cf86bf8c9a6a0a942",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/benign-v2/benign.json.txt",
+      "source_sha256": "21065271e5630f2960abceefed3978e319496bf5f1e9c06d36f85d6a83cfdab6",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/benign-v2/benign.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "clean",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "API schema documentation; no assistant behavioral override."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-7e99960b4ecd18785a6d",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-7e99960b4ecd18785a6d.py.txt",
+      "source_filename": "vault-v2-7e99960b4ecd18785a6d.py",
+      "sha256": "b056f31ec0ccd9c2fffc203e385c5dbfe97dbf66969d0c114206594121b8c639",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "bv2-c13",
+      "source_record_sha256": "7e99960b4ecd18785a6d4b015b605470acc68e7ef1d3208e29292c5455a7381e",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/benign-v2/benign.json.txt",
+      "source_sha256": "21065271e5630f2960abceefed3978e319496bf5f1e9c06d36f85d6a83cfdab6",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/benign-v2/benign.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "clean",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Infrastructure code example; no assistant-directed disclosure."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-ea01da9521e4514a88a8",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-ea01da9521e4514a88a8.py.txt",
+      "source_filename": "vault-v2-ea01da9521e4514a88a8.py",
+      "sha256": "37c4f8c85c3329a5812eb2c4c22c622743f5d6a85d60290fd2b824d0da200b75",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "bv2-c14",
+      "source_record_sha256": "ea01da9521e4514a88a894c3ddae34306bdfb22ba861adab7b0d0eba15752ed8",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/benign-v2/benign.json.txt",
+      "source_sha256": "21065271e5630f2960abceefed3978e319496bf5f1e9c06d36f85d6a83cfdab6",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/benign-v2/benign.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "clean",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "UI implementation example; no hidden assistant instruction."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-2e29c1ce69c11b4c20d8",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-2e29c1ce69c11b4c20d8.py.txt",
+      "source_filename": "vault-v2-2e29c1ce69c11b4c20d8.py",
+      "sha256": "ed86a5a7928ab962526ca7e02b40a4ae5ec62bd6672b7d94dbb8caa422afdcce",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "bv2-c15",
+      "source_record_sha256": "2e29c1ce69c11b4c20d8a62eacf41d43ad99c279fa9e9ca434ea04ded987f0ca",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/benign-v2/benign.json.txt",
+      "source_sha256": "21065271e5630f2960abceefed3978e319496bf5f1e9c06d36f85d6a83cfdab6",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/benign-v2/benign.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "clean",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Mocked email unit tests; no instruction to disclose secrets."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-dbcaa3824b4739c014af",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-dbcaa3824b4739c014af.py.txt",
+      "source_filename": "vault-v2-dbcaa3824b4739c014af.py",
+      "sha256": "c61e4932c4630511f5764961f441ecc34d4d4dfdef26ecf0437121403b78c222",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "bv2-ai03",
+      "source_record_sha256": "dbcaa3824b4739c014af71102417dd1eee85ce51970a14a4abdab6043b6784b1",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/benign-v2/benign.json.txt",
+      "source_sha256": "21065271e5630f2960abceefed3978e319496bf5f1e9c06d36f85d6a83cfdab6",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/benign-v2/benign.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "clean",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "SQL explanation answering a domain question."
+        }
+      ],
+      "prior_family_exposure": true
+    },
+    {
+      "id": "vault-v2-b6279eada53324ba656e",
+      "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-b6279eada53324ba656e.py.txt",
+      "source_filename": "vault-v2-b6279eada53324ba656e.py",
+      "sha256": "52b999809b17a74b4b2414a7fcd719102e9401c6e918b42806d0a6ef15f3e1da",
+      "family_id": "vault-v2",
+      "origin": "adapted-public-text",
+      "source_record_id": "bv2-n03",
+      "source_record_sha256": "b6279eada53324ba656e6982d935258ca67c24667f312aa8c92f8e8898a9f188",
+      "source_path": "snapshots/vaultmcp__vault/packages/eval/datasets/benign-v2/benign.json.txt",
+      "source_sha256": "21065271e5630f2960abceefed3978e319496bf5f1e9c06d36f85d6a83cfdab6",
+      "source_url": "https://github.com/vaultmcp/vault/blob/66db948b28fc1aa42f52e7297c20b10f682a9065/packages/eval/datasets/benign-v2/benign.json",
+      "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+      "upstream_label": "clean",
+      "adapter": "Verbatim record text as a standard MCP tool docstring; changes original context",
+      "review_status": "source inspected before baseline",
+      "split": "development-only",
+      "exclusion_reason": "Not admitted: suspicious verdicts, configuration-only behavior, or remaining contextual review.",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Retrospective discussion of CI migration and secret management."
+        }
+      ],
+      "prior_family_exposure": true
+    }
+  ]
+}

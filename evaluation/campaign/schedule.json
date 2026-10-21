@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "scope": "Finish data preparation, execute rounds 005-007, demonstrate, freeze code, final one-shot validation, publish report locally",
+  "independence": "Security behavior and standard MCP tool syntax define labels. No scanner prediction is used to admit or relabel a case. Assistant-authored cases are not independently reviewed.",
+  "preparation_complete": true,
+  "candidate_counts": {
+    "prompt-injection-bench": 218,
+    "vault-v2": 180,
+    "atr-skills": 498,
+    "bordair-mcp": 34
+  },
+  "converted_candidates": 930,
+  "admitted_public_artifacts": 98,
+  "synthetic_artifacts": 24,
+  "source_cases_reused_from_pilot": 22,
+  "synthetic_cases_reused_from_pilot": 24,
+  "rounds": [
+    {
+      "iteration": 5,
+      "manifest": "evaluation/iterations/iteration-005/manifest.json",
+      "sha256": "d7f3f2608b5ddc2956b0c9d1b31c95338469f505a8d8dab9b7a207f7b3f94880",
+      "artifacts": 78,
+      "description": "Public metadata: 22 exposed pilot records plus 56 additional related records",
+      "sequence": [
+        "frozen baseline",
+        "investigate",
+        "focused repairs",
+        "paired retest",
+        "prior-batch regression"
+      ]
+    },
+    {
+      "iteration": 6,
+      "manifest": "evaluation/iterations/iteration-006/manifest.json",
+      "sha256": "28cd19c944f15c2efbd5c23844d71e636c7f0dad0c6bc71a6ca3e6e79f7ec7e5",
+      "artifacts": 24,
+      "description": "Synthetic paired source behaviors: exposed pilot; six families, two structural variants",
+      "sequence": [
+        "frozen baseline",
+        "investigate",
+        "focused repairs",
+        "paired retest",
+        "prior-batch regression"
+      ]
+    },
+    {
+      "iteration": 7,
+      "manifest": "evaluation/iterations/iteration-007/manifest.json",
+      "sha256": "3580fbc9db359ecf0759f2b4f906105a30b140154069aec75549863a5327b68c",
+      "artifacts": 20,
+      "description": "New public source family: adapted Vault text; not native source validation",
+      "sequence": [
+        "frozen baseline",
+        "investigate",
+        "focused repairs",
+        "paired retest",
+        "prior-batch regression"
+      ]
+    }
+  ],
+  "final": {
+    "artifacts": 33,
+    "labels": 50,
+    "path": "evaluation/holdout/staging-manifest.json",
+    "sha256": "2a2d41a117e52952d9823f369abde6c948275bdd90b4cbcf3d237bfe5c12ef52",
+    "policy": "Do not tune after final outcomes. Reserved MCP-DecayBench stays unused as a future reserve."
+  },
+  "scope_exclusions": [
+    "Most Bordair records are unrelated modalities or generic jailbreak augmentation.",
+    "MCP-FBAs preference pairs target agent behavior; no static vulnerability labels inferred.",
+    "Unreviewed converted records are not included in any scored denominator."
+  ],
+  "authors": [
+    "Bar David",
+    "Noam Ben Lulu"
+  ],
+  "institution": "Technion",
+  "submission_date": "2026-10-21"
+}

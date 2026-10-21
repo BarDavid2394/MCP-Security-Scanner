@@ -1,0 +1,20 @@
+{
+  "generator_version": "material-pilot-v1",
+  "generator_sha256": "925cdb30f0576dc6b10a31057f330e69f3891c3c76e7415689db9db8b4a5818c",
+  "public_records_converted": 218,
+  "adapted_admitted": 22,
+  "public_unreviewed": 196,
+  "synthetic_artifacts": 24,
+  "synthetic_template_families": 6,
+  "labels_by_category": {
+    "MCP03": 26,
+    "MCP01": 4,
+    "MCP05": 8,
+    "MCP13": 4,
+    "MCP06": 4
+  },
+  "holdout_manifest_sha256": "2a2d41a117e52952d9823f369abde6c948275bdd90b4cbcf3d237bfe5c12ef52",
+  "holdout_unchanged": true,
+  "final_validation_candidates_used": 0,
+  "warning": "Counts are generated artifacts, not independent incidents; unreviewed conversions are not admitted tests."
+}

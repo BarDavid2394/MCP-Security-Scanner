@@ -1,0 +1,32 @@
+[
+  {
+    "name": "clean",
+    "command": [
+      "python",
+      "-m",
+      "mcp_scanner",
+      "scan",
+      "tests/samples/clean_server.py",
+      "--format",
+      "json"
+    ],
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "findings": 0
+  },
+  {
+    "name": "vulnerable",
+    "command": [
+      "python",
+      "-m",
+      "mcp_scanner",
+      "scan",
+      "tests/samples/vulnerable_tool_poisoning.py",
+      "--format",
+      "json"
+    ],
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "findings": 17
+  }
+]

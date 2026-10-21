@@ -1,0 +1,269 @@
+{
+  "by_category": {
+    "MCP01": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 2,
+      "tn": 4,
+      "errors": 0
+    },
+    "MCP02": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP03": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 2,
+      "tn": 5,
+      "errors": 0
+    },
+    "MCP05": {
+      "tp": 4,
+      "fp": 1,
+      "fn": 6,
+      "tn": 6,
+      "errors": 0
+    },
+    "MCP06": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 3,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP07": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "tn": 1,
+      "errors": 0
+    },
+    "MCP09": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP13": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 3,
+      "errors": 0
+    },
+    "MCP04": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP08": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP10": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP11": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP12": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP14": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP15": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0
+    },
+    "MCP16": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0
+    }
+  },
+  "missed_labels_in_zero_tool_files": 6,
+  "zero_tool_files": 5,
+  "unscored_predictions": [
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection-remote-mcp--index-js",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection-remote-mcp--index-js",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-malicious-code-exec--index-js",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-wikipedia-http-streamable--wikipedia-mcp-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-wikipedia-http-streamable--wikipedia-mcp-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge2--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP01-SECRET-HARDCODED"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP01-SECRET-HARDCODED"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP05-COMMAND-INJECTION"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP01-SECRET-HARDCODED"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP05-DYNAMIC-CODE"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge6--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge6--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge6--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge7--server-py",
+      "rule_id": "MCP01-SECRET-HARDCODED"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--clean--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--vulnerable--server-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--vulnerable--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "mception--tests--fixtures--servers--python_subprocess--mcp_server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    }
+  ],
+  "note": "Post-final analysis only; no detector changes made."
+}

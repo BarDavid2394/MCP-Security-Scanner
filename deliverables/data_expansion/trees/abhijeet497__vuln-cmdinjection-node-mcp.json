@@ -1,0 +1,28 @@
+{
+  "repository": "abhijeet497/vuln-cmdinjection-node-mcp",
+  "revision": "e603094a3aca96c5e2db4077608ec09d2997cedf",
+  "license": null,
+  "truncated": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 20
+    },
+    {
+      "path": "README.md",
+      "size": 164
+    },
+    {
+      "path": "index.js",
+      "size": 1127
+    },
+    {
+      "path": "package-lock.json",
+      "size": 39039
+    },
+    {
+      "path": "package.json",
+      "size": 212
+    }
+  ]
+}

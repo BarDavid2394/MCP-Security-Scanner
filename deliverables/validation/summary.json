@@ -1,0 +1,131 @@
+{
+  "date": "2026-10-11",
+  "review": "none",
+  "targets": [
+    {
+      "target_id": "official-fetch",
+      "target": "evaluation\\corpus\\official-servers\\src\\fetch",
+      "files_scanned": 7,
+      "tools_analyzed": 1,
+      "servers_found": 1,
+      "total_findings": 1,
+      "critical_count": 0,
+      "high_count": 1,
+      "parse_errors": [],
+      "status": "completed",
+      "elapsed_seconds": 0.107
+    },
+    {
+      "target_id": "official-git",
+      "target": "evaluation\\corpus\\official-servers\\src\\git",
+      "files_scanned": 6,
+      "tools_analyzed": 12,
+      "servers_found": 1,
+      "total_findings": 0,
+      "critical_count": 0,
+      "high_count": 0,
+      "parse_errors": [],
+      "status": "completed",
+      "elapsed_seconds": 0.151
+    },
+    {
+      "target_id": "official-time",
+      "target": "evaluation\\corpus\\official-servers\\src\\time",
+      "files_scanned": 6,
+      "tools_analyzed": 2,
+      "servers_found": 1,
+      "total_findings": 0,
+      "critical_count": 0,
+      "high_count": 0,
+      "parse_errors": [],
+      "status": "completed",
+      "elapsed_seconds": 0.08
+    },
+    {
+      "target_id": "python-sdk-examples",
+      "target": "evaluation\\corpus\\python-sdk\\examples",
+      "files_scanned": 243,
+      "tools_analyzed": 117,
+      "servers_found": 17,
+      "total_findings": 53,
+      "critical_count": 0,
+      "high_count": 8,
+      "parse_errors": [],
+      "status": "completed",
+      "elapsed_seconds": 1.709
+    },
+    {
+      "target_id": "quickstart-weather",
+      "target": "evaluation\\corpus\\quickstart-resources\\weather-server-python",
+      "files_scanned": 3,
+      "tools_analyzed": 2,
+      "servers_found": 0,
+      "total_findings": 0,
+      "critical_count": 0,
+      "high_count": 0,
+      "parse_errors": [],
+      "status": "completed",
+      "elapsed_seconds": 0.125
+    },
+    {
+      "target_id": "fastmcp-examples",
+      "target": "evaluation\\corpus\\fastmcp\\examples",
+      "status": "failed",
+      "error_type": "AttributeError",
+      "error": "'NoneType' object has no attribute '_fields'",
+      "elapsed_seconds": 1.253
+    },
+    {
+      "target_id": "mcp-atlassian",
+      "target": "evaluation\\corpus\\mcp-atlassian\\src",
+      "files_scanned": 123,
+      "tools_analyzed": 98,
+      "servers_found": 0,
+      "total_findings": 13,
+      "critical_count": 0,
+      "high_count": 8,
+      "parse_errors": [],
+      "status": "completed",
+      "elapsed_seconds": 11.844
+    },
+    {
+      "target_id": "markitdown-mcp",
+      "target": "evaluation\\corpus\\markitdown\\packages\\markitdown-mcp",
+      "files_scanned": 5,
+      "tools_analyzed": 1,
+      "servers_found": 0,
+      "total_findings": 1,
+      "critical_count": 0,
+      "high_count": 0,
+      "parse_errors": [],
+      "status": "completed",
+      "elapsed_seconds": 0.099
+    },
+    {
+      "target_id": "simple-mcp-server",
+      "target": "evaluation\\corpus\\simple-mcp-server\\src",
+      "files_scanned": 8,
+      "tools_analyzed": 2,
+      "servers_found": 0,
+      "total_findings": 0,
+      "critical_count": 0,
+      "high_count": 0,
+      "parse_errors": [],
+      "status": "completed",
+      "elapsed_seconds": 0.126
+    },
+    {
+      "target_id": "aws-documentation",
+      "target": "evaluation\\corpus\\awslabs-mcp\\src\\aws-documentation-mcp-server",
+      "files_scanned": 30,
+      "tools_analyzed": 7,
+      "servers_found": 0,
+      "total_findings": 3,
+      "critical_count": 0,
+      "high_count": 0,
+      "parse_errors": [],
+      "status": "completed",
+      "elapsed_seconds": 1.837
+    }
+  ]
+}

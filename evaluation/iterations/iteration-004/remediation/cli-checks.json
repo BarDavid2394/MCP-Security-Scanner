@@ -1,0 +1,215 @@
+[
+  {
+    "case": "dictionary_get",
+    "exit_code": 0,
+    "expected": 0,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T16:17:36.501245",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpfywi2o9m\\dictionary_get.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 0,
+        "by_severity": {},
+        "by_type": {},
+        "by_attack": {},
+        "by_rule": {},
+        "by_confidence": {},
+        "fixable": 0,
+        "risk_score": 0,
+        "risk_level": "NONE"
+      },
+      "findings": []
+    }
+  },
+  {
+    "case": "helper_code",
+    "exit_code": 1,
+    "expected": 1,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T16:17:36.657473",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpfywi2o9m\\helper_code.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 1,
+        "by_severity": {
+          "HIGH": 1
+        },
+        "by_type": {
+          "command_injection_&_execution": 1
+        },
+        "by_attack": {
+          "MCP05": 1
+        },
+        "by_rule": {
+          "MCP05-DYNAMIC-CODE": 1
+        },
+        "by_confidence": {
+          "HIGH": 1
+        },
+        "fixable": 0,
+        "risk_score": 8,
+        "risk_level": "HIGH"
+      },
+      "findings": [
+        {
+          "vulnerability_type": "command_injection_&_execution",
+          "severity": "HIGH",
+          "title": "MCP05: Dynamic code evaluation",
+          "description": "Tool input reaches code execution, dynamic import or unsafe deserialization through a visible call path.",
+          "file_path": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpfywi2o9m\\helper_code.py",
+          "line_number": 5,
+          "function_name": "inspect",
+          "matched_pattern": "MCP05-DYNAMIC-CODE",
+          "matched_text": "eval",
+          "recommendation": "Use a strict parser or an explicit operation/module allowlist.",
+          "code_snippet": null,
+          "metadata": {
+            "evidence": {
+              "rule_id": "MCP05-DYNAMIC-CODE",
+              "source": "tool-controlled parameter",
+              "sink": "eval",
+              "path": [
+                "inspect",
+                "decode",
+                "eval"
+              ],
+              "protections": [],
+              "missing_protections": [
+                "safe parser",
+                "operation allowlist"
+              ]
+            }
+          },
+          "attack_id": "MCP05",
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "confidence": "HIGH",
+          "fixable": false,
+          "source_kind": "python",
+          "references": [
+            "https://github.com/OWASP/www-project-mcp-top-10"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case": "helper_network",
+    "exit_code": 1,
+    "expected": 1,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T16:17:36.819513",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpfywi2o9m\\helper_network.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 1,
+        "by_severity": {
+          "HIGH": 1
+        },
+        "by_type": {
+          "server-side_request_forgery": 1
+        },
+        "by_attack": {
+          "MCP13": 1
+        },
+        "by_rule": {
+          "MCP13-SSRF": 1
+        },
+        "by_confidence": {
+          "HIGH": 1
+        },
+        "fixable": 0,
+        "risk_score": 8,
+        "risk_level": "HIGH"
+      },
+      "findings": [
+        {
+          "vulnerability_type": "server-side_request_forgery",
+          "severity": "HIGH",
+          "title": "MCP13: Tool-controlled URL reaches network client",
+          "description": "A tool can request a caller-controlled destination or privileged internal endpoint through a visible HTTP client.",
+          "file_path": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpfywi2o9m\\helper_network.py",
+          "line_number": 5,
+          "function_name": "inspect",
+          "matched_pattern": "MCP13-SSRF",
+          "matched_text": "requests.get",
+          "recommendation": "Allowlist schemes and destinations, block private/reserved addresses and validate redirects.",
+          "code_snippet": null,
+          "metadata": {
+            "evidence": {
+              "rule_id": "MCP13-SSRF",
+              "source": "tool-controlled parameter",
+              "sink": "download destination",
+              "path": [
+                "inspect",
+                "download",
+                "requests.get(destination)"
+              ],
+              "protections": [],
+              "missing_protections": [
+                "destination validation"
+              ]
+            }
+          },
+          "attack_id": "MCP13",
+          "rule_id": "MCP13-SSRF",
+          "confidence": "HIGH",
+          "fixable": false,
+          "source_kind": "python",
+          "references": [
+            "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case": "honest_base64",
+    "exit_code": 0,
+    "expected": 0,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T16:17:36.981384",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpfywi2o9m\\honest_base64.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 0,
+        "by_severity": {},
+        "by_type": {},
+        "by_attack": {},
+        "by_rule": {},
+        "by_confidence": {},
+        "fixable": 0,
+        "risk_score": 0,
+        "risk_level": "NONE"
+      },
+      "findings": []
+    }
+  }
+]

@@ -1,0 +1,137 @@
+[
+  {
+    "case": "fixed_argv",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T15:03:08.002241",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpc1a_mijb\\fixed_argv.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 0,
+        "by_severity": {},
+        "by_type": {},
+        "by_attack": {},
+        "by_rule": {},
+        "by_confidence": {},
+        "fixable": 0,
+        "risk_score": 0,
+        "risk_level": "NONE"
+      },
+      "findings": []
+    }
+  },
+  {
+    "case": "quoted_shell_argument",
+    "exit_code": 0,
+    "expected_exit_code": 0,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T15:03:08.206052",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpc1a_mijb\\quoted_shell_argument.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 0,
+        "by_severity": {},
+        "by_type": {},
+        "by_attack": {},
+        "by_rule": {},
+        "by_confidence": {},
+        "fixable": 0,
+        "risk_score": 0,
+        "risk_level": "NONE"
+      },
+      "findings": []
+    }
+  },
+  {
+    "case": "unprotected_shell_argument",
+    "exit_code": 1,
+    "expected_exit_code": 1,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T15:03:08.488164",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpc1a_mijb\\unprotected_shell_argument.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 1,
+        "by_severity": {
+          "HIGH": 1
+        },
+        "by_type": {
+          "command_injection_&_execution": 1
+        },
+        "by_attack": {
+          "MCP05": 1
+        },
+        "by_rule": {
+          "MCP05-COMMAND-INJECTION": 1
+        },
+        "by_confidence": {
+          "HIGH": 1
+        },
+        "fixable": 0,
+        "risk_score": 8,
+        "risk_level": "HIGH"
+      },
+      "findings": [
+        {
+          "vulnerability_type": "command_injection_&_execution",
+          "severity": "HIGH",
+          "title": "MCP05: Tool input reaches command execution",
+          "description": "Tool-controlled data can reach a command execution sink.",
+          "file_path": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpc1a_mijb\\unprotected_shell_argument.py",
+          "line_number": 7,
+          "function_name": "inspect",
+          "matched_pattern": "MCP05-COMMAND-INJECTION",
+          "matched_text": "subprocess.run",
+          "recommendation": "Use a fixed executable and argument allowlist; never use shell=True with tool input.",
+          "code_snippet": null,
+          "metadata": {
+            "evidence": {
+              "rule_id": "MCP05-COMMAND-INJECTION",
+              "source": "value",
+              "sink": "subprocess.run",
+              "path": [
+                "value",
+                "subprocess.run"
+              ],
+              "protections": [],
+              "missing_protections": [
+                "fixed executable",
+                "argument allowlist"
+              ]
+            }
+          },
+          "attack_id": "MCP05",
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "confidence": "HIGH",
+          "fixable": false,
+          "source_kind": "python",
+          "references": [
+            "https://github.com/OWASP/www-project-mcp-top-10"
+          ]
+        }
+      ]
+    }
+  }
+]

@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+ENV/
+env/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Claude Code
+.claude/
+
+# Project materials (not part of the tool)
+*.pdf
+*.pptx
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Reproducible third-party evaluation artifacts
+evaluation/corpus/
+evaluation/corpus-external/
+evaluation/holdout-corpus/
+evaluation/holdout-results/
+evaluation/holdout/.run-token
+evaluation/raw-results/
+evaluation/work/
+evaluation/*.log
+evaluation/*-llm-*.json
+.mcp-scanner-cache/
+
+# Submission book is an intentional published project deliverable.
+!/deliverables/MCP_Project_Book.pdf
+!/deliverables/Final_Project_Results.pdf
+!/deliverables/Final_Results_Slide_Content.pdf
+!/deliverables/Final_Presentation_Revision_Plan.pdf
+!/deliverables/Final_Validation_Report.pdf
+
+# Keep downloaded third-party corpora and document work files local.
+# Pinned source manifests, reports and acquisition scripts are versioned.
+/deliverables/new_samples/
+/deliverables/working/
+/deliverables/data_expansion/snapshots/
+/deliverables/data_expansion/huggingface/*/
+/deliverables/data_expansion/advisory_pairs/*/
+/deliverables/~$*

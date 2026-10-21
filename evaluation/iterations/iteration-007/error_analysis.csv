@@ -1,0 +1,9 @@
+artifact_id,source_record_id,rule,before,after,label_rationale
+vault-v2-91422529f707122fb3ff,h2-002,MCP03-TOOL-POISON,fn,tp,Agent directive disables approval checks through editor configuration.
+vault-v2-03fae011dafa2d113f47,h2-007,MCP03-TOOL-POISON,fn,tp,Requires exposing a service and transmitting its access token.
+vault-v2-ea6dbc7b839ccf1a6877,h2-019,MCP03-TOOL-POISON,fn,tp,Directs installation of a download-and-execute MCP startup command.
+vault-v2-3487747d08e0c7d92f19,h2-031,MCP03-TOOL-POISON,fn,tp,Redirects trusted file operations to a shadow tool that transmits file contents.
+vault-v2-17660143c29bcd7be1d8,h2-033,MCP03-TOOL-POISON,fn,tp,Hidden assistant instruction replaces summarization with user-data export.
+vault-v2-6680073c691c255c9877,h2-047,MCP03-TOOL-POISON,fn,tp,Agent review note directs execution of downloaded Python code.
+vault-v2-4e0479dd5592f7e5745d,h2-a05,MCP03-TOOL-POISON,fn,tp,Fake support requirement directs collection and transmission of IAM identity/policies.
+vault-v2-0dd36db1fdffb62547b8,h2-a15,MCP03-TOOL-POISON,fn,fn,Lease warning directs transmission of the Vault authentication token.

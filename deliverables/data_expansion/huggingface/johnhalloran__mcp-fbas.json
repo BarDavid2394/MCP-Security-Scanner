@@ -1,0 +1,130 @@
+{
+  "_id": "6a4c288fa7755f6f62f924ab",
+  "id": "johnhalloran/mcp-fbas",
+  "author": "johnhalloran",
+  "sha": "13b90e6d1518212815078479d2bb147e51f558cc",
+  "lastModified": "2026-07-08T06:34:20.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "task_categories:text-generation",
+    "language:en",
+    "license:cc-by-nc-4.0",
+    "size_categories:1K<n<10K",
+    "format:parquet",
+    "format:optimized-parquet",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:polars",
+    "library:mlcroissant",
+    "arxiv:2505.23634",
+    "arxiv:2605.11217",
+    "region:us",
+    "safety",
+    "dpo",
+    "preference-optimization",
+    "mcp",
+    "model-context-protocol",
+    "agentic",
+    "red-teaming",
+    "jailbreak",
+    "refusal"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tMCP Falsely-Benign Attack (FBA) & Truly-Benign (TB) Preference Dataset\n\t\n\n\n\n\n\n\n\t\n\t\t\n\t\n\t\n\t\tTL;DR\n\t\n\nMost LLM safety training targets prompts that look malicious. This dataset targets prompts\nthat don't. It contains preference pairs for training refusal guardrails against\nfalsely benign attacks (FBAs) \u2014 Model Context Protocol (MCP) tool-use exploits derived\nfrom real CVEs, phrased as ordinary, harmless-sounding requests with no refusal-triggering\nlanguage, paired with truly-benign\u2026 See the full description on the dataset page: https://huggingface.co/datasets/johnhalloran/mcp-fbas.",
+  "downloads": 45,
+  "likes": 0,
+  "cardData": {
+    "license": "cc-by-nc-4.0",
+    "task_categories": [
+      "text-generation"
+    ],
+    "language": [
+      "en"
+    ],
+    "tags": [
+      "safety",
+      "dpo",
+      "preference-optimization",
+      "mcp",
+      "model-context-protocol",
+      "agentic",
+      "red-teaming",
+      "jailbreak",
+      "refusal"
+    ],
+    "pretty_name": "MCP Falsely-Benign Attack (FBA) & Truly-Benign (TB) Preference Dataset",
+    "size_categories": [
+      "1K<n<10K"
+    ],
+    "gated": true,
+    "extra_gated_heading": "Acknowledge terms to access this dataset",
+    "extra_gated_prompt": "This dataset contains CVE-derived MCP attack examples for defensive safety research only (training/evaluating refusal behavior in tool-using LLM agents). By requesting access, you agree not to use it to train, fine-tune, or otherwise improve a model for carrying out, facilitating, or evading detection of malicious attacks against real systems.",
+    "extra_gated_fields": {
+      "Company/Affiliation": "text",
+      "Intended use": {
+        "type": "select",
+        "options": [
+          "Academic research",
+          "Industry safety research",
+          "Model evaluation / benchmarking",
+          {
+            "label": "Other",
+            "value": "other"
+          }
+        ]
+      },
+      "I agree to use this dataset only for defensive safety research, not to train a model for malicious purposes": "checkbox"
+    },
+    "extra_gated_button_content": "Agree and request access",
+    "configs": [
+      {
+        "config_name": "default",
+        "data_files": [
+          {
+            "split": "train",
+            "path": "data/train-*"
+          }
+        ]
+      },
+      {
+        "config_name": "test_attack",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "test_attack/test-*"
+          }
+        ]
+      },
+      {
+        "config_name": "test_benign",
+        "data_files": [
+          {
+            "split": "test",
+            "path": "test_benign/test-*"
+          }
+        ]
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "data/train-00000-of-00001.parquet"
+    },
+    {
+      "rfilename": "test_attack/test-00000-of-00001.parquet"
+    },
+    {
+      "rfilename": "test_benign/test-00000-of-00001.parquet"
+    }
+  ],
+  "createdAt": "2026-07-06T22:13:35.000Z",
+  "usedStorage": 4816308
+}

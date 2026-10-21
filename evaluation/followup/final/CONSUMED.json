@@ -1,0 +1,21 @@
+{
+  "status": "completed",
+  "started_at": "2026-10-17T08:21:11.918016+00:00",
+  "manifest_sha256": "d806954d6fbebe38128289a3b2f3aa1974e3ff4eaf9b272cf7a09ec183fd725e",
+  "review": "none",
+  "target_execution": false,
+  "completed_at": "2026-10-17T08:21:12.122077+00:00",
+  "code_unchanged": true,
+  "artifacts": 10,
+  "micro": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 8,
+    "errors": 0,
+    "precision": null,
+    "recall": 0.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  }
+}

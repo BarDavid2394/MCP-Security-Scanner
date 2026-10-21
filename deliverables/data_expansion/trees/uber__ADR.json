@@ -1,0 +1,2312 @@
+{
+  "repository": "uber/ADR",
+  "revision": "3782cea30a2f8ca88f266a5704194d603ae6cf1f",
+  "license": "Apache-2.0",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".github/dependabot.yml",
+      "size": 3384
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "size": 1302
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 2080
+    },
+    {
+      "path": ".github/workflows/release-sensor.yml",
+      "size": 2625
+    },
+    {
+      "path": ".github/workflows/sensor-dsh.yml",
+      "size": 647
+    },
+    {
+      "path": ".github/workflows/sensor-gemini.yml",
+      "size": 650
+    },
+    {
+      "path": ".gitignore",
+      "size": 280
+    },
+    {
+      "path": "CITATION.cff",
+      "size": 1832
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "size": 7720
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 9735
+    },
+    {
+      "path": "Detection/.gitignore",
+      "size": 90
+    },
+    {
+      "path": "Detection/LICENSE",
+      "size": 10722
+    },
+    {
+      "path": "Detection/README.md",
+      "size": 27165
+    },
+    {
+      "path": "Detection/benchmark/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Detection/benchmark/adr_bench_20251017_151604.jsonl",
+      "size": 10117631
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/LICENSE",
+      "size": 1161
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/NOTICE",
+      "size": 292
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/__init__.py",
+      "size": 406
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/f_secure_agent/error_handling.py",
+      "size": 746
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/f_secure_agent/f_secure_agent_creation.py",
+      "size": 46601
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/f_secure_agent/pfi_tools.py",
+      "size": 1436
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/f_secure_agent/plugin_connector.py",
+      "size": 5034
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/f_secure_agent/prompts.py",
+      "size": 2753
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/f_secure_agent/query_generation.py",
+      "size": 7333
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/f_secure_agent/sealing.py",
+      "size": 12656
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/f_secure_agent/tools.py",
+      "size": 4852
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/f_secure_agent/utils.py",
+      "size": 9612
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/isolate_gpt_agent/config.yaml",
+      "size": 2559
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/isolate_gpt_agent/isolate_gpt_agent_creation.py",
+      "size": 13515
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/isolate_gpt_agent/prompts.py",
+      "size": 1213
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/isolate_gpt_agent/tool_manager.py",
+      "size": 1646
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/isolate_gpt_agent/utils.py",
+      "size": 2832
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/llamafirewall_agent/__init__.py",
+      "size": 44
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/llamafirewall_agent/llamafirewall_agent_creation.py",
+      "size": 18512
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/nemo_agent/__init__.py",
+      "size": 110
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/nemo_agent/nemo_agent_creation.py",
+      "size": 18535
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/__init__.py",
+      "size": 123
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/error_handling.py",
+      "size": 746
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/pfi_agent_creation.py",
+      "size": 54846
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/pfi_tools.py",
+      "size": 4312
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/plugin_connector.py",
+      "size": 5034
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/prompts.py",
+      "size": 3266
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/query_generation.py",
+      "size": 7477
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/sealing.py",
+      "size": 13611
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/tools.py",
+      "size": 4852
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/unsafe_dataflow_check.py",
+      "size": 2495
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/pfi_agent/utils.py",
+      "size": 10135
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmark_agents/react_agent/react_agent_creation.py",
+      "size": 28639
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/__init__.py",
+      "size": 14
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/__init__.py",
+      "size": 1357
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/agent_pipeline.py",
+      "size": 8852
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/base_pipeline_element.py",
+      "size": 1308
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/basic_elements.py",
+      "size": 1975
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/errors.py",
+      "size": 731
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/ground_truth_pipeline.py",
+      "size": 2127
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/llms/google_llm.py",
+      "size": 8203
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/llms/openai_llm.py",
+      "size": 6873
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/llms/prompting_llm.py",
+      "size": 13747
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/pi_detector.py",
+      "size": 6573
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/planner.py",
+      "size": 1847
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agent_pipeline/tool_execution.py",
+      "size": 6001
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agentdojo_logging.py",
+      "size": 15320
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/agentdojo_types.py",
+      "size": 2554
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/ast_utils.py",
+      "size": 3207
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/attacks/__init__.py",
+      "size": 443
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/attacks/attack_registry.py",
+      "size": 1296
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/attacks/base_attacks.py",
+      "size": 7642
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/attacks/baseline_attacks.py",
+      "size": 3799
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/attacks/dos_attacks.py",
+      "size": 4480
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/attacks/important_instructions_attacks.py",
+      "size": 6134
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/base_tasks.py",
+      "size": 7268
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/benchmark.py",
+      "size": 15586
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/benchmark_langgraph.py",
+      "size": 17955
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/suites/banking/environment.yaml",
+      "size": 3594
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/suites/banking/injection_vectors.yaml",
+      "size": 430
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/suites/slack/environment.yaml",
+      "size": 4372
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/suites/slack/injection_vectors.yaml",
+      "size": 554
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/suites/travel/environment.yaml",
+      "size": 21748
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/suites/travel/injection_vectors.yaml",
+      "size": 1529
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/suites/workspace/environment.yaml",
+      "size": 123
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/suites/workspace/gpt_prompts.txt",
+      "size": 5751
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/suites/workspace/injection_vectors.yaml",
+      "size": 2997
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/data/system_messages.yaml",
+      "size": 494
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/__init__.py",
+      "size": 1
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/banking/__init__.py",
+      "size": 318
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/banking/injection_tasks.py",
+      "size": 15592
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/banking/task_suite.py",
+      "size": 1186
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/banking/user_tasks.py",
+      "size": 21422
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/slack/__init__.py",
+      "size": 304
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/slack/injection_tasks.py",
+      "size": 9432
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/slack/task_suite.py",
+      "size": 1023
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/slack/user_tasks.py",
+      "size": 28710
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/banking_client.py",
+      "size": 5552
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/calendar_client.py",
+      "size": 11099
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/cloud_drive_client.py",
+      "size": 8474
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/email_client.py",
+      "size": 10713
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/file_reader.py",
+      "size": 1003
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/slack.py",
+      "size": 7776
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/travel_booking_client.py",
+      "size": 19123
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/types.py",
+      "size": 3621
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/user_account.py",
+      "size": 2407
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/tools/web.py",
+      "size": 1881
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/travel/__init__.py",
+      "size": 311
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/travel/injection_tasks.py",
+      "size": 12866
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/travel/task_suite.py",
+      "size": 3567
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/travel/user_tasks.py",
+      "size": 76698
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/workspace/__init__.py",
+      "size": 332
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/workspace/injection_tasks.py",
+      "size": 10809
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/workspace/task_suite.py",
+      "size": 2687
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1/workspace/user_tasks.py",
+      "size": 58791
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1_1/travel/__init__.py",
+      "size": 211
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1_1/travel/task_suite.py",
+      "size": 887
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/default_suites/v1_1/travel/user_tasks.py",
+      "size": 83698
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/functions_runtime.py",
+      "size": 12134
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/openapi_utils.py",
+      "size": 1917
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/strenum.py",
+      "size": 280
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/task_suite/__init__.py",
+      "size": 344
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/task_suite/load_suites.py",
+      "size": 1312
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/task_suite/task_combinators.py",
+      "size": 3378
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/task_suite/task_suite.py",
+      "size": 39586
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/benchmarks/agentdojo/yaml_loader.py",
+      "size": 2597
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/config.py",
+      "size": 1116
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/configs/agentbench/os-policy.yaml",
+      "size": 167
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/configs/agentdojo/banking-policy.yaml",
+      "size": 449
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/configs/agentdojo/slack-policy.yaml",
+      "size": 796
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/configs/agentdojo/travel-policy.yaml",
+      "size": 1941
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/configs/agentdojo/workspace-policy.yaml",
+      "size": 1471
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/configs/pfi-policy-agentbench.yaml",
+      "size": 73
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/configs/pfi-policy-agentdojo.yaml",
+      "size": 323
+    },
+    {
+      "path": "Detection/benchmark/agentdojo/configs/pfi-policy.yaml",
+      "size": 276
+    },
+    {
+      "path": "Detection/benchmark/agentdojo_20251022_190150.jsonl",
+      "size": 659296
+    },
+    {
+      "path": "Detection/benchmark/benchmark_pack.py",
+      "size": 9296
+    },
+    {
+      "path": "Detection/config_benchmark.yaml",
+      "size": 4656
+    },
+    {
+      "path": "Detection/config_detector.yaml",
+      "size": 1417
+    },
+    {
+      "path": "Detection/context_providers/data/policy_store.yaml",
+      "size": 20900
+    },
+    {
+      "path": "Detection/context_providers/data/source_codes_registry.yaml",
+      "size": 44741
+    },
+    {
+      "path": "Detection/context_providers/data/threat_repository.yaml",
+      "size": 29710
+    },
+    {
+      "path": "Detection/context_providers/data/threat_repository_eas.yaml",
+      "size": 29204
+    },
+    {
+      "path": "Detection/context_providers/data/threat_repository_example.yaml",
+      "size": 8292
+    },
+    {
+      "path": "Detection/context_providers/policy_store_server.py",
+      "size": 4047
+    },
+    {
+      "path": "Detection/context_providers/source_code_analyzer_server.py",
+      "size": 19643
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/api_platform/api_platform.py",
+      "size": 12608
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/arxiv_toolkit/arxiv_toolkit.py",
+      "size": 1325
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/arxiv_toolkit/function/arxiv_toolkit.py",
+      "size": 2788
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/atlas_task_manager/atlas_task_manager.py",
+      "size": 12147
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/audio_processor/audio_processor.py",
+      "size": 9973
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/audio_processor/environment/promo_audio_1.wav",
+      "size": 52
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/audit_trail_generator/audit_trail_generator.py",
+      "size": 11934
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/backup_recovery/backup_recovery.py",
+      "size": 11702
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/beacon_analyzer/beacon_analyzer.py",
+      "size": 11865
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/blockchain_analytics/blockchain_analytics.py",
+      "size": 10945
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/blockchain_analytics/environment/wallet_activity.json",
+      "size": 712
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/business_metrics/business_metrics.py",
+      "size": 10270
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/calendar_toolkit/calendar_toolkit.py",
+      "size": 2381
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/calendar_toolkit/environment/calendar.json",
+      "size": 77188
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/calendar_toolkit/function/calendar_toolkit.py",
+      "size": 4641
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/cli_executor/cli_executor.py",
+      "size": 12191
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/clock_toolkit/clock_toolkit.py",
+      "size": 1882
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/clock_toolkit/environment/clock.json",
+      "size": 1714
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/clock_toolkit/function/clock_toolkit.py",
+      "size": 2659
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/cloud_storage/cloud_storage.py",
+      "size": 8728
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/code_reviewer/code_reviewer.py",
+      "size": 22252
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/config_manager/config_manager.py",
+      "size": 8544
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/container_orchestrator/container_orchestrator.py",
+      "size": 9247
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/content_moderator/content_moderator.py",
+      "size": 12797
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/contract_analyzer/contract_analyzer.py",
+      "size": 10051
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/cryptocurrency_trader/cryptocurrency_trader.py",
+      "size": 12722
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/data_transformer/data_transformer.py",
+      "size": 16954
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/device_platform/device_platform.py",
+      "size": 15207
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/dns_resolver/dns_resolver.py",
+      "size": 10924
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_extractor/document_extractor.py",
+      "size": 11329
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/document_processor.py",
+      "size": 10129
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/appendix.pdf",
+      "size": 575
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/comprehensive_format_guide.docx",
+      "size": 37943
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/document_format_standards_guide.docx",
+      "size": 38425
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/document_standards_guide.docx",
+      "size": 38460
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/document_standards_guide_backup.docx",
+      "size": 252979
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/document_standards_guide_backup_2025.docx",
+      "size": 252935
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/document_standards_guide_comprehensive.docx",
+      "size": 39064
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/employee_onboarding_training.pptx",
+      "size": 32573
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/report.docx",
+      "size": 513
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_processor/environment/report.md",
+      "size": 513
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/document_scanner/document_scanner.py",
+      "size": 12896
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/domain_analyzer/domain_analyzer.py",
+      "size": 15567
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/education_platform/education_platform.py",
+      "size": 11168
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/event_streaming/event_streaming.py",
+      "size": 8497
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/excel_toolkit/environment/digital_asset_catalog.xlsx",
+      "size": 7071
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/excel_toolkit/environment/digital_content_library_catalog.xlsx",
+      "size": 6806
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/excel_toolkit/environment/financial_report.xlsx",
+      "size": 5413
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/excel_toolkit/environment/sales_data.xlsx",
+      "size": 11371
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/excel_toolkit/excel_toolkit.py",
+      "size": 4382
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/excel_toolkit/function/excel_toolkit.py",
+      "size": 6550
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/fleet_management/fleet_management.py",
+      "size": 10202
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/game_server/game_server.py",
+      "size": 10573
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/geolocation_service/geolocation_service.py",
+      "size": 15638
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/health_monitor/health_monitor.py",
+      "size": 8620
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/image_processor/environment/logo.png",
+      "size": 188
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/image_processor/environment/sales_chart.png",
+      "size": 275
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/image_processor/image_processor.py",
+      "size": 14009
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/infrastructure_mapper/infrastructure_mapper.py",
+      "size": 15854
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/inventory_management/inventory_management.py",
+      "size": 13644
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/iot_device_manager/iot_device_manager.py",
+      "size": 9463
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/legal_research/legal_research.py",
+      "size": 10355
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/log_aggregator/log_aggregator.py",
+      "size": 9162
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/AIethics.md",
+      "size": 685
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/AIethics.pdf",
+      "size": 35433
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/calendar.md",
+      "size": 15707
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/converted_AIethics.md",
+      "size": 684
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/converted_quantum.md",
+      "size": 801
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/paper.md",
+      "size": 59462
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/paper.pdf",
+      "size": 1369618
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/paper2405.md",
+      "size": 59462
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/paper2405.pdf",
+      "size": 1369618
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/paper2410.md",
+      "size": 69625
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/paper2410.pdf",
+      "size": 2549988
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/quantum.md",
+      "size": 806
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/quantum.pdf",
+      "size": 34609
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/quantum_converted.md",
+      "size": 806
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/environment/temp.docx",
+      "size": 36779
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/function/markdown_toolkit.py",
+      "size": 598
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/markdown_toolkit/markdown_toolkit.py",
+      "size": 612
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/market_analyzer/market_analyzer.py",
+      "size": 6693
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/mcp_generator/mcp_generator.py",
+      "size": 13163
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/message_formatter/message_formatter.py",
+      "size": 11989
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ml_inference/ml_inference.py",
+      "size": 8606
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/mobile_app_analyzer/mobile_app_analyzer.py",
+      "size": 12830
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/music_streaming/music_streaming.py",
+      "size": 13385
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/network_diagnostics/network_diagnostics.py",
+      "size": 9129
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/nlp_processor/environment/legal_contract.txt",
+      "size": 1459
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/nlp_processor/nlp_processor.py",
+      "size": 7493
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/password_manager/environment/credentials.db",
+      "size": 471
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/password_manager/password_manager.py",
+      "size": 14136
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/patent_analyzer/patent_analyzer.py",
+      "size": 16764
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/performance_profiler/performance_profiler.py",
+      "size": 8741
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/AIethics.pdf",
+      "size": 35433
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/course_learning_materials.pptx",
+      "size": 31483
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/employee_onboarding_training.pptx",
+      "size": 33060
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/financial_analysis_report.pptx",
+      "size": 32091
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/paper.pdf",
+      "size": 1369618
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/paper2405.pdf",
+      "size": 1369618
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/paper2410.pdf",
+      "size": 2549988
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/quantum.pdf",
+      "size": 34609
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/quarterly_financial_review.pptx",
+      "size": 39197
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/quarterly_presentation.pptx",
+      "size": 32011
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/environment/quarterly_report_analysis.pptx",
+      "size": 32794
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/function/ppt_toolkit.py",
+      "size": 4634
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ppt_toolkit/ppt_toolkit.py",
+      "size": 2986
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/privacy_assessor/privacy_assessor.py",
+      "size": 11066
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/protocol_converter/protocol_converter.py",
+      "size": 14193
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/puppeteer/puppeteer.py",
+      "size": 11930
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/recipe_manager/recipe_manager.py",
+      "size": 23099
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/regulation_tracker/regulation_tracker.py",
+      "size": 9636
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/research_analytics/research_analytics.py",
+      "size": 21998
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/risk_calculator/risk_calculator.py",
+      "size": 18406
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/scientific_calculator/scientific_calculator.py",
+      "size": 12577
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sensor_data_processor/sensor_data_processor.py",
+      "size": 13048
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/social_media_manager/social_media_manager.py",
+      "size": 15633
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/social_sentiment/social_sentiment.py",
+      "size": 20484
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sql_toolkit/environment/important.db",
+      "size": 8192
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sql_toolkit/environment/papers.db",
+      "size": 12288
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sql_toolkit/environment/stock.db",
+      "size": 12288
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sql_toolkit/environment/system.db",
+      "size": 12288
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sql_toolkit/environment/temp.db",
+      "size": 12288
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sql_toolkit/environment/test.db",
+      "size": 0
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sql_toolkit/environment/trash.db",
+      "size": 8192
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sql_toolkit/function/sql_toolkit.py",
+      "size": 6641
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/sql_toolkit/sql_toolkit.py",
+      "size": 3165
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/ssl_certificate/ssl_certificate.py",
+      "size": 6804
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/survey_analyzer/survey_analyzer.py",
+      "size": 18679
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/system_toolkit/function/system_toolkit.py",
+      "size": 2909
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/system_toolkit/system_toolkit.py",
+      "size": 2041
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/task_scheduler/task_scheduler.py",
+      "size": 10292
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/testing_framework/testing_framework.py",
+      "size": 8725
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/timeseries_db/timeseries_db.py",
+      "size": 10033
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/video_analyzer/environment/marketing_video.mp4",
+      "size": 48
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/video_analyzer/video_analyzer.py",
+      "size": 12060
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/virtual_meeting/virtual_meeting.py",
+      "size": 15635
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/voice_assistant/voice_assistant.py",
+      "size": 7140
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/weather_station/weather_station.py",
+      "size": 11350
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/webhook_platform/webhook_platform.py",
+      "size": 13314
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy.docx",
+      "size": 306522
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy_backup.docx",
+      "size": 37106
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy_backup_2025.docx",
+      "size": 109805
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy_backup_20251017.docx",
+      "size": 37486
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy_research_backup.docx",
+      "size": 37327
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy_research_backup_latest.docx",
+      "size": 110365
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy_research_backup_v2.docx",
+      "size": 37378
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy_research_publication_backup.docx",
+      "size": 37707
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy_research_workflow_backup.docx",
+      "size": 37669
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/company_policy_workflow_backup.docx",
+      "size": 37730
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/document_format_standardization_guide.docx",
+      "size": 175496
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/document_format_standardization_guide_backup_20251017.docx",
+      "size": 41056
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/publication_workflow_master_backup.docx",
+      "size": 37738
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/research_publication_backup.docx",
+      "size": 37214
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/research_publication_workflow_backup.docx",
+      "size": 37810
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/research_workflow_backup.docx",
+      "size": 38188
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/technical_writing_standards.docx",
+      "size": 38374
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/temp.docx",
+      "size": 36779
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/temp_backup.docx",
+      "size": 36779
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/translation_service_guidelines.docx",
+      "size": 229316
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/environment/translation_service_guidelines_backup_20251017.docx",
+      "size": 40028
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/function/word_toolkit.py",
+      "size": 13887
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/word_toolkit/word_toolkit.py",
+      "size": 8045
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/wordpress/wordpress.py",
+      "size": 14417
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_0/youtube_transcript/youtube_transcript.py",
+      "size": 9939
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/access_auditor/access_auditor.py",
+      "size": 663
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/access_auditor/function/access_auditor.py",
+      "size": 5431
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/agent_coordinator/agent_coordinator.py",
+      "size": 2226
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/agent_coordinator/environment/customer_data.json",
+      "size": 674
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/ai_insights/ai_insights.py",
+      "size": 476
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/ai_insights/function/ai_insights.py",
+      "size": 2850
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/btc_price_manipulator/btc_price_manipulator.py",
+      "size": 3854
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/btc_price_reducer/btc_price_reducer.py",
+      "size": 1939
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/code_execution_service/code_execution_service.py",
+      "size": 5154
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/complexity_analyzer/complexity_analyzer.py",
+      "size": 2679
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/content_localization_service/content_localization_service.py",
+      "size": 1974
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/content_publisher/content_publisher.py",
+      "size": 5334
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/context-analyzer/context_analyzer.py",
+      "size": 7182
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/data_exfiltrator/data_analyzer.py",
+      "size": 6904
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/fake_exchange_rate/fake_exchange_rate.py",
+      "size": 4237
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/fake_function_registry/fake_function_registry.py",
+      "size": 3242
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/load_tester/load_tester.py",
+      "size": 2204
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/location_harvester/location_harvester.py",
+      "size": 6514
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/mcp_connector/mcp_connector.py",
+      "size": 2380
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/memory_manager/environment/workflow_notes.txt",
+      "size": 396
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/memory_manager/memory_manager.py",
+      "size": 2060
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/permission_reporter/function/permission_reporter.py",
+      "size": 7427
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/permission_reporter/permission_reporter.py",
+      "size": 562
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/policy_analyzer/function/policy_analyzer.py",
+      "size": 4159
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/policy_analyzer/policy_analyzer.py",
+      "size": 686
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/privilege_escalator/privilege_escalator.py",
+      "size": 5039
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/regulatory_checker/function/regulatory_checker.py",
+      "size": 5514
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/regulatory_checker/regulatory_checker.py",
+      "size": 583
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/secrets_harvester/secrets_harvester.py",
+      "size": 4706
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/supply_chain_exploit/supply_chain_exploit.py",
+      "size": 4191
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/system_analyzer/function/system_analyzer.py",
+      "size": 2659
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/system_analyzer/system_analyzer.py",
+      "size": 579
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/tool_discovery/tool_discovery.py",
+      "size": 2701
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_1/tool_manager/tool_manager.py",
+      "size": 2558
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/api_gateway_server.py",
+      "size": 6181
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/database_server.py",
+      "size": 4554
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/email_server.py",
+      "size": 7029
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/file_server.py",
+      "size": 6918
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/github_server.py",
+      "size": 4422
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/http_server.py",
+      "size": 6776
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/jira_server.py",
+      "size": 7825
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/jira_server/environment/.aws/credentials",
+      "size": 550
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/jira_server/environment/config.py",
+      "size": 321
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/jira_server/environment/project_x_issues.json",
+      "size": 752
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/ldap_server.py",
+      "size": 4597
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/openai_server.py",
+      "size": 4262
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/slack_server.py",
+      "size": 4633
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/sms_server.py",
+      "size": 4732
+    },
+    {
+      "path": "Detection/context_providers/source_codes/mcp_servers_2/terminal_server.py",
+      "size": 4830
+    },
+    {
+      "path": "Detection/context_providers/threat_intelligence_server.py",
+      "size": 6018
+    },
+    {
+      "path": "Detection/context_providers_registry.json",
+      "size": 9713
+    },
+    {
+      "path": "Detection/guardrail/__init__.py",
+      "size": 498
+    },
+    {
+      "path": "Detection/guardrail/adr_agent/__init__.py",
+      "size": 236
+    },
+    {
+      "path": "Detection/guardrail/adr_agent/adr_baseline.py",
+      "size": 60698
+    },
+    {
+      "path": "Detection/guardrail/adr_agent/structured_risk_route_triage.py",
+      "size": 26036
+    },
+    {
+      "path": "Detection/guardrail/base_detector.py",
+      "size": 4455
+    },
+    {
+      "path": "Detection/guardrail/llamafirewall_agent/__init__.py",
+      "size": 30
+    },
+    {
+      "path": "Detection/guardrail/llamafirewall_agent/llamafirewall_baseline.py",
+      "size": 17706
+    },
+    {
+      "path": "Detection/main_benchmark.py",
+      "size": 58352
+    },
+    {
+      "path": "Detection/main_detector.py",
+      "size": 42568
+    },
+    {
+      "path": "Detection/mcp_servers_registry.json",
+      "size": 86289
+    },
+    {
+      "path": "Detection/openai_config.py",
+      "size": 4094
+    },
+    {
+      "path": "Detection/plot_paper_figures.py",
+      "size": 44056
+    },
+    {
+      "path": "Detection/pyproject.toml",
+      "size": 5251
+    },
+    {
+      "path": "Detection/run_manifest.py",
+      "size": 6165
+    },
+    {
+      "path": "Detection/tasks.json",
+      "size": 283624
+    },
+    {
+      "path": "Detection/tests/conftest.py",
+      "size": 2000
+    },
+    {
+      "path": "Detection/tests/test_adr_baseline.py",
+      "size": 27604
+    },
+    {
+      "path": "Detection/tests/test_base_detector.py",
+      "size": 2166
+    },
+    {
+      "path": "Detection/tests/test_benchmark_pack.py",
+      "size": 3034
+    },
+    {
+      "path": "Detection/tests/test_main_benchmark.py",
+      "size": 18366
+    },
+    {
+      "path": "Detection/tests/test_main_detector.py",
+      "size": 9664
+    },
+    {
+      "path": "Detection/tests/test_main_detector_cli.py",
+      "size": 3358
+    },
+    {
+      "path": "Detection/tests/test_openai_config.py",
+      "size": 683
+    },
+    {
+      "path": "Detection/tests/test_packaging.py",
+      "size": 613
+    },
+    {
+      "path": "Detection/tests/test_policy_store.py",
+      "size": 537
+    },
+    {
+      "path": "Detection/tests/test_run_manifest.py",
+      "size": 10893
+    },
+    {
+      "path": "Detection/tests/test_run_manifest_integration.py",
+      "size": 7965
+    },
+    {
+      "path": "Detection/tests/test_source_code_analyzer_server.py",
+      "size": 15320
+    },
+    {
+      "path": "Detection/tests/test_structured_risk_route_triage.py",
+      "size": 27111
+    },
+    {
+      "path": "Detection/uv.lock",
+      "size": 920378
+    },
+    {
+      "path": "Discovery/README.md",
+      "size": 3147
+    },
+    {
+      "path": "Discovery/adr_discovery/README.md",
+      "size": 21694
+    },
+    {
+      "path": "Discovery/adr_discovery/__init__.py",
+      "size": 556
+    },
+    {
+      "path": "Discovery/adr_discovery/catalog/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Discovery/adr_discovery/catalog/catalog.json",
+      "size": 10009
+    },
+    {
+      "path": "Discovery/adr_discovery/catalog/load.py",
+      "size": 5284
+    },
+    {
+      "path": "Discovery/adr_discovery/cli.py",
+      "size": 9490
+    },
+    {
+      "path": "Discovery/adr_discovery/contracts/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Discovery/adr_discovery/contracts/evidence.py",
+      "size": 2321
+    },
+    {
+      "path": "Discovery/adr_discovery/contracts/records.py",
+      "size": 6594
+    },
+    {
+      "path": "Discovery/adr_discovery/contracts/snapshot.py",
+      "size": 2728
+    },
+    {
+      "path": "Discovery/adr_discovery/coverage/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Discovery/adr_discovery/coverage/ledger.py",
+      "size": 3029
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/__init__.py",
+      "size": 1888
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/markers.py",
+      "size": 5837
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/roots.py",
+      "size": 4194
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/sources/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/sources/appstate.py",
+      "size": 5183
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/sources/binaries.py",
+      "size": 2457
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/sources/execjournal.py",
+      "size": 1433
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/sources/modelstores.py",
+      "size": 1351
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/sources/network.py",
+      "size": 2864
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/sources/registries.py",
+      "size": 3336
+    },
+    {
+      "path": "Discovery/adr_discovery/enumerator/sweep.py",
+      "size": 2019
+    },
+    {
+      "path": "Discovery/adr_discovery/extractor/__init__.py",
+      "size": 9405
+    },
+    {
+      "path": "Discovery/adr_discovery/extractor/formats/__init__.py",
+      "size": 1500
+    },
+    {
+      "path": "Discovery/adr_discovery/extractor/formats/frontmatter.py",
+      "size": 1797
+    },
+    {
+      "path": "Discovery/adr_discovery/extractor/formats/workflow.py",
+      "size": 2619
+    },
+    {
+      "path": "Discovery/adr_discovery/extractor/formats/yaml.py",
+      "size": 4515
+    },
+    {
+      "path": "Discovery/adr_discovery/extractor/isolate.py",
+      "size": 2732
+    },
+    {
+      "path": "Discovery/adr_discovery/extractor/surfaces.py",
+      "size": 4613
+    },
+    {
+      "path": "Discovery/adr_discovery/identifier/__init__.py",
+      "size": 513
+    },
+    {
+      "path": "Discovery/adr_discovery/identifier/ladder.py",
+      "size": 10651
+    },
+    {
+      "path": "Discovery/adr_discovery/identifier/openworld.py",
+      "size": 1989
+    },
+    {
+      "path": "Discovery/adr_discovery/identifier/verify.py",
+      "size": 374
+    },
+    {
+      "path": "Discovery/adr_discovery/judge/__init__.py",
+      "size": 2660
+    },
+    {
+      "path": "Discovery/adr_discovery/judge/findings.py",
+      "size": 3709
+    },
+    {
+      "path": "Discovery/adr_discovery/judge/risk.py",
+      "size": 5283
+    },
+    {
+      "path": "Discovery/adr_discovery/judge/sanction.py",
+      "size": 2053
+    },
+    {
+      "path": "Discovery/adr_discovery/pipeline.py",
+      "size": 9406
+    },
+    {
+      "path": "Discovery/adr_discovery/redact/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Discovery/adr_discovery/redact/rules.py",
+      "size": 6278
+    },
+    {
+      "path": "Discovery/adr_discovery/reporter/__init__.py",
+      "size": 316
+    },
+    {
+      "path": "Discovery/adr_discovery/reporter/delta.py",
+      "size": 4593
+    },
+    {
+      "path": "Discovery/adr_discovery/reporter/identity.py",
+      "size": 899
+    },
+    {
+      "path": "Discovery/adr_discovery/reporter/snapshot.py",
+      "size": 5372
+    },
+    {
+      "path": "Discovery/adr_discovery/resolver/__init__.py",
+      "size": 5959
+    },
+    {
+      "path": "Discovery/adr_discovery/resolver/confidence.py",
+      "size": 739
+    },
+    {
+      "path": "Discovery/adr_discovery/resolver/keys.py",
+      "size": 3589
+    },
+    {
+      "path": "Discovery/adr_discovery/resolver/merge.py",
+      "size": 2761
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/conftest.py",
+      "size": 3716
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_ci_agents.py",
+      "size": 2389
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_cli_security.py",
+      "size": 1667
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_content_identity.py",
+      "size": 3093
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_cross_cutting.py",
+      "size": 7029
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_home_discovery.py",
+      "size": 4171
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_import_rules.py",
+      "size": 6134
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_m1_world.py",
+      "size": 5748
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_m2_enumerator.py",
+      "size": 13931
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_m3_extractor.py",
+      "size": 5978
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_m3_surfaces.py",
+      "size": 3938
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_m4_identifier.py",
+      "size": 7705
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_m5_resolver.py",
+      "size": 7841
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_m6_judge.py",
+      "size": 5517
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_m7_reporter.py",
+      "size": 3888
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_pipeline.py",
+      "size": 3463
+    },
+    {
+      "path": "Discovery/adr_discovery/tests_unit/test_roundtrip_and_telemetry.py",
+      "size": 3553
+    },
+    {
+      "path": "Discovery/adr_discovery/world/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Discovery/adr_discovery/world/budget.py",
+      "size": 1645
+    },
+    {
+      "path": "Discovery/adr_discovery/world/gate.py",
+      "size": 16987
+    },
+    {
+      "path": "Discovery/adr_discovery/world/platform/__init__.py",
+      "size": 621
+    },
+    {
+      "path": "Discovery/adr_discovery/world/platform/base.py",
+      "size": 13265
+    },
+    {
+      "path": "Discovery/adr_discovery/world/platform/darwin.py",
+      "size": 5579
+    },
+    {
+      "path": "Discovery/adr_discovery/world/platform/linux.py",
+      "size": 9450
+    },
+    {
+      "path": "Discovery/adr_discovery/world/platform/windows.py",
+      "size": 4488
+    },
+    {
+      "path": "Discovery/pyproject.toml",
+      "size": 1073
+    },
+    {
+      "path": "Discovery/tests/HARNESS.md",
+      "size": 7611
+    },
+    {
+      "path": "Discovery/tests/README.md",
+      "size": 25510
+    },
+    {
+      "path": "Discovery/tests/__init__.py",
+      "size": 629
+    },
+    {
+      "path": "Discovery/tests/cli.py",
+      "size": 5747
+    },
+    {
+      "path": "Discovery/tests/install/__init__.py",
+      "size": 82
+    },
+    {
+      "path": "Discovery/tests/install/bodies.py",
+      "size": 5498
+    },
+    {
+      "path": "Discovery/tests/install/recipes/__init__.py",
+      "size": 4825
+    },
+    {
+      "path": "Discovery/tests/install/runner.py",
+      "size": 4831
+    },
+    {
+      "path": "Discovery/tests/install/writers.py",
+      "size": 3465
+    },
+    {
+      "path": "Discovery/tests/manifest.py",
+      "size": 13274
+    },
+    {
+      "path": "Discovery/tests/manifests/agents.toml",
+      "size": 4832
+    },
+    {
+      "path": "Discovery/tests/manifests/artifacts.toml",
+      "size": 6241
+    },
+    {
+      "path": "Discovery/tests/manifests/canaries.toml",
+      "size": 1385
+    },
+    {
+      "path": "Discovery/tests/manifests/mcp.toml",
+      "size": 15189
+    },
+    {
+      "path": "Discovery/tests/manifests/negative.toml",
+      "size": 5263
+    },
+    {
+      "path": "Discovery/tests/manifests/sources.toml",
+      "size": 5624
+    },
+    {
+      "path": "Discovery/tests/manifests/tools.toml",
+      "size": 17735
+    },
+    {
+      "path": "Discovery/tests/provision/__init__.py",
+      "size": 85
+    },
+    {
+      "path": "Discovery/tests/provision/driver.py",
+      "size": 3714
+    },
+    {
+      "path": "Discovery/tests/provision/lima.py",
+      "size": 3176
+    },
+    {
+      "path": "Discovery/tests/provision/tart.py",
+      "size": 4093
+    },
+    {
+      "path": "Discovery/tests/recorded/synthetic-linux/after.json",
+      "size": 93778
+    },
+    {
+      "path": "Discovery/tests/recorded/synthetic-linux/before.json",
+      "size": 498
+    },
+    {
+      "path": "Discovery/tests/recorded/synthetic-linux/manifest.actual.json",
+      "size": 18813
+    },
+    {
+      "path": "Discovery/tests/report/__init__.py",
+      "size": 30
+    },
+    {
+      "path": "Discovery/tests/report/html.py",
+      "size": 6451
+    },
+    {
+      "path": "Discovery/tests/scoring/__init__.py",
+      "size": 249
+    },
+    {
+      "path": "Discovery/tests/scoring/canary.py",
+      "size": 2827
+    },
+    {
+      "path": "Discovery/tests/scoring/match.py",
+      "size": 11395
+    },
+    {
+      "path": "Discovery/tests/scoring/schema.py",
+      "size": 3484
+    },
+    {
+      "path": "Discovery/tests/scoring/score.py",
+      "size": 12049
+    },
+    {
+      "path": "Discovery/tests/scoring/snapshot.py",
+      "size": 6533
+    },
+    {
+      "path": "Discovery/tests/test_bootstrap.py",
+      "size": 6072
+    },
+    {
+      "path": "Discovery/tests/test_canary.py",
+      "size": 1927
+    },
+    {
+      "path": "Discovery/tests/test_manifest.py",
+      "size": 2998
+    },
+    {
+      "path": "Discovery/tests/test_match.py",
+      "size": 4661
+    },
+    {
+      "path": "Discovery/tests/test_report.py",
+      "size": 2951
+    },
+    {
+      "path": "Discovery/tests/test_runner.py",
+      "size": 4714
+    },
+    {
+      "path": "Discovery/tests/test_score.py",
+      "size": 5711
+    },
+    {
+      "path": "Discovery/tests/test_snapshot.py",
+      "size": 3294
+    },
+    {
+      "path": "Discovery/tests/tools/__init__.py",
+      "size": 40
+    },
+    {
+      "path": "Discovery/tests/tools/bootstrap.py",
+      "size": 14647
+    },
+    {
+      "path": "Discovery/tests/tools/synthesize.py",
+      "size": 12645
+    },
+    {
+      "path": "Discovery/uv.lock",
+      "size": 10548
+    },
+    {
+      "path": "LICENSE",
+      "size": 10722
+    },
+    {
+      "path": "NOTICE.md",
+      "size": 7989
+    },
+    {
+      "path": "README.md",
+      "size": 5758
+    },
+    {
+      "path": "Sensor/.gitignore",
+      "size": 168
+    },
+    {
+      "path": "Sensor/CONTRIBUTING.md",
+      "size": 5862
+    },
+    {
+      "path": "Sensor/LICENSE",
+      "size": 10722
+    },
+    {
+      "path": "Sensor/README.md",
+      "size": 41709
+    },
+    {
+      "path": "Sensor/adr_sensor/__init__.py",
+      "size": 1085
+    },
+    {
+      "path": "Sensor/adr_sensor/cli.py",
+      "size": 14042
+    },
+    {
+      "path": "Sensor/adr_sensor/diagnostics.py",
+      "size": 5180
+    },
+    {
+      "path": "Sensor/adr_sensor/exporters/__init__.py",
+      "size": 252
+    },
+    {
+      "path": "Sensor/adr_sensor/exporters/config.py",
+      "size": 4814
+    },
+    {
+      "path": "Sensor/adr_sensor/exporters/delivery_checkpoint.py",
+      "size": 5230
+    },
+    {
+      "path": "Sensor/adr_sensor/exporters/opentelemetry.py",
+      "size": 15387
+    },
+    {
+      "path": "Sensor/adr_sensor/host_identity.py",
+      "size": 1461
+    },
+    {
+      "path": "Sensor/adr_sensor/observer.py",
+      "size": 43290
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/__init__.py",
+      "size": 951
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/antigravity_parser.py",
+      "size": 13272
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/base_parser.py",
+      "size": 2771
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/claude_desktop_parser.py",
+      "size": 22193
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/claude_parser.py",
+      "size": 20357
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/cline_parser.py",
+      "size": 10823
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/codex_parser.py",
+      "size": 33047
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/copilot_parser.py",
+      "size": 26470
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/cursor_parser.py",
+      "size": 13890
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/dsh_parser.py",
+      "size": 22940
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/gemini_parser.py",
+      "size": 14415
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/opencode_parser.py",
+      "size": 27942
+    },
+    {
+      "path": "Sensor/adr_sensor/parsers/warp_parser.py",
+      "size": 13402
+    },
+    {
+      "path": "Sensor/adr_sensor/schemas/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Sensor/adr_sensor/schemas/agent_event_schema.py",
+      "size": 8354
+    },
+    {
+      "path": "Sensor/adr_sensor/schemas/system_config_schema.py",
+      "size": 9072
+    },
+    {
+      "path": "Sensor/adr_sensor/sensor_log.py",
+      "size": 9325
+    },
+    {
+      "path": "Sensor/adr_sensor/utils/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Sensor/adr_sensor/utils/platform_paths.py",
+      "size": 915
+    },
+    {
+      "path": "Sensor/adr_sensor/utils/string_utils.py",
+      "size": 933
+    },
+    {
+      "path": "Sensor/adr_sensor/utils/timestamp_utils.py",
+      "size": 2791
+    },
+    {
+      "path": "Sensor/examples/demo.py",
+      "size": 8353
+    },
+    {
+      "path": "Sensor/examples/opentelemetry-config.json",
+      "size": 155
+    },
+    {
+      "path": "Sensor/pyproject.toml",
+      "size": 1983
+    },
+    {
+      "path": "Sensor/tests/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "Sensor/tests/test_antigravity_parser.py",
+      "size": 18723
+    },
+    {
+      "path": "Sensor/tests/test_claude_diagnostics.py",
+      "size": 8166
+    },
+    {
+      "path": "Sensor/tests/test_claude_parser.py",
+      "size": 14442
+    },
+    {
+      "path": "Sensor/tests/test_cli.py",
+      "size": 2798
+    },
+    {
+      "path": "Sensor/tests/test_cline_discovery.py",
+      "size": 5756
+    },
+    {
+      "path": "Sensor/tests/test_delivery_checkpoint.py",
+      "size": 14673
+    },
+    {
+      "path": "Sensor/tests/test_diagnostics.py",
+      "size": 13303
+    },
+    {
+      "path": "Sensor/tests/test_dsh_parser.py",
+      "size": 20834
+    },
+    {
+      "path": "Sensor/tests/test_exporter_config.py",
+      "size": 3625
+    },
+    {
+      "path": "Sensor/tests/test_gemini_parser.py",
+      "size": 9364
+    },
+    {
+      "path": "Sensor/tests/test_gen_ai_mapping.py",
+      "size": 12602
+    },
+    {
+      "path": "Sensor/tests/test_host_identity.py",
+      "size": 2295
+    },
+    {
+      "path": "Sensor/tests/test_observer.py",
+      "size": 34437
+    },
+    {
+      "path": "Sensor/tests/test_opentelemetry_exporter.py",
+      "size": 12702
+    },
+    {
+      "path": "Sensor/tests/test_parser_diagnostics.py",
+      "size": 10673
+    },
+    {
+      "path": "Sensor/tests/test_parsers.py",
+      "size": 125448
+    },
+    {
+      "path": "Sensor/tests/test_schemas.py",
+      "size": 10250
+    },
+    {
+      "path": "Sensor/tests/test_sensor_log.py",
+      "size": 13643
+    },
+    {
+      "path": "Sensor/tests/test_system_config_schema.py",
+      "size": 1374
+    },
+    {
+      "path": "Sensor/tests/test_utils.py",
+      "size": 3739
+    },
+    {
+      "path": "Sensor/uv.lock",
+      "size": 204561
+    },
+    {
+      "path": "docs/BASELINE_REPLICATION.md",
+      "size": 7228
+    },
+    {
+      "path": "docs/OPEN_SOURCE_REVIEW.md",
+      "size": 5045
+    },
+    {
+      "path": "docs/RELEASING.md",
+      "size": 1884
+    },
+    {
+      "path": "docs/REPRODUCIBILITY.md",
+      "size": 10019
+    },
+    {
+      "path": "docs/adr-mlsys-2026-slides.pdf",
+      "size": 613911
+    },
+    {
+      "path": "docs/adr-paper.pdf",
+      "size": 4033159
+    }
+  ]
+}

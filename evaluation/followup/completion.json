@@ -1,0 +1,30 @@
+{
+  "completed_at": "2026-10-17T08:24:01.521903+00:00",
+  "rounds": [
+    8,
+    9,
+    10
+  ],
+  "unit_tests": 172,
+  "prior_label_regressions": 0,
+  "old_final_development": {
+    "before_recall": 0.43333333333333335,
+    "after_recall": 0.5333333333333333,
+    "before_fp": 1,
+    "after_fp": 0
+  },
+  "final": {
+    "tp": 0,
+    "fp": 0,
+    "fn": 2,
+    "tn": 8,
+    "errors": 0,
+    "precision": null,
+    "recall": 0.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "scanner_unchanged_since_freeze": true,
+  "final_second_run_refused": true,
+  "report": "deliverables/Followup_Validation_Report.md"
+}

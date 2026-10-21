@@ -1,0 +1,400 @@
+{
+  "unit": "artifact + rule + optional function scope; unlabelled outcomes are unknown",
+  "micro": {
+    "tp": 4,
+    "fp": 9,
+    "fn": 4,
+    "tn": 7,
+    "errors": 0,
+    "precision": 0.3076923076923077,
+    "recall": 0.5,
+    "false_positive_rate": 0.5625,
+    "label_coverage": 1.0
+  },
+  "by_rule": {
+    "MCP01-SECRET-HARDCODED": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1,
+      "errors": 0,
+      "precision": null,
+      "recall": null,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP03-TOOL-POISON": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 1,
+      "tn": 2,
+      "errors": 0,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "false_positive_rate": 0.3333333333333333,
+      "label_coverage": 1.0
+    },
+    "MCP05-COMMAND-INJECTION": {
+      "tp": 2,
+      "fp": 8,
+      "fn": 1,
+      "tn": 1,
+      "errors": 0,
+      "precision": 0.2,
+      "recall": 0.6666666666666666,
+      "false_positive_rate": 0.8888888888888888,
+      "label_coverage": 1.0
+    },
+    "MCP06-UNTRUSTED-CONTEXT": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 1,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP13-SSRF": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": null,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "by_category": {
+    "MCP01": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1,
+      "errors": 0,
+      "precision": null,
+      "recall": null,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP03": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 1,
+      "tn": 2,
+      "errors": 0,
+      "precision": 0.6666666666666666,
+      "recall": 0.6666666666666666,
+      "false_positive_rate": 0.3333333333333333,
+      "label_coverage": 1.0
+    },
+    "MCP05": {
+      "tp": 2,
+      "fp": 8,
+      "fn": 1,
+      "tn": 1,
+      "errors": 0,
+      "precision": 0.2,
+      "recall": 0.6666666666666666,
+      "false_positive_rate": 0.8888888888888888,
+      "label_coverage": 1.0
+    },
+    "MCP06": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 1,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP13": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": null,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "safe--env_config",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Credential comes from environment, with no embedded credential literal.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--fastmcp_helper_guarded",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "git_log",
+      "rationale": "Anchored regex rejects shell metacharacters before helper invocation. Scoped to command injection, not authorization or audit.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--fastmcp_helper_guarded",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "git_show",
+      "rationale": "shlex.quote escapes the sole substituted argument as an unquoted shell word. Scoped to command injection, not authorization or audit.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--fastmcp_helper_guarded",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "git_recent",
+      "rationale": "FastMCP validates integer parameter. Scoped to command injection, not authorization or audit.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "disk_usage",
+      "rationale": "Fixed du executable and argv list, shell disabled; path does not select executable. Scoped to command injection, not authorization or audit.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "quoted",
+      "rationale": "shlex.quote escapes the sole substituted argument as an unquoted shell word. Scoped to command injection, not authorization or audit.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "validated",
+      "rationale": "Anchored regex rejects shell metacharacters before invocation. Scoped to command injection, not authorization or audit.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "restart",
+      "rationale": "FastMCP validates Literal restricted to web or worker. Scoped to command injection, not authorization or audit.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "tail",
+      "rationale": "FastMCP validates integer parameter. Scoped to command injection, not authorization or audit.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--not_mcp_script",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Click CLI has no MCP registration; negative scope control for tool-input rule, not a claim that CLI is secure.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "safe--mcp001_module_scope_false_context",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Ordinary config/metadata or disclosed sibling-tool prerequisite, without malicious redirection.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "safe--mcp_untrusted_tool_source",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "function_name": "get_error_details",
+      "rationale": "Untrusted event message reaches model. Printable-character filtering preserves malicious instructions; upstream safe label is not adopted.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "safe--mcp_untrusted_tool_source",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "get_error_details",
+      "rationale": "Tool argument changes path under a fixed HTTPS authority, not destination; assumes no upstream redirect behavior.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "safe--system_prompt_field",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Ordinary config/metadata or disclosed sibling-tool prerequisite, without malicious redirection.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "safe--tool_poisoning",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Ordinary config/metadata or disclosed sibling-tool prerequisite, without malicious redirection.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "safe--tool_poisoning",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "No lower-trust external content source is fetched; tools return caller values.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vulnerable--mcp-tool-sinks--fastmcp_helper",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "git_log",
+      "rationale": "Tool argument reaches unrestricted shell command. Low-level MCP dispatch is in the intended scope.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vulnerable--mcp-tool-sinks--fastmcp_ops",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "disk_usage",
+      "rationale": "Tool argument reaches unrestricted shell command. Low-level MCP dispatch is in the intended scope.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vulnerable--mcp-tool-sinks--lowlevel_server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "call_tool",
+      "rationale": "Tool argument reaches unrestricted shell command. Low-level MCP dispatch is in the intended scope.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vulnerable--mcp_untrusted_tool_source",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "function_name": "get_error_details",
+      "rationale": "Untrusted event message reaches model. Printable-character filtering preserves malicious instructions; upstream safe label is not adopted.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vulnerable--mcp_untrusted_tool_source",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "get_error_details",
+      "rationale": "Tool argument changes path under a fixed HTTPS authority, not destination; assumes no upstream redirect behavior.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vulnerable--tool_poisoning",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "audit_log",
+      "rationale": "Hidden character plus instruction to include full conversation history.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vulnerable--tool_poisoning",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "get_weather",
+      "rationale": "Metadata directs credential-file read and external exfiltration.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vulnerable--tool_poisoning",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "read_notes",
+      "rationale": "Metadata hijacks another tool invocation and requests output inclusion.",
+      "outcome": "fn"
+    }
+  ],
+  "unscored_predictions": [
+    {
+      "artifact_id": "safe--mcp-tool-sinks--fastmcp_helper_guarded",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "git_log"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--fastmcp_helper_guarded",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "git_show"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--fastmcp_helper_guarded",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "git_recent"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "disk_usage"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "validated"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "restart"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "tail"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "disk_usage"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "quoted"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "validated"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "restart"
+    },
+    {
+      "artifact_id": "safe--mcp-tool-sinks--guarded_ops",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "tail"
+    },
+    {
+      "artifact_id": "vulnerable--mcp-tool-sinks--fastmcp_helper",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "git_log"
+    },
+    {
+      "artifact_id": "vulnerable--mcp-tool-sinks--fastmcp_ops",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "disk_usage"
+    },
+    {
+      "artifact_id": "vulnerable--mcp-tool-sinks--fastmcp_ops",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "disk_usage"
+    }
+  ],
+  "note": "Scores concern explicitly reviewed labels only; errors excluded from confusion matrix and counted separately."
+}

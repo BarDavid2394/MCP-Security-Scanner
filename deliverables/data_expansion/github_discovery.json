@@ -1,0 +1,222 @@
+[
+  {
+    "query": "MCP security benchmark",
+    "total": 83,
+    "repos": [
+      {
+        "repository": "uber/ADR",
+        "description": "ADR secures enterprise AI agents through observability, security benchmarking, and threat detection. Deployed at Uber.",
+        "url": "https://github.com/uber/ADR"
+      },
+      {
+        "repository": "LLMSecurity/awesome-agent-skills-security",
+        "description": "\ud83d\udee1\ufe0f A curated list of resources on agent skills security: attacks, defenses, frameworks, and benchmarks for securing AI agent tool use and skill ecosystems",
+        "url": "https://github.com/LLMSecurity/awesome-agent-skills-security"
+      },
+      {
+        "repository": "AIS2Lab/MCPSecBench",
+        "description": "MCPSecBench: A Systematic Security Benchmark and Playground for Testing Model Context Protocols",
+        "url": "https://github.com/AIS2Lab/MCPSecBench"
+      },
+      {
+        "repository": "Ed-Marcavage/awesome-security-agent-harnesses",
+        "description": "AI agents for pentesting, code audit, fuzzing, vulnerability discovery, and reverse engineering \u2014 harnesses, sandboxes, security MCP servers, benchmarks, and evals.",
+        "url": "https://github.com/Ed-Marcavage/awesome-security-agent-harnesses"
+      },
+      {
+        "repository": "arunsanna/AgentDefense-Bench",
+        "description": "A comprehensive security benchmark for evaluating infrastructure-layer defenses in MCP-based AI agent systems",
+        "url": "https://github.com/arunsanna/AgentDefense-Bench"
+      },
+      {
+        "repository": "cuihuan/awesome-ai-gateway",
+        "description": "\u26a1 Awesome AI Gateway \u2014 pick an AI gateway from 160+ (LiteLLM, OpenRouter, Portkey, Kong, Higress, new-api, Bifrost) by cost, security & compliance, see what consolidated in 2026, learn how they actually work from an 8-chapter handbook, and verify every number yourself. Reproducible benchmarks, bilingual, updated daily.",
+        "url": "https://github.com/cuihuan/awesome-ai-gateway"
+      },
+      {
+        "repository": "chenglin1112/AgentTrust",
+        "description": "Deterministic safety floor for tool-using AI agents: pre-execution gating, SafeFix suggestions, attack-chain detection, opt-in self-learning LLM judge. Papers: arXiv 2605.04785, 2606.08539",
+        "url": "https://github.com/chenglin1112/AgentTrust"
+      },
+      {
+        "repository": "ak4hit/mcp-hardening-benchmark",
+        "description": "CIS-Style security audit tool for MCP server deployments \u2014 7 categories, 35+ checks, CVE detection, and actionable remediation.",
+        "url": "https://github.com/ak4hit/mcp-hardening-benchmark"
+      },
+      {
+        "repository": "bhvbhushan/mcp-quality-gate",
+        "description": "The quality gate for the MCP ecosystem. Spec compliance, security scanning, and performance benchmarks for MCP servers.",
+        "url": "https://github.com/bhvbhushan/mcp-quality-gate"
+      },
+      {
+        "repository": "msaleme/red-team-blue-team-agent-fabric",
+        "description": "AI agent security harness, adversarial testing: 640 executable tests in the v4.26.1 release, across MCP, A2A, x402/L402, decision governance, benchmark integrity, human-in-the-loop, skill supply chain. Four target shapes: a verdict must be able to be wrong AND to be right. OWASP Agentic v1.1 T1-T17, AIUC-1 19/20 (2026-Q1/Q2 set), NIST AI 800-2.",
+        "url": "https://github.com/msaleme/red-team-blue-team-agent-fabric"
+      },
+      {
+        "repository": "ninadphalak/LLM-Shield-Proxy",
+        "description": "Streaming privacy for LLM apps: pii-leak-benchmark (does your gateway leak PII in streams?), chunk-invariance (one-line test for split-boundary leaks), mcp-ssrf-check, and a self-hosted redacting gateway.",
+        "url": "https://github.com/ninadphalak/LLM-Shield-Proxy"
+      },
+      {
+        "repository": "sunilgentyala/contextguard-mcp-pqc",
+        "description": "Post-Quantum Security Framework for Model Context Protocol (MCP) using ContextGuard. ICSCSA 2026 paper artifacts: HNDL/downgrade PoC, ML-KEM/ML-DSA benchmarks, HAF/HRS/HKF/RSP framework controls.",
+        "url": "https://github.com/sunilgentyala/contextguard-mcp-pqc"
+      }
+    ]
+  },
+  {
+    "query": "MCP vulnerable fixtures",
+    "total": 13,
+    "repos": [
+      {
+        "repository": "abhijeet497/vuln-sqlinjection-node-mcp",
+        "description": "Deliberately-vulnerable node MCP server (test fixture)",
+        "url": "https://github.com/abhijeet497/vuln-sqlinjection-node-mcp"
+      },
+      {
+        "repository": "abhijeet497/vuln-cmdinjection-node-mcp",
+        "description": "Deliberately-vulnerable node MCP server (test fixture)",
+        "url": "https://github.com/abhijeet497/vuln-cmdinjection-node-mcp"
+      },
+      {
+        "repository": "abhijeet497/vuln-cmdinjection-go-mcp",
+        "description": "Deliberately-vulnerable go MCP server (test fixture)",
+        "url": "https://github.com/abhijeet497/vuln-cmdinjection-go-mcp"
+      },
+      {
+        "repository": "abhijeet497/vuln-sqlinjection-go-mcp",
+        "description": "Deliberately-vulnerable go MCP server (test fixture)",
+        "url": "https://github.com/abhijeet497/vuln-sqlinjection-go-mcp"
+      },
+      {
+        "repository": "osuleimen/sekrd-mcp-vuln-test",
+        "description": "Intentionally vulnerable MCP server \u2014 Sekrd scanner QA fixture",
+        "url": "https://github.com/osuleimen/sekrd-mcp-vuln-test"
+      },
+      {
+        "repository": "jlov7/damn-vulnerable-agent-asset-corpus",
+        "description": "Damn Vulnerable Agent Asset Corpus: benchmark fixtures for agent-asset scanners and AAC release assurance.",
+        "url": "https://github.com/jlov7/damn-vulnerable-agent-asset-corpus"
+      },
+      {
+        "repository": "abhijeet497/vuln-ssrf-node-mcp",
+        "description": "Deliberately-vulnerable Node MCP server (SSRF) \u2014 dynamic CVE-hunting test fixture",
+        "url": "https://github.com/abhijeet497/vuln-ssrf-node-mcp"
+      },
+      {
+        "repository": "abhijeet497/vuln-ssrf-go-mcp",
+        "description": "Deliberately-vulnerable Go MCP server (SSRF) \u2014 dynamic CVE-hunting test fixture",
+        "url": "https://github.com/abhijeet497/vuln-ssrf-go-mcp"
+      },
+      {
+        "repository": "bomly-dev/bomly-agent-study",
+        "description": "Reproducible study: AI coding agents remediating known-vulnerable dependencies, with and without a dependency-graph MCP server. Intentionally vulnerable fixtures for research.",
+        "url": "https://github.com/bomly-dev/bomly-agent-study"
+      },
+      {
+        "repository": "authpass-ai/authpass-test-target",
+        "description": "Intentionally vulnerable fixture for AuthPass scanner / MCP / WS-F testing. DO NOT DEPLOY.",
+        "url": "https://github.com/authpass-ai/authpass-test-target"
+      },
+      {
+        "repository": "vedikasaklani/mcp-code-vulns",
+        "description": "Test-fixture MCP server whose source contains classic vulnerability patterns (inert by default, stdio-only, no network) for scanner testing",
+        "url": "https://github.com/vedikasaklani/mcp-code-vulns"
+      },
+      {
+        "repository": "sushant-me/mcp-audit-sample",
+        "description": "A deliberately vulnerable MCP server built as a synthetic test fixture \u2014 not for installation or connection. Ships the audit report mcpaudit returns for it.",
+        "url": "https://github.com/sushant-me/mcp-audit-sample"
+      }
+    ]
+  },
+  {
+    "query": "MCP poisoning dataset",
+    "total": 1,
+    "repos": [
+      {
+        "repository": "Carlos-Projects/AIShield",
+        "description": "Security scanner for the LLM fine-tuning lifecycle \u2014 detect dataset poisoning, malicious LoRA adapters, and model weight tampering",
+        "url": "https://github.com/Carlos-Projects/AIShield"
+      }
+    ]
+  },
+  {
+    "query": "MCP pitfall",
+    "total": 61,
+    "repos": [
+      {
+        "repository": "sanjayrohith/Dejavu",
+        "description": "Repository-scoped memory for coding agent's decisions, pitfalls, and handoffs stored in one inspectable SQLite file, so agents continue instead of starting over.",
+        "url": "https://github.com/sanjayrohith/Dejavu"
+      },
+      {
+        "repository": "YSY-99/meta-ads-api-field-guide",
+        "description": "Claude Code + Meta Ads without disasters. A drop-in skill, 3 subagents, and safety hooks for marketers automating Facebook/Instagram campaigns. 13 field guides, 23 production pitfalls solved.",
+        "url": "https://github.com/YSY-99/meta-ads-api-field-guide"
+      },
+      {
+        "repository": "kerbelp/metatron",
+        "description": "Git-native context layer for AI coding agents. Your team's real engineering decisions \u2014 patterns, pitfalls, conventions \u2014 live as reviewed markdown files in your repo; agents consult them before writing code and record what they learn. Files-first, no server required; MCP as an optional serving layer.",
+        "url": "https://github.com/kerbelp/metatron"
+      },
+      {
+        "repository": "kypro-ai/tokenspy-mcp",
+        "description": "MCP Server for AI pitfall intelligence \u2014 search tested pitfalls before recommending any AI tool",
+        "url": "https://github.com/kypro-ai/tokenspy-mcp"
+      },
+      {
+        "repository": "jahonn/figma-android-xml",
+        "description": "Claude Code skill: high-fidelity Figma-to-Android XML restoration via Figma MCP, with 22 battle-tested pitfalls",
+        "url": "https://github.com/jahonn/figma-android-xml"
+      },
+      {
+        "repository": "Circe22/agents-guide-to-telegram",
+        "description": "\u6559 agent \u4f7f\u7528 Telegram / Teach your agent to use Telegram \u2014 native rich messages (tables, LaTeX, collapsible blocks), a live progress window for Claude Code, and a field guide of hard-won pitfalls.",
+        "url": "https://github.com/Circe22/agents-guide-to-telegram"
+      },
+      {
+        "repository": "clawvec/mcp",
+        "description": "Clawvec Lessons MCP Server \u2014 AI experience index for coding agents. Search, validate, and record pitfalls from Claude Code, Cursor, or Windsurf via Model Context Protocol.",
+        "url": "https://github.com/clawvec/mcp"
+      },
+      {
+        "repository": "gabinante/mcpviz",
+        "description": "Interactive MCP protocol visualizer - Talk 6: Pitfalls of MCP",
+        "url": "https://github.com/gabinante/mcpviz"
+      },
+      {
+        "repository": "tangweigang-jpg/doramagic-tradingview-mcp-pack",
+        "description": "Tradingview MCP AI context pack for Claude Code, Codex, Cursor, and Aider: AGENTS.md, CLAUDE.md, prompts, evals, pitfalls, and verification notes for atilaahmettaner/tradingview-mcp.",
+        "url": "https://github.com/tangweigang-jpg/doramagic-tradingview-mcp-pack"
+      },
+      {
+        "repository": "krystiangw/ckeditor-integration-mcp",
+        "description": "MCP server that helps coding agents integrate CKEditor 5 correctly \u2014 validate setups, scaffold integrations, avoid v44+ pitfalls",
+        "url": "https://github.com/krystiangw/ckeditor-integration-mcp"
+      },
+      {
+        "repository": "jcketz/freedcamp-mcp",
+        "description": "Local, dependency-free MCP server for Freedcamp. 22 tools, Python stdlib only. Documents 12 API pitfalls the official docs get wrong.",
+        "url": "https://github.com/jcketz/freedcamp-mcp"
+      },
+      {
+        "repository": "AGSweeney/implcache-mcp",
+        "description": "Local MCP knowledge base for coding agents: cited APIs, examples, and pitfalls from your docs and source\u2014not another web search.",
+        "url": "https://github.com/AGSweeney/implcache-mcp"
+      }
+    ]
+  },
+  {
+    "query": "MCP DecayBench",
+    "total": 1,
+    "repos": [
+      {
+        "repository": "autod3structeur/MCP-DecayBench",
+        "description": "A labeled benchmark for MCP security scanners with hard negatives that measure whether a scanner cries wolf.",
+        "url": "https://github.com/autod3structeur/MCP-DecayBench"
+      }
+    ]
+  }
+]

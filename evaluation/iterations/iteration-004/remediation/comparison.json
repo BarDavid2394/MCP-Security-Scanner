@@ -1,0 +1,436 @@
+{
+  "purpose": "Development retest on exposed batch 4, not fresh validation",
+  "original_fresh": {
+    "tp": 10,
+    "fp": 0,
+    "fn": 34,
+    "tn": 27,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.22727272727272727,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "original_labels_after_repair": {
+    "tp": 44,
+    "fp": 0,
+    "fn": 0,
+    "tn": 27,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "with_posthoc_controls_before": {
+    "tp": 10,
+    "fp": 3,
+    "fn": 34,
+    "tn": 27,
+    "errors": 0,
+    "precision": 0.7692307692307693,
+    "recall": 0.22727272727272727,
+    "false_positive_rate": 0.1,
+    "label_coverage": 1.0
+  },
+  "with_posthoc_controls_after": {
+    "tp": 44,
+    "fp": 0,
+    "fn": 0,
+    "tn": 30,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "resolved": [
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--behavioral_profiling_user_tracking",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "search_products",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_analytics_location_tracking",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "calculate_distance",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_data_collection_model_training",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "translate_text",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_monetization_affiliate_tracking",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "shorten_url",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--incomplete_security_fake_encryption",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "encrypt_data",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--misleading_functionality_fake_operations",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "compress_image",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--undisclosed_tracking_data_collection",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "validate_email",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--command_injection_grep",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "search_logs",
+      "before": "fp",
+      "after": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--os_system_injection_archives",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "function_name": "compress_file",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--act_as_role_injection",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "execute_system_command",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "query_database",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "query_database",
+      "before": "fp",
+      "after": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--contradictory_description_validation_bypass",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "validate_input",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--hidden_metadata_filter_bypass",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "search_documentation",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--hidden_system_instructions",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "read_file_safely",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--hidden_system_instructions",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "read_file_safely",
+      "before": "fp",
+      "after": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--jailbreak_mode_context_manipulation",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "process_request",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--safety_bypass_emergency_access",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "emergency_system_access",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--resource-exhaustion--network_bandwidth_exhaustion",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "download_files",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--base64_decode_execute_obfuscation",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "function_name": "run_encoded_script",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--compile_execute_bytecode_manipulation",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "function_name": "compile_code",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--dynamic_import_arbitrary_module",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "function_name": "load_module",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--dynamic_lambda_function_execution",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "function_name": "create_function",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--importlib_dynamic_module_loading",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "function_name": "load_plugin",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--unrestricted_eval_code_injection",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "function_name": "evaluate_expression",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--unrestricted_exec_arbitrary_code",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "function_name": "run_script",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--unsafe_pickle_deserialization",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "function_name": "load_data",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--yaml_unsafe_load_code_execution",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "function_name": "parse_config",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--cloud_metadata_credential_extraction",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "get_instance_info",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--dns_rebinding_attack",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "fetch_external",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--file_protocol_ssrf_local_file",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "load_resource",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--internal_service_port_scanning",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "check_service",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--localhost_metadata_service_access",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "fetch_data",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--private_ip_range_scanning",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "probe_network",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--redirect_chain_internal_service",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "download_file",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--redirect_following_open_redirect",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "download_file",
+      "before": "fn",
+      "after": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--ssrf_url_manipulation_internal_network",
+      "rule_id": "MCP13-SSRF",
+      "function_name": "fetch_resource",
+      "before": "fn",
+      "after": "tp"
+    }
+  ],
+  "earlier_batches": {
+    "iteration-001": {
+      "tp": 4,
+      "fp": 1,
+      "fn": 4,
+      "tn": 15,
+      "errors": 0,
+      "precision": 0.8,
+      "recall": 0.5,
+      "false_positive_rate": 0.0625,
+      "label_coverage": 1.0
+    },
+    "iteration-002": {
+      "tp": 14,
+      "fp": 0,
+      "fn": 0,
+      "tn": 13,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "iteration-003": {
+      "tp": 36,
+      "fp": 0,
+      "fn": 0,
+      "tn": 23,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "primary": [
+    {
+      "target_id": "aws-documentation",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 30,
+      "tools": 7,
+      "before": 3,
+      "after": 3
+    },
+    {
+      "target_id": "fastmcp-examples",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 141,
+      "tools": 156,
+      "before": 34,
+      "after": 34
+    },
+    {
+      "target_id": "markitdown-mcp",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 5,
+      "tools": 1,
+      "before": 1,
+      "after": 1
+    },
+    {
+      "target_id": "mcp-atlassian",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 117,
+      "tools": 98,
+      "before": 6,
+      "after": 6
+    },
+    {
+      "target_id": "official-fetch",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 7,
+      "tools": 1,
+      "before": 1,
+      "after": 2
+    },
+    {
+      "target_id": "official-git",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 6,
+      "tools": 12,
+      "before": 0,
+      "after": 0
+    },
+    {
+      "target_id": "official-time",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 6,
+      "tools": 2,
+      "before": 0,
+      "after": 0
+    },
+    {
+      "target_id": "python-sdk-examples",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 243,
+      "tools": 117,
+      "before": 54,
+      "after": 54
+    },
+    {
+      "target_id": "quickstart-weather",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 3,
+      "tools": 2,
+      "before": 0,
+      "after": 0
+    },
+    {
+      "target_id": "simple-mcp-server",
+      "status": "completed",
+      "inputs_identical": true,
+      "files": 8,
+      "tools": 2,
+      "before": 0,
+      "after": 0
+    }
+  ],
+  "unscored_findings": 14
+}

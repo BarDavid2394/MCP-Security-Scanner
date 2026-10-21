@@ -1,0 +1,13 @@
+{
+  "verified_at": "2026-10-16T13:00:10.730226+00:00",
+  "code_unchanged_since_freeze": true,
+  "labels_unchanged": true,
+  "holdout_manifest_unchanged": true,
+  "freeze_then_labels_then_scan": true,
+  "tests": 117,
+  "cli_checks": 4,
+  "primary_completed": 10,
+  "primary_inputs_identical": true,
+  "no_post_validation_tuning": true,
+  "model_calls": 0
+}

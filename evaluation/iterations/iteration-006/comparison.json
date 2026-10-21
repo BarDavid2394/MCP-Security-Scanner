@@ -1,0 +1,30 @@
+{
+  "iteration": 6,
+  "artifacts": 24,
+  "before": {
+    "tp": 8,
+    "fp": 2,
+    "fn": 4,
+    "tn": 10,
+    "errors": 0,
+    "precision": 0.8,
+    "recall": 0.6666666666666666,
+    "false_positive_rate": 0.16666666666666666,
+    "label_coverage": 1.0
+  },
+  "after": {
+    "tp": 12,
+    "fp": 0,
+    "fn": 0,
+    "tn": 12,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "purpose": "Synthetic paired source behaviors: exposed pilot; six families, two structural variants",
+  "changes": "Prefixed environment credential provenance, safe presence-only outputs, pathlib content through helpers, and fixed-format printf argument-list safety.",
+  "before_unscored": 9,
+  "after_unscored": 8
+}

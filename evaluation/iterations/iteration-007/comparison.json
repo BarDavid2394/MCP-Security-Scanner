@@ -1,0 +1,30 @@
+{
+  "iteration": 7,
+  "artifacts": 20,
+  "before": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 8,
+    "tn": 10,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.2,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "after": {
+    "tp": 9,
+    "fp": 0,
+    "fn": 1,
+    "tn": 10,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.9,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "purpose": "New public source family: adapted Vault text; not native source validation",
+  "changes": "Required auto-approval changes, remote-code setup instructions, credential-bearing registration URLs, hidden file uploads, and sensitive shell uploads.",
+  "before_unscored": 1,
+  "after_unscored": 1
+}

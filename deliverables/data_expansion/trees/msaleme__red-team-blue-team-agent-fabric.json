@@ -1,0 +1,1948 @@
+{
+  "repository": "msaleme/red-team-blue-team-agent-fabric",
+  "revision": "2a529b51fea5a68842619382a4aa866b71091e23",
+  "license": "Apache-2.0",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".env.example",
+      "size": 741
+    },
+    {
+      "path": ".gitguardian.yaml",
+      "size": 1681
+    },
+    {
+      "path": ".github/DISCUSSION_TEMPLATE/compliance-experience.yml",
+      "size": 1228
+    },
+    {
+      "path": ".github/DISCUSSION_TEMPLATE/payment-protocol-security.yml",
+      "size": 898
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/reproduction-report.yml",
+      "size": 4719
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/security-test-request.yml",
+      "size": 1574
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 14540
+    },
+    {
+      "path": ".github/workflows/public-metadata.yml",
+      "size": 2581
+    },
+    {
+      "path": ".github/workflows/publish-pypi.yml",
+      "size": 18148
+    },
+    {
+      "path": ".github/workflows/security-scan.yml",
+      "size": 5550
+    },
+    {
+      "path": ".gitignore",
+      "size": 3256
+    },
+    {
+      "path": "BLUE-TEAM-PLAYBOOKS.md",
+      "size": 38199
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 234040
+    },
+    {
+      "path": "CITATION.cff",
+      "size": 1950
+    },
+    {
+      "path": "CLAUDE.md",
+      "size": 11188
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 6927
+    },
+    {
+      "path": "CONTRIBUTION_REVIEW_CHECKLIST.md",
+      "size": 3678
+    },
+    {
+      "path": "ENHANCED-RED-BLUE-TEAM-TEST-PLAN.md",
+      "size": 54834
+    },
+    {
+      "path": "EVALUATION_PROTOCOL.md",
+      "size": 15272
+    },
+    {
+      "path": "EXECUTIVE-PRESENTATION.md",
+      "size": 18504
+    },
+    {
+      "path": "HARNESS_TEST_CATALOG.md",
+      "size": 67751
+    },
+    {
+      "path": "LICENSE",
+      "size": 10765
+    },
+    {
+      "path": "MANIFEST.in",
+      "size": 477
+    },
+    {
+      "path": "README.md",
+      "size": 32799
+    },
+    {
+      "path": "ROADMAP.md",
+      "size": 10844
+    },
+    {
+      "path": "SECURITY_POLICY.md",
+      "size": 4359
+    },
+    {
+      "path": "SKILL.md",
+      "size": 7617
+    },
+    {
+      "path": "action.yml",
+      "size": 4148
+    },
+    {
+      "path": "agent-fabric-red-blue-team-spec.md",
+      "size": 5917
+    },
+    {
+      "path": "attestations/external/2026-08-17-veritas-recomputation-record.json",
+      "size": 8588
+    },
+    {
+      "path": "attestations/external/2026-08-17-veritas-recomputation-report.json",
+      "size": 7253
+    },
+    {
+      "path": "attestations/external/README.md",
+      "size": 1774
+    },
+    {
+      "path": "attestations/self/2026-08-17-receipt-claim-record.json",
+      "size": 9625
+    },
+    {
+      "path": "attestations/self/2026-08-17-receipt-claim-report.json",
+      "size": 8030
+    },
+    {
+      "path": "attestations/self/README.md",
+      "size": 2599
+    },
+    {
+      "path": "benchmarks/CHANGELOG.md",
+      "size": 7943
+    },
+    {
+      "path": "benchmarks/CONTRIBUTING.md",
+      "size": 6144
+    },
+    {
+      "path": "benchmarks/LEADERBOARD.md",
+      "size": 4603
+    },
+    {
+      "path": "benchmarks/README.md",
+      "size": 15540
+    },
+    {
+      "path": "benchmarks/__init__.py",
+      "size": 235
+    },
+    {
+      "path": "benchmarks/agent_under_test.py",
+      "size": 4038
+    },
+    {
+      "path": "benchmarks/capability_scanner.py",
+      "size": 6094
+    },
+    {
+      "path": "benchmarks/decision_behavior_corpus.py",
+      "size": 80446
+    },
+    {
+      "path": "benchmarks/dgb_bundle_export.py",
+      "size": 48356
+    },
+    {
+      "path": "benchmarks/evaluation_results.json",
+      "size": 59918
+    },
+    {
+      "path": "benchmarks/evaluation_runner.py",
+      "size": 37007
+    },
+    {
+      "path": "benchmarks/scanner_derived.py",
+      "size": 2933
+    },
+    {
+      "path": "benchmarks/tool_fixtures.py",
+      "size": 14493
+    },
+    {
+      "path": "community_modules/MANIFEST.yaml",
+      "size": 1273
+    },
+    {
+      "path": "community_modules/TEMPLATE.yaml",
+      "size": 4475
+    },
+    {
+      "path": "community_modules/contrib/semantic_constraint_dropped.yaml",
+      "size": 2890
+    },
+    {
+      "path": "community_modules/contrib/semantic_constraint_preserved.yaml",
+      "size": 2863
+    },
+    {
+      "path": "community_modules/contrib/semantic_constraint_safely_narrowed.yaml",
+      "size": 2924
+    },
+    {
+      "path": "community_modules/contrib/semantic_constraint_widened.yaml",
+      "size": 2874
+    },
+    {
+      "path": "community_modules/examples/crewai_role_escape.yaml",
+      "size": 4730
+    },
+    {
+      "path": "community_modules/examples/mcp_description_exfil.yaml",
+      "size": 5810
+    },
+    {
+      "path": "configs/aiuc1_mapping.yaml",
+      "size": 8489
+    },
+    {
+      "path": "configs/eu_ai_act_mapping.yaml",
+      "size": 4753
+    },
+    {
+      "path": "configs/iso_42001_mapping.yaml",
+      "size": 3171
+    },
+    {
+      "path": "configs/monthly_targets.yaml",
+      "size": 511
+    },
+    {
+      "path": "conformance/external/veritas-omega/README.md",
+      "size": 1792
+    },
+    {
+      "path": "conformance/external/veritas-omega/REPORT.md",
+      "size": 4713
+    },
+    {
+      "path": "conformance/external/veritas-omega/result-artifact.json",
+      "size": 16406
+    },
+    {
+      "path": "conformance/external/veritas-omega/verify_veritas.py",
+      "size": 13736
+    },
+    {
+      "path": "conformance/receipt-claim/README.md",
+      "size": 5233
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-001.json",
+      "size": 2938
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-002.json",
+      "size": 3624
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-003.json",
+      "size": 3602
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-004.json",
+      "size": 3617
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-005.json",
+      "size": 3641
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-006.json",
+      "size": 3618
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-007.json",
+      "size": 3665
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-008.json",
+      "size": 3623
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-009.json",
+      "size": 3592
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-010.json",
+      "size": 3569
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/RCL-011.json",
+      "size": 3619
+    },
+    {
+      "path": "conformance/receipt-claim/fixtures/index.json",
+      "size": 3403
+    },
+    {
+      "path": "conformance/receipt-claim/generate.py",
+      "size": 6238
+    },
+    {
+      "path": "conformance/receipt-claim/verify_fixtures.py",
+      "size": 1718
+    },
+    {
+      "path": "docker/Dockerfile.mcp",
+      "size": 321
+    },
+    {
+      "path": "docker/docker-compose.yml",
+      "size": 2114
+    },
+    {
+      "path": "docker/envoy-config/envoy.yaml",
+      "size": 12034
+    },
+    {
+      "path": "docker/mock-backends/Dockerfile",
+      "size": 192
+    },
+    {
+      "path": "docker/mock-backends/mock_backend.py",
+      "size": 15174
+    },
+    {
+      "path": "docker/mock-backends/requirements.txt",
+      "size": 11
+    },
+    {
+      "path": "docs/ADVANCED.md",
+      "size": 6807
+    },
+    {
+      "path": "docs/AIUC1-CROSSWALK.md",
+      "size": 11436
+    },
+    {
+      "path": "docs/AIUC1-SUBMISSION-EMAIL.md",
+      "size": 4594
+    },
+    {
+      "path": "docs/AIUC1-SUBMISSION-OUTLINE.md",
+      "size": 8445
+    },
+    {
+      "path": "docs/ATTESTATION-REGISTRY-SERVER-CONTRACT.md",
+      "size": 16313
+    },
+    {
+      "path": "docs/AUDIT-R33-INDEPENDENT-REVIEW.md",
+      "size": 7318
+    },
+    {
+      "path": "docs/AUROC-METHODOLOGY.md",
+      "size": 2712
+    },
+    {
+      "path": "docs/CASE_STUDY_ENVOY_GATEWAY.md",
+      "size": 8268
+    },
+    {
+      "path": "docs/CASE_STUDY_FALSE_PASS.md",
+      "size": 3016
+    },
+    {
+      "path": "docs/COMPARISON.md",
+      "size": 9510
+    },
+    {
+      "path": "docs/DECISION-GOVERNANCE-CHECKLIST.md",
+      "size": 8695
+    },
+    {
+      "path": "docs/EVIDENCE-CLASS-TAXONOMY.md",
+      "size": 19156
+    },
+    {
+      "path": "docs/EVIDENCE-INTEGRITY-OPERATING-RULES.md",
+      "size": 6117
+    },
+    {
+      "path": "docs/EXTERNAL-FIXTURES.md",
+      "size": 9586
+    },
+    {
+      "path": "docs/MODULE_CHECKLIST.md",
+      "size": 2016
+    },
+    {
+      "path": "docs/OWASP-AGENTIC-T1-T15-COVERAGE.md",
+      "size": 1074
+    },
+    {
+      "path": "docs/OWASP-AGENTIC-T1-T15-SUBMISSION-COVERAGE.md",
+      "size": 83608
+    },
+    {
+      "path": "docs/OWASP-AGENTIC-V1.1-COVERAGE.md",
+      "size": 109349
+    },
+    {
+      "path": "docs/OWASP-ASI-TOP10-CROSSWALK.md",
+      "size": 8257
+    },
+    {
+      "path": "docs/PAYMENT-ATTACK-TAXONOMY.md",
+      "size": 59689
+    },
+    {
+      "path": "docs/PLUGIN_SPEC.md",
+      "size": 18114
+    },
+    {
+      "path": "docs/PRIVACY.md",
+      "size": 8751
+    },
+    {
+      "path": "docs/QUICKSTART.md",
+      "size": 6554
+    },
+    {
+      "path": "docs/RCL-CROSS-IMPLEMENTATION-INTEROP.md",
+      "size": 5296
+    },
+    {
+      "path": "docs/README.md",
+      "size": 6609
+    },
+    {
+      "path": "docs/RELATED-WORK.md",
+      "size": 10681
+    },
+    {
+      "path": "docs/RELEASING.md",
+      "size": 5974
+    },
+    {
+      "path": "docs/REPRODUCING.md",
+      "size": 4989
+    },
+    {
+      "path": "docs/RESULT-SEMANTICS.md",
+      "size": 7147
+    },
+    {
+      "path": "docs/STRATEGY.md",
+      "size": 3478
+    },
+    {
+      "path": "docs/TEST-INVENTORY.md",
+      "size": 16733
+    },
+    {
+      "path": "docs/VERIFICATION-DESIGN-DEFECT.md",
+      "size": 11487
+    },
+    {
+      "path": "docs/WORKSPACE-TRUST-REVIEW.md",
+      "size": 11940
+    },
+    {
+      "path": "docs/aiuc1-prep.md",
+      "size": 4034
+    },
+    {
+      "path": "docs/attestation-registry.md",
+      "size": 8580
+    },
+    {
+      "path": "docs/audits/README.md",
+      "size": 3934
+    },
+    {
+      "path": "docs/audits/dgb-scanner-measurement.md",
+      "size": 7521
+    },
+    {
+      "path": "docs/audits/dgb-scanner-passes-audit.md",
+      "size": 11648
+    },
+    {
+      "path": "docs/audits/dgb-two-scanner-comparison.md",
+      "size": 6296
+    },
+    {
+      "path": "docs/blog/THREE-SENTINELS-PROVENANCE.md",
+      "size": 2902
+    },
+    {
+      "path": "docs/blog/gateway-attacks-methodology.md",
+      "size": 12655
+    },
+    {
+      "path": "docs/coverage/owasp-agentic-v1.1.json",
+      "size": 174538
+    },
+    {
+      "path": "docs/coverage/owasp-agentic-v1.1.yaml",
+      "size": 128849
+    },
+    {
+      "path": "docs/cve/CVE-2026-2275.md",
+      "size": 5971
+    },
+    {
+      "path": "docs/cve/CVE-2026-2285.md",
+      "size": 7748
+    },
+    {
+      "path": "docs/cve/CVE-2026-2286.md",
+      "size": 12319
+    },
+    {
+      "path": "docs/cve/CVE-2026-2287.md",
+      "size": 8208
+    },
+    {
+      "path": "docs/cve/CVE-2026-39313.md",
+      "size": 5124
+    },
+    {
+      "path": "docs/cve/CVE-2026-39889.md",
+      "size": 6041
+    },
+    {
+      "path": "docs/cve/CVE-2026-40289.md",
+      "size": 6257
+    },
+    {
+      "path": "docs/cve/CVE-2026-59822.md",
+      "size": 6438
+    },
+    {
+      "path": "docs/cve/CVE-2026-71433.md",
+      "size": 8594
+    },
+    {
+      "path": "docs/cve/CVE-2026-71963.md",
+      "size": 13822
+    },
+    {
+      "path": "docs/cve/CVE-2026-72718.md",
+      "size": 13420
+    },
+    {
+      "path": "docs/cve/README.md",
+      "size": 6815
+    },
+    {
+      "path": "docs/cve/cve-test-mapping.yaml",
+      "size": 53938
+    },
+    {
+      "path": "docs/discord-bot.md",
+      "size": 3678
+    },
+    {
+      "path": "docs/drafts/draft-saleme-agent-action-attestation-00.md",
+      "size": 9787
+    },
+    {
+      "path": "docs/engagement/LAUNCH_POSTS.md",
+      "size": 6856
+    },
+    {
+      "path": "docs/engagement/WEEKLY_HOOKS_2026-04-06.md",
+      "size": 4390
+    },
+    {
+      "path": "docs/evidence/adi/2026-09-02-qwen35-n3-raw.json",
+      "size": 9896
+    },
+    {
+      "path": "docs/evidence/release-claims/release-test-count-v4.21.3.txt",
+      "size": 3151
+    },
+    {
+      "path": "docs/evidence/release-claims/release-test-count-v4.22.0.txt",
+      "size": 3936
+    },
+    {
+      "path": "docs/evidence/release-claims/release-test-count-v4.23.0.txt",
+      "size": 3927
+    },
+    {
+      "path": "docs/evidence/release-claims/release-test-count-v4.24.0.txt",
+      "size": 3950
+    },
+    {
+      "path": "docs/evidence/release-claims/release-test-count-v4.25.0.txt",
+      "size": 3919
+    },
+    {
+      "path": "docs/evidence/release-claims/release-test-count-v4.26.0.txt",
+      "size": 3919
+    },
+    {
+      "path": "docs/evidence/release-claims/release-test-count-v4.26.1.txt",
+      "size": 3919
+    },
+    {
+      "path": "docs/examples/top10_failures_example.md",
+      "size": 6395
+    },
+    {
+      "path": "docs/free-scan.md",
+      "size": 4510
+    },
+    {
+      "path": "docs/github-action.md",
+      "size": 8337
+    },
+    {
+      "path": "docs/mcp-server.md",
+      "size": 7445
+    },
+    {
+      "path": "docs/monthly-report.md",
+      "size": 4107
+    },
+    {
+      "path": "docs/paper-dgb/README.md",
+      "size": 3988
+    },
+    {
+      "path": "docs/paper-dgb/_gen_appendix.py",
+      "size": 4936
+    },
+    {
+      "path": "docs/paper-dgb/main.tex",
+      "size": 59232
+    },
+    {
+      "path": "docs/paper-dgb/references.bib",
+      "size": 7701
+    },
+    {
+      "path": "docs/proposals/AG2-V1-AUTHORITY-BOUNDARY-EVALUATION.md",
+      "size": 3330
+    },
+    {
+      "path": "docs/proposals/CAPABILITY-RESIDUE.md",
+      "size": 6679
+    },
+    {
+      "path": "docs/proposals/CROSS-PROTOCOL-SCHEMA-RESOLUTION.md",
+      "size": 4647
+    },
+    {
+      "path": "docs/proposals/HIDDEN-INSTRUCTION-CREDENTIALED-ACTION.md",
+      "size": 6647
+    },
+    {
+      "path": "docs/proposals/attestation-schema-proposal.md",
+      "size": 18188
+    },
+    {
+      "path": "docs/proposals/entity-decision.md",
+      "size": 3289
+    },
+    {
+      "path": "docs/release-claims.json",
+      "size": 3515
+    },
+    {
+      "path": "docs/research/DIAGNOSTIC-AGENT-CONTROLS-2026-08.md",
+      "size": 10650
+    },
+    {
+      "path": "docs/result-semantics.json",
+      "size": 13095
+    },
+    {
+      "path": "docs/v3.8-roadmap.md",
+      "size": 8323
+    },
+    {
+      "path": "docs/v3.9-roadmap.md",
+      "size": 1560
+    },
+    {
+      "path": "fixtures/dgb/README.md",
+      "size": 10562
+    },
+    {
+      "path": "fixtures/dgb/dgb-corpus-bundle.v1.json",
+      "size": 172220
+    },
+    {
+      "path": "fixtures/rcl/CONFORMANCE.md",
+      "size": 9782
+    },
+    {
+      "path": "fixtures/rcl/README.md",
+      "size": 5811
+    },
+    {
+      "path": "fixtures/rcl/rcl-oracle-fixtures.v1.json",
+      "size": 25619
+    },
+    {
+      "path": "grafana-dashboards.json",
+      "size": 26620
+    },
+    {
+      "path": "interop/README.md",
+      "size": 2770
+    },
+    {
+      "path": "interop/adapters/abv_reference.py",
+      "size": 3968
+    },
+    {
+      "path": "interop/lumen_scope_binding_repro.py",
+      "size": 11976
+    },
+    {
+      "path": "interop/run_external_fixture.py",
+      "size": 20303
+    },
+    {
+      "path": "mcp_server/__init__.py",
+      "size": 349
+    },
+    {
+      "path": "mcp_server/__main__.py",
+      "size": 2148
+    },
+    {
+      "path": "mcp_server/server.py",
+      "size": 24317
+    },
+    {
+      "path": "protocol_tests/__init__.py",
+      "size": 37
+    },
+    {
+      "path": "protocol_tests/_ed25519.py",
+      "size": 4281
+    },
+    {
+      "path": "protocol_tests/_utils.py",
+      "size": 16314
+    },
+    {
+      "path": "protocol_tests/a2a_harness.py",
+      "size": 89300
+    },
+    {
+      "path": "protocol_tests/advanced_attacks.py",
+      "size": 37865
+    },
+    {
+      "path": "protocol_tests/agent_data_injection.py",
+      "size": 21712
+    },
+    {
+      "path": "protocol_tests/agent_prose_outcome.py",
+      "size": 5548
+    },
+    {
+      "path": "protocol_tests/aggregate.py",
+      "size": 4378
+    },
+    {
+      "path": "protocol_tests/aiuc1_compliance_harness.py",
+      "size": 64028
+    },
+    {
+      "path": "protocol_tests/ap2_harness.py",
+      "size": 49819
+    },
+    {
+      "path": "protocol_tests/asi_inventory.py",
+      "size": 12211
+    },
+    {
+      "path": "protocol_tests/attestation.py",
+      "size": 18418
+    },
+    {
+      "path": "protocol_tests/attestation_registry.py",
+      "size": 14642
+    },
+    {
+      "path": "protocol_tests/autogen_harness.py",
+      "size": 39101
+    },
+    {
+      "path": "protocol_tests/benchmark_integrity_harness.py",
+      "size": 40674
+    },
+    {
+      "path": "protocol_tests/capability_profile_harness.py",
+      "size": 41008
+    },
+    {
+      "path": "protocol_tests/capability_residue_harness.py",
+      "size": 17923
+    },
+    {
+      "path": "protocol_tests/capability_residue_targets.py",
+      "size": 3312
+    },
+    {
+      "path": "protocol_tests/card_token_harness.py",
+      "size": 35669
+    },
+    {
+      "path": "protocol_tests/cbrn_harness.py",
+      "size": 30751
+    },
+    {
+      "path": "protocol_tests/cli.py",
+      "size": 47056
+    },
+    {
+      "path": "protocol_tests/cloud_agent_harness.py",
+      "size": 53108
+    },
+    {
+      "path": "protocol_tests/community_runner.py",
+      "size": 70939
+    },
+    {
+      "path": "protocol_tests/configs",
+      "size": 10
+    },
+    {
+      "path": "protocol_tests/coverage",
+      "size": 16
+    },
+    {
+      "path": "protocol_tests/crewai_cve_harness.py",
+      "size": 61740
+    },
+    {
+      "path": "protocol_tests/delegation_chain_harness.py",
+      "size": 91145
+    },
+    {
+      "path": "protocol_tests/enterprise_adapters.py",
+      "size": 51451
+    },
+    {
+      "path": "protocol_tests/extended_enterprise_adapters.py",
+      "size": 45099
+    },
+    {
+      "path": "protocol_tests/extended_thinking_harness.py",
+      "size": 41663
+    },
+    {
+      "path": "protocol_tests/framework_adapters.py",
+      "size": 72199
+    },
+    {
+      "path": "protocol_tests/governance_modification_harness.py",
+      "size": 45711
+    },
+    {
+      "path": "protocol_tests/gtg1002_simulation.py",
+      "size": 57361
+    },
+    {
+      "path": "protocol_tests/harmful_output_harness.py",
+      "size": 36088
+    },
+    {
+      "path": "protocol_tests/harness_base.py",
+      "size": 11760
+    },
+    {
+      "path": "protocol_tests/hidden_instruction_harness.py",
+      "size": 20007
+    },
+    {
+      "path": "protocol_tests/hidden_instruction_targets.py",
+      "size": 5586
+    },
+    {
+      "path": "protocol_tests/hitl_harness.py",
+      "size": 38117
+    },
+    {
+      "path": "protocol_tests/http_helpers.py",
+      "size": 110229
+    },
+    {
+      "path": "protocol_tests/identity_harness.py",
+      "size": 52650
+    },
+    {
+      "path": "protocol_tests/incident_response_harness.py",
+      "size": 41071
+    },
+    {
+      "path": "protocol_tests/intent_contract_harness.py",
+      "size": 34244
+    },
+    {
+      "path": "protocol_tests/jailbreak_harness.py",
+      "size": 57655
+    },
+    {
+      "path": "protocol_tests/kill_switch_harness.py",
+      "size": 27867
+    },
+    {
+      "path": "protocol_tests/l402_harness.py",
+      "size": 103398
+    },
+    {
+      "path": "protocol_tests/mcp_harness.py",
+      "size": 206818
+    },
+    {
+      "path": "protocol_tests/mcp_supplychain.py",
+      "size": 28838
+    },
+    {
+      "path": "protocol_tests/mcp_tool_poisoning_harness.py",
+      "size": 85129
+    },
+    {
+      "path": "protocol_tests/memory_harness.py",
+      "size": 59289
+    },
+    {
+      "path": "protocol_tests/mock_mcp_server.py",
+      "size": 15313
+    },
+    {
+      "path": "protocol_tests/multi_agent_harness.py",
+      "size": 68773
+    },
+    {
+      "path": "protocol_tests/over_refusal_harness.py",
+      "size": 61261
+    },
+    {
+      "path": "protocol_tests/owasp_taxonomy.py",
+      "size": 2566
+    },
+    {
+      "path": "protocol_tests/package_data.py",
+      "size": 2217
+    },
+    {
+      "path": "protocol_tests/prompt_caching_harness.py",
+      "size": 39835
+    },
+    {
+      "path": "protocol_tests/provenance_harness.py",
+      "size": 42604
+    },
+    {
+      "path": "protocol_tests/ptc_harness.py",
+      "size": 49396
+    },
+    {
+      "path": "protocol_tests/rcl_fixture_export.py",
+      "size": 8705
+    },
+    {
+      "path": "protocol_tests/rcl_fixtures.py",
+      "size": 8761
+    },
+    {
+      "path": "protocol_tests/receipt_claim_harness.py",
+      "size": 22627
+    },
+    {
+      "path": "protocol_tests/report_gate.py",
+      "size": 8549
+    },
+    {
+      "path": "protocol_tests/return_channel_harness.py",
+      "size": 34888
+    },
+    {
+      "path": "protocol_tests/run_provenance.py",
+      "size": 32988
+    },
+    {
+      "path": "protocol_tests/schema_resolution.py",
+      "size": 4537
+    },
+    {
+      "path": "protocol_tests/schemas",
+      "size": 10
+    },
+    {
+      "path": "protocol_tests/settlement_finality_harness.py",
+      "size": 26745
+    },
+    {
+      "path": "protocol_tests/skill_security_harness.py",
+      "size": 55720
+    },
+    {
+      "path": "protocol_tests/statistical.py",
+      "size": 12683
+    },
+    {
+      "path": "protocol_tests/telemetry.py",
+      "size": 10206
+    },
+    {
+      "path": "protocol_tests/tool_search_harness.py",
+      "size": 40963
+    },
+    {
+      "path": "protocol_tests/trial_runner.py",
+      "size": 16171
+    },
+    {
+      "path": "protocol_tests/ucp_acp_harness.py",
+      "size": 36500
+    },
+    {
+      "path": "protocol_tests/version.py",
+      "size": 851
+    },
+    {
+      "path": "protocol_tests/watermark_harness.py",
+      "size": 22742
+    },
+    {
+      "path": "protocol_tests/workspace_trust_harness.py",
+      "size": 22057
+    },
+    {
+      "path": "protocol_tests/x402_fireblocks_harness.py",
+      "size": 55991
+    },
+    {
+      "path": "protocol_tests/x402_harness.py",
+      "size": 182400
+    },
+    {
+      "path": "protocol_tests/x402_merchant.py",
+      "size": 16159
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 3314
+    },
+    {
+      "path": "red_team_automation.py",
+      "size": 56990
+    },
+    {
+      "path": "reports/aiuc1-prep-2026-03-28.md",
+      "size": 6828
+    },
+    {
+      "path": "reports/mcpstandard-dev-20260327.json",
+      "size": 9720
+    },
+    {
+      "path": "reports/monthly/.gitkeep",
+      "size": 0
+    },
+    {
+      "path": "reports/round_25/VS-R03-mcp-tool-poisoning-evidence.md",
+      "size": 3523
+    },
+    {
+      "path": "reports/round_25/vsr03-mcp-tool-poisoning-evidence.json",
+      "size": 7871
+    },
+    {
+      "path": "reports/round_26/VS-R04-receipt-claim-evidence.md",
+      "size": 3355
+    },
+    {
+      "path": "reports/round_26/rcl-oracle-fixtures-v1.json",
+      "size": 24742
+    },
+    {
+      "path": "reports/round_26/vsr04-receipt-claim-evidence.json",
+      "size": 3720
+    },
+    {
+      "path": "schemas/attestation-report.json",
+      "size": 37699
+    },
+    {
+      "path": "schemas/result-semantics.schema.json",
+      "size": 8768
+    },
+    {
+      "path": "scripts/.env.example",
+      "size": 126
+    },
+    {
+      "path": "scripts/__init__.py",
+      "size": 1161
+    },
+    {
+      "path": "scripts/aiuc1_prep.py",
+      "size": 22248
+    },
+    {
+      "path": "scripts/audit_verdict_taint.py",
+      "size": 12960
+    },
+    {
+      "path": "scripts/auroc.py",
+      "size": 6673
+    },
+    {
+      "path": "scripts/behavioral_profile.py",
+      "size": 29968
+    },
+    {
+      "path": "scripts/build_provenance.py",
+      "size": 6452
+    },
+    {
+      "path": "scripts/check_public_metadata.py",
+      "size": 31572
+    },
+    {
+      "path": "scripts/compliance_crosswalk.py",
+      "size": 7941
+    },
+    {
+      "path": "scripts/compliance_report.py",
+      "size": 12774
+    },
+    {
+      "path": "scripts/count_tests.py",
+      "size": 5154
+    },
+    {
+      "path": "scripts/dead_host_sweep.py",
+      "size": 20041
+    },
+    {
+      "path": "scripts/discord_scan_bot.py",
+      "size": 14053
+    },
+    {
+      "path": "scripts/empty_answer_sweep.py",
+      "size": 6813
+    },
+    {
+      "path": "scripts/evidence_pack.py",
+      "size": 21718
+    },
+    {
+      "path": "scripts/free_scan.py",
+      "size": 17094
+    },
+    {
+      "path": "scripts/fria_evidence.py",
+      "size": 9554
+    },
+    {
+      "path": "scripts/generate_cve_pages.py",
+      "size": 33769
+    },
+    {
+      "path": "scripts/generate_owasp_agentic_coverage.py",
+      "size": 29416
+    },
+    {
+      "path": "scripts/generate_test_catalog.py",
+      "size": 13276
+    },
+    {
+      "path": "scripts/html_report.py",
+      "size": 30284
+    },
+    {
+      "path": "scripts/mcp_reference_calibration.py",
+      "size": 7570
+    },
+    {
+      "path": "scripts/monthly_security_report.py",
+      "size": 13000
+    },
+    {
+      "path": "scripts/no_surface_sweep.py",
+      "size": 14141
+    },
+    {
+      "path": "scripts/owasp_agentic_select.py",
+      "size": 8131
+    },
+    {
+      "path": "scripts/permissive_host_sweep.py",
+      "size": 6862
+    },
+    {
+      "path": "scripts/refusing_host_sweep.py",
+      "size": 5633
+    },
+    {
+      "path": "scripts/registry_reference_server.py",
+      "size": 22595
+    },
+    {
+      "path": "scripts/top10_failures.py",
+      "size": 19934
+    },
+    {
+      "path": "scripts/validate_owasp_agentic_mapping.py",
+      "size": 16775
+    },
+    {
+      "path": "scripts/validate_result_semantics.py",
+      "size": 19751
+    },
+    {
+      "path": "scripts/verify_attestation_record.py",
+      "size": 7494
+    },
+    {
+      "path": "scripts/verify_release_claims.py",
+      "size": 12456
+    },
+    {
+      "path": "scripts/verify_release_provenance.py",
+      "size": 6392
+    },
+    {
+      "path": "scripts/verify_wheel_gate.py",
+      "size": 25716
+    },
+    {
+      "path": "setup.py",
+      "size": 2626
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION.md",
+      "size": 3901
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R24_2026-03-30.md",
+      "size": 13462
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R25_2026-03-30.md",
+      "size": 11091
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R26_2026-03-30.md",
+      "size": 8079
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R27_2026-03-30.md",
+      "size": 9477
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R28_2026-03-30.md",
+      "size": 7450
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R29_2026-04-02.md",
+      "size": 7723
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R30_2026-04-04.md",
+      "size": 7578
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R31_2026-04-08.md",
+      "size": 13389
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R32_2026-04-08.md",
+      "size": 7166
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R33_2026-07-01.md",
+      "size": 7054
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R34_2026-07-01.md",
+      "size": 8045
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R35_2026-07-25.md",
+      "size": 11928
+    },
+    {
+      "path": "testing/CRITICAL_EVALUATION_R36_2026-08-30.md",
+      "size": 5727
+    },
+    {
+      "path": "testing/README.md",
+      "size": 2235
+    },
+    {
+      "path": "testing/__init__.py",
+      "size": 60
+    },
+    {
+      "path": "testing/counterfactual_shapes.py",
+      "size": 5985
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/LICENSE",
+      "size": 1074
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/SHA256SUMS",
+      "size": 2245
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/check.py",
+      "size": 6959
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/CTRL-01.json",
+      "size": 1099
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/CTRL-02.json",
+      "size": 1134
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/CTRL-03.json",
+      "size": 1044
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P1-01.json",
+      "size": 1102
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P2-01.json",
+      "size": 1105
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P2-02.json",
+      "size": 1083
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P3-01.json",
+      "size": 1290
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P3-02.json",
+      "size": 1174
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P4-01.json",
+      "size": 1095
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P5-01.json",
+      "size": 1119
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P5-02.json",
+      "size": 945
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P6-01.json",
+      "size": 1396
+    },
+    {
+      "path": "testing/fixtures/abv-v0.1.2/vectors/NEG-P6-02.json",
+      "size": 1513
+    },
+    {
+      "path": "testing/fixtures/oatr_test_tokens.json",
+      "size": 13995
+    },
+    {
+      "path": "testing/mock_mcp_server.py",
+      "size": 769
+    },
+    {
+      "path": "testing/test_a2a_absence_controls.py",
+      "size": 5292
+    },
+    {
+      "path": "testing/test_a2a_contentless_answers.py",
+      "size": 8906
+    },
+    {
+      "path": "testing/test_a2a_unserviced_state.py",
+      "size": 11161
+    },
+    {
+      "path": "testing/test_a2a_verdicts_need_an_a2a_surface.py",
+      "size": 22099
+    },
+    {
+      "path": "testing/test_absence_controls_last_three.py",
+      "size": 5290
+    },
+    {
+      "path": "testing/test_action_report_gate.py",
+      "size": 21147
+    },
+    {
+      "path": "testing/test_adapter_verdicts_need_a_surface.py",
+      "size": 20634
+    },
+    {
+      "path": "testing/test_advanced_attacks_logic.py",
+      "size": 1785
+    },
+    {
+      "path": "testing/test_agent_data_injection.py",
+      "size": 9023
+    },
+    {
+      "path": "testing/test_agent_prose_extraction.py",
+      "size": 4571
+    },
+    {
+      "path": "testing/test_agent_prose_outcome_profile.py",
+      "size": 5046
+    },
+    {
+      "path": "testing/test_aiuc1_et_ptc_verdicts_need_a_surface.py",
+      "size": 14807
+    },
+    {
+      "path": "testing/test_attestation_readme_consistency.py",
+      "size": 4085
+    },
+    {
+      "path": "testing/test_autogen_harness.py",
+      "size": 4188
+    },
+    {
+      "path": "testing/test_autogen_served_json.py",
+      "size": 10208
+    },
+    {
+      "path": "testing/test_behavioral_profile.py",
+      "size": 12640
+    },
+    {
+      "path": "testing/test_behavioral_profile_three_state.py",
+      "size": 7988
+    },
+    {
+      "path": "testing/test_benchmark_integrity_preflight.py",
+      "size": 5531
+    },
+    {
+      "path": "testing/test_capability_residue_controls.py",
+      "size": 5974
+    },
+    {
+      "path": "testing/test_cli_exit_propagation.py",
+      "size": 3497
+    },
+    {
+      "path": "testing/test_cli_json_capability.py",
+      "size": 4952
+    },
+    {
+      "path": "testing/test_cloud_agent_verdicts_need_a_surface.py",
+      "size": 12302
+    },
+    {
+      "path": "testing/test_code_quality.py",
+      "size": 46836
+    },
+    {
+      "path": "testing/test_community_capability_gating.py",
+      "size": 21946
+    },
+    {
+      "path": "testing/test_community_live_adapter.py",
+      "size": 15384
+    },
+    {
+      "path": "testing/test_community_regex_budget.py",
+      "size": 8580
+    },
+    {
+      "path": "testing/test_comparison_doc_is_current.py",
+      "size": 10544
+    },
+    {
+      "path": "testing/test_console_reports_the_third_state.py",
+      "size": 6861
+    },
+    {
+      "path": "testing/test_contentless_answer_is_not_an_answer.py",
+      "size": 10152
+    },
+    {
+      "path": "testing/test_contentless_answers_are_inconclusive.py",
+      "size": 13006
+    },
+    {
+      "path": "testing/test_crewai_request_outcome.py",
+      "size": 5637
+    },
+    {
+      "path": "testing/test_cve_pages_are_current.py",
+      "size": 9428
+    },
+    {
+      "path": "testing/test_cve_verdicts_are_target_differentials.py",
+      "size": 24684
+    },
+    {
+      "path": "testing/test_dead_host_state.py",
+      "size": 11636
+    },
+    {
+      "path": "testing/test_delegation_chain_attenuation.py",
+      "size": 26858
+    },
+    {
+      "path": "testing/test_delegation_live_fixtures.py",
+      "size": 16587
+    },
+    {
+      "path": "testing/test_documented_cli_shapes.py",
+      "size": 2713
+    },
+    {
+      "path": "testing/test_documented_test_ids_resolve.py",
+      "size": 7100
+    },
+    {
+      "path": "testing/test_ed25519.py",
+      "size": 2044
+    },
+    {
+      "path": "testing/test_empty_2xx_is_not_an_answer.py",
+      "size": 11769
+    },
+    {
+      "path": "testing/test_empty_answer_is_not_a_control.py",
+      "size": 14452
+    },
+    {
+      "path": "testing/test_evaluation_runner_config_d.py",
+      "size": 4142
+    },
+    {
+      "path": "testing/test_evidence_integrity_registers.py",
+      "size": 52089
+    },
+    {
+      "path": "testing/test_evidence_transformation_patterns.py",
+      "size": 24436
+    },
+    {
+      "path": "testing/test_exit_code_contract.py",
+      "size": 20563
+    },
+    {
+      "path": "testing/test_exit_code_six_harnesses.py",
+      "size": 19833
+    },
+    {
+      "path": "testing/test_external_fixture_runner.py",
+      "size": 16877
+    },
+    {
+      "path": "testing/test_free_scan_controls.py",
+      "size": 8505
+    },
+    {
+      "path": "testing/test_gtg1002_patterns.py",
+      "size": 6638
+    },
+    {
+      "path": "testing/test_harness_base_adoption.py",
+      "size": 13376
+    },
+    {
+      "path": "testing/test_hidden_instruction_controls.py",
+      "size": 10119
+    },
+    {
+      "path": "testing/test_hitl_capability_controls.py",
+      "size": 27472
+    },
+    {
+      "path": "testing/test_hitl_harness.py",
+      "size": 12812
+    },
+    {
+      "path": "testing/test_inconclusive_is_structural.py",
+      "size": 13602
+    },
+    {
+      "path": "testing/test_inconclusive_summary.py",
+      "size": 8248
+    },
+    {
+      "path": "testing/test_independence_claims_are_disclosed.py",
+      "size": 6628
+    },
+    {
+      "path": "testing/test_integration.py",
+      "size": 6418
+    },
+    {
+      "path": "testing/test_json_stdout_purity.py",
+      "size": 5497
+    },
+    {
+      "path": "testing/test_live_unreached_is_inconclusive.py",
+      "size": 12313
+    },
+    {
+      "path": "testing/test_local_verdicts_are_labelled.py",
+      "size": 11505
+    },
+    {
+      "path": "testing/test_mcp021_http_auth_denial.py",
+      "size": 8154
+    },
+    {
+      "path": "testing/test_mcp_encoding_scanner.py",
+      "size": 9569
+    },
+    {
+      "path": "testing/test_mcp_liveness_grounded_verdicts.py",
+      "size": 10353
+    },
+    {
+      "path": "testing/test_mcp_reference_calibration.py",
+      "size": 5310
+    },
+    {
+      "path": "testing/test_mcp_result_integrity.py",
+      "size": 7275
+    },
+    {
+      "path": "testing/test_mcp_supplychain.py",
+      "size": 11251
+    },
+    {
+      "path": "testing/test_memory_namespace_boundary.py",
+      "size": 5573
+    },
+    {
+      "path": "testing/test_memory_revocation_enforcement.py",
+      "size": 15526
+    },
+    {
+      "path": "testing/test_native_simulate_is_scoped.py",
+      "size": 9744
+    },
+    {
+      "path": "testing/test_no_default_endpoints.py",
+      "size": 7531
+    },
+    {
+      "path": "testing/test_no_duplicate_refusal_predicate.py",
+      "size": 15889
+    },
+    {
+      "path": "testing/test_no_surface_is_not_a_pass.py",
+      "size": 12705
+    },
+    {
+      "path": "testing/test_oatr_v120_fixtures.py",
+      "size": 13102
+    },
+    {
+      "path": "testing/test_overrefusal_caching_gtg_need_a_surface.py",
+      "size": 22056
+    },
+    {
+      "path": "testing/test_packaged_scripts_resolve.py",
+      "size": 27246
+    },
+    {
+      "path": "testing/test_payment_decision_states.py",
+      "size": 31289
+    },
+    {
+      "path": "testing/test_payment_outcome.py",
+      "size": 9001
+    },
+    {
+      "path": "testing/test_payment_silence_guard.py",
+      "size": 11016
+    },
+    {
+      "path": "testing/test_payment_verdicts_need_a_402_surface.py",
+      "size": 17442
+    },
+    {
+      "path": "testing/test_permissive_host_state.py",
+      "size": 52816
+    },
+    {
+      "path": "testing/test_ptc_aiuc1_unserved_is_inconclusive.py",
+      "size": 13537
+    },
+    {
+      "path": "testing/test_public_metadata_check.py",
+      "size": 29392
+    },
+    {
+      "path": "testing/test_receipt_claim.py",
+      "size": 3779
+    },
+    {
+      "path": "testing/test_refusal_establishes_a_pass.py",
+      "size": 14500
+    },
+    {
+      "path": "testing/test_refusal_recognisers_need_a_surface.py",
+      "size": 23524
+    },
+    {
+      "path": "testing/test_refusing_host_state.py",
+      "size": 16162
+    },
+    {
+      "path": "testing/test_release_claims.py",
+      "size": 19225
+    },
+    {
+      "path": "testing/test_release_is_gated_on_the_wheel.py",
+      "size": 30037
+    },
+    {
+      "path": "testing/test_release_provenance.py",
+      "size": 19016
+    },
+    {
+      "path": "testing/test_report_states_its_provenance.py",
+      "size": 11446
+    },
+    {
+      "path": "testing/test_review_findings_are_ratcheted.py",
+      "size": 41743
+    },
+    {
+      "path": "testing/test_schema_resolution.py",
+      "size": 4897
+    },
+    {
+      "path": "testing/test_served_answers_reach_a_verdict.py",
+      "size": 15149
+    },
+    {
+      "path": "testing/test_serviced_guard.py",
+      "size": 40468
+    },
+    {
+      "path": "testing/test_simulated_passes_are_scoped.py",
+      "size": 5562
+    },
+    {
+      "path": "testing/test_static_detectors_can_fire.py",
+      "size": 26729
+    },
+    {
+      "path": "testing/test_statistical.py",
+      "size": 9500
+    },
+    {
+      "path": "testing/test_sweep_covers_the_registry.py",
+      "size": 6509
+    },
+    {
+      "path": "testing/test_telemetry_three_state.py",
+      "size": 15538
+    },
+    {
+      "path": "testing/test_transport.py",
+      "size": 33242
+    },
+    {
+      "path": "testing/test_trial_runner.py",
+      "size": 25428
+    },
+    {
+      "path": "testing/test_verdicts_need_a_surface.py",
+      "size": 53223
+    },
+    {
+      "path": "testing/test_vsr03_verdict_correctness.py",
+      "size": 33727
+    },
+    {
+      "path": "testing/test_workspace_trust_controls.py",
+      "size": 9489
+    },
+    {
+      "path": "testing/test_x402_capability_controls.py",
+      "size": 5687
+    },
+    {
+      "path": "testing/test_x402_merchant.py",
+      "size": 5554
+    },
+    {
+      "path": "tests/_installed_consumer.py",
+      "size": 14902
+    },
+    {
+      "path": "tests/test_aggregate_state_is_shared.py",
+      "size": 10177
+    },
+    {
+      "path": "tests/test_attestation_can_say_inconclusive.py",
+      "size": 5984
+    },
+    {
+      "path": "tests/test_attestation_schema_neutrality.py",
+      "size": 4232
+    },
+    {
+      "path": "tests/test_auroc.py",
+      "size": 3339
+    },
+    {
+      "path": "tests/test_community_manifest_integrity.py",
+      "size": 2838
+    },
+    {
+      "path": "tests/test_dgb_bundle_export.py",
+      "size": 34053
+    },
+    {
+      "path": "tests/test_evidence_artifacts_are_three_state.py",
+      "size": 4409
+    },
+    {
+      "path": "tests/test_evidence_pack_declares_its_denominator.py",
+      "size": 3847
+    },
+    {
+      "path": "tests/test_fallback_validator_matches_schema.py",
+      "size": 4283
+    },
+    {
+      "path": "tests/test_fb013_quorum_binds_distinct_approvers.py",
+      "size": 5514
+    },
+    {
+      "path": "tests/test_fria_evidence.py",
+      "size": 3214
+    },
+    {
+      "path": "tests/test_imported_risk_score_needs_a_denominator.py",
+      "size": 1872
+    },
+    {
+      "path": "tests/test_installed_consumer_diagnoses_itself.py",
+      "size": 12376
+    },
+    {
+      "path": "tests/test_mcp021_auth_fail_open.py",
+      "size": 4880
+    },
+    {
+      "path": "tests/test_mcp_sdk_schema_resolution_boundary.py",
+      "size": 4468
+    },
+    {
+      "path": "tests/test_mcp_server_runtime.py",
+      "size": 556
+    },
+    {
+      "path": "tests/test_mcp_server_streamable_http_boundary.py",
+      "size": 3248
+    },
+    {
+      "path": "tests/test_one_predicate_both_shapes.py",
+      "size": 4096
+    },
+    {
+      "path": "tests/test_owasp_agentic_mapping.py",
+      "size": 12893
+    },
+    {
+      "path": "tests/test_owasp_asi_is_one_source.py",
+      "size": 7381
+    },
+    {
+      "path": "tests/test_owasp_titles_have_one_source.py",
+      "size": 4413
+    },
+    {
+      "path": "tests/test_rcl_fixture_export.py",
+      "size": 4975
+    },
+    {
+      "path": "tests/test_record_states_its_own_independence.py",
+      "size": 8980
+    },
+    {
+      "path": "tests/test_registry_refuses_without_schema.py",
+      "size": 8611
+    },
+    {
+      "path": "tests/test_registry_schema_validity_is_enforced.py",
+      "size": 10436
+    },
+    {
+      "path": "tests/test_registry_server_contract.py",
+      "size": 16899
+    },
+    {
+      "path": "tests/test_report_states_its_provenance.py",
+      "size": 35945
+    },
+    {
+      "path": "tests/test_result_semantics_predeclared.py",
+      "size": 13711
+    },
+    {
+      "path": "tests/test_simulate_does_not_claim_a_pass.py",
+      "size": 8384
+    },
+    {
+      "path": "tests/test_the_wheel_ships_what_it_reads.py",
+      "size": 12802
+    },
+    {
+      "path": "tests/test_verdict_taint_audit.py",
+      "size": 7746
+    }
+  ]
+}

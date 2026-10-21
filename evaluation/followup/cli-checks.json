@@ -1,0 +1,43 @@
+[
+  {
+    "args": [
+      "rules"
+    ],
+    "exit_code": 0
+  },
+  {
+    "args": [
+      "scan",
+      "tests/samples/clean_server.py",
+      "--format",
+      "json"
+    ],
+    "exit_code": 0
+  },
+  {
+    "args": [
+      "scan",
+      "tests/samples/vulnerable_tool_poisoning.py",
+      "--format",
+      "json"
+    ],
+    "exit_code": 1
+  },
+  {
+    "args": [
+      "scan",
+      "tests/samples/clean_server.py",
+      "--check",
+      "MCP99"
+    ],
+    "exit_code": 2
+  },
+  {
+    "fix_dry_run_unchanged": true,
+    "backup_preserved": true,
+    "valid_python": true,
+    "idempotent": true,
+    "fix_exit": 1,
+    "verify_report": "\n================================================================\nMCP Security Fixer - Auto-Remediation Report\n================================================================\n\nTarget: C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpxbt64tge\\server.py\nFiles scanned: 1\nFiles fixed: 1\n\nIssues before: 17\nFixes applied: 2\nIssues after:  12\nOther detected categories (not modified): 0\n\n----------------------------------------------------------------\nFile Details:\n----------------------------------------------------------------\n\n  [OK] C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpxbt64tge\\server.py\n       Issues: 17 -> Fixes: 2\n       Backup: C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpxbt64tge\\server.py.bak\n----------------------------------------------------------------\n\n  Partial fix: 12 issues remain (may require manual review)\n\n"
+  }
+]

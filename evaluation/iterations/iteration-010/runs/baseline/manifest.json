@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "iteration": "iteration-010",
+  "label_unit": "artifact/rule",
+  "description": "Six synthetic paired behavior families; development evidence, not independent incidents.",
+  "review": "Assistant source-semantic review; independent human review pending.",
+  "artifacts": [
+    {
+      "id": "execfile-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/execfile-positive.ts.txt",
+      "source_filename": "execfile-positive.ts",
+      "sha256": "616f4214ef4216f81d76e682d2fd5f350a2fb04bfdccc0a4cc6ae21909e01ec7",
+      "origin": "synthetic",
+      "family_id": "execfile",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "rationale": "User controls executable."
+        }
+      ]
+    },
+    {
+      "id": "execfile-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/execfile-negative.ts.txt",
+      "source_filename": "execfile-negative.ts",
+      "sha256": "ce25faf9a1a3335fec0d5c36c5575574dff1e2022296ce91e14f3f67fc01b200",
+      "origin": "synthetic",
+      "family_id": "execfile",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "rationale": "Fixed git read operation, operand follows option terminator, shell disabled."
+        }
+      ]
+    },
+    {
+      "id": "shell-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/shell-positive.ts.txt",
+      "source_filename": "shell-positive.ts",
+      "sha256": "00dc0851ea5860212450d61efc288036b3520565b6ac019253ab8075cb859cb5",
+      "origin": "synthetic",
+      "family_id": "shell",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "rationale": "Shell option exposes user input to shell interpretation."
+        }
+      ]
+    },
+    {
+      "id": "shell-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/shell-negative.ts.txt",
+      "source_filename": "shell-negative.ts",
+      "sha256": "f2344c0a784a977277202ad263fcaaeec79f2f9843bf31a123fd34b99fb51718",
+      "origin": "synthetic",
+      "family_id": "shell",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "rationale": "Explicit shell false with fixed executable and operand boundary."
+        }
+      ]
+    },
+    {
+      "id": "interpreter-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/interpreter-positive.ts.txt",
+      "source_filename": "interpreter-positive.ts",
+      "sha256": "fbd0ee65d1c00a586acc0b7fa8514c39d13d5a432cae0e5f43469d4277e2da9c",
+      "origin": "synthetic",
+      "family_id": "interpreter",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "rationale": "User controls interpreter program."
+        }
+      ]
+    },
+    {
+      "id": "interpreter-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/interpreter-negative.ts.txt",
+      "source_filename": "interpreter-negative.ts",
+      "sha256": "3a2cf47ee873b721ef5a008a1549787899ef9cae0b09fe151da274c631d13de7",
+      "origin": "synthetic",
+      "family_id": "interpreter",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "rationale": "Fixed non-interpreter read operation with option terminator."
+        }
+      ]
+    },
+    {
+      "id": "quoted-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/quoted-positive.ts.txt",
+      "source_filename": "quoted-positive.ts",
+      "sha256": "51b4746c7770c6e2c34d2be907ca58391c384d1223b97cff92f55fadbde9c2c4",
+      "origin": "synthetic",
+      "family_id": "quoted",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "rationale": "User input interpolated into shell command."
+        }
+      ]
+    },
+    {
+      "id": "quoted-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/quoted-negative.ts.txt",
+      "source_filename": "quoted-negative.ts",
+      "sha256": "da8a0cee8fa355385f06cf63735883c33ccda778f8b2a164b0e458fe23fe0899",
+      "origin": "synthetic",
+      "family_id": "quoted",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "rationale": "Example string is data, not executable code."
+        }
+      ]
+    },
+    {
+      "id": "filetext-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/filetext-positive.ts.txt",
+      "source_filename": "filetext-positive.ts",
+      "sha256": "1dec7774c1b3be72939484732050a6e32024453ac933513e63ae9accd84a8a90",
+      "origin": "synthetic",
+      "family_id": "filetext",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "positive",
+          "rationale": "Raw file text crosses tool result boundary."
+        }
+      ]
+    },
+    {
+      "id": "filetext-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/filetext-negative.ts.txt",
+      "source_filename": "filetext-negative.ts",
+      "sha256": "7c5f9334a4306443ec9787abd53f8b900adea93032b4a1b4af92a98fb47d1a21",
+      "origin": "synthetic",
+      "family_id": "filetext",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "negative",
+          "rationale": "Only a numeric length crosses boundary."
+        }
+      ]
+    },
+    {
+      "id": "filealias-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/filealias-positive.ts.txt",
+      "source_filename": "filealias-positive.ts",
+      "sha256": "2b2f6a1ef4fdaf378eaede5af236ca49edcf2bac0009c1229dc0a7d266cb8902",
+      "origin": "synthetic",
+      "family_id": "filealias",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "positive",
+          "rationale": "Raw file text alias reaches tool result."
+        }
+      ]
+    },
+    {
+      "id": "filealias-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/followup/filealias-negative.ts.txt",
+      "source_filename": "filealias-negative.ts",
+      "sha256": "c73bbc4d4c6f3310ce0ca5447fdbf4fd5d9d370d792279cfab6d09b4c0b0202c",
+      "origin": "synthetic",
+      "family_id": "filealias",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "negative",
+          "rationale": "Alias carries only numeric length."
+        }
+      ]
+    }
+  ]
+}

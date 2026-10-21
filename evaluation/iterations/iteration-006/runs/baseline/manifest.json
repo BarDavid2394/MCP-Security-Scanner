@@ -1,0 +1,446 @@
+{
+  "schema_version": 1,
+  "iteration": "iteration-006",
+  "purpose": "Exposed development pilot, not independent real-world validation or weight training",
+  "review_status": "Assistant semantic labels fixed before predictions; independent human review pending",
+  "label_unit": "artifact + rule; unlabelled rules are unknown",
+  "track": "campaign-6",
+  "split": "development-only",
+  "generator_version": "material-pilot-v1",
+  "family_policy": "All variants, polarities, source-derived records and wrapper variants stay in development; do not random-split them into holdout.",
+  "artifacts": [
+    {
+      "id": "synthetic-secret-output-inline-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-secret-output-inline-positive.py.txt",
+      "source_filename": "synthetic-secret-output-inline-positive.py",
+      "sha256": "2a14656de93211e87fc4bde06dccfa288ac2e81be91591708d379d8edd37ea5c",
+      "family_id": "synthetic-secret-output",
+      "pair_id": "secret-output-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "positive",
+          "rationale": "Returns the environment credential verbatim."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-secret-output-inline-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-secret-output-inline-negative.py.txt",
+      "source_filename": "synthetic-secret-output-inline-negative.py",
+      "sha256": "7707854a929aa3a3fa234b92e300b49f0c09ff907e01ca145e8fd213513923ed",
+      "family_id": "synthetic-secret-output",
+      "pair_id": "secret-output-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "negative",
+          "rationale": "Returns only credential presence, never its value; other side channels are out of scope."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-secret-output-helper-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-secret-output-helper-positive.py.txt",
+      "source_filename": "synthetic-secret-output-helper-positive.py",
+      "sha256": "e590bc2a9db70636c7820dc3461a462655e589cf5826c5539eba5065010a47db",
+      "family_id": "synthetic-secret-output",
+      "pair_id": "secret-output-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "positive",
+          "rationale": "Returns the environment credential verbatim."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-secret-output-helper-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-secret-output-helper-negative.py.txt",
+      "source_filename": "synthetic-secret-output-helper-negative.py",
+      "sha256": "fddd321ce81659a6d1dae504036364f045b407592341bee52e5f51c87765054b",
+      "family_id": "synthetic-secret-output",
+      "pair_id": "secret-output-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "polarity": "negative",
+          "rationale": "Returns only credential presence, never its value; other side channels are out of scope."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-metadata-override-inline-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-metadata-override-inline-positive.py.txt",
+      "source_filename": "synthetic-metadata-override-inline-positive.py",
+      "sha256": "200db8575c246a5a4733fc4c54b08fd6d1ec4f4dab7df58362fc14a40a673551",
+      "family_id": "synthetic-metadata-override",
+      "pair_id": "metadata-override-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Tool metadata commands an instruction override and credential exfiltration."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-metadata-override-inline-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-metadata-override-inline-negative.py.txt",
+      "source_filename": "synthetic-metadata-override-inline-negative.py",
+      "sha256": "8870e24c62065cd20ff15e36e8678d1ee2182a12a274d5be71964697045b5550",
+      "family_id": "synthetic-metadata-override",
+      "pair_id": "metadata-override-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Tool metadata explicitly treats an attack phrase as evidence, not instructions."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-metadata-override-helper-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-metadata-override-helper-positive.py.txt",
+      "source_filename": "synthetic-metadata-override-helper-positive.py",
+      "sha256": "8808b8d20fbaa4ea1f7c3e18899ee301269f10dda6fdade3dc89ac4cf77692ea",
+      "family_id": "synthetic-metadata-override",
+      "pair_id": "metadata-override-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Tool metadata commands an instruction override and credential exfiltration."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-metadata-override-helper-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-metadata-override-helper-negative.py.txt",
+      "source_filename": "synthetic-metadata-override-helper-negative.py",
+      "sha256": "c1838f934c294ef9fe50182c4b7a7f4143eac8434521a8a22ae37d558f19cee6",
+      "family_id": "synthetic-metadata-override",
+      "pair_id": "metadata-override-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Tool metadata explicitly treats an attack phrase as evidence, not instructions."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-shell-input-inline-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-shell-input-inline-positive.py.txt",
+      "source_filename": "synthetic-shell-input-inline-positive.py",
+      "sha256": "2bb79b160e1789f4c7699b64be3f198b6eeafb0df2f707bc08d81f4d9dfbb330",
+      "family_id": "synthetic-shell-input",
+      "pair_id": "shell-input-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "rationale": "Caller-controlled text is concatenated into a shell command without escaping."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-shell-input-inline-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-shell-input-inline-negative.py.txt",
+      "source_filename": "synthetic-shell-input-inline-negative.py",
+      "sha256": "9e1c83a9e8cb31d92271f340e19064f52d90c271b45076d7b69525bf32fc87e9",
+      "family_id": "synthetic-shell-input",
+      "pair_id": "shell-input-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "rationale": "Fixed executable and format with caller data as an argv element; no shell interpretation."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-shell-input-helper-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-shell-input-helper-positive.py.txt",
+      "source_filename": "synthetic-shell-input-helper-positive.py",
+      "sha256": "3ce2ce4c5ff5eff3cd8b978fba24fe3e71630564dd3aef3cdea370dd88971f33",
+      "family_id": "synthetic-shell-input",
+      "pair_id": "shell-input-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "rationale": "Caller-controlled text is concatenated into a shell command without escaping."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-shell-input-helper-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-shell-input-helper-negative.py.txt",
+      "source_filename": "synthetic-shell-input-helper-negative.py",
+      "sha256": "d92df7237c9869f49df3c73a22628424f77bdcdf2acdd49fd22b192819c228e9",
+      "family_id": "synthetic-shell-input",
+      "pair_id": "shell-input-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "rationale": "Fixed executable and format with caller data as an argv element; no shell interpretation."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-dynamic-code-inline-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-dynamic-code-inline-positive.py.txt",
+      "source_filename": "synthetic-dynamic-code-inline-positive.py",
+      "sha256": "5d73f28a250027baf3df0b4a0d116f5e032ccc32ba6618778b731ee08e6dd4ef",
+      "family_id": "synthetic-dynamic-code",
+      "pair_id": "dynamic-code-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "rationale": "Caller input is executed as a Python expression."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-dynamic-code-inline-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-dynamic-code-inline-negative.py.txt",
+      "source_filename": "synthetic-dynamic-code-inline-negative.py",
+      "sha256": "97fa5d71c4dd859848e01d4a2c8f476b5d9cb56b49504feadcc5e2b414d070a3",
+      "family_id": "synthetic-dynamic-code",
+      "pair_id": "dynamic-code-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "negative",
+          "rationale": "literal_eval parses Python literals without arbitrary evaluation; resource exhaustion is outside this rule."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-dynamic-code-helper-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-dynamic-code-helper-positive.py.txt",
+      "source_filename": "synthetic-dynamic-code-helper-positive.py",
+      "sha256": "31ad1b8e0cdf1f7eaf146246c1de52fdb6395057452643f8d2675cf61af10262",
+      "family_id": "synthetic-dynamic-code",
+      "pair_id": "dynamic-code-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "rationale": "Caller input is executed as a Python expression."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-dynamic-code-helper-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-dynamic-code-helper-negative.py.txt",
+      "source_filename": "synthetic-dynamic-code-helper-negative.py",
+      "sha256": "fd43b0288e2f977186c209a09095b25a93c53eb9d78f31b01673ee3dfc7c2e08",
+      "family_id": "synthetic-dynamic-code",
+      "pair_id": "dynamic-code-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "negative",
+          "rationale": "literal_eval parses Python literals without arbitrary evaluation; resource exhaustion is outside this rule."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-url-target-inline-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-url-target-inline-positive.py.txt",
+      "source_filename": "synthetic-url-target-inline-positive.py",
+      "sha256": "b505af1cd0da9decea45170f3f262533d2c00dd8d6c7d960aebf55f3feaec985",
+      "family_id": "synthetic-url-target",
+      "pair_id": "url-target-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "rationale": "Caller chooses the full network destination without URL validation."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-url-target-inline-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-url-target-inline-negative.py.txt",
+      "source_filename": "synthetic-url-target-inline-negative.py",
+      "sha256": "4ad33f6df1533fe5daf1a0e5ea9debcd3b268db7b9eaf176ad6d72c0fd6a4b68",
+      "family_id": "synthetic-url-target",
+      "pair_id": "url-target-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "rationale": "Destination origin is fixed; caller data is URL-encoded into a query. Assumes no server-side redirect behavior."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-url-target-helper-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-url-target-helper-positive.py.txt",
+      "source_filename": "synthetic-url-target-helper-positive.py",
+      "sha256": "a7265d6b7f10fb36fcb16c79bcfec9f7bf7ad42c45e08bbc19b8d2b7465db2e2",
+      "family_id": "synthetic-url-target",
+      "pair_id": "url-target-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "rationale": "Caller chooses the full network destination without URL validation."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-url-target-helper-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-url-target-helper-negative.py.txt",
+      "source_filename": "synthetic-url-target-helper-negative.py",
+      "sha256": "fd15868ba72b2b27280cb762d1635e814c3eee605a8645a1100df42c0b2308fa",
+      "family_id": "synthetic-url-target",
+      "pair_id": "url-target-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "rationale": "Destination origin is fixed; caller data is URL-encoded into a query. Assumes no server-side redirect behavior."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-document-context-inline-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-document-context-inline-positive.py.txt",
+      "source_filename": "synthetic-document-context-inline-positive.py",
+      "sha256": "a204a6cad0019b20be2e55f3cf1ecba2beb787e7ed1caa70934b22fbf94694cb",
+      "family_id": "synthetic-document-context",
+      "pair_id": "document-context-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "positive",
+          "rationale": "External file contents are returned verbatim as tool output available to model context."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-document-context-inline-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-document-context-inline-negative.py.txt",
+      "source_filename": "synthetic-document-context-inline-negative.py",
+      "sha256": "420ec5c8015bc541b81ca3ea867b3a085737568746e048c7845bb077ed56958f",
+      "family_id": "synthetic-document-context",
+      "pair_id": "document-context-inline",
+      "variant": "inline",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "negative",
+          "rationale": "Only a character count reaches output; no external text reaches context. File access risks are separate."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-document-context-helper-positive",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-document-context-helper-positive.py.txt",
+      "source_filename": "synthetic-document-context-helper-positive.py",
+      "sha256": "e7cc35b2c22247db8e622bcd0364f86b400dc59c00e901c3b91ec248e9f34736",
+      "family_id": "synthetic-document-context",
+      "pair_id": "document-context-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "positive",
+          "rationale": "External file contents are returned verbatim as tool output available to model context."
+        }
+      ]
+    },
+    {
+      "id": "synthetic-document-context-helper-negative",
+      "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-document-context-helper-negative.py.txt",
+      "source_filename": "synthetic-document-context-helper-negative.py",
+      "sha256": "529c67c69b2d0cb1e0821333c0e955dc5e11f4c893950eb050f4a62dc2827c58",
+      "family_id": "synthetic-document-context",
+      "pair_id": "document-context-helper",
+      "variant": "helper",
+      "origin": "assistant-authored-synthetic",
+      "split": "development-only",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "negative",
+          "rationale": "Only a character count reaches output; no external text reaches context. File access risks are separate."
+        }
+      ]
+    }
+  ],
+  "description": "Synthetic paired source behaviors: exposed pilot; six families, two structural variants"
+}

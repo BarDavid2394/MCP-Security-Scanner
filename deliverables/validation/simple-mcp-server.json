@@ -1,0 +1,30 @@
+{
+  "scanner": "MCP Security Scanner",
+  "version": "2.0.0",
+  "catalog_version": "2026.1",
+  "timestamp": "2026-10-11T12:07:47.915564",
+  "scan_info": {
+    "target_id": "simple-mcp-server",
+    "target": "evaluation\\corpus\\simple-mcp-server\\src",
+    "files_scanned": 8,
+    "tools_analyzed": 2,
+    "servers_found": 0,
+    "total_findings": 0,
+    "critical_count": 0,
+    "high_count": 0,
+    "parse_errors": [],
+    "status": "completed"
+  },
+  "summary": {
+    "total": 0,
+    "by_severity": {},
+    "by_type": {},
+    "by_attack": {},
+    "by_rule": {},
+    "by_confidence": {},
+    "fixable": 0,
+    "risk_score": 0,
+    "risk_level": "NONE"
+  },
+  "findings": []
+}

@@ -1,0 +1,24 @@
+{
+  "target_id": "official-git",
+  "target": "evaluation/corpus/official-servers/src/git",
+  "input_files": {
+    "pyproject.toml": "ff6fc90742855b05c614d36769bda00a9223474f96a3c3d372f24f2bdde8ce8d",
+    "src/mcp_server_git/__init__.py": "6119150f057052ddb5aa23f584dde758f2904db51709989e3d164bcd53d62dea",
+    "src/mcp_server_git/__main__.py": "9c0472d5a9337a0ab25126e9c65f63660c976cffcf115c0274363a71738e43fa",
+    "src/mcp_server_git/server.py": "a85b08858295fbebf37ffa8402cda62f9b3efacd42708a91aa60940720f4871e",
+    "tests/test_server.py": "91b6e7de87cd1ca85ec963a1c5ad3588e78170e3a73a67ad88e7d5473f3bf7ba",
+    "uv.lock": "9c40c382b0f91690eac5010b4e06224f588d3c5b4fcae63c26b9422ed579d361"
+  },
+  "status": "completed",
+  "scan_info": {
+    "files_scanned": 6,
+    "tools_analyzed": 12,
+    "servers_found": 1,
+    "total_findings": 0,
+    "critical_count": 0,
+    "high_count": 0,
+    "parse_errors": []
+  },
+  "findings": [],
+  "elapsed_seconds": 0.321242
+}

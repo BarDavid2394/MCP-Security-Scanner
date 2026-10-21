@@ -1,0 +1,12 @@
+{
+  "recorded_at": "2026-10-16T12:01:25.010237+00:00",
+  "purpose": "Retrospective paired regression check, not fresh validation",
+  "reference_run": "iteration-001/runs/after",
+  "code_fingerprint": "2f58300d2539e01d84b2c0c6fdc8752fd2a6feb72fb259d6251ce29c9400d6c3",
+  "code_archive_sha256": "8ef47e989e7b3a184689dd5781b1543449e94fc97ac5dd5cc31f72af2cfab9a2",
+  "manifest_sha256": "a5fcd779f3748914cd94a3e3a4acbaec476c655f734432db7414c44ac793d60f",
+  "module_origin": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\iterations\\iteration-001\\runs\\after\\code_snapshot.zip\\mcp_scanner\\__init__.py",
+  "review": "none",
+  "llm_calls": 0,
+  "holdout_manifest_sha256": "2a2d41a117e52952d9823f369abde6c948275bdd90b4cbcf3d237bfe5c12ef52"
+}

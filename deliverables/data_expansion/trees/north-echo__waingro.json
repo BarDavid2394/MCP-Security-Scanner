@@ -1,0 +1,948 @@
+{
+  "repository": "north-echo/waingro",
+  "revision": "3b052f59342c505cdb369f86ba5bc7153f0d6229",
+  "license": "MIT",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 236
+    },
+    {
+      "path": "Containerfile",
+      "size": 336
+    },
+    {
+      "path": "LICENSE",
+      "size": 1073
+    },
+    {
+      "path": "README.md",
+      "size": 27742
+    },
+    {
+      "path": "assets/waingro-banner.jpg",
+      "size": 310446
+    },
+    {
+      "path": "deploy/hanna2/00-waingro-sshd.conf",
+      "size": 371
+    },
+    {
+      "path": "deploy/hanna2/99-waingro-kvm.rules",
+      "size": 82
+    },
+    {
+      "path": "deploy/hanna2/audit-base.rules",
+      "size": 281
+    },
+    {
+      "path": "deploy/hanna2/backup-host.sh",
+      "size": 4364
+    },
+    {
+      "path": "deploy/hanna2/cases/clawgrid-connector/README.md",
+      "size": 2162
+    },
+    {
+      "path": "deploy/hanna2/cases/clawgrid-connector/case.json",
+      "size": 3265
+    },
+    {
+      "path": "deploy/hanna2/cases/clawgrid-connector/heartbeat-response.json",
+      "size": 704
+    },
+    {
+      "path": "deploy/hanna2/cases/clawgrid-connector/synthetic-config.json",
+      "size": 161
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/benign-canary/SKILL.md",
+      "size": 259
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/benign-canary/scripts/run.py",
+      "size": 168
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/negative-control/SKILL.md",
+      "size": 243
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/negative-control/scripts/run.py",
+      "size": 43
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/network-sinkhole/SKILL.md",
+      "size": 263
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/network-sinkhole/response.json",
+      "size": 34
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/network-sinkhole/scripts/run.py",
+      "size": 581
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/output-volume/SKILL.md",
+      "size": 257
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/output-volume/scripts/run.py",
+      "size": 89
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/shim-interception/SKILL.md",
+      "size": 283
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/shim-interception/scripts/run.sh",
+      "size": 144
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/timeout/SKILL.md",
+      "size": 250
+    },
+    {
+      "path": "deploy/hanna2/control-fixtures/timeout/scripts/run.py",
+      "size": 28
+    },
+    {
+      "path": "deploy/hanna2/control-suite.json",
+      "size": 3799
+    },
+    {
+      "path": "deploy/hanna2/egress-lockdown.nft",
+      "size": 714
+    },
+    {
+      "path": "deploy/hanna2/host-policy.fixture.json",
+      "size": 337
+    },
+    {
+      "path": "deploy/hanna2/prepare-host.sh",
+      "size": 6920
+    },
+    {
+      "path": "deploy/hanna2/restore-drill.sh",
+      "size": 4408
+    },
+    {
+      "path": "deploy/hanna2/waingro-egress-lockdown",
+      "size": 2442
+    },
+    {
+      "path": "deploy/hanna2/waingro-egress-lockdown.service",
+      "size": 429
+    },
+    {
+      "path": "deploy/hanna2/waingro-egress-rollback.service",
+      "size": 159
+    },
+    {
+      "path": "deploy/hanna2/waingro-egress-rollback.timer",
+      "size": 165
+    },
+    {
+      "path": "docs/dynamic-containment.md",
+      "size": 7080
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 1612
+    },
+    {
+      "path": "research/clawhub-audit/README.md",
+      "size": 2555
+    },
+    {
+      "path": "research/clawhub-audit/data/summary_public.json",
+      "size": 2069
+    },
+    {
+      "path": "research/clawhub-audit/methodology.md",
+      "size": 5009
+    },
+    {
+      "path": "research/containment-readiness-2026-09-12.md",
+      "size": 5752
+    },
+    {
+      "path": "research/control-plane-detection-2026-09-12.md",
+      "size": 7023
+    },
+    {
+      "path": "research/evidence/hanna2-preservation-2026-09-13.json",
+      "size": 1670
+    },
+    {
+      "path": "research/evidence/provenance-external-reviews-2026-09-12.json",
+      "size": 8191
+    },
+    {
+      "path": "research/hanna2-control-validation-2026-09-14.md",
+      "size": 6347
+    },
+    {
+      "path": "research/provenance-review-2026-09-12.md",
+      "size": 11100
+    },
+    {
+      "path": "research/refinement-2026-09-12.md",
+      "size": 7634
+    },
+    {
+      "path": "research/validation-2026-09-11.md",
+      "size": 9443
+    },
+    {
+      "path": "scripts/auto_triage.py",
+      "size": 14279
+    },
+    {
+      "path": "scripts/bulk_scan.py",
+      "size": 12298
+    },
+    {
+      "path": "scripts/generate_report.py",
+      "size": 27572
+    },
+    {
+      "path": "scripts/monitor_disclosure.py",
+      "size": 3342
+    },
+    {
+      "path": "scripts/rescan_sus.py",
+      "size": 9355
+    },
+    {
+      "path": "scripts/resolve_latest.py",
+      "size": 2635
+    },
+    {
+      "path": "scripts/triage.py",
+      "size": 12356
+    },
+    {
+      "path": "scripts/triage_prep.py",
+      "size": 11758
+    },
+    {
+      "path": "src/waingro/__init__.py",
+      "size": 72
+    },
+    {
+      "path": "src/waingro/analyzers/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "src/waingro/analyzers/aggregate.py",
+      "size": 6157
+    },
+    {
+      "path": "src/waingro/analyzers/artifact.py",
+      "size": 1845
+    },
+    {
+      "path": "src/waingro/analyzers/behavior_graph.py",
+      "size": 5320
+    },
+    {
+      "path": "src/waingro/analyzers/context.py",
+      "size": 11684
+    },
+    {
+      "path": "src/waingro/analyzers/dataflow.py",
+      "size": 31066
+    },
+    {
+      "path": "src/waingro/analyzers/hybrid.py",
+      "size": 27492
+    },
+    {
+      "path": "src/waingro/analyzers/package_runner.py",
+      "size": 10945
+    },
+    {
+      "path": "src/waingro/analyzers/reputation.py",
+      "size": 5729
+    },
+    {
+      "path": "src/waingro/analyzers/risk_profile.py",
+      "size": 4248
+    },
+    {
+      "path": "src/waingro/analyzers/runtime.py",
+      "size": 4024
+    },
+    {
+      "path": "src/waingro/analyzers/semantic.py",
+      "size": 9888
+    },
+    {
+      "path": "src/waingro/analyzers/static.py",
+      "size": 945
+    },
+    {
+      "path": "src/waingro/analyzers/typosquat.py",
+      "size": 2051
+    },
+    {
+      "path": "src/waingro/cli.py",
+      "size": 42829
+    },
+    {
+      "path": "src/waingro/config.py",
+      "size": 193
+    },
+    {
+      "path": "src/waingro/data/c2_blocklist.txt",
+      "size": 263
+    },
+    {
+      "path": "src/waingro/data/install_domains.txt",
+      "size": 1920
+    },
+    {
+      "path": "src/waingro/data/known_packages.txt",
+      "size": 5465
+    },
+    {
+      "path": "src/waingro/data/known_skills.txt",
+      "size": 232
+    },
+    {
+      "path": "src/waingro/dynamic/__init__.py",
+      "size": 128
+    },
+    {
+      "path": "src/waingro/dynamic/campaign.py",
+      "size": 11786
+    },
+    {
+      "path": "src/waingro/dynamic/case.py",
+      "size": 14077
+    },
+    {
+      "path": "src/waingro/dynamic/controls.py",
+      "size": 8340
+    },
+    {
+      "path": "src/waingro/dynamic/guest_agent_payload.py",
+      "size": 33347
+    },
+    {
+      "path": "src/waingro/dynamic/host.py",
+      "size": 14306
+    },
+    {
+      "path": "src/waingro/dynamic/models.py",
+      "size": 5890
+    },
+    {
+      "path": "src/waingro/dynamic/plan.py",
+      "size": 23012
+    },
+    {
+      "path": "src/waingro/dynamic/runner.py",
+      "size": 43404
+    },
+    {
+      "path": "src/waingro/dynamic/trace.py",
+      "size": 17171
+    },
+    {
+      "path": "src/waingro/ecosystem.py",
+      "size": 4434
+    },
+    {
+      "path": "src/waingro/evaluation.py",
+      "size": 9808
+    },
+    {
+      "path": "src/waingro/evidence.py",
+      "size": 4471
+    },
+    {
+      "path": "src/waingro/mcp/__init__.py",
+      "size": 68
+    },
+    {
+      "path": "src/waingro/mcp/batch.py",
+      "size": 15790
+    },
+    {
+      "path": "src/waingro/mcp/discovery.py",
+      "size": 9226
+    },
+    {
+      "path": "src/waingro/mcp/models.py",
+      "size": 2697
+    },
+    {
+      "path": "src/waingro/mcp/parser.py",
+      "size": 10050
+    },
+    {
+      "path": "src/waingro/mcp/scanner.py",
+      "size": 2463
+    },
+    {
+      "path": "src/waingro/models.py",
+      "size": 6052
+    },
+    {
+      "path": "src/waingro/parsers/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "src/waingro/parsers/script.py",
+      "size": 1538
+    },
+    {
+      "path": "src/waingro/parsers/sections.py",
+      "size": 5001
+    },
+    {
+      "path": "src/waingro/parsers/skill.py",
+      "size": 7734
+    },
+    {
+      "path": "src/waingro/provenance_review.py",
+      "size": 24116
+    },
+    {
+      "path": "src/waingro/reporters/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "src/waingro/reporters/console.py",
+      "size": 4828
+    },
+    {
+      "path": "src/waingro/reporters/json_report.py",
+      "size": 3470
+    },
+    {
+      "path": "src/waingro/resolvers/__init__.py",
+      "size": 49
+    },
+    {
+      "path": "src/waingro/resolvers/dependency_graph.py",
+      "size": 5562
+    },
+    {
+      "path": "src/waingro/resolvers/http_safety.py",
+      "size": 818
+    },
+    {
+      "path": "src/waingro/resolvers/osv.py",
+      "size": 9952
+    },
+    {
+      "path": "src/waingro/resolvers/package_artifact.py",
+      "size": 15315
+    },
+    {
+      "path": "src/waingro/resolvers/package_registry.py",
+      "size": 26639
+    },
+    {
+      "path": "src/waingro/resolvers/provenance.py",
+      "size": 3315
+    },
+    {
+      "path": "src/waingro/rules/__init__.py",
+      "size": 5731
+    },
+    {
+      "path": "src/waingro/rules/agent_control.py",
+      "size": 7779
+    },
+    {
+      "path": "src/waingro/rules/behavior.py",
+      "size": 20750
+    },
+    {
+      "path": "src/waingro/rules/execution.py",
+      "size": 24471
+    },
+    {
+      "path": "src/waingro/rules/exfiltration.py",
+      "size": 29957
+    },
+    {
+      "path": "src/waingro/rules/injection.py",
+      "size": 5710
+    },
+    {
+      "path": "src/waingro/rules/mcp/__init__.py",
+      "size": 4526
+    },
+    {
+      "path": "src/waingro/rules/mcp/auth.py",
+      "size": 5656
+    },
+    {
+      "path": "src/waingro/rules/mcp/cross_tool.py",
+      "size": 2584
+    },
+    {
+      "path": "src/waingro/rules/mcp/execution.py",
+      "size": 7134
+    },
+    {
+      "path": "src/waingro/rules/mcp/exfiltration.py",
+      "size": 8130
+    },
+    {
+      "path": "src/waingro/rules/mcp/injection.py",
+      "size": 5251
+    },
+    {
+      "path": "src/waingro/rules/mcp/network.py",
+      "size": 3626
+    },
+    {
+      "path": "src/waingro/rules/mcp/path_traversal.py",
+      "size": 3726
+    },
+    {
+      "path": "src/waingro/rules/mcp/scope.py",
+      "size": 6614
+    },
+    {
+      "path": "src/waingro/rules/mcp/spoofing.py",
+      "size": 7612
+    },
+    {
+      "path": "src/waingro/rules/mcp/supply_chain.py",
+      "size": 4312
+    },
+    {
+      "path": "src/waingro/rules/mcp/typosquat.py",
+      "size": 4334
+    },
+    {
+      "path": "src/waingro/rules/network.py",
+      "size": 17853
+    },
+    {
+      "path": "src/waingro/rules/obfuscation.py",
+      "size": 11901
+    },
+    {
+      "path": "src/waingro/rules/persistence.py",
+      "size": 6488
+    },
+    {
+      "path": "src/waingro/rules/social.py",
+      "size": 11495
+    },
+    {
+      "path": "src/waingro/scanner.py",
+      "size": 3920
+    },
+    {
+      "path": "src/waingro/ttps.py",
+      "size": 1605
+    },
+    {
+      "path": "tests/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "tests/conftest.py",
+      "size": 2994
+    },
+    {
+      "path": "tests/fixtures/clean/basic-skill/SKILL.md",
+      "size": 314
+    },
+    {
+      "path": "tests/fixtures/dynamic/adversarial-runtime/SKILL.md",
+      "size": 346
+    },
+    {
+      "path": "tests/fixtures/dynamic/adversarial-runtime/scripts/run.py",
+      "size": 510
+    },
+    {
+      "path": "tests/fixtures/dynamic/benign-runtime/SKILL.md",
+      "size": 278
+    },
+    {
+      "path": "tests/fixtures/dynamic/benign-runtime/scripts/run.py",
+      "size": 324
+    },
+    {
+      "path": "tests/fixtures/known_good_skills.txt",
+      "size": 232
+    },
+    {
+      "path": "tests/fixtures/malicious/authtool-reverse-shell/SKILL.md",
+      "size": 380
+    },
+    {
+      "path": "tests/fixtures/malicious/clawhavoc-base64/SKILL.md",
+      "size": 328
+    },
+    {
+      "path": "tests/fixtures/malicious/clawhavoc-curl-pipe/SKILL.md",
+      "size": 392
+    },
+    {
+      "path": "tests/fixtures/malicious/credential-exfil/SKILL.md",
+      "size": 573
+    },
+    {
+      "path": "tests/fixtures/malicious/fake-dependency/SKILL.md",
+      "size": 436
+    },
+    {
+      "path": "tests/fixtures/malicious/persistence-crontab/SKILL.md",
+      "size": 337
+    },
+    {
+      "path": "tests/fixtures/skills/README.md",
+      "size": 2445
+    },
+    {
+      "path": "tests/fixtures/skills/authtool/oauth-interceptor/SKILL.md",
+      "size": 1057
+    },
+    {
+      "path": "tests/fixtures/skills/authtool/session-stealer/SKILL.md",
+      "size": 1145
+    },
+    {
+      "path": "tests/fixtures/skills/authtool/token-replay/SKILL.md",
+      "size": 999
+    },
+    {
+      "path": "tests/fixtures/skills/benign/bundled-subprocess/SKILL.md",
+      "size": 195
+    },
+    {
+      "path": "tests/fixtures/skills/benign/bundled-subprocess/scripts/lint.py",
+      "size": 425
+    },
+    {
+      "path": "tests/fixtures/skills/benign/code-reviewer/SKILL.md",
+      "size": 999
+    },
+    {
+      "path": "tests/fixtures/skills/benign/daily-standup/SKILL.md",
+      "size": 907
+    },
+    {
+      "path": "tests/fixtures/skills/benign/weather-checker/SKILL.md",
+      "size": 843
+    },
+    {
+      "path": "tests/fixtures/skills/clawhavoc/c2-beacon/SKILL.md",
+      "size": 794
+    },
+    {
+      "path": "tests/fixtures/skills/clawhavoc/c2-beacon/scripts/monitor.sh",
+      "size": 196
+    },
+    {
+      "path": "tests/fixtures/skills/clawhavoc/cron-persistence/SKILL.md",
+      "size": 1240
+    },
+    {
+      "path": "tests/fixtures/skills/clawhavoc/reverse-shell-skill/SKILL.md",
+      "size": 961
+    },
+    {
+      "path": "tests/fixtures/skills/credential-exfiltration/cloud-key-stealer/SKILL.md",
+      "size": 1010
+    },
+    {
+      "path": "tests/fixtures/skills/credential-exfiltration/env-harvester/SKILL.md",
+      "size": 1098
+    },
+    {
+      "path": "tests/fixtures/skills/credential-exfiltration/keychain-reader/SKILL.md",
+      "size": 903
+    },
+    {
+      "path": "tests/fixtures/skills/data-exfiltration/archive-and-send/SKILL.md",
+      "size": 858
+    },
+    {
+      "path": "tests/fixtures/skills/data-exfiltration/clipboard-monitor/SKILL.md",
+      "size": 1221
+    },
+    {
+      "path": "tests/fixtures/skills/data-exfiltration/dns-exfil/SKILL.md",
+      "size": 900
+    },
+    {
+      "path": "tests/fixtures/skills/data-exfiltration/dns-exfil/scripts/dns_test.sh",
+      "size": 263
+    },
+    {
+      "path": "tests/fixtures/skills/evasion/base64-split/SKILL.md",
+      "size": 923
+    },
+    {
+      "path": "tests/fixtures/skills/evasion/hex-encoded-cmd/SKILL.md",
+      "size": 981
+    },
+    {
+      "path": "tests/fixtures/skills/evasion/variable-concat/SKILL.md",
+      "size": 897
+    },
+    {
+      "path": "tests/fixtures/skills/malicious/hidden-exec-js/SKILL.md",
+      "size": 187
+    },
+    {
+      "path": "tests/fixtures/skills/malicious/hidden-exec-js/scripts/setup.js",
+      "size": 530
+    },
+    {
+      "path": "tests/fixtures/skills/malicious/hidden-exec-py/SKILL.md",
+      "size": 197
+    },
+    {
+      "path": "tests/fixtures/skills/malicious/hidden-exec-py/scripts/utils.py",
+      "size": 484
+    },
+    {
+      "path": "tests/fixtures/skills/mixed-signal/delayed-payload/SKILL.md",
+      "size": 1458
+    },
+    {
+      "path": "tests/fixtures/skills/mixed-signal/helpful-but-leaky/SKILL.md",
+      "size": 1408
+    },
+    {
+      "path": "tests/fixtures/skills/mixed-signal/mostly-clean/SKILL.md",
+      "size": 940
+    },
+    {
+      "path": "tests/fixtures/skills/prompt-injection/ignore-previous/SKILL.md",
+      "size": 1134
+    },
+    {
+      "path": "tests/fixtures/skills/prompt-injection/role-hijack/SKILL.md",
+      "size": 984
+    },
+    {
+      "path": "tests/fixtures/skills/prompt-injection/system-prompt-override/SKILL.md",
+      "size": 920
+    },
+    {
+      "path": "tests/fixtures/skills/supply-chain/curl-pipe-bash/SKILL.md",
+      "size": 754
+    },
+    {
+      "path": "tests/fixtures/skills/supply-chain/npm-preinstall-hook/SKILL.md",
+      "size": 702
+    },
+    {
+      "path": "tests/fixtures/skills/supply-chain/npm-preinstall-hook/scripts/package.json",
+      "size": 377
+    },
+    {
+      "path": "tests/fixtures/skills/supply-chain/pip-install-evil/SKILL.md",
+      "size": 817
+    },
+    {
+      "path": "tests/test_analyzers/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "tests/test_analyzers/test_artifact.py",
+      "size": 1654
+    },
+    {
+      "path": "tests/test_analyzers/test_behavior_graph.py",
+      "size": 2799
+    },
+    {
+      "path": "tests/test_analyzers/test_context.py",
+      "size": 22891
+    },
+    {
+      "path": "tests/test_analyzers/test_dataflow_cache.py",
+      "size": 1272
+    },
+    {
+      "path": "tests/test_analyzers/test_hybrid.py",
+      "size": 10714
+    },
+    {
+      "path": "tests/test_analyzers/test_reputation.py",
+      "size": 1618
+    },
+    {
+      "path": "tests/test_analyzers/test_risk_profile.py",
+      "size": 4100
+    },
+    {
+      "path": "tests/test_analyzers/test_semantic.py",
+      "size": 4479
+    },
+    {
+      "path": "tests/test_analyzers/test_typosquat.py",
+      "size": 1162
+    },
+    {
+      "path": "tests/test_cli.py",
+      "size": 13671
+    },
+    {
+      "path": "tests/test_corpus.py",
+      "size": 7354
+    },
+    {
+      "path": "tests/test_dynamic.py",
+      "size": 33786
+    },
+    {
+      "path": "tests/test_dynamic_campaign.py",
+      "size": 5133
+    },
+    {
+      "path": "tests/test_dynamic_case.py",
+      "size": 7349
+    },
+    {
+      "path": "tests/test_dynamic_controls.py",
+      "size": 3120
+    },
+    {
+      "path": "tests/test_dynamic_host.py",
+      "size": 974
+    },
+    {
+      "path": "tests/test_ecosystem.py",
+      "size": 1149
+    },
+    {
+      "path": "tests/test_evaluation.py",
+      "size": 3161
+    },
+    {
+      "path": "tests/test_hanna2_preservation.py",
+      "size": 1554
+    },
+    {
+      "path": "tests/test_hanna2_provisioning.py",
+      "size": 4046
+    },
+    {
+      "path": "tests/test_mcp_hardening.py",
+      "size": 7793
+    },
+    {
+      "path": "tests/test_parsers/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "tests/test_parsers/test_script.py",
+      "size": 732
+    },
+    {
+      "path": "tests/test_parsers/test_sections.py",
+      "size": 4970
+    },
+    {
+      "path": "tests/test_parsers/test_skill.py",
+      "size": 6607
+    },
+    {
+      "path": "tests/test_provenance_review.py",
+      "size": 12151
+    },
+    {
+      "path": "tests/test_resolvers_dependency_graph.py",
+      "size": 3621
+    },
+    {
+      "path": "tests/test_resolvers_http_safety.py",
+      "size": 1730
+    },
+    {
+      "path": "tests/test_resolvers_osv.py",
+      "size": 2055
+    },
+    {
+      "path": "tests/test_resolvers_package_artifact.py",
+      "size": 4481
+    },
+    {
+      "path": "tests/test_resolvers_package_registry.py",
+      "size": 9587
+    },
+    {
+      "path": "tests/test_resolvers_provenance.py",
+      "size": 581
+    },
+    {
+      "path": "tests/test_rules/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "tests/test_rules/test_agent_control.py",
+      "size": 4902
+    },
+    {
+      "path": "tests/test_rules/test_behavior.py",
+      "size": 12658
+    },
+    {
+      "path": "tests/test_rules/test_bundled_content.py",
+      "size": 4156
+    },
+    {
+      "path": "tests/test_rules/test_execution.py",
+      "size": 15711
+    },
+    {
+      "path": "tests/test_rules/test_exfiltration.py",
+      "size": 14212
+    },
+    {
+      "path": "tests/test_rules/test_injection.py",
+      "size": 4239
+    },
+    {
+      "path": "tests/test_rules/test_network.py",
+      "size": 11014
+    },
+    {
+      "path": "tests/test_rules/test_obfuscation.py",
+      "size": 7790
+    },
+    {
+      "path": "tests/test_rules/test_persistence.py",
+      "size": 1940
+    },
+    {
+      "path": "tests/test_rules/test_precision_round2.py",
+      "size": 5238
+    },
+    {
+      "path": "tests/test_rules/test_rule_shapes.py",
+      "size": 12771
+    },
+    {
+      "path": "tests/test_rules/test_social.py",
+      "size": 3156
+    },
+    {
+      "path": "tests/test_scanner.py",
+      "size": 3827
+    },
+    {
+      "path": "tests/test_search_skill_content.py",
+      "size": 4711
+    }
+  ]
+}

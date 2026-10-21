@@ -1,0 +1,303 @@
+{
+  "schema_version": 1,
+  "iteration": "iteration-001",
+  "created_at": "2026-10-16T11:39:11.580982+00:00",
+  "purpose": "Development iteration, not final holdout",
+  "review_status": "Assistant source review before first scan; independent human adjudication pending",
+  "label_unit": "artifact + rule + optional function scope; unlabelled outcomes are unknown",
+  "scope": "MCP source heuristics and negative scope controls, not general AI application security",
+  "assumptions": [
+    "FastMCP enforces declared int/Literal schemas.",
+    "Shell-quoting examples assume POSIX shells.",
+    "Fixed-authority SSRF negatives do not model upstream redirects."
+  ],
+  "artifacts": [
+    {
+      "id": "safe--env_config",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/env_config.py.txt",
+      "source_filename": "test-fixtures/safe/env_config.py",
+      "sha256": "1521a3182c786d9da3ace304a802a54c3385836e3d35b6de99e785e540e69de0",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/safe/env_config.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP01-SECRET-HARDCODED",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Credential comes from environment, with no embedded credential literal."
+        }
+      ]
+    },
+    {
+      "id": "safe--mcp-tool-sinks--fastmcp_helper_guarded",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp-tool-sinks/fastmcp_helper_guarded.py.txt",
+      "source_filename": "test-fixtures/safe/mcp-tool-sinks/fastmcp_helper_guarded.py",
+      "sha256": "c2927e58e3e390795aba34d9499c09da166791e32c5a6dbcf8c6af009c0e55a3",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/safe/mcp-tool-sinks/fastmcp_helper_guarded.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "git_log",
+          "rationale": "Anchored regex rejects shell metacharacters before helper invocation. Scoped to command injection, not authorization or audit."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "git_show",
+          "rationale": "shlex.quote escapes the sole substituted argument as an unquoted shell word. Scoped to command injection, not authorization or audit."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "git_recent",
+          "rationale": "FastMCP validates integer parameter. Scoped to command injection, not authorization or audit."
+        }
+      ]
+    },
+    {
+      "id": "safe--mcp-tool-sinks--guarded_ops",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp-tool-sinks/guarded_ops.py.txt",
+      "source_filename": "test-fixtures/safe/mcp-tool-sinks/guarded_ops.py",
+      "sha256": "d07314905071ac02b5de3e456eff6287d8cab017323ed31a23f34d8559ee2131",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/safe/mcp-tool-sinks/guarded_ops.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "disk_usage",
+          "rationale": "Fixed du executable and argv list, shell disabled; path does not select executable. Scoped to command injection, not authorization or audit."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "quoted",
+          "rationale": "shlex.quote escapes the sole substituted argument as an unquoted shell word. Scoped to command injection, not authorization or audit."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "validated",
+          "rationale": "Anchored regex rejects shell metacharacters before invocation. Scoped to command injection, not authorization or audit."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "restart",
+          "rationale": "FastMCP validates Literal restricted to web or worker. Scoped to command injection, not authorization or audit."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "tail",
+          "rationale": "FastMCP validates integer parameter. Scoped to command injection, not authorization or audit."
+        }
+      ]
+    },
+    {
+      "id": "safe--mcp-tool-sinks--not_mcp_script",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp-tool-sinks/not_mcp_script.py.txt",
+      "source_filename": "test-fixtures/safe/mcp-tool-sinks/not_mcp_script.py",
+      "sha256": "ec5335df85849978dc57e308047e9e5b5d4da097621935a085e97f1f5e38ec2e",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/safe/mcp-tool-sinks/not_mcp_script.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Click CLI has no MCP registration; negative scope control for tool-input rule, not a claim that CLI is secure."
+        }
+      ]
+    },
+    {
+      "id": "safe--mcp001_module_scope_false_context",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp001_module_scope_false_context.py.txt",
+      "source_filename": "test-fixtures/safe/mcp001_module_scope_false_context.py",
+      "sha256": "d623a4e5988b155f9247e2ebf478f4d71cd4f539102e3b9056b2bb29ab20abe8",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/safe/mcp001_module_scope_false_context.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Ordinary config/metadata or disclosed sibling-tool prerequisite, without malicious redirection."
+        }
+      ]
+    },
+    {
+      "id": "safe--mcp_untrusted_tool_source",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp_untrusted_tool_source.py.txt",
+      "source_filename": "test-fixtures/safe/mcp_untrusted_tool_source.py",
+      "sha256": "ab97607226bb2b75f401f92dfdfec1952d2f282155ef6cb2d5e1da88f2eb6f72",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/safe/mcp_untrusted_tool_source.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "positive",
+          "function_name": "get_error_details",
+          "rationale": "Untrusted event message reaches model. Printable-character filtering preserves malicious instructions; upstream safe label is not adopted."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "get_error_details",
+          "rationale": "Tool argument changes path under a fixed HTTPS authority, not destination; assumes no upstream redirect behavior."
+        }
+      ]
+    },
+    {
+      "id": "safe--system_prompt_field",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/system_prompt_field.py.txt",
+      "source_filename": "test-fixtures/safe/system_prompt_field.py",
+      "sha256": "68eb0cb6dc84eb42c86a95043b0720324d46cad28256b9cc51761f1e06942b98",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/safe/system_prompt_field.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Ordinary config/metadata or disclosed sibling-tool prerequisite, without malicious redirection."
+        }
+      ]
+    },
+    {
+      "id": "safe--tool_poisoning",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/tool_poisoning.py.txt",
+      "source_filename": "test-fixtures/safe/tool_poisoning.py",
+      "sha256": "dcd039ea638794d50b0044d984767f500c9e4c24792c636d07f1ceaef441f34c",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/safe/tool_poisoning.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Ordinary config/metadata or disclosed sibling-tool prerequisite, without malicious redirection."
+        },
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "No lower-trust external content source is fetched; tools return caller values."
+        }
+      ]
+    },
+    {
+      "id": "vulnerable--mcp-tool-sinks--fastmcp_helper",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_helper.py.txt",
+      "source_filename": "test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_helper.py",
+      "sha256": "5fcfe7339d84b8ad87302f6c87192d2cbe6522c5d01514b73264dcb573db823b",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_helper.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "git_log",
+          "rationale": "Tool argument reaches unrestricted shell command. Low-level MCP dispatch is in the intended scope."
+        }
+      ]
+    },
+    {
+      "id": "vulnerable--mcp-tool-sinks--fastmcp_ops",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_ops.py.txt",
+      "source_filename": "test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_ops.py",
+      "sha256": "ff2b406becf3cf6b0a23da46f94cd328a470c9eea3361a75e547d28abb13a498",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_ops.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "disk_usage",
+          "rationale": "Tool argument reaches unrestricted shell command. Low-level MCP dispatch is in the intended scope."
+        }
+      ]
+    },
+    {
+      "id": "vulnerable--mcp-tool-sinks--lowlevel_server",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/mcp-tool-sinks/lowlevel_server.py.txt",
+      "source_filename": "test-fixtures/vulnerable/mcp-tool-sinks/lowlevel_server.py",
+      "sha256": "2d2322417659616fa8a414c40eef6c80ed844142d16865a353b0468553940318",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/vulnerable/mcp-tool-sinks/lowlevel_server.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "call_tool",
+          "rationale": "Tool argument reaches unrestricted shell command. Low-level MCP dispatch is in the intended scope."
+        }
+      ]
+    },
+    {
+      "id": "vulnerable--mcp_untrusted_tool_source",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/mcp_untrusted_tool_source.py.txt",
+      "source_filename": "test-fixtures/vulnerable/mcp_untrusted_tool_source.py",
+      "sha256": "bc95b0b1ab4b94fd646a10e11c3d8584afc9c8d00a11d8c999a2d774f98bb995",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/vulnerable/mcp_untrusted_tool_source.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "polarity": "positive",
+          "function_name": "get_error_details",
+          "rationale": "Untrusted event message reaches model. Printable-character filtering preserves malicious instructions; upstream safe label is not adopted."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "get_error_details",
+          "rationale": "Tool argument changes path under a fixed HTTPS authority, not destination; assumes no upstream redirect behavior."
+        }
+      ]
+    },
+    {
+      "id": "vulnerable--tool_poisoning",
+      "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/tool_poisoning.py.txt",
+      "source_filename": "test-fixtures/vulnerable/tool_poisoning.py",
+      "sha256": "17ca031ac814d8917ffda8035b9cd31f044ddc45195420b42a318b0001aa3746",
+      "source_url": "https://github.com/akanthed/SecureAI-Scan/blob/f1f2b423b3a67127295c5aeba3016d5e0f352d0c/test-fixtures/vulnerable/tool_poisoning.py",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "audit_log",
+          "rationale": "Hidden character plus instruction to include full conversation history."
+        },
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "get_weather",
+          "rationale": "Metadata directs credential-file read and external exfiltration."
+        },
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "read_notes",
+          "rationale": "Metadata hijacks another tool invocation and requests output inclusion."
+        }
+      ]
+    }
+  ]
+}

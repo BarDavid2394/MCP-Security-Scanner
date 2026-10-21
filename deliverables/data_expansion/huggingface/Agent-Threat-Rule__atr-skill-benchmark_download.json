@@ -1,0 +1,20 @@
+[
+  {
+    "dataset": "Agent-Threat-Rule/atr-skill-benchmark",
+    "revision": "7219b10d2ac077e3db8c87d43d653a67935cdb5d",
+    "upstream_path": "README.md",
+    "local_path": "deliverables/data_expansion/huggingface/Agent-Threat-Rule__atr-skill-benchmark/README.md.txt",
+    "bytes": 3008,
+    "sha256": "a66096b038cc14afd0a004928647510d0f86604faa8345e1587fa64f05497d9d",
+    "url": "https://huggingface.co/datasets/Agent-Threat-Rule/atr-skill-benchmark/resolve/7219b10d2ac077e3db8c87d43d653a67935cdb5d/README.md"
+  },
+  {
+    "dataset": "Agent-Threat-Rule/atr-skill-benchmark",
+    "revision": "7219b10d2ac077e3db8c87d43d653a67935cdb5d",
+    "upstream_path": "atr-skill-benchmark.jsonl",
+    "local_path": "deliverables/data_expansion/huggingface/Agent-Threat-Rule__atr-skill-benchmark/atr-skill-benchmark.jsonl.txt",
+    "bytes": 3869572,
+    "sha256": "599bfe4d520ff8d2c4d1ae8cecae6fb0da7a8bb374e3dc3e9f8ff30290f32e82",
+    "url": "https://huggingface.co/datasets/Agent-Threat-Rule/atr-skill-benchmark/resolve/7219b10d2ac077e3db8c87d43d653a67935cdb5d/atr-skill-benchmark.jsonl"
+  }
+]

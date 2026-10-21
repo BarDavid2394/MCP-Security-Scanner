@@ -1,0 +1,187 @@
+{
+  "iteration": "iteration-001",
+  "created_at": "2026-10-16T11:45:06.638219+00:00",
+  "metric_unit": "artifact/rule/function label, not raw finding",
+  "runs": {
+    "before": {
+      "tp": 3,
+      "fp": 9,
+      "fn": 5,
+      "tn": 7,
+      "errors": 0,
+      "precision": 0.25,
+      "recall": 0.375,
+      "false_positive_rate": 0.5625,
+      "label_coverage": 1.0
+    },
+    "stability": {
+      "tp": 3,
+      "fp": 9,
+      "fn": 5,
+      "tn": 7,
+      "errors": 0,
+      "precision": 0.25,
+      "recall": 0.375,
+      "false_positive_rate": 0.5625,
+      "label_coverage": 1.0
+    },
+    "after": {
+      "tp": 4,
+      "fp": 9,
+      "fn": 4,
+      "tn": 7,
+      "errors": 0,
+      "precision": 0.3076923076923077,
+      "recall": 0.5,
+      "false_positive_rate": 0.5625,
+      "label_coverage": 1.0
+    }
+  },
+  "transition_counts": {
+    "fp->fp": 9,
+    "fn->fn": 4,
+    "fn->tp": 1
+  },
+  "primary": [
+    {
+      "target": "aws-documentation",
+      "before_status": "completed",
+      "after_status": "completed",
+      "before_files": 30,
+      "after_files": 30,
+      "before_findings": 3,
+      "after_findings": 3,
+      "excluded_inputs": [],
+      "shared_input_hashes_unchanged": true,
+      "findings_identical": true
+    },
+    {
+      "target": "fastmcp-examples",
+      "before_status": "failed",
+      "after_status": "completed",
+      "before_files": null,
+      "after_files": 141,
+      "before_findings": null,
+      "after_findings": 33,
+      "excluded_inputs": [
+        ".mcp-scanner-cache/reviews/52caa5ee93129222bc656d4f2d97fae90e57fc15a38e4385a742c1cbf493e639.json",
+        ".mcp-scanner-cache/reviews/60adba0f1b51208855b79e79416d4292e8b78e4782acd5cd2c40a29ef4f5364e.json",
+        ".mcp-scanner-cache/reviews/76ae1abaec592cc95279a0d838086add51cfe3649c2c058e8edf226909575d74.json",
+        ".mcp-scanner-cache/reviews/9c7f9d59206221ea7fd1844dacabc724f6f63c245ab5ceb021c7eae500d1bb1a.json",
+        ".mcp-scanner-cache/reviews/aa54a65d67ad11861c580f26d836b0742bd72a95f60f73ffc0fb6e7d1a3f5559.json",
+        ".mcp-scanner-cache/reviews/ae6ae67d8ac65bc7c86888219a2a74f7a01c1f7374e0a92a989a44a5cf05ce12.json",
+        ".mcp-scanner-cache/reviews/de969c79153c1c525540f1e74cf1da7956dcf3d008d5253f149ec9d7f4f0edd5.json",
+        ".mcp-scanner-cache/reviews/ebc639200e8fc3d448e0928b40d893c6aa3a3c8302fe42c91a98bb88b0a1de55.json",
+        ".mcp-scanner-cache/reviews/fb5ad724f0e8a07cd92fe45521438f0ba53e2185e8a22b5e7dabc74c41eb497c.json",
+        ".mcp-scanner-cache/reviews/ffa5b66f987bf590a61b62c88897f17f850f2c0b2243d5e69757246d0d5846cf.json"
+      ],
+      "shared_input_hashes_unchanged": true
+    },
+    {
+      "target": "markitdown-mcp",
+      "before_status": "completed",
+      "after_status": "completed",
+      "before_files": 5,
+      "after_files": 5,
+      "before_findings": 1,
+      "after_findings": 1,
+      "excluded_inputs": [],
+      "shared_input_hashes_unchanged": true,
+      "findings_identical": true
+    },
+    {
+      "target": "mcp-atlassian",
+      "before_status": "completed",
+      "after_status": "completed",
+      "before_files": 123,
+      "after_files": 117,
+      "before_findings": 13,
+      "after_findings": 13,
+      "excluded_inputs": [
+        ".mcp-scanner-cache/reviews/41e88ae1453e853adf56d99ba5a8abfacd0d2dac5503122d0cb8caae1400f7ba.json",
+        ".mcp-scanner-cache/reviews/654754ffc9772186abe168a4910862a449afb39ef39fd5dc7440460f978c4f6a.json",
+        ".mcp-scanner-cache/reviews/6a5fd9475aba01ce38e78098c23ff8cdd31d9e22c01ec0e9ae6f8cfdaa4b3076.json",
+        ".mcp-scanner-cache/reviews/774cf44f9d4ceeb3bb1f7467b79a4107b41633d24cf180f4fab6f0827b952fc4.json",
+        ".mcp-scanner-cache/reviews/820785d8ef84931c26c753ad88b8287c87d6a3b23bd25c1f9a03674b2b51e83b.json",
+        ".mcp-scanner-cache/reviews/e6ed3f8aeb50bb6f91623c0b99afaac492154ea69221f44dbf25fb25d7aa313c.json"
+      ],
+      "shared_input_hashes_unchanged": true,
+      "findings_identical": true
+    },
+    {
+      "target": "official-fetch",
+      "before_status": "completed",
+      "after_status": "completed",
+      "before_files": 7,
+      "after_files": 7,
+      "before_findings": 1,
+      "after_findings": 1,
+      "excluded_inputs": [],
+      "shared_input_hashes_unchanged": true,
+      "findings_identical": true
+    },
+    {
+      "target": "official-git",
+      "before_status": "completed",
+      "after_status": "completed",
+      "before_files": 6,
+      "after_files": 6,
+      "before_findings": 0,
+      "after_findings": 0,
+      "excluded_inputs": [],
+      "shared_input_hashes_unchanged": true,
+      "findings_identical": true
+    },
+    {
+      "target": "official-time",
+      "before_status": "completed",
+      "after_status": "completed",
+      "before_files": 6,
+      "after_files": 6,
+      "before_findings": 0,
+      "after_findings": 0,
+      "excluded_inputs": [],
+      "shared_input_hashes_unchanged": true,
+      "findings_identical": true
+    },
+    {
+      "target": "python-sdk-examples",
+      "before_status": "completed",
+      "after_status": "completed",
+      "before_files": 243,
+      "after_files": 243,
+      "before_findings": 53,
+      "after_findings": 53,
+      "excluded_inputs": [],
+      "shared_input_hashes_unchanged": true,
+      "findings_identical": true
+    },
+    {
+      "target": "quickstart-weather",
+      "before_status": "completed",
+      "after_status": "completed",
+      "before_files": 3,
+      "after_files": 3,
+      "before_findings": 0,
+      "after_findings": 0,
+      "excluded_inputs": [],
+      "shared_input_hashes_unchanged": true,
+      "findings_identical": true
+    },
+    {
+      "target": "simple-mcp-server",
+      "before_status": "completed",
+      "after_status": "completed",
+      "before_files": 8,
+      "after_files": 8,
+      "before_findings": 0,
+      "after_findings": 0,
+      "excluded_inputs": [],
+      "shared_input_hashes_unchanged": true,
+      "findings_identical": true
+    }
+  ],
+  "independent_final_test": false,
+  "review": "none",
+  "holdout_consumed": false
+}

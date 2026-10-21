@@ -1,0 +1,2844 @@
+{
+  "repository": "CobaltoSec/corvus",
+  "revision": "e03e90f0c021d3daccd0864a2fb4207620a13b7d",
+  "license": null,
+  "truncated": false,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 592
+    },
+    {
+      "path": ".github/workflows/code-scanning.yml",
+      "size": 4694
+    },
+    {
+      "path": ".gitignore",
+      "size": 1721
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 102317
+    },
+    {
+      "path": "README.md",
+      "size": 24954
+    },
+    {
+      "path": "case-studies/DISCLOSURE-PROCESS.md",
+      "size": 18594
+    },
+    {
+      "path": "case-studies/cfp-ekoparty-2026.md",
+      "size": 12546
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/batch-tier-a/server-everything/report.json",
+      "size": 147596
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/batch-tier-a/server-everything/report.md",
+      "size": 137430
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/batch-tier-a/server-everything/report.sarif",
+      "size": 74070
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/batch-tier-a/server-github/report.json",
+      "size": 33419
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/batch-tier-a/server-github/report.md",
+      "size": 2132
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/batch-tier-a/server-github/report.sarif",
+      "size": 1942
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/batch-tier-a/summary.md",
+      "size": 1148
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/cs01.py",
+      "size": 11463
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-curated.md",
+      "size": 31604
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-everything/exchanges.jsonl",
+      "size": 11493
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-everything/report.json",
+      "size": 19927
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-everything/report.md",
+      "size": 877
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-everything/report.sarif",
+      "size": 557
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-filesystem/exchanges.jsonl",
+      "size": 173538
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-filesystem/report.json",
+      "size": 294438
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-filesystem/report.md",
+      "size": 2701
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-filesystem/report.sarif",
+      "size": 2972
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-git/exchanges.jsonl",
+      "size": 355907
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-git/report.json",
+      "size": 454927
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-git/report.md",
+      "size": 2825
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-git/report.sarif",
+      "size": 3678
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-memory/exchanges.jsonl",
+      "size": 115142
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-memory/report.json",
+      "size": 303252
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-memory/report.md",
+      "size": 135286
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-memory/report.sarif",
+      "size": 71106
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-pdf/exchanges.jsonl",
+      "size": 363810
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-pdf/report.json",
+      "size": 401796
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-pdf/report.md",
+      "size": 1208
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-pdf/report.sarif",
+      "size": 1506
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-postgres/exchanges.jsonl",
+      "size": 23185
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-postgres/report.json",
+      "size": 27553
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-postgres/report.md",
+      "size": 1891
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-postgres/report.sarif",
+      "size": 2369
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-sequential-thinking/exchanges.jsonl",
+      "size": 18523
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-sequential-thinking/report.json",
+      "size": 35207
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-sequential-thinking/report.md",
+      "size": 2103
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-sequential-thinking/report.sarif",
+      "size": 3076
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-sqlite/exchanges.jsonl",
+      "size": 82118
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-sqlite/report.json",
+      "size": 110162
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-sqlite/report.md",
+      "size": 5987
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/findings-raw/server-sqlite/report.sarif",
+      "size": 7640
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/methodology.md",
+      "size": 1436
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/report.md",
+      "size": 15781
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/database-server-executeautomation/report.json",
+      "size": 7146
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/database-server-executeautomation/report.md",
+      "size": 2621
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/exa-mcp-server/report.json",
+      "size": 5998
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/exa-mcp-server/report.md",
+      "size": 2569
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-fetch-server/report.json",
+      "size": 9806
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-fetch-server/report.md",
+      "size": 2727
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-homescan/report.json",
+      "size": 6004
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-homescan/report.md",
+      "size": 2561
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-aws-kb-retrieval/report.json",
+      "size": 3915
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-aws-kb-retrieval/report.md",
+      "size": 2606
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-commands/report.json",
+      "size": 4752
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-commands/report.md",
+      "size": 2575
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-fetch/report.json",
+      "size": 6055
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-fetch/report.md",
+      "size": 3404
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-mysql/report.json",
+      "size": 1323
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-mysql/report.md",
+      "size": 1406
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-puppeteer/report.json",
+      "size": 7624
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-puppeteer/report.md",
+      "size": 2600
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-time/report.json",
+      "size": 4624
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-server-time/report.md",
+      "size": 2558
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-shell-server/report.json",
+      "size": 30944
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/mcp-shell-server/report.md",
+      "size": 3205
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/n8n-mcp/report.json",
+      "size": 18587
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/n8n-mcp/report.md",
+      "size": 2566
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/notion-mcp-server/report.json",
+      "size": 1302
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/notion-mcp-server/report.md",
+      "size": 1400
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/npm-search-mcp-server/report.json",
+      "size": 3452
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/npm-search-mcp-server/report.md",
+      "size": 2575
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/playwright-mcp/report.json",
+      "size": 27396
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/playwright-mcp/report.md",
+      "size": 2582
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-everything/report.json",
+      "size": 17361
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-everything/report.md",
+      "size": 4757
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-filesystem/report.json",
+      "size": 15095
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-filesystem/report.md",
+      "size": 2766
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-git/report.json",
+      "size": 12342
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-git/report.md",
+      "size": 2588
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-github/report.json",
+      "size": 34341
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-github/report.md",
+      "size": 2591
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-memory/report.json",
+      "size": 11297
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-memory/report.md",
+      "size": 2585
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-postgres/report.json",
+      "size": 3407
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-postgres/report.md",
+      "size": 2650
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-sequential-thinking/report.json",
+      "size": 7990
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-sequential-thinking/report.md",
+      "size": 2611
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-sqlite/report.json",
+      "size": 7062
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/server-sqlite/report.md",
+      "size": 3468
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/shell-command-mcp/report.json",
+      "size": 4344
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/shell-command-mcp/report.md",
+      "size": 3196
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/summary.md",
+      "size": 2183
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/super-shell-mcp/report.json",
+      "size": 7324
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/super-shell-mcp/report.md",
+      "size": 2568
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/tavily-mcp/report.json",
+      "size": 15732
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/scan-delta-v102/tavily-mcp/report.md",
+      "size": 2559
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/targets-cs01-tier-a.yaml",
+      "size": 519
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/targets-master.yaml",
+      "size": 12894
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/targets-rescan-v101.yaml",
+      "size": 2490
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/targets-retry2.yaml",
+      "size": 291
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/targets-retry3.yaml",
+      "size": 370
+    },
+    {
+      "path": "case-studies/cs01-mcp-ecosystem/targets.md",
+      "size": 3034
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/candidates.yaml",
+      "size": 24924
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/cs02.py",
+      "size": 12015
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/curate.py",
+      "size": 17720
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/curated-keep.yaml",
+      "size": 12401
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/curated-skip.yaml",
+      "size": 21142
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/findings-curated-cs03.md",
+      "size": 18709
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/findings-curated.md",
+      "size": 31149
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/report.md",
+      "size": 14130
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/codeloop-mcp-server/report.json",
+      "size": 1306
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/codeloop-mcp-server/report.md",
+      "size": 1390
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/desktop-commander/report.json",
+      "size": 72559
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/desktop-commander/report.md",
+      "size": 3373
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/docx-mcp/report.json",
+      "size": 36396
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/docx-mcp/report.md",
+      "size": 2568
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/drawio-mcp-server/report.json",
+      "size": 61077
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/drawio-mcp-server/report.md",
+      "size": 2733
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/drawio-mcp/report.json",
+      "size": 56181
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/drawio-mcp/report.md",
+      "size": 2558
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/duckduckgo-mcp-server/report.json",
+      "size": 6659
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/duckduckgo-mcp-server/report.md",
+      "size": 2754
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/element-mcp/report.json",
+      "size": 7243
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/element-mcp/report.md",
+      "size": 2577
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/european-parliament-mcp-server/report.json",
+      "size": 94148
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/european-parliament-mcp-server/report.md",
+      "size": 5334
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/flightradar-mcp-server/report.json",
+      "size": 6236
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/flightradar-mcp-server/report.md",
+      "size": 2741
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/jamf-docs-mcp-server/report.json",
+      "size": 37085
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/jamf-docs-mcp-server/report.md",
+      "size": 5045
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/lsp-mcp-server/report.json",
+      "size": 34025
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/lsp-mcp-server/report.md",
+      "size": 2568
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/malicious-mcp-server/report.json",
+      "size": 8206
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/malicious-mcp-server/report.md",
+      "size": 2746
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mantine-mcp-server/report.json",
+      "size": 5622
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mantine-mcp-server/report.md",
+      "size": 2571
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-fetch/report.json",
+      "size": 12160
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-fetch/report.md",
+      "size": 2723
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-javadc/report.json",
+      "size": 6029
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-javadc/report.md",
+      "size": 2562
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-mysql-server/report.json",
+      "size": 99310
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-mysql-server/report.md",
+      "size": 2783
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-postgres/report.json",
+      "size": 14406
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-postgres/report.md",
+      "size": 2564
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-read-website-fast/report.json",
+      "size": 4468
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-read-website-fast/report.md",
+      "size": 2587
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-server-docker/report.json",
+      "size": 3688
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-server-docker/report.md",
+      "size": 2571
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-server-hotnews/report.json",
+      "size": 4322
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-server-hotnews/report.md",
+      "size": 2584
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-server-nationalparks/report.json",
+      "size": 9514
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mcp-server-nationalparks/report.md",
+      "size": 2585
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mediawiki-mcp-server/report.json",
+      "size": 53910
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mediawiki-mcp-server/report.md",
+      "size": 3225
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/musea-mcp-server/report.json",
+      "size": 19753
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/musea-mcp-server/report.md",
+      "size": 2589
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/myclaw-toolkit/report.json",
+      "size": 20335
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/myclaw-toolkit/report.md",
+      "size": 2568
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mysql-mcp-server/report.json",
+      "size": 4904
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/mysql-mcp-server/report.md",
+      "size": 2569
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/nx-mcp/report.json",
+      "size": 4754
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/nx-mcp/report.md",
+      "size": 3333
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/openapi-mcp-server/report.json",
+      "size": 11435
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/openapi-mcp-server/report.md",
+      "size": 2733
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/postgres-mcp-server/report.json",
+      "size": 51096
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/postgres-mcp-server/report.md",
+      "size": 2588
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/pubmed-mcp-server/report.json",
+      "size": 21647
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/pubmed-mcp-server/report.md",
+      "size": 3214
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/regle-mcp-server/report.json",
+      "size": 7702
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/regle-mcp-server/report.md",
+      "size": 2572
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/remnux-mcp-server/report.json",
+      "size": 61634
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/remnux-mcp-server/report.md",
+      "size": 2578
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/shadcn-ui-mcp-server/report.json",
+      "size": 15326
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/shadcn-ui-mcp-server/report.md",
+      "size": 5319
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/spartan-mcp/report.json",
+      "size": 62891
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/spartan-mcp/report.md",
+      "size": 2567
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/ssh-mcp-server/report.json",
+      "size": 6025
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/ssh-mcp-server/report.md",
+      "size": 2797
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/summary.md",
+      "size": 3016
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/ui5-mcp-server/report.json",
+      "size": 16626
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/ui5-mcp-server/report.md",
+      "size": 2557
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/upg-mcp-server/report.json",
+      "size": 1333
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-delta-v102/upg-mcp-server/report.md",
+      "size": 1418
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/codeloop-mcp-server/report.json",
+      "size": 3606
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/codeloop-mcp-server/report.md",
+      "size": 3253
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/codeloop-mcp-server/report.sarif",
+      "size": 2726
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/combined.sarif",
+      "size": 167657
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/docx-mcp/report.json",
+      "size": 79072
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/docx-mcp/report.md",
+      "size": 33148
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/docx-mcp/report.sarif",
+      "size": 39315
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/duckduckgo-mcp-server/report.json",
+      "size": 8705
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/duckduckgo-mcp-server/report.md",
+      "size": 4516
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/duckduckgo-mcp-server/report.sarif",
+      "size": 4496
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/element-mcp/report.json",
+      "size": 12643
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/element-mcp/report.md",
+      "size": 6599
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/element-mcp/report.sarif",
+      "size": 7688
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/european-parliament-mcp-server/report.json",
+      "size": 97337
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/european-parliament-mcp-server/report.md",
+      "size": 7372
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/european-parliament-mcp-server/report.sarif",
+      "size": 8357
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/flightradar-mcp-server/report.json",
+      "size": 7288
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/flightradar-mcp-server/report.md",
+      "size": 3673
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/flightradar-mcp-server/report.sarif",
+      "size": 3634
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/jamf-docs-mcp-server/report.json",
+      "size": 47878
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/jamf-docs-mcp-server/report.md",
+      "size": 13734
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/jamf-docs-mcp-server/report.sarif",
+      "size": 13041
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/lsp-mcp-server/report.json",
+      "size": 196246
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/lsp-mcp-server/report.md",
+      "size": 159567
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/lsp-mcp-server/report.sarif",
+      "size": 92740
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/malicious-mcp-server/report.json",
+      "size": 283074
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/malicious-mcp-server/report.md",
+      "size": 274461
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/malicious-mcp-server/report.sarif",
+      "size": 145731
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mantine-mcp-server/report.json",
+      "size": 145656
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mantine-mcp-server/report.md",
+      "size": 140927
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mantine-mcp-server/report.sarif",
+      "size": 74467
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-fetch/report.json",
+      "size": 19217
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-fetch/report.md",
+      "size": 7712
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-fetch/report.sarif",
+      "size": 9937
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-javadc/report.json",
+      "size": 14321
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-javadc/report.md",
+      "size": 8804
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-javadc/report.sarif",
+      "size": 10122
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-mysql-server/report.json",
+      "size": 129077
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-mysql-server/report.md",
+      "size": 26747
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-mysql-server/report.sarif",
+      "size": 27048
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-read-website-fast/report.json",
+      "size": 4872
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-read-website-fast/report.md",
+      "size": 3064
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-read-website-fast/report.sarif",
+      "size": 2775
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-server-docker/report.json",
+      "size": 8399
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-server-docker/report.md",
+      "size": 6315
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-server-docker/report.sarif",
+      "size": 6755
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-server-hotnews/report.json",
+      "size": 4726
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-server-hotnews/report.md",
+      "size": 3061
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-server-hotnews/report.sarif",
+      "size": 2775
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-server-nationalparks/report.json",
+      "size": 11512
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-server-nationalparks/report.md",
+      "size": 4262
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/mcp-server-nationalparks/report.sarif",
+      "size": 4059
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/musea-mcp-server/report.json",
+      "size": 25154
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/musea-mcp-server/report.md",
+      "size": 6624
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/musea-mcp-server/report.sarif",
+      "size": 7821
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/myclaw-toolkit/report.json",
+      "size": 311139
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/myclaw-toolkit/report.md",
+      "size": 286901
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/myclaw-toolkit/report.sarif",
+      "size": 156301
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/openapi-mcp-server/report.json",
+      "size": 12827
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/openapi-mcp-server/report.md",
+      "size": 3813
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/openapi-mcp-server/report.sarif",
+      "size": 3625
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/postgres-mcp-server/report.json",
+      "size": 56591
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/postgres-mcp-server/report.md",
+      "size": 7109
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/postgres-mcp-server/report.sarif",
+      "size": 7148
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/pubmed-mcp-server/report.json",
+      "size": 26463
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/pubmed-mcp-server/report.md",
+      "size": 7372
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/pubmed-mcp-server/report.sarif",
+      "size": 6350
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/regle-mcp-server/report.json",
+      "size": 22062
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/regle-mcp-server/report.md",
+      "size": 13414
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/regle-mcp-server/report.sarif",
+      "size": 14988
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/remnux-mcp-server/report.json",
+      "size": 74806
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/remnux-mcp-server/report.md",
+      "size": 14303
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/remnux-mcp-server/report.sarif",
+      "size": 12313
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/shadcn-ui-mcp-server/report.json",
+      "size": 13786
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/shadcn-ui-mcp-server/report.md",
+      "size": 3975
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/shadcn-ui-mcp-server/report.sarif",
+      "size": 3930
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/spartan-mcp/report.json",
+      "size": 67939
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/spartan-mcp/report.md",
+      "size": 6663
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/spartan-mcp/report.sarif",
+      "size": 6600
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/summary.md",
+      "size": 400
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/ui5-mcp-server/report.json",
+      "size": 18394
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/ui5-mcp-server/report.md",
+      "size": 4118
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/ui5-mcp-server/report.sarif",
+      "size": 3389
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/upg-mcp-server/report.json",
+      "size": 3633
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/upg-mcp-server/report.md",
+      "size": 3280
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scan-v101/upg-mcp-server/report.sarif",
+      "size": 2726
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/scraper.py",
+      "size": 14948
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/targets-cs03-expansion.yaml",
+      "size": 2560
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/targets-cs03-pypi.yaml",
+      "size": 989
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/targets-cs03-tier2.yaml",
+      "size": 2491
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/targets-master.yaml",
+      "size": 22408
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/targets-rescan-v101-retry.yaml",
+      "size": 521
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/targets-rescan-v101.yaml",
+      "size": 3406
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/tier-d-curated.yaml",
+      "size": 12373
+    },
+    {
+      "path": "case-studies/cs02-mcp-ecosystem/tier-d-snippet.yaml",
+      "size": 18194
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/academic-mcp/report.json",
+      "size": 21387
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/academic-mcp/report.md",
+      "size": 7712
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/arxiv-mcp-server-pypi/report.json",
+      "size": 27231
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/arxiv-mcp-server-pypi/report.md",
+      "size": 8900
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/chakra-ui-mcp/report.json",
+      "size": 18965
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/chakra-ui-mcp/report.md",
+      "size": 3566
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/clarvia-mcp-server/report.json",
+      "size": 25028
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/clarvia-mcp-server/report.md",
+      "size": 6013
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/coingecko-mcp-official/report.json",
+      "size": 8483
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/coingecko-mcp-official/report.md",
+      "size": 4610
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/cyanheads-git-mcp/report.json",
+      "size": 6245
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/cyanheads-git-mcp/report.md",
+      "size": 4463
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/daisyui-mcp-server/report.json",
+      "size": 140047
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/daisyui-mcp-server/report.md",
+      "size": 135477
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/dangahagan-weather-mcp/report.json",
+      "size": 17955
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/dangahagan-weather-mcp/report.md",
+      "size": 3543
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/devutils-mcp-server/report.json",
+      "size": 1367960
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/devutils-mcp-server/report.md",
+      "size": 1334133
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/eslint-mcp/report.json",
+      "size": 5036
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/eslint-mcp/report.md",
+      "size": 3561
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/excel-mcp-server/report.json",
+      "size": 20684
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/excel-mcp-server/report.md",
+      "size": 5499
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/faker-mcp-server/report.json",
+      "size": 18534
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/faker-mcp-server/report.md",
+      "size": 6433
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/findings-curated-cs04.md",
+      "size": 27912
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/flowbite-mcp/report.json",
+      "size": 156503
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/flowbite-mcp/report.md",
+      "size": 140117
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/hackernews-mcp/report.json",
+      "size": 5870
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/hackernews-mcp/report.md",
+      "size": 4362
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/hero-fe-mcp-server/report.json",
+      "size": 6896
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/hero-fe-mcp-server/report.md",
+      "size": 4224
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/hn-mcp/report.json",
+      "size": 21046
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/hn-mcp/report.md",
+      "size": 12206
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/lunar-mcp-server/report.json",
+      "size": 352295
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/lunar-mcp-server/report.md",
+      "size": 314969
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mantine-mcp-server/report.json",
+      "size": 148333
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mantine-mcp-server/report.md",
+      "size": 142813
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/marketnow-mcp/report.json",
+      "size": 10231
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/marketnow-mcp/report.md",
+      "size": 6376
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-devutils/report.json",
+      "size": 413653
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-devutils/report.md",
+      "size": 354572
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-finance-frankfurter/report.json",
+      "size": 7618
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-finance-frankfurter/report.md",
+      "size": 3970
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-hacker-news/report.json",
+      "size": 9793
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-hacker-news/report.md",
+      "size": 4315
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-mathtools/report.json",
+      "size": 24627
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-mathtools/report.md",
+      "size": 11041
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-npm-registry/report.json",
+      "size": 30631
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-npm-registry/report.md",
+      "size": 19023
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-open-library/report.json",
+      "size": 9468
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-open-library/report.md",
+      "size": 4805
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-server-duckdb/report.json",
+      "size": 139235
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-server-duckdb/report.md",
+      "size": 137356
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-web-search/report.json",
+      "size": 141444
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/mcp-web-search/report.md",
+      "size": 136322
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/multilingual-dictionary-mcp/report.json",
+      "size": 2161261
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/multilingual-dictionary-mcp/report.md",
+      "size": 2129913
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/nextjs-docs-mcp/report.json",
+      "size": 9531
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/nextjs-docs-mcp/report.md",
+      "size": 6385
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/npm-helper-mcp/report.json",
+      "size": 17064
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/npm-helper-mcp/report.md",
+      "size": 7460
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/npm-search-mcp-server/report.json",
+      "size": 5990
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/npm-search-mcp-server/report.md",
+      "size": 4589
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/open-meteo-mcp-server/report.json",
+      "size": 3793
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/open-meteo-mcp-server/report.md",
+      "size": 3391
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/open-meteo-mcp/report.json",
+      "size": 9793
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/open-meteo-mcp/report.md",
+      "size": 5456
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/pdf-toolkit-mcp/report.json",
+      "size": 65194
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/pdf-toolkit-mcp/report.md",
+      "size": 24084
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/pubmed-search-mcp/report.json",
+      "size": 22285
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/pubmed-search-mcp/report.md",
+      "size": 14036
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/pulsemcp-pulse-fetch/report.json",
+      "size": 10111
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/pulsemcp-pulse-fetch/report.md",
+      "size": 4559
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/pulsemcp-server/report.json",
+      "size": 6078
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/pulsemcp-server/report.md",
+      "size": 4141
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/rosetta-mcp-server/report.json",
+      "size": 20546
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/rosetta-mcp-server/report.md",
+      "size": 5967
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/shadcn-cli-mcp/report.json",
+      "size": 278292
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/shadcn-cli-mcp/report.md",
+      "size": 269502
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/shadcn-ui-mcp-server/report.json",
+      "size": 14552
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/shadcn-ui-mcp-server/report.md",
+      "size": 4498
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/summary.md",
+      "size": 278
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/sveltejs-mcp/report.json",
+      "size": 178520
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/sveltejs-mcp/report.md",
+      "size": 131176
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/synergy-mcp-server/report.json",
+      "size": 292812
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/synergy-mcp-server/report.md",
+      "size": 274598
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/taiga-ui-mcp/report.json",
+      "size": 9187
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/taiga-ui-mcp/report.md",
+      "size": 5865
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-batch-a.yaml",
+      "size": 3183
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-batch-b.yaml",
+      "size": 7239
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-batch-c.yaml",
+      "size": 4014
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-batch1.yaml",
+      "size": 13232
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-d.yaml",
+      "size": 6315
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-e.yaml",
+      "size": 4060
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-f.yaml",
+      "size": 4606
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-g.yaml",
+      "size": 5208
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-h.yaml",
+      "size": 4883
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/targets-cs04-i.yaml",
+      "size": 730
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/tradingview-mcp/report.json",
+      "size": 48929
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/tradingview-mcp/report.md",
+      "size": 13614
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/ui5-mcp-server/report.json",
+      "size": 19169
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/ui5-mcp-server/report.md",
+      "size": 4641
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/wikipedia-mcp-pypi/report.json",
+      "size": 5765
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/wikipedia-mcp-pypi/report.md",
+      "size": 3560
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/wikipedia-mcp/report.json",
+      "size": 139979
+    },
+    {
+      "path": "case-studies/cs04-mcp-ecosystem/wikipedia-mcp/report.md",
+      "size": 137179
+    },
+    {
+      "path": "case-studies/cs05-mcp-ecosystem/candidates-2026-07-05.yaml",
+      "size": 18937
+    },
+    {
+      "path": "case-studies/cs05-mcp-ecosystem/findings-curated-cs05.md",
+      "size": 11805
+    },
+    {
+      "path": "case-studies/cs05-mcp-ecosystem/targets-cs05-a.yaml",
+      "size": 8654
+    },
+    {
+      "path": "case-studies/cs05-mcp-ecosystem/targets-cs05-b.yaml",
+      "size": 4754
+    },
+    {
+      "path": "case-studies/cs06-mcp-ecosystem/candidates-2026-07-05.yaml",
+      "size": 26180
+    },
+    {
+      "path": "case-studies/cs06-mcp-ecosystem/findings-curated-cs06.md",
+      "size": 7271
+    },
+    {
+      "path": "case-studies/cs06-mcp-ecosystem/targets-cs06.yaml",
+      "size": 8562
+    },
+    {
+      "path": "case-studies/cs07-mcp-ecosystem/findings-curated-cs07.md",
+      "size": 5910
+    },
+    {
+      "path": "case-studies/cs07-mcp-ecosystem/scans/mcp-server-chart/report.json",
+      "size": 115423
+    },
+    {
+      "path": "case-studies/cs07-mcp-ecosystem/scans/mcp-server-chart/report.md",
+      "size": 8208
+    },
+    {
+      "path": "case-studies/cs07-mcp-ecosystem/scans/summary.md",
+      "size": 923
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/findings-curated-cs08.md",
+      "size": 9624
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/adonis-docs/report.json",
+      "size": 21721
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/adonis-docs/report.md",
+      "size": 8003
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-latex/report.json",
+      "size": 14357
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-latex/report.md",
+      "size": 9805
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-paper/report.json",
+      "size": 11834
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-paper/report.md",
+      "size": 7307
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-query/report.json",
+      "size": 22084
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-query/report.md",
+      "size": 6269
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-research/report.json",
+      "size": 21498
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-research/report.md",
+      "size": 10392
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-today/report.json",
+      "size": 24045
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/arxiv-today/report.md",
+      "size": 12463
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/audio-format/report.json",
+      "size": 9510
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/audio-format/report.md",
+      "size": 6932
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/autocleaneeg-pubmed/report.json",
+      "size": 410046
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/autocleaneeg-pubmed/report.md",
+      "size": 403110
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/bibtex-file/report.json",
+      "size": 10683
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/bibtex-file/report.md",
+      "size": 6937
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/byebye-docs/report.json",
+      "size": 19994
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/byebye-docs/report.md",
+      "size": 8527
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/crossref-cite/report.json",
+      "size": 15917
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/crossref-cite/report.md",
+      "size": 9038
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/docsend2pdf/report.json",
+      "size": 138442
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/docsend2pdf/report.md",
+      "size": 136216
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/docset/report.json",
+      "size": 158766
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/docset/report.md",
+      "size": 143314
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/docsie/report.json",
+      "size": 3635
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/docsie/report.md",
+      "size": 3221
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/hsqh-risk-profile-mcp-demo/report.json",
+      "size": 7888
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/hsqh-risk-profile-mcp-demo/report.md",
+      "size": 5479
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/hwdocs/report.json",
+      "size": 281921
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/hwdocs/report.md",
+      "size": 272637
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/iflow-mcp-abhishekloiwal-mcp-file/report.json",
+      "size": 409669
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/iflow-mcp-abhishekloiwal-mcp-file/report.md",
+      "size": 404354
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/iflow-mcp-zzaebok-wikidata/report.json",
+      "size": 14418
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/iflow-mcp-zzaebok-wikidata/report.md",
+      "size": 8590
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/insurance-analysis/report.json",
+      "size": 11156
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/insurance-analysis/report.md",
+      "size": 6490
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/local-weather/report.json",
+      "size": 5830
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/local-weather/report.md",
+      "size": 4298
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/localparse/report.json",
+      "size": 156137
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/localparse/report.md",
+      "size": 144495
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-csv-database/report.json",
+      "size": 21993
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-csv-database/report.md",
+      "size": 10503
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-database-manager/report.json",
+      "size": 13389
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-database-manager/report.md",
+      "size": 8279
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-database/report.json",
+      "size": 30029
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-database/report.md",
+      "size": 13924
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-db-filesystem/report.json",
+      "size": 15915
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-db-filesystem/report.md",
+      "size": 9057
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-file-tool/report.json",
+      "size": 43022
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-file-tool/report.md",
+      "size": 16439
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-filesystem/report.json",
+      "size": 31934
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-filesystem/report.md",
+      "size": 12388
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-gdocs/report.json",
+      "size": 11974
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-gdocs/report.md",
+      "size": 7618
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-google-agent-platform-docs/report.json",
+      "size": 12701
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-google-agent-platform-docs/report.md",
+      "size": 7563
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-guo-file/report.json",
+      "size": 8442
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-guo-file/report.md",
+      "size": 6151
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-hackernews/report.json",
+      "size": 6480
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-hackernews/report.md",
+      "size": 4701
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-library-docs/report.json",
+      "size": 142811
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-library-docs/report.md",
+      "size": 138860
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-local-image-reader/report.json",
+      "size": 8880
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-local-image-reader/report.md",
+      "size": 6939
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-msaccess-database/report.json",
+      "size": 114987
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-msaccess-database/report.md",
+      "size": 17343
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-mylib-docs/report.json",
+      "size": 5937
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-mylib-docs/report.md",
+      "size": 4493
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-roblox-docs/report.json",
+      "size": 37247
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-roblox-docs/report.md",
+      "size": 13745
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-server-cpp-format/report.json",
+      "size": 7389
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-server-cpp-format/report.md",
+      "size": 5111
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-server-sqlite-cn/report.json",
+      "size": 147172
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcp-server-sqlite-cn/report.md",
+      "size": 141725
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpcn-video-format-converter/report.json",
+      "size": 11926
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpcn-video-format-converter/report.md",
+      "size": 6014
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-hash/report.json",
+      "size": 8971
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-hash/report.md",
+      "size": 6952
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-info/report.json",
+      "size": 8815
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-info/report.md",
+      "size": 6930
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-read/report.json",
+      "size": 9919
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-read/report.md",
+      "size": 7564
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-search/report.json",
+      "size": 9300
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-search/report.md",
+      "size": 6950
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-size/report.json",
+      "size": 7786
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-size/report.md",
+      "size": 5528
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-write/report.json",
+      "size": 10887
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/mcpzoo-file-write/report.md",
+      "size": 8230
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/meok-agents-md-lint/report.json",
+      "size": 544189
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/meok-agents-md-lint/report.md",
+      "size": 536231
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/meta-ads-mcp-local/report.json",
+      "size": 469362
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/meta-ads-mcp-local/report.md",
+      "size": 417640
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/scoutdocs/report.json",
+      "size": 12788
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/scoutdocs/report.md",
+      "size": 6726
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/shadcn-docs/report.json",
+      "size": 12362
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/shadcn-docs/report.md",
+      "size": 8741
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/summary.md",
+      "size": 30433
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/yahoo-local-search/report.json",
+      "size": 42257
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/yahoo-local-search/report.md",
+      "size": 18848
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/zh-file/report.json",
+      "size": 27278
+    },
+    {
+      "path": "case-studies/cs08-mcp-ecosystem/scans/zh-file/report.md",
+      "size": 14313
+    },
+    {
+      "path": "case-studies/cs09-mcp-ecosystem/findings-curated-cs09.md",
+      "size": 4754
+    },
+    {
+      "path": "case-studies/cs09-mcp-ecosystem/scans/arxiv-smithery/report.json",
+      "size": 12685
+    },
+    {
+      "path": "case-studies/cs09-mcp-ecosystem/scans/arxiv-smithery/report.md",
+      "size": 8495
+    },
+    {
+      "path": "case-studies/cs09-mcp-ecosystem/scans/summary.md",
+      "size": 2272
+    },
+    {
+      "path": "case-studies/cs09-mcp-ecosystem/targets-cs09.yaml",
+      "size": 9072
+    },
+    {
+      "path": "case-studies/cs10-mcp-ecosystem/candidates-cs10-npm-2026-07-06.yaml",
+      "size": 24935
+    },
+    {
+      "path": "case-studies/cs10-mcp-ecosystem/findings-curated-cs10.md",
+      "size": 10072
+    },
+    {
+      "path": "case-studies/cs11-mcp-ecosystem/findings-curated-cs11.md",
+      "size": 16832
+    },
+    {
+      "path": "case-studies/cs12-mcp-ecosystem/findings-curated-cs12.md",
+      "size": 7575
+    },
+    {
+      "path": "case-studies/cs12-mcp-ecosystem/targets-cs12.yaml",
+      "size": 10211
+    },
+    {
+      "path": "case-studies/cs13-mcp-ecosystem/findings-curated-cs13.md",
+      "size": 3052
+    },
+    {
+      "path": "case-studies/cs13-mcp-ecosystem/targets-cs13.yaml",
+      "size": 9283
+    },
+    {
+      "path": "case-studies/cs14-mcp-ecosystem/findings-curated-cs14.md",
+      "size": 6003
+    },
+    {
+      "path": "case-studies/cs14-mcp-ecosystem/targets-cs14.yaml",
+      "size": 13470
+    },
+    {
+      "path": "case-studies/cs15-mcp-ecosystem/findings-curated-cs15.md",
+      "size": 5657
+    },
+    {
+      "path": "case-studies/cs15-mcp-ecosystem/targets-cs15.yaml",
+      "size": 5921
+    },
+    {
+      "path": "case-studies/cs15-mcp-ecosystem/targets-cs15b.yaml",
+      "size": 2103
+    },
+    {
+      "path": "case-studies/cs16-mcp-ecosystem/findings-curated-cs16.md",
+      "size": 5102
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/agentndx-ai/report.json",
+      "size": 9110
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/agentndx-ai/report.md",
+      "size": 5772
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/archive-35-com/report.json",
+      "size": 19955
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/archive-35-com/report.md",
+      "size": 12211
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/dayze-com/report.json",
+      "size": 26804
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/dayze-com/report.md",
+      "size": 13392
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/epwforge-com/report.json",
+      "size": 66076
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/epwforge-com/report.md",
+      "size": 19659
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/frootai-dev/report.json",
+      "size": 36326
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/frootai-dev/report.md",
+      "size": 19543
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/gitdealflow-com/report.json",
+      "size": 13537
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/gitdealflow-com/report.md",
+      "size": 9974
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/glimind-com/report.json",
+      "size": 184566
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/glimind-com/report.md",
+      "size": 159978
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/krystalview-com/report.json",
+      "size": 16626
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/krystalview-com/report.md",
+      "size": 6397
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/mcpstandard-dev/report.json",
+      "size": 141423
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/mcpstandard-dev/report.md",
+      "size": 138355
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/nexus-agent-xa12-onrender-com/report.json",
+      "size": 45977
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/nexus-agent-xa12-onrender-com/report.md",
+      "size": 27767
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/resultrail-larrybuildsai-vercel-app_resultrail/report.json",
+      "size": 14437
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/resultrail-larrybuildsai-vercel-app_resultrail/report.md",
+      "size": 8682
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/scoreboard-urdr-dev/report.json",
+      "size": 24123
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/scoreboard-urdr-dev/report.md",
+      "size": 8088
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/sniff-world/report.json",
+      "size": 10678
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/sniff-world/report.md",
+      "size": 6304
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/summary.md",
+      "size": 2825
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/ucpchecker-com/report.json",
+      "size": 18001
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/ucpchecker-com/report.md",
+      "size": 4171
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/vaaya-ai/report.json",
+      "size": 25787
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/vaaya-ai/report.md",
+      "size": 13472
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/www-vivaldo-shop/report.json",
+      "size": 13824
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/www-vivaldo-shop/report.md",
+      "size": 9171
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/xqb-io_mcp/report.json",
+      "size": 13978
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/batch-scans/xqb-io_mcp/report.md",
+      "size": 4766
+    },
+    {
+      "path": "case-studies/cs18-petrel-run4/findings-curated-cs18.md",
+      "size": 6476
+    },
+    {
+      "path": "case-studies/cs19-petrel-run5/findings-curated-cs19.md",
+      "size": 3077
+    },
+    {
+      "path": "case-studies/cs19-petrel-run5/targets-cs19.yaml",
+      "size": 29711
+    },
+    {
+      "path": "case-studies/dataset_b1.md",
+      "size": 6475
+    },
+    {
+      "path": "case-studies/init_audit_stats.py",
+      "size": 3138
+    },
+    {
+      "path": "case-studies/public-stats.yaml",
+      "size": 30011
+    },
+    {
+      "path": "case-studies/slides/corvus-ekoparty-2026-slides.html",
+      "size": 33655
+    },
+    {
+      "path": "case-studies/slides/corvus-ekoparty-2026-slides.pdf",
+      "size": 259746
+    },
+    {
+      "path": "case-studies/technical-paper-ekoparty-2026.md",
+      "size": 15099
+    },
+    {
+      "path": "corvus/__init__.py",
+      "size": 882
+    },
+    {
+      "path": "corvus/batch.py",
+      "size": 19540
+    },
+    {
+      "path": "corvus/cli.py",
+      "size": 62693
+    },
+    {
+      "path": "corvus/config.py",
+      "size": 1172
+    },
+    {
+      "path": "corvus/core/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "corvus/core/models.py",
+      "size": 6440
+    },
+    {
+      "path": "corvus/core/session.py",
+      "size": 1159
+    },
+    {
+      "path": "corvus/diff.py",
+      "size": 1844
+    },
+    {
+      "path": "corvus/discovery/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "corvus/discovery/enumerator.py",
+      "size": 3048
+    },
+    {
+      "path": "corvus/history.py",
+      "size": 5543
+    },
+    {
+      "path": "corvus/modules/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "corvus/modules/base.py",
+      "size": 518
+    },
+    {
+      "path": "corvus/modules/dynamic/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "corvus/modules/dynamic/batch_dos.py",
+      "size": 8518
+    },
+    {
+      "path": "corvus/modules/dynamic/cancellation_probe.py",
+      "size": 8675
+    },
+    {
+      "path": "corvus/modules/dynamic/cmd_injection.py",
+      "size": 19877
+    },
+    {
+      "path": "corvus/modules/dynamic/completion_probe.py",
+      "size": 9655
+    },
+    {
+      "path": "corvus/modules/dynamic/cursor_probe.py",
+      "size": 7313
+    },
+    {
+      "path": "corvus/modules/dynamic/elicitation_probe.py",
+      "size": 9464
+    },
+    {
+      "path": "corvus/modules/dynamic/endpoint_probe.py",
+      "size": 12060
+    },
+    {
+      "path": "corvus/modules/dynamic/init_audit.py",
+      "size": 7149
+    },
+    {
+      "path": "corvus/modules/dynamic/logging_probe.py",
+      "size": 3873
+    },
+    {
+      "path": "corvus/modules/dynamic/oauth_bypass.py",
+      "size": 7070
+    },
+    {
+      "path": "corvus/modules/dynamic/output_encoding.py",
+      "size": 7418
+    },
+    {
+      "path": "corvus/modules/dynamic/param_smuggling.py",
+      "size": 5993
+    },
+    {
+      "path": "corvus/modules/dynamic/prompts_injection.py",
+      "size": 7817
+    },
+    {
+      "path": "corvus/modules/dynamic/proto_fuzz.py",
+      "size": 12240
+    },
+    {
+      "path": "corvus/modules/dynamic/response_flood.py",
+      "size": 8484
+    },
+    {
+      "path": "corvus/modules/dynamic/response_injection.py",
+      "size": 8595
+    },
+    {
+      "path": "corvus/modules/dynamic/rug_pull.py",
+      "size": 17043
+    },
+    {
+      "path": "corvus/modules/dynamic/sampling_probe.py",
+      "size": 9926
+    },
+    {
+      "path": "corvus/modules/dynamic/schema_bypass.py",
+      "size": 5779
+    },
+    {
+      "path": "corvus/modules/dynamic/ssrf.py",
+      "size": 19540
+    },
+    {
+      "path": "corvus/modules/dynamic/token_exposure.py",
+      "size": 16607
+    },
+    {
+      "path": "corvus/modules/static/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "corvus/modules/static/auth_audit.py",
+      "size": 8677
+    },
+    {
+      "path": "corvus/modules/static/github_advisory.py",
+      "size": 5066
+    },
+    {
+      "path": "corvus/modules/static/log_audit.py",
+      "size": 7329
+    },
+    {
+      "path": "corvus/modules/static/npm_behavior.py",
+      "size": 5554
+    },
+    {
+      "path": "corvus/modules/static/osv_supply_chain.py",
+      "size": 4671
+    },
+    {
+      "path": "corvus/modules/static/resource_uri.py",
+      "size": 8615
+    },
+    {
+      "path": "corvus/modules/static/schema_audit.py",
+      "size": 3739
+    },
+    {
+      "path": "corvus/modules/static/scope_audit.py",
+      "size": 12980
+    },
+    {
+      "path": "corvus/modules/static/shadow_tool.py",
+      "size": 10001
+    },
+    {
+      "path": "corvus/modules/static/supply_chain.py",
+      "size": 5928
+    },
+    {
+      "path": "corvus/modules/static/supply_chain_python.py",
+      "size": 5660
+    },
+    {
+      "path": "corvus/modules/static/tool_chaining.py",
+      "size": 4050
+    },
+    {
+      "path": "corvus/modules/static/tool_poisoning.py",
+      "size": 4538
+    },
+    {
+      "path": "corvus/payloads/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "corvus/payloads/data/injection.yaml",
+      "size": 1425
+    },
+    {
+      "path": "corvus/payloads/data/poisoning_patterns.yaml",
+      "size": 1408
+    },
+    {
+      "path": "corvus/payloads/data/schema_bypass.yaml",
+      "size": 503
+    },
+    {
+      "path": "corvus/payloads/data/traversal.yaml",
+      "size": 749
+    },
+    {
+      "path": "corvus/payloads/engine.py",
+      "size": 3779
+    },
+    {
+      "path": "corvus/plugins.py",
+      "size": 3258
+    },
+    {
+      "path": "corvus/py.typed",
+      "size": 0
+    },
+    {
+      "path": "corvus/reporting/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "corvus/reporting/report.py",
+      "size": 5820
+    },
+    {
+      "path": "corvus/reporting/templates/report.html.j2",
+      "size": 7286
+    },
+    {
+      "path": "corvus/reporting/templates/report.md.j2",
+      "size": 1591
+    },
+    {
+      "path": "corvus/run_summary.py",
+      "size": 2219
+    },
+    {
+      "path": "corvus/scoring.py",
+      "size": 1287
+    },
+    {
+      "path": "corvus/transport/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "corvus/transport/base.py",
+      "size": 1644
+    },
+    {
+      "path": "corvus/transport/http.py",
+      "size": 4500
+    },
+    {
+      "path": "corvus/transport/sse.py",
+      "size": 113
+    },
+    {
+      "path": "corvus/transport/stdio.py",
+      "size": 13840
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 1368
+    },
+    {
+      "path": "scripts/update-public.py",
+      "size": 16173
+    },
+    {
+      "path": "tests/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "tests/conftest.py",
+      "size": 205
+    },
+    {
+      "path": "tests/e2e/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "tests/e2e/conftest.py",
+      "size": 1788
+    },
+    {
+      "path": "tests/e2e/test_e2e_batch.py",
+      "size": 8217
+    },
+    {
+      "path": "tests/e2e/test_e2e_parallel.py",
+      "size": 2708
+    },
+    {
+      "path": "tests/e2e/test_e2e_smithery.py",
+      "size": 4274
+    },
+    {
+      "path": "tests/fixtures/sample_config.toml",
+      "size": 240
+    },
+    {
+      "path": "tests/fixtures/sample_plugin.py",
+      "size": 1192
+    },
+    {
+      "path": "tests/mock_appearing_tool_server.py",
+      "size": 2154
+    },
+    {
+      "path": "tests/mock_http_server.py",
+      "size": 4422
+    },
+    {
+      "path": "tests/mock_listchanged_server.py",
+      "size": 2279
+    },
+    {
+      "path": "tests/mock_mutating_server.py",
+      "size": 3184
+    },
+    {
+      "path": "tests/mock_server.py",
+      "size": 16528
+    },
+    {
+      "path": "tests/mock_ssrf_server.py",
+      "size": 2754
+    },
+    {
+      "path": "tests/mock_stateful_server.py",
+      "size": 2286
+    },
+    {
+      "path": "tests/test_advanced_modules.py",
+      "size": 9767
+    },
+    {
+      "path": "tests/test_batch.py",
+      "size": 7818
+    },
+    {
+      "path": "tests/test_batch_dos.py",
+      "size": 10360
+    },
+    {
+      "path": "tests/test_batch_ux.py",
+      "size": 5673
+    },
+    {
+      "path": "tests/test_cancellation_probe.py",
+      "size": 6660
+    },
+    {
+      "path": "tests/test_cli_disclose.py",
+      "size": 1806
+    },
+    {
+      "path": "tests/test_cli_v29.py",
+      "size": 9936
+    },
+    {
+      "path": "tests/test_completion_probe.py",
+      "size": 7898
+    },
+    {
+      "path": "tests/test_config.py",
+      "size": 2718
+    },
+    {
+      "path": "tests/test_cursor_probe.py",
+      "size": 6291
+    },
+    {
+      "path": "tests/test_cvss.py",
+      "size": 2195
+    },
+    {
+      "path": "tests/test_diff.py",
+      "size": 6347
+    },
+    {
+      "path": "tests/test_disclose_cmd.py",
+      "size": 4091
+    },
+    {
+      "path": "tests/test_discover.py",
+      "size": 9915
+    },
+    {
+      "path": "tests/test_discovery.py",
+      "size": 865
+    },
+    {
+      "path": "tests/test_elicitation_probe.py",
+      "size": 12178
+    },
+    {
+      "path": "tests/test_endpoint_probe.py",
+      "size": 4169
+    },
+    {
+      "path": "tests/test_enumerator_listchanged.py",
+      "size": 1571
+    },
+    {
+      "path": "tests/test_fp_calibration_v3.py",
+      "size": 9975
+    },
+    {
+      "path": "tests/test_fp_calibration_v4.py",
+      "size": 12817
+    },
+    {
+      "path": "tests/test_fp_calibration_v5.py",
+      "size": 13916
+    },
+    {
+      "path": "tests/test_github_advisory.py",
+      "size": 7058
+    },
+    {
+      "path": "tests/test_history.py",
+      "size": 2738
+    },
+    {
+      "path": "tests/test_logging_probe.py",
+      "size": 5490
+    },
+    {
+      "path": "tests/test_modules.py",
+      "size": 10852
+    },
+    {
+      "path": "tests/test_modules_v2.py",
+      "size": 4742
+    },
+    {
+      "path": "tests/test_modules_v3.py",
+      "size": 8387
+    },
+    {
+      "path": "tests/test_modules_v4.py",
+      "size": 2503
+    },
+    {
+      "path": "tests/test_modules_v5.py",
+      "size": 12604
+    },
+    {
+      "path": "tests/test_modules_v6.py",
+      "size": 12684
+    },
+    {
+      "path": "tests/test_modules_v7.py",
+      "size": 15878
+    },
+    {
+      "path": "tests/test_npm_behavior.py",
+      "size": 7072
+    },
+    {
+      "path": "tests/test_oauth_bypass.py",
+      "size": 10075
+    },
+    {
+      "path": "tests/test_osv_supply_chain.py",
+      "size": 9494
+    },
+    {
+      "path": "tests/test_owasp_remap.py",
+      "size": 2257
+    },
+    {
+      "path": "tests/test_plugins.py",
+      "size": 5067
+    },
+    {
+      "path": "tests/test_prompts_injection.py",
+      "size": 9119
+    },
+    {
+      "path": "tests/test_proto_fuzz.py",
+      "size": 5495
+    },
+    {
+      "path": "tests/test_public_api.py",
+      "size": 9047
+    },
+    {
+      "path": "tests/test_request_logging.py",
+      "size": 2340
+    },
+    {
+      "path": "tests/test_response_flood.py",
+      "size": 4426
+    },
+    {
+      "path": "tests/test_response_injection.py",
+      "size": 9433
+    },
+    {
+      "path": "tests/test_rug_pull.py",
+      "size": 5376
+    },
+    {
+      "path": "tests/test_run_summary.py",
+      "size": 2732
+    },
+    {
+      "path": "tests/test_sampling_probe.py",
+      "size": 13805
+    },
+    {
+      "path": "tests/test_sarif.py",
+      "size": 5998
+    },
+    {
+      "path": "tests/test_scoring.py",
+      "size": 4366
+    },
+    {
+      "path": "tests/test_ssrf.py",
+      "size": 7198
+    },
+    {
+      "path": "tests/test_supply_chain.py",
+      "size": 6100
+    },
+    {
+      "path": "tests/test_supply_chain_python.py",
+      "size": 7290
+    },
+    {
+      "path": "tests/test_token_exposure.py",
+      "size": 7083
+    },
+    {
+      "path": "tests/test_transport.py",
+      "size": 5437
+    },
+    {
+      "path": "tests/test_transport_http.py",
+      "size": 4566
+    },
+    {
+      "path": "tests/test_verify_critical.py",
+      "size": 7378
+    },
+    {
+      "path": "tool-observations.md",
+      "size": 463
+    }
+  ]
+}

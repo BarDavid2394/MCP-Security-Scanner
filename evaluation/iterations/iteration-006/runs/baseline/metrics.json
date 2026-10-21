@@ -1,0 +1,357 @@
+{
+  "unit": "artifact + rule; unlabelled rules are unknown",
+  "micro": {
+    "tp": 8,
+    "fp": 2,
+    "fn": 4,
+    "tn": 10,
+    "errors": 0,
+    "precision": 0.8,
+    "recall": 0.6666666666666666,
+    "false_positive_rate": 0.16666666666666666,
+    "label_coverage": 1.0
+  },
+  "by_rule": {
+    "MCP01-SECRET-OUTPUT": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP03-TOOL-POISON": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP05-COMMAND-INJECTION": {
+      "tp": 2,
+      "fp": 2,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "false_positive_rate": 1.0,
+      "label_coverage": 1.0
+    },
+    "MCP05-DYNAMIC-CODE": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP06-UNTRUSTED-CONTEXT": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP13-SSRF": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "by_category": {
+    "MCP01": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP03": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP05": {
+      "tp": 4,
+      "fp": 2,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "false_positive_rate": 0.5,
+      "label_coverage": 1.0
+    },
+    "MCP06": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP13": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "synthetic-secret-output-inline-positive",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "rationale": "Returns the environment credential verbatim.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "synthetic-secret-output-inline-negative",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "negative",
+      "rationale": "Returns only credential presence, never its value; other side channels are out of scope.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "synthetic-secret-output-helper-positive",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "rationale": "Returns the environment credential verbatim.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "synthetic-secret-output-helper-negative",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "negative",
+      "rationale": "Returns only credential presence, never its value; other side channels are out of scope.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "synthetic-metadata-override-inline-positive",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Tool metadata commands an instruction override and credential exfiltration.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "synthetic-metadata-override-inline-negative",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Tool metadata explicitly treats an attack phrase as evidence, not instructions.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "synthetic-metadata-override-helper-positive",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Tool metadata commands an instruction override and credential exfiltration.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "synthetic-metadata-override-helper-negative",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Tool metadata explicitly treats an attack phrase as evidence, not instructions.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "synthetic-shell-input-inline-positive",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "rationale": "Caller-controlled text is concatenated into a shell command without escaping.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "synthetic-shell-input-inline-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Fixed executable and format with caller data as an argv element; no shell interpretation.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "synthetic-shell-input-helper-positive",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "rationale": "Caller-controlled text is concatenated into a shell command without escaping.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "synthetic-shell-input-helper-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Fixed executable and format with caller data as an argv element; no shell interpretation.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "synthetic-dynamic-code-inline-positive",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "rationale": "Caller input is executed as a Python expression.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "synthetic-dynamic-code-inline-negative",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "rationale": "literal_eval parses Python literals without arbitrary evaluation; resource exhaustion is outside this rule.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "synthetic-dynamic-code-helper-positive",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "rationale": "Caller input is executed as a Python expression.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "synthetic-dynamic-code-helper-negative",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "rationale": "literal_eval parses Python literals without arbitrary evaluation; resource exhaustion is outside this rule.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "synthetic-url-target-inline-positive",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "rationale": "Caller chooses the full network destination without URL validation.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "synthetic-url-target-inline-negative",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "rationale": "Destination origin is fixed; caller data is URL-encoded into a query. Assumes no server-side redirect behavior.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "synthetic-url-target-helper-positive",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "rationale": "Caller chooses the full network destination without URL validation.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "synthetic-url-target-helper-negative",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "rationale": "Destination origin is fixed; caller data is URL-encoded into a query. Assumes no server-side redirect behavior.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "synthetic-document-context-inline-positive",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "rationale": "External file contents are returned verbatim as tool output available to model context.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "synthetic-document-context-inline-negative",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "negative",
+      "rationale": "Only a character count reaches output; no external text reaches context. File access risks are separate.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "synthetic-document-context-helper-positive",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "rationale": "External file contents are returned verbatim as tool output available to model context.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "synthetic-document-context-helper-negative",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "negative",
+      "rationale": "Only a character count reaches output; no external text reaches context. File access risks are separate.",
+      "outcome": "tn"
+    }
+  ],
+  "unscored_predictions": [
+    {
+      "artifact_id": "synthetic-shell-input-inline-positive",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "process_value"
+    },
+    {
+      "artifact_id": "synthetic-shell-input-inline-positive",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "process_value"
+    },
+    {
+      "artifact_id": "synthetic-shell-input-inline-negative",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "process_value"
+    },
+    {
+      "artifact_id": "synthetic-shell-input-inline-negative",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "process_value"
+    },
+    {
+      "artifact_id": "synthetic-shell-input-helper-positive",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "process_value"
+    },
+    {
+      "artifact_id": "synthetic-shell-input-helper-negative",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "process_value"
+    },
+    {
+      "artifact_id": "synthetic-dynamic-code-inline-positive",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "process_value"
+    },
+    {
+      "artifact_id": "synthetic-url-target-inline-positive",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "process_value"
+    },
+    {
+      "artifact_id": "synthetic-url-target-inline-negative",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "process_value"
+    }
+  ],
+  "note": "Scores concern explicitly reviewed labels only; errors excluded from confusion matrix and counted separately."
+}

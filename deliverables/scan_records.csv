@@ -1,0 +1,29 @@
+﻿report,timestamp,target,files_scanned,tools_analyzed,findings,finding_files,by_attack
+evaluation/raw-results/aws-documentation.json,2026-08-10T08:28:16.087574,evaluation/corpus/awslabs-mcp/src/aws-documentation-mcp-server,30,7,3,3,"{""MCP10"": 3}"
+evaluation/raw-results/external-excel-017.json,2026-08-10T15:51:05.840988,evaluation/corpus-external/excel-mcp-0.1.7,17,25,1,1,"{""MCP07"": 1}"
+evaluation/raw-results/external-excel-018.json,2026-08-10T15:51:06.683018,evaluation/corpus-external/excel-mcp-0.1.8,19,25,2,2,"{""MCP07"": 1, ""MCP09"": 1}"
+evaluation/raw-results/external-mcpsecbench-benign-add.json,2026-08-10T15:52:52.641775,evaluation/corpus-external/MCPSecBench/code/addserver.py,1,2,0,0,{}
+evaluation/raw-results/external-mcpsecbench.json,2026-08-10T15:51:01.698414,evaluation/corpus-external/MCPSecBench/code,13,19,16,6,"{""MCP01"": 1, ""MCP03"": 3, ""MCP05"": 1, ""MCP07"": 3, ""MCP08"": 3, ""MCP09"": 3, ""MCP11"": 1, ""MCP16"": 1}"
+evaluation/raw-results/external-mcptox-command-improved.json,2026-08-10T16:39:37.599882,evaluation/corpus-external/MCPTox-Benchmark/def_tool,485,485,1107,393,"{""MCP03"": 1107}"
+evaluation/raw-results/external-mcptox-improved.json,2026-08-10T16:21:30.497022,evaluation/corpus-external/MCPTox-Benchmark/def_tool,485,485,1107,393,"{""MCP03"": 1107}"
+evaluation/raw-results/external-mcptox.json,2026-08-10T16:13:23.692084,evaluation/corpus-external/MCPTox-Benchmark/def_tool,485,485,0,0,{}
+evaluation/raw-results/external-msb.json,2026-08-10T15:51:04.902108,evaluation/corpus-external/MSB/data/tools/attack_tools,64,267,14,14,"{""MCP07"": 8, ""MCP10"": 6}"
+evaluation/raw-results/external-official-fetch.json,2026-08-10T15:51:06.978165,evaluation/corpus/official-servers/src/fetch,7,1,1,1,"{""MCP13"": 1}"
+evaluation/raw-results/fastmcp-examples.json,2026-08-10T08:27:54.771750,evaluation/corpus/fastmcp/examples,141,156,20,16,"{""MCP04"": 2, ""MCP06"": 4, ""MCP07"": 11, ""MCP08"": 2, ""MCP10"": 1}"
+evaluation/raw-results/fixture-clean_fastmcp.json,2026-08-10T08:28:16.095142,clean_fastmcp,1,1,0,0,{}
+evaluation/raw-results/fixture-mutated_prompt_injection.json,2026-08-10T08:28:16.098618,mutated_prompt_injection,1,1,2,1,"{""MCP06"": 1, ""MCP13"": 1}"
+evaluation/raw-results/fixture-mutated_tool_poisoning.json,2026-08-10T08:28:16.105239,mutated_tool_poisoning,1,1,4,1,"{""MCP03"": 4}"
+evaluation/raw-results/holdout-mcpsafety-clean-mcp03.json,2026-08-10T16:25:15.197038,evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers,40,156,0,0,{}
+evaluation/raw-results/markitdown-mcp.json,2026-08-10T08:28:12.152854,evaluation/corpus/markitdown/packages/markitdown-mcp,5,1,1,1,"{""MCP07"": 1}"
+evaluation/raw-results/mcp-atlassian.json,2026-08-10T08:28:12.099497,evaluation/corpus/mcp-atlassian/src,117,98,13,7,"{""MCP01"": 6, ""MCP10"": 5, ""MCP11"": 1, ""MCP15"": 1}"
+evaluation/raw-results/mcp03-clean-regression.json,2026-08-10T16:39:36.859479,tests/samples/clean_server.py,1,4,0,0,{}
+evaluation/raw-results/official-fetch.json,2026-08-10T08:27:41.722352,evaluation/corpus/official-servers/src/fetch,7,1,1,1,"{""MCP13"": 1}"
+evaluation/raw-results/official-git.json,2026-08-10T08:27:42.701578,evaluation/corpus/official-servers/src/git,6,12,0,0,{}
+evaluation/raw-results/official-time.json,2026-08-10T08:27:43.213149,evaluation/corpus/official-servers/src/time,6,2,0,0,{}
+evaluation/raw-results/python-sdk-examples.json,2026-08-10T08:27:50.272556,evaluation/corpus/python-sdk/examples,243,117,45,40,"{""MCP01"": 5, ""MCP04"": 4, ""MCP06"": 2, ""MCP07"": 25, ""MCP09"": 1, ""MCP11"": 6, ""MCP15"": 2}"
+evaluation/raw-results/quickstart-weather.json,2026-08-10T08:27:50.561629,evaluation/corpus/quickstart-resources/weather-server-python,3,2,0,0,{}
+evaluation/raw-results/simple-mcp-server.json,2026-08-10T08:28:12.290099,evaluation/corpus/simple-mcp-server/src,8,2,0,0,{}
+evaluation/atlassian-llm-pilot.json,2026-08-10T15:13:42.894346,evaluation/corpus/mcp-atlassian/src,118,98,13,7,"{""MCP01"": 6, ""MCP10"": 5, ""MCP11"": 1, ""MCP15"": 1}"
+evaluation/atlassian-llm-review-cached.json,2026-08-10T15:12:49.299703,evaluation/corpus/mcp-atlassian/src,118,98,13,7,"{""MCP01"": 6, ""MCP10"": 5, ""MCP11"": 1, ""MCP15"": 1}"
+evaluation/atlassian-llm-review.json,2026-08-10T15:12:20.270035,evaluation/corpus/mcp-atlassian/src,117,98,13,7,"{""MCP01"": 6, ""MCP10"": 5, ""MCP11"": 1, ""MCP15"": 1}"
+evaluation/fastmcp-llm-pilot.json,2026-08-10T15:18:09.586519,evaluation/corpus/fastmcp/examples,141,156,20,16,"{""MCP04"": 2, ""MCP06"": 4, ""MCP07"": 11, ""MCP08"": 2, ""MCP10"": 1}"

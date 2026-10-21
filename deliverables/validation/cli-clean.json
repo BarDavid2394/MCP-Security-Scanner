@@ -1,0 +1,24 @@
+{
+  "scanner": "MCP Security Scanner",
+  "version": "2.0.0",
+  "catalog_version": "2026.1",
+  "timestamp": "2026-10-11T12:09:17.010549",
+  "scan_info": {
+    "target": "tests\\samples\\clean_server.py",
+    "files_scanned": 1,
+    "tools_analyzed": 4,
+    "servers_found": 1
+  },
+  "summary": {
+    "total": 0,
+    "by_severity": {},
+    "by_type": {},
+    "by_attack": {},
+    "by_rule": {},
+    "by_confidence": {},
+    "fixable": 0,
+    "risk_score": 0,
+    "risk_level": "NONE"
+  },
+  "findings": []
+}

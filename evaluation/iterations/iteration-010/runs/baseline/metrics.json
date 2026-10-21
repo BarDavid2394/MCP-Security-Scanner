@@ -1,0 +1,211 @@
+{
+  "unit": "artifact/rule",
+  "micro": {
+    "tp": 4,
+    "fp": 4,
+    "fn": 2,
+    "tn": 2,
+    "errors": 0,
+    "precision": 0.5,
+    "recall": 0.6666666666666666,
+    "false_positive_rate": 0.6666666666666666,
+    "label_coverage": 1.0
+  },
+  "by_rule": {
+    "MCP05-COMMAND-INJECTION": {
+      "tp": 4,
+      "fp": 4,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "false_positive_rate": 1.0,
+      "label_coverage": 1.0
+    },
+    "MCP06-UNTRUSTED-CONTEXT": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "by_category": {
+    "MCP05": {
+      "tp": 4,
+      "fp": 4,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0,
+      "precision": 0.5,
+      "recall": 1.0,
+      "false_positive_rate": 1.0,
+      "label_coverage": 1.0
+    },
+    "MCP06": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "execfile-positive",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "rationale": "User controls executable.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "execfile-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Fixed git read operation, operand follows option terminator, shell disabled.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "shell-positive",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "rationale": "Shell option exposes user input to shell interpretation.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "shell-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Explicit shell false with fixed executable and operand boundary.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "interpreter-positive",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "rationale": "User controls interpreter program.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "interpreter-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Fixed non-interpreter read operation with option terminator.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "quoted-positive",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "rationale": "User input interpolated into shell command.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "quoted-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Example string is data, not executable code.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "filetext-positive",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "rationale": "Raw file text crosses tool result boundary.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "filetext-negative",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "negative",
+      "rationale": "Only a numeric length crosses boundary.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "filealias-positive",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "rationale": "Raw file text alias reaches tool result.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "filealias-negative",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "negative",
+      "rationale": "Alias carries only numeric length.",
+      "outcome": "tn"
+    }
+  ],
+  "unscored_predictions": [
+    {
+      "artifact_id": "execfile-positive",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "execfile-negative",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "shell-positive",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "shell-negative",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "interpreter-positive",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "interpreter-negative",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "quoted-positive",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "quoted-negative",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "filetext-positive",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "filetext-negative",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "filealias-positive",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    },
+    {
+      "artifact_id": "filealias-negative",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "operate"
+    }
+  ],
+  "note": "Scores concern explicitly reviewed labels only; errors excluded from confusion matrix and counted separately."
+}

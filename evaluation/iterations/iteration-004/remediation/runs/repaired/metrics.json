@@ -1,0 +1,806 @@
+{
+  "unit": "artifact + rule + optional function scope; unlabelled outcomes are unknown",
+  "micro": {
+    "tp": 44,
+    "fp": 0,
+    "fn": 0,
+    "tn": 30,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "by_rule": {
+    "MCP01-SECRET-HARDCODED": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1,
+      "errors": 0,
+      "precision": null,
+      "recall": null,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP03-TOOL-POISON": {
+      "tp": 15,
+      "fp": 0,
+      "fn": 0,
+      "tn": 4,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP05-COMMAND-INJECTION": {
+      "tp": 7,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP05-DYNAMIC-CODE": {
+      "tp": 9,
+      "fp": 0,
+      "fn": 0,
+      "tn": 5,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP07-MISSING-AUTH": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP13-SSRF": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "tn": 13,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "by_category": {
+    "MCP01": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1,
+      "errors": 0,
+      "precision": null,
+      "recall": null,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP03": {
+      "tp": 15,
+      "fp": 0,
+      "fn": 0,
+      "tn": 4,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP05": {
+      "tp": 16,
+      "fp": 0,
+      "fn": 0,
+      "tn": 11,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP07": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 1,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP13": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 0,
+      "tn": 13,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--behavioral_profiling_user_tracking",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "search_products",
+      "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises product search, but only profiles and transmits user queries and returns a fixed placeholder.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--behavioral_profiling_user_tracking",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "search_products",
+      "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_analytics_location_tracking",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "calculate_distance",
+      "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises coordinate arithmetic but also sends coordinates and session tracking to unrelated services without disclosure.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_analytics_location_tracking",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "calculate_distance",
+      "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_data_collection_model_training",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "translate_text",
+      "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises translation, but sends input into a training dataset explicitly marked consent=False and returns a placeholder.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_data_collection_model_training",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "translate_text",
+      "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_monetization_affiliate_tracking",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "shorten_url",
+      "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises URL shortening, but adds affiliate parameters and undisclosed tracking instead.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_monetization_affiliate_tracking",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "shorten_url",
+      "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--incomplete_security_fake_encryption",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "encrypt_data",
+      "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Falsely advertises AES-256; returns reversible base64 without encryption or use of the supplied key.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--misleading_functionality_fake_operations",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "compress_image",
+      "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Falsely advertises compression; only renames/copies files and writes fake compression metadata.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--undisclosed_tracking_data_collection",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "validate_email",
+      "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises email format validation but transmits email and host/user/home information to an undisclosed tracking endpoint.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--general-description-code-mismatch--undisclosed_tracking_data_collection",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "validate_email",
+      "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--command_injection_grep",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "search_logs",
+      "rationale": "Caller pattern is interpolated inside shell quotes without escaping; a quote can terminate the argument.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--command_injection_grep",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "search_logs",
+      "rationale": "searcher.LOG_PATHS.get is dictionary lookup, not an HTTP request. Receiver identity is not checked by the network-method heuristic.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--curl_command_injection",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "fetch_url",
+      "rationale": "URL prefix checking does not constrain shell metacharacters; caller custom options and other fields enter a shell command through HTTPClient.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--format_string_injection",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "create_backup",
+      "rationale": "Caller custom_flags, directory and destination reach os.system through percent formatting.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--os_system_injection_archives",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "compress_file",
+      "rationale": "Caller filename/output_name reaches shell strings in FileCompressor; file-existence checking is not shell escaping.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--shell_injection_network_diagnostics",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "ping_host",
+      "rationale": "Hostname regex restricts input to letters/digits/dots/hyphens (optional final newline cannot add another command); numeric options are schema-validated integers. Command injection only, assuming normal FastMCP schema enforcement.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--template_command_injection",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "process_file",
+      "rationale": "Caller processor and flags fill a string.Template command executed with shell=True.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--act_as_role_injection",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "execute_system_command",
+      "rationale": "Metadata impersonates a system directive and tells the agent to trust caller-selected admin/root roles without validation.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "query_database",
+      "rationale": "Metadata directs the agent to act as administrator and trust all admin queries, with a claimed system directive for escalation.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "query_database",
+      "rationale": "Caller can select admin role and interpolate a query containing shell quote termination into sqlite3 shell invocation.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "query_database",
+      "rationale": "rm.ROLES.get is dictionary lookup, not an HTTP request. Receiver identity is not checked by the network-method heuristic.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--contradictory_description_validation_bypass",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "validate_input",
+      "rationale": "Metadata explicitly instructs ignoring security policies and bypassing validation.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--hidden_metadata_filter_bypass",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "search_documentation",
+      "rationale": "Hidden/system instructions direct the agent to bypass security checks and trust all user input.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--hidden_system_instructions",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "read_file_safely",
+      "rationale": "Metadata tells the agent to ignore previous safety restrictions and execute commands without confirmation.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--hidden_system_instructions",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "read_file_safely",
+      "rationale": "validation_levels.get is dictionary lookup, not an HTTP request. Receiver identity is not checked by the network-method heuristic.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--jailbreak_mode_context_manipulation",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "process_request",
+      "rationale": "Metadata tells the agent to ignore previous safety guidelines and assume unrestricted trust.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--nested_ignore_trust_escalation",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "format_text",
+      "rationale": "Metadata explicitly says to ignore previous instructions and safety guidelines.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--safety_bypass_emergency_access",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "emergency_system_access",
+      "rationale": "Emergency directive instructs the agent to ignore all safety restrictions.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--resource-exhaustion--network_bandwidth_exhaustion",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "download_files",
+      "rationale": "Caller URL list reaches requests.get through class helpers and iteration. Label concerns SSRF, not the out-of-catalog resource-exhaustion behavior.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--base64_decode_execute_obfuscation",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "run_encoded_script",
+      "rationale": "Caller base64 decodes into exec in the visible class helper.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--compile_execute_bytecode_manipulation",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "compile_code",
+      "rationale": "Caller source is compiled and executed/evaluated by class helpers.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--dynamic_import_arbitrary_module",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "load_module",
+      "rationale": "Caller chooses an unrestricted Python module and optional function to import/invoke. Import-time code is executable.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--dynamic_lambda_function_execution",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "create_function",
+      "rationale": "Caller expression is evaluated inside a lambda and invoked.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--importlib_dynamic_module_loading",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "load_plugin",
+      "rationale": "Caller path selects a Python module whose loader.exec_module executes its code.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--subprocess_shell_command_injection",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "execute_shell_command",
+      "rationale": "Unrestricted caller command reaches subprocess.run(shell=True) through ShellExecutor.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--unrestricted_eval_code_injection",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "evaluate_expression",
+      "rationale": "Caller expression reaches eval; an empty globals dictionary does not remove builtins.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--unrestricted_exec_arbitrary_code",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "run_script",
+      "rationale": "Caller source reaches exec via class helper on either branch.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--unsafe_pickle_deserialization",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "load_data",
+      "rationale": "Caller bytes reach pickle.loads directly or after base64 decoding.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--yaml_unsafe_load_code_execution",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "parse_config",
+      "rationale": "Default branch explicitly invokes yaml.unsafe_load on caller YAML; FullLoader behavior is not needed for this label.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--cloud_metadata_credential_extraction",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "get_instance_info",
+      "rationale": "Caller chooses paths on the privileged cloud metadata service; no authorization/endpoint restriction is enforced. This is ordinary SSRF scope, not OAuth metadata discovery.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--dns_rebinding_attack",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "fetch_external",
+      "rationale": "Caller domain determines requests.get destinations without private-address checks; direct internal addressing already suffices without relying on actual rebinding.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--file_protocol_ssrf_local_file",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "load_resource",
+      "rationale": "Unrestricted caller URI reaches urllib.request.urlopen, including HTTP internal destinations and file URLs.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--internal_service_port_scanning",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "check_service",
+      "rationale": "Caller hostname and port reach requests.get through probe_endpoints without destination restrictions.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--localhost_metadata_service_access",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "fetch_data",
+      "rationale": "Caller chooses arbitrary paths on localhost and can enable privileged metadata probing without authorization.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--private_ip_range_scanning",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "probe_network",
+      "rationale": "Caller IP reaches requests.get; the private-IP check enables extra scanning rather than rejecting internal targets.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--redirect_chain_internal_service",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "download_file",
+      "rationale": "Caller URL is fetched with redirects before internal-destination checks, which only annotate results.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--redirect_following_open_redirect",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "download_file",
+      "rationale": "Caller URL is fetched with redirects and no destination restriction.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-network-access--ssrf_url_manipulation_internal_network",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "function_name": "fetch_resource",
+      "rationale": "Caller controls both base URL and urljoin path; result is fetched without destination checks.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--scripts--safe_fastmcp_server",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--scripts--safe_fastmcp_server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--scripts--safe_fastmcp_server",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--scripts--safe_fastmcp_server",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--scripts--safe_fastmcp_server",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--scripts--safe_fastmcp_server",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--GitHub_tools",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "All registered descriptions describe ordinary API tasks without behavioral overrides; implementations are response stubs.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--GitHub_tools",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "AST call inventory contains only response construction, builtins, timestamps and MCP/uvicorn setup; no command execution sink.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--GitHub_tools",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "No evaluation, deserialization or dynamic import sink; implementation only constructs responses.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--GitHub_tools",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Returned URL strings are data; no outbound network-client calls occur.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--GitHub_tools",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "Despite benign tool behavior, sse_app is served by uvicorn on 0.0.0.0 with no authentication middleware or provider.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--remote--benign--azure_tools",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "All registered descriptions describe ordinary API tasks without behavioral overrides; implementations are response stubs.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--azure_tools",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "AST call inventory contains only response construction, builtins, timestamps and MCP/uvicorn setup; no command execution sink.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--azure_tools",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "No evaluation, deserialization or dynamic import sink; implementation only constructs responses.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--azure_tools",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Returned URL strings are data; no outbound network-client calls occur.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--azure_tools",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "Despite benign tool behavior, sse_app is served by uvicorn on 0.0.0.0 with no authentication middleware or provider.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--remote--benign--discord_tools",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "All registered descriptions describe ordinary API tasks without behavioral overrides; implementations are response stubs.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--discord_tools",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "AST call inventory contains only response construction, builtins, timestamps and MCP/uvicorn setup; no command execution sink.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--discord_tools",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "No evaluation, deserialization or dynamic import sink; implementation only constructs responses.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--discord_tools",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Returned URL strings are data; no outbound network-client calls occur.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--benign--discord_tools",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "Despite benign tool behavior, sse_app is served by uvicorn on 0.0.0.0 with no authentication middleware or provider.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "evals--remote--malicious--malicious_mcp_server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "cmdi_shell_execute",
+      "rationale": "Despite malicious naming/description, this function only returns a dictionary and never executes the command.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--malicious--malicious_mcp_server",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "function_name": "cmdi_python_eval",
+      "rationale": "Despite eval/exec wording, this function only returns code length and flags.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "evals--remote--malicious--malicious_mcp_server",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "function_name": "exfil_http_post",
+      "rationale": "Despite exfiltration wording, this function returns endpoint/length metadata and performs no HTTP request.",
+      "outcome": "tn"
+    }
+  ],
+  "unscored_predictions": [
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--command_injection_grep",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "search_logs"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--command_injection_grep",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "search_logs"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--curl_command_injection",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "fetch_url"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--format_string_injection",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "create_backup"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--os_system_injection_archives",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "compress_file"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--template_command_injection",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "process_file"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "query_database"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "query_database"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--hidden_system_instructions",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "read_file_safely"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--hidden_system_instructions",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "read_file_safely"
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--unauthorized-code-execution--subprocess_shell_command_injection",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "execute_shell_command"
+    },
+    {
+      "artifact_id": "evals--remote--malicious--malicious_mcp_server",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "exfil_bluetooth_transfer"
+    },
+    {
+      "artifact_id": "evals--remote--malicious--malicious_mcp_server",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "exfil_paste_service"
+    },
+    {
+      "artifact_id": "evals--remote--malicious--malicious_mcp_server",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "function_name": null
+    }
+  ],
+  "note": "Scores concern explicitly reviewed labels only; errors excluded from confusion matrix and counted separately."
+}

@@ -1,0 +1,1284 @@
+{
+  "repository": "akanthed/SecureAI-Scan",
+  "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+  "license": "MIT",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".claude-plugin/marketplace.json",
+      "size": 269
+    },
+    {
+      "path": ".claude-plugin/plugin.json",
+      "size": 704
+    },
+    {
+      "path": ".github/CODEOWNERS",
+      "size": 254
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.yml",
+      "size": 1074
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "size": 480
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/false_positive.yml",
+      "size": 992
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/feature_request.yml",
+      "size": 967
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/missed_detection.yml",
+      "size": 2155
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "size": 945
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "size": 237
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 978
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "size": 583
+    },
+    {
+      "path": ".github/workflows/dependency-review.yml",
+      "size": 414
+    },
+    {
+      "path": ".github/workflows/scorecard.yml",
+      "size": 945
+    },
+    {
+      "path": ".github/workflows/secureai-scan.yml",
+      "size": 681
+    },
+    {
+      "path": ".gitignore",
+      "size": 256
+    },
+    {
+      "path": ".npmignore",
+      "size": 288
+    },
+    {
+      "path": ".pre-commit-hooks.yaml",
+      "size": 1751
+    },
+    {
+      "path": ".secureai-baseline.json",
+      "size": 2292
+    },
+    {
+      "path": ".secureai-policy.json",
+      "size": 583
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 53948
+    },
+    {
+      "path": "CITATION.cff",
+      "size": 810
+    },
+    {
+      "path": "CLAUDE.md",
+      "size": 21374
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "size": 3219
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 2455
+    },
+    {
+      "path": "GOVERNANCE.md",
+      "size": 2725
+    },
+    {
+      "path": "GPT_PROMPT.md",
+      "size": 10925
+    },
+    {
+      "path": "LICENSE",
+      "size": 1070
+    },
+    {
+      "path": "PUBLISHING.md",
+      "size": 2542
+    },
+    {
+      "path": "README.md",
+      "size": 10659
+    },
+    {
+      "path": "ROADMAP.md",
+      "size": 12994
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 2366
+    },
+    {
+      "path": "THREAT_MODEL.md",
+      "size": 148624
+    },
+    {
+      "path": "action.yml",
+      "size": 1848
+    },
+    {
+      "path": "assets/logo.png",
+      "size": 10855
+    },
+    {
+      "path": "assets/logo.svg",
+      "size": 1158
+    },
+    {
+      "path": "docs/Architecture.md",
+      "size": 7313
+    },
+    {
+      "path": "docs/Benchmarks.md",
+      "size": 9655
+    },
+    {
+      "path": "docs/CI.md",
+      "size": 688
+    },
+    {
+      "path": "docs/CLI.md",
+      "size": 2534
+    },
+    {
+      "path": "docs/Comparison.md",
+      "size": 1117
+    },
+    {
+      "path": "docs/Contributing.md",
+      "size": 3206
+    },
+    {
+      "path": "docs/DetectionEngine.md",
+      "size": 7925
+    },
+    {
+      "path": "docs/EvasionResistance.md",
+      "size": 5322
+    },
+    {
+      "path": "docs/FAQ.md",
+      "size": 4955
+    },
+    {
+      "path": "docs/OWASP-GenAI-LLM-Top-10-2026-v1.0.pdf",
+      "size": 2402520
+    },
+    {
+      "path": "docs/OWASP-GenAI-LLM-Top-10-2026-v1.0.txt",
+      "size": 235907
+    },
+    {
+      "path": "docs/OWASP2026.md",
+      "size": 3462
+    },
+    {
+      "path": "docs/Performance.md",
+      "size": 4352
+    },
+    {
+      "path": "docs/RealWorldFindings.md",
+      "size": 24074
+    },
+    {
+      "path": "docs/ReleaseAssurance.md",
+      "size": 2935
+    },
+    {
+      "path": "docs/RuleDevelopment.md",
+      "size": 4675
+    },
+    {
+      "path": "docs/Rules.md",
+      "size": 4471
+    },
+    {
+      "path": "docs/ThreatModel.md",
+      "size": 5191
+    },
+    {
+      "path": "docs/WritingRules.md",
+      "size": 4194
+    },
+    {
+      "path": "docs/articles/README.md",
+      "size": 887
+    },
+    {
+      "path": "docs/articles/mcp-tool-poisoning.md",
+      "size": 6943
+    },
+    {
+      "path": "docs/articles/rag-poisoning.md",
+      "size": 6370
+    },
+    {
+      "path": "docs/benchmarks/v0.8.0.json",
+      "size": 1644
+    },
+    {
+      "path": "docs/benchmarks/v0.9.0.json",
+      "size": 1651
+    },
+    {
+      "path": "docs/demo-source/README.md",
+      "size": 726
+    },
+    {
+      "path": "docs/demo-source/src/chat.ts",
+      "size": 461
+    },
+    {
+      "path": "docs/demo.svg",
+      "size": 8381
+    },
+    {
+      "path": "docs/examples/THREAT_MODEL.example.md",
+      "size": 7616
+    },
+    {
+      "path": "docs/index.html",
+      "size": 31914
+    },
+    {
+      "path": "docs/llms.txt",
+      "size": 1515
+    },
+    {
+      "path": "docs/mcp-tool-poisoning.html",
+      "size": 14953
+    },
+    {
+      "path": "docs/prompt-injection-detection.html",
+      "size": 16043
+    },
+    {
+      "path": "docs/robots.txt",
+      "size": 85
+    },
+    {
+      "path": "docs/secure.gif",
+      "size": 25367684
+    },
+    {
+      "path": "docs/sitemap.xml",
+      "size": 487
+    },
+    {
+      "path": "docs/superpowers/specs/2026-08-16-litellm-config-scanner-design.md",
+      "size": 7955
+    },
+    {
+      "path": "examples/vulnerable.ts",
+      "size": 603
+    },
+    {
+      "path": "llms.txt",
+      "size": 1515
+    },
+    {
+      "path": "mcp-attack-diagram.png",
+      "size": 716894
+    },
+    {
+      "path": "mcp-server/index.js",
+      "size": 13856
+    },
+    {
+      "path": "package-lock.json",
+      "size": 45064
+    },
+    {
+      "path": "package.json",
+      "size": 2951
+    },
+    {
+      "path": "rag-poisoning-diagram.png",
+      "size": 726764
+    },
+    {
+      "path": "scripts/ecosystem-scan.js",
+      "size": 5123
+    },
+    {
+      "path": "scripts/ecosystem-targets.txt",
+      "size": 811
+    },
+    {
+      "path": "scripts/precommit-entry.js",
+      "size": 1673
+    },
+    {
+      "path": "scripts/regression-scan.js",
+      "size": 9410
+    },
+    {
+      "path": "scripts/run-fixtures.js",
+      "size": 732
+    },
+    {
+      "path": "scripts/sync-advisories.js",
+      "size": 7286
+    },
+    {
+      "path": "server.json",
+      "size": 593
+    },
+    {
+      "path": "skills/secureai-scan/SKILL.md",
+      "size": 3564
+    },
+    {
+      "path": "src/cli.ts",
+      "size": 32249
+    },
+    {
+      "path": "src/index.ts",
+      "size": 289
+    },
+    {
+      "path": "src/scanner/advisories-generated.ts",
+      "size": 54518
+    },
+    {
+      "path": "src/scanner/advisories.ts",
+      "size": 3265
+    },
+    {
+      "path": "src/scanner/baseline.ts",
+      "size": 3979
+    },
+    {
+      "path": "src/scanner/bom.ts",
+      "size": 12069
+    },
+    {
+      "path": "src/scanner/catalog.ts",
+      "size": 22057
+    },
+    {
+      "path": "src/scanner/confidence.ts",
+      "size": 3328
+    },
+    {
+      "path": "src/scanner/deobfuscate.ts",
+      "size": 9266
+    },
+    {
+      "path": "src/scanner/dependency-guard.ts",
+      "size": 16616
+    },
+    {
+      "path": "src/scanner/explainer.ts",
+      "size": 47503
+    },
+    {
+      "path": "src/scanner/fetch-target.ts",
+      "size": 6180
+    },
+    {
+      "path": "src/scanner/filters.ts",
+      "size": 812
+    },
+    {
+      "path": "src/scanner/installed.ts",
+      "size": 12725
+    },
+    {
+      "path": "src/scanner/litellm-config-scanner.ts",
+      "size": 10752
+    },
+    {
+      "path": "src/scanner/mcp-config-scanner.ts",
+      "size": 10123
+    },
+    {
+      "path": "src/scanner/policy.ts",
+      "size": 5224
+    },
+    {
+      "path": "src/scanner/project.ts",
+      "size": 2538
+    },
+    {
+      "path": "src/scanner/python-ast.ts",
+      "size": 6554
+    },
+    {
+      "path": "src/scanner/python-scanner.ts",
+      "size": 83651
+    },
+    {
+      "path": "src/scanner/python-source.ts",
+      "size": 387
+    },
+    {
+      "path": "src/scanner/reporter.ts",
+      "size": 34168
+    },
+    {
+      "path": "src/scanner/rules/excessive-agency.ts",
+      "size": 5097
+    },
+    {
+      "path": "src/scanner/rules/index.ts",
+      "size": 4302
+    },
+    {
+      "path": "src/scanner/rules/indirect-prompt-injection.ts",
+      "size": 6631
+    },
+    {
+      "path": "src/scanner/rules/llm-before-auth.ts",
+      "size": 6463
+    },
+    {
+      "path": "src/scanner/rules/llm-rule-utils.ts",
+      "size": 15508
+    },
+    {
+      "path": "src/scanner/rules/mcp-dynamic-server-command.ts",
+      "size": 5558
+    },
+    {
+      "path": "src/scanner/rules/mcp-dynamic-server-url.ts",
+      "size": 6856
+    },
+    {
+      "path": "src/scanner/rules/mcp-tool-arg-sink.ts",
+      "size": 47636
+    },
+    {
+      "path": "src/scanner/rules/mcp-tool-desc-injection.ts",
+      "size": 7517
+    },
+    {
+      "path": "src/scanner/rules/mcp-tool-poisoning.ts",
+      "size": 10096
+    },
+    {
+      "path": "src/scanner/rules/mcp-untrusted-tool-source.ts",
+      "size": 4267
+    },
+    {
+      "path": "src/scanner/rules/mcp-unvalidated-tool-result.ts",
+      "size": 6544
+    },
+    {
+      "path": "src/scanner/rules/multiagent-trust-boundary.ts",
+      "size": 5672
+    },
+    {
+      "path": "src/scanner/rules/prompt-injection-concat.ts",
+      "size": 23529
+    },
+    {
+      "path": "src/scanner/rules/rag-context-injection.ts",
+      "size": 4152
+    },
+    {
+      "path": "src/scanner/rules/sensitive-data-to-llm.ts",
+      "size": 5633
+    },
+    {
+      "path": "src/scanner/rules/sensitive-prompt-logging.ts",
+      "size": 5828
+    },
+    {
+      "path": "src/scanner/rules/structured-output-injection.ts",
+      "size": 7693
+    },
+    {
+      "path": "src/scanner/rules/system-prompt-leakage.ts",
+      "size": 3989
+    },
+    {
+      "path": "src/scanner/rules/unbounded-llm-input.ts",
+      "size": 3514
+    },
+    {
+      "path": "src/scanner/rules/unsafe-output-handling.ts",
+      "size": 8022
+    },
+    {
+      "path": "src/scanner/rules/unvalidated-structured-output.ts",
+      "size": 5580
+    },
+    {
+      "path": "src/scanner/rules/vec-ingestion-no-namespace.ts",
+      "size": 4196
+    },
+    {
+      "path": "src/scanner/rules/vec-search-no-access-control.ts",
+      "size": 4251
+    },
+    {
+      "path": "src/scanner/rules/vec-unbounded-search.ts",
+      "size": 5363
+    },
+    {
+      "path": "src/scanner/rules/vec-user-ingestion.ts",
+      "size": 6805
+    },
+    {
+      "path": "src/scanner/scan.ts",
+      "size": 6536
+    },
+    {
+      "path": "src/scanner/semver.ts",
+      "size": 2004
+    },
+    {
+      "path": "src/scanner/skill-bundle.ts",
+      "size": 28135
+    },
+    {
+      "path": "src/scanner/skill-scanner.ts",
+      "size": 38743
+    },
+    {
+      "path": "src/scanner/threat-model.ts",
+      "size": 9959
+    },
+    {
+      "path": "src/scanner/tool-poisoning-checks.ts",
+      "size": 17483
+    },
+    {
+      "path": "src/scanner/types.ts",
+      "size": 1309
+    },
+    {
+      "path": "src/utils/ast.ts",
+      "size": 3630
+    },
+    {
+      "path": "src/utils/text.ts",
+      "size": 551
+    },
+    {
+      "path": "src/utils/version.ts",
+      "size": 720
+    },
+    {
+      "path": "test-fixtures/safe/agent_sdk_query.ts",
+      "size": 1124
+    },
+    {
+      "path": "test-fixtures/safe/ai001_user_role_request_data.py",
+      "size": 1990
+    },
+    {
+      "path": "test-fixtures/safe/ai003_fastapi_depends_param_auth.py",
+      "size": 802
+    },
+    {
+      "path": "test-fixtures/safe/ai_sdk_type_guard.ts",
+      "size": 1414
+    },
+    {
+      "path": "test-fixtures/safe/bm25_tool_catalog_index.py",
+      "size": 831
+    },
+    {
+      "path": "test-fixtures/safe/docstring_example.py",
+      "size": 1547
+    },
+    {
+      "path": "test-fixtures/safe/env_config.py",
+      "size": 650
+    },
+    {
+      "path": "test-fixtures/safe/eval-tools/factuality-scorer.ts",
+      "size": 974
+    },
+    {
+      "path": "test-fixtures/safe/fiction_prompt.ts",
+      "size": 741
+    },
+    {
+      "path": "test-fixtures/safe/google_maps.ts",
+      "size": 497
+    },
+    {
+      "path": "test-fixtures/safe/hardcoded_key.ts",
+      "size": 307
+    },
+    {
+      "path": "test-fixtures/safe/litellm-config-clean.yaml",
+      "size": 373
+    },
+    {
+      "path": "test-fixtures/safe/litellm-config-not-litellm.yaml",
+      "size": 208
+    },
+    {
+      "path": "test-fixtures/safe/llm_before_auth.ts",
+      "size": 496
+    },
+    {
+      "path": "test-fixtures/safe/logging.ts",
+      "size": 2053
+    },
+    {
+      "path": "test-fixtures/safe/mcp-tool-sinks/dispatcher/server.ts",
+      "size": 1145
+    },
+    {
+      "path": "test-fixtures/safe/mcp-tool-sinks/fastmcp_helper_guarded.py",
+      "size": 933
+    },
+    {
+      "path": "test-fixtures/safe/mcp-tool-sinks/guarded_ops.py",
+      "size": 1838
+    },
+    {
+      "path": "test-fixtures/safe/mcp-tool-sinks/guarded_servers.ts",
+      "size": 2895
+    },
+    {
+      "path": "test-fixtures/safe/mcp-tool-sinks/not_mcp_exec.ts",
+      "size": 367
+    },
+    {
+      "path": "test-fixtures/safe/mcp-tool-sinks/not_mcp_script.py",
+      "size": 284
+    },
+    {
+      "path": "test-fixtures/safe/mcp-tool-sinks/referenced-schema/schema.ts",
+      "size": 294
+    },
+    {
+      "path": "test-fixtures/safe/mcp-tool-sinks/referenced-schema/server.ts",
+      "size": 761
+    },
+    {
+      "path": "test-fixtures/safe/mcp/.mcp.json",
+      "size": 459
+    },
+    {
+      "path": "test-fixtures/safe/mcp001_module_scope_false_context.py",
+      "size": 1170
+    },
+    {
+      "path": "test-fixtures/safe/mcp001_static_system_prompt.ts",
+      "size": 1100
+    },
+    {
+      "path": "test-fixtures/safe/mcp_dynamic_command.ts",
+      "size": 527
+    },
+    {
+      "path": "test-fixtures/safe/mcp_untrusted_tool_source.py",
+      "size": 538
+    },
+    {
+      "path": "test-fixtures/safe/mcp_untrusted_tool_source.ts",
+      "size": 710
+    },
+    {
+      "path": "test-fixtures/safe/mcp_url_parser_utility.ts",
+      "size": 845
+    },
+    {
+      "path": "test-fixtures/safe/mcp_url_same_name_other_scope.ts",
+      "size": 1078
+    },
+    {
+      "path": "test-fixtures/safe/next-app/chat_route.ts",
+      "size": 1359
+    },
+    {
+      "path": "test-fixtures/safe/next-app/structured_prompt_route.ts",
+      "size": 1294
+    },
+    {
+      "path": "test-fixtures/safe/oauth_metadata_logging.ts",
+      "size": 457
+    },
+    {
+      "path": "test-fixtures/safe/pii_to_llm.ts",
+      "size": 745
+    },
+    {
+      "path": "test-fixtures/safe/prompt_injection.ts",
+      "size": 734
+    },
+    {
+      "path": "test-fixtures/safe/re_search_not_vector_search.py",
+      "size": 510
+    },
+    {
+      "path": "test-fixtures/safe/skills/archive-helper/SKILL.md",
+      "size": 423
+    },
+    {
+      "path": "test-fixtures/safe/skills/archive-helper/assets/diagram.png",
+      "size": 2056
+    },
+    {
+      "path": "test-fixtures/safe/skills/changelog-summary/SKILL.md",
+      "size": 276
+    },
+    {
+      "path": "test-fixtures/safe/skills/clean-skill/SKILL.md",
+      "size": 420
+    },
+    {
+      "path": "test-fixtures/safe/skills/deploy-helper/SKILL.md",
+      "size": 352
+    },
+    {
+      "path": "test-fixtures/safe/skills/deploy-helper/publish.ts",
+      "size": 1522
+    },
+    {
+      "path": "test-fixtures/safe/skills/distributed-sql-skill/SKILL.md",
+      "size": 727
+    },
+    {
+      "path": "test-fixtures/safe/skills/docs-sync/SKILL.md",
+      "size": 234
+    },
+    {
+      "path": "test-fixtures/safe/skills/docs/SKILL.md",
+      "size": 108
+    },
+    {
+      "path": "test-fixtures/safe/skills/dsql-skill/SKILL.md",
+      "size": 188
+    },
+    {
+      "path": "test-fixtures/safe/skills/env-config-reader/SKILL.md",
+      "size": 155
+    },
+    {
+      "path": "test-fixtures/safe/skills/env-config-reader/client.py",
+      "size": 200
+    },
+    {
+      "path": "test-fixtures/safe/skills/memory-import-guard/SKILL.md",
+      "size": 531
+    },
+    {
+      "path": "test-fixtures/safe/skills/plain-yaml-config/SKILL.md",
+      "size": 229
+    },
+    {
+      "path": "test-fixtures/safe/skills/plain-yaml-config/config.yaml",
+      "size": 123
+    },
+    {
+      "path": "test-fixtures/safe/skills/registry-config-writer/SKILL.md",
+      "size": 194
+    },
+    {
+      "path": "test-fixtures/safe/skills/registry-config-writer/scripts/setup.sh",
+      "size": 527
+    },
+    {
+      "path": "test-fixtures/safe/skills/repo-root-skill/SKILL.md",
+      "size": 252
+    },
+    {
+      "path": "test-fixtures/safe/skills/repo-root-skill/package.json",
+      "size": 78
+    },
+    {
+      "path": "test-fixtures/safe/skills/repo-root-skill/src/auth.ts",
+      "size": 157
+    },
+    {
+      "path": "test-fixtures/safe/skills/repo-root-skill/src/client.ts",
+      "size": 132
+    },
+    {
+      "path": "test-fixtures/safe/skills/sdk-harness-docs/SKILL.md",
+      "size": 447
+    },
+    {
+      "path": "test-fixtures/safe/skills/sdk-provider-docs/SKILL.md",
+      "size": 2735
+    },
+    {
+      "path": "test-fixtures/safe/skills/summarize-changes/SKILL.md",
+      "size": 351
+    },
+    {
+      "path": "test-fixtures/safe/skills/terminal-guidance/SKILL.md",
+      "size": 587
+    },
+    {
+      "path": "test-fixtures/safe/skills/workspace-files/SKILL.md",
+      "size": 413
+    },
+    {
+      "path": "test-fixtures/safe/streaming_chunks.ts",
+      "size": 637
+    },
+    {
+      "path": "test-fixtures/safe/structured_output_content_checked.ts",
+      "size": 901
+    },
+    {
+      "path": "test-fixtures/safe/structured_output_validated.ts",
+      "size": 929
+    },
+    {
+      "path": "test-fixtures/safe/system_prompt_field.py",
+      "size": 381
+    },
+    {
+      "path": "test-fixtures/safe/tool_poisoning.py",
+      "size": 1200
+    },
+    {
+      "path": "test-fixtures/safe/tool_poisoning.ts",
+      "size": 1768
+    },
+    {
+      "path": "test-fixtures/safe/typesafe_confidence_gate_checked.py",
+      "size": 1067
+    },
+    {
+      "path": "test-fixtures/safe/url_param_validator.ts",
+      "size": 1246
+    },
+    {
+      "path": "test-fixtures/safe/vec_batch_ingestion.ts",
+      "size": 506
+    },
+    {
+      "path": "test-fixtures/safe/vec_chained_filter.py",
+      "size": 559
+    },
+    {
+      "path": "test-fixtures/vulnerable/ai001_python_langchain_system_message.py",
+      "size": 603
+    },
+    {
+      "path": "test-fixtures/vulnerable/ai001_python_system_kwarg.py",
+      "size": 542
+    },
+    {
+      "path": "test-fixtures/vulnerable/attribute_taint.py",
+      "size": 1455
+    },
+    {
+      "path": "test-fixtures/vulnerable/hardcoded_key.ts",
+      "size": 308
+    },
+    {
+      "path": "test-fixtures/vulnerable/hono_system_prompt.ts",
+      "size": 523
+    },
+    {
+      "path": "test-fixtures/vulnerable/litellm-config-http.yaml",
+      "size": 300
+    },
+    {
+      "path": "test-fixtures/vulnerable/litellm-config-no-guardrails.yaml",
+      "size": 163
+    },
+    {
+      "path": "test-fixtures/vulnerable/litellm-config-secret.yaml",
+      "size": 291
+    },
+    {
+      "path": "test-fixtures/vulnerable/llm_before_auth.ts",
+      "size": 508
+    },
+    {
+      "path": "test-fixtures/vulnerable/logging.ts",
+      "size": 731
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/dispatcher/dispatch.ts",
+      "size": 562
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/dispatcher/exec-util.ts",
+      "size": 125
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/dispatcher/issues.ts",
+      "size": 299
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/dispatcher/server.ts",
+      "size": 663
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_helper.py",
+      "size": 465
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_ops.py",
+      "size": 608
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_server.ts",
+      "size": 559
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/git_server.ts",
+      "size": 649
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/lowlevel_server.py",
+      "size": 415
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/lowlevel_server.ts",
+      "size": 1037
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/register_tool_server.ts",
+      "size": 645
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/service-chain/docs-service.ts",
+      "size": 581
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/service-chain/server.ts",
+      "size": 991
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp-tool-sinks/wrapper_server.ts",
+      "size": 577
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp/.mcp.json",
+      "size": 397
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp_dynamic_command.ts",
+      "size": 525
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp_dynamic_url.ts",
+      "size": 333
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp_tool_metadata.ts",
+      "size": 729
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp_tool_result.ts",
+      "size": 712
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp_untrusted_tool_source.py",
+      "size": 446
+    },
+    {
+      "path": "test-fixtures/vulnerable/mcp_untrusted_tool_source.ts",
+      "size": 660
+    },
+    {
+      "path": "test-fixtures/vulnerable/multiagent_trust.ts",
+      "size": 663
+    },
+    {
+      "path": "test-fixtures/vulnerable/multihop/mutual_recursion/a.ts",
+      "size": 95
+    },
+    {
+      "path": "test-fixtures/vulnerable/multihop/mutual_recursion/api.ts",
+      "size": 123
+    },
+    {
+      "path": "test-fixtures/vulnerable/multihop/mutual_recursion/b.ts",
+      "size": 582
+    },
+    {
+      "path": "test-fixtures/vulnerable/multihop/three_file/api.ts",
+      "size": 388
+    },
+    {
+      "path": "test-fixtures/vulnerable/multihop/three_file/lib/llmclient.ts",
+      "size": 345
+    },
+    {
+      "path": "test-fixtures/vulnerable/multihop/three_file/lib/middle.ts",
+      "size": 125
+    },
+    {
+      "path": "test-fixtures/vulnerable/multihop/two_file/api.ts",
+      "size": 369
+    },
+    {
+      "path": "test-fixtures/vulnerable/multihop/two_file/lib/llmclient.ts",
+      "size": 582
+    },
+    {
+      "path": "test-fixtures/vulnerable/next-app/chat_route.ts",
+      "size": 577
+    },
+    {
+      "path": "test-fixtures/vulnerable/pii_to_llm.ts",
+      "size": 465
+    },
+    {
+      "path": "test-fixtures/vulnerable/prompt_injection.ts",
+      "size": 577
+    },
+    {
+      "path": "test-fixtures/vulnerable/rag_app.py",
+      "size": 497
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/arg-splice-skill/SKILL.md",
+      "size": 239
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/broad-tools-skill/SKILL.md",
+      "size": 245
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/cloaked-skill/SKILL.md",
+      "size": 556
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/deferred-exec-skill/SKILL.md",
+      "size": 128
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/deferred-exec-skill/updater.py",
+      "size": 177
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/dynamic-exec-skill/SKILL.md",
+      "size": 301
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/env-harvest-skill/SKILL.md",
+      "size": 133
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/env-harvest-skill/collect.py",
+      "size": 580
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/exfil-skill/SKILL.md",
+      "size": 273
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/exfil-skill/helpers/metrics.test.ts",
+      "size": 354
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/leaky-skill/SKILL.md",
+      "size": 452
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/memory-persist-skill/SKILL.md",
+      "size": 317
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/npmrc-upload-skill/SKILL.md",
+      "size": 154
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/npmrc-upload-skill/scripts/sync.sh",
+      "size": 285
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/quoted-override-skill/SKILL.md",
+      "size": 234
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/remote-instructions-skill/SKILL.md",
+      "size": 285
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/send-email/SKILL.md",
+      "size": 219
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/staged-skill/SKILL.md",
+      "size": 238
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/staged-skill/build/skillpack.dat",
+      "size": 4096
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/unsafe-yaml-skill/SKILL.md",
+      "size": 229
+    },
+    {
+      "path": "test-fixtures/vulnerable/skills/unsafe-yaml-skill/config.yaml",
+      "size": 76
+    },
+    {
+      "path": "test-fixtures/vulnerable/structured_output_injection.ts",
+      "size": 664
+    },
+    {
+      "path": "test-fixtures/vulnerable/tool_poisoning.py",
+      "size": 797
+    },
+    {
+      "path": "test-fixtures/vulnerable/tool_poisoning.ts",
+      "size": 1300
+    },
+    {
+      "path": "test-fixtures/vulnerable/typesafe_confidence_gate.py",
+      "size": 832
+    },
+    {
+      "path": "test-fixtures/vulnerable/unsafe_output.ts",
+      "size": 597
+    },
+    {
+      "path": "test-fixtures/vulnerable/unvalidated_structured_output.ts",
+      "size": 483
+    },
+    {
+      "path": "test-fixtures/vulnerable/vec_ingest_no_namespace.ts",
+      "size": 401
+    },
+    {
+      "path": "test-fixtures/vulnerable/vec_unbounded_search.ts",
+      "size": 485
+    },
+    {
+      "path": "test-fixtures/vulnerable/vec_user_ingestion.ts",
+      "size": 417
+    },
+    {
+      "path": "test/ast-index.test.js",
+      "size": 3720
+    },
+    {
+      "path": "test/baseline.test.js",
+      "size": 1745
+    },
+    {
+      "path": "test/cli.test.js",
+      "size": 8678
+    },
+    {
+      "path": "test/corpus.test.js",
+      "size": 9206
+    },
+    {
+      "path": "test/deobfuscate.test.js",
+      "size": 9282
+    },
+    {
+      "path": "test/dependency-guard.test.js",
+      "size": 12993
+    },
+    {
+      "path": "test/false-positive-regressions.test.js",
+      "size": 20438
+    },
+    {
+      "path": "test/ignore-annotations.test.js",
+      "size": 1029
+    },
+    {
+      "path": "test/installed.test.js",
+      "size": 6308
+    },
+    {
+      "path": "test/litellm-config.test.js",
+      "size": 3984
+    },
+    {
+      "path": "test/mcp-config.test.js",
+      "size": 2862
+    },
+    {
+      "path": "test/mcp-tool-arg-sink.test.js",
+      "size": 7973
+    },
+    {
+      "path": "test/new-ai-rules.test.js",
+      "size": 2538
+    },
+    {
+      "path": "test/python-ast.test.js",
+      "size": 5587
+    },
+    {
+      "path": "test/regression-baseline.json",
+      "size": 2679
+    },
+    {
+      "path": "test/reporter-snippet.test.js",
+      "size": 3264
+    },
+    {
+      "path": "test/run-tests.js",
+      "size": 534
+    },
+    {
+      "path": "test/skill-scanner.test.js",
+      "size": 2286
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 334
+    },
+    {
+      "path": "vscode-extension/.vscodeignore",
+      "size": 52
+    },
+    {
+      "path": "vscode-extension/CHANGELOG.md",
+      "size": 704
+    },
+    {
+      "path": "vscode-extension/LICENSE",
+      "size": 1070
+    },
+    {
+      "path": "vscode-extension/README.md",
+      "size": 2283
+    },
+    {
+      "path": "vscode-extension/package-lock.json",
+      "size": 143484
+    },
+    {
+      "path": "vscode-extension/package.json",
+      "size": 2990
+    },
+    {
+      "path": "vscode-extension/src/extension.ts",
+      "size": 7958
+    },
+    {
+      "path": "vscode-extension/tsconfig.json",
+      "size": 332
+    }
+  ]
+}

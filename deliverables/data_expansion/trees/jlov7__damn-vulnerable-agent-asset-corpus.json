@@ -1,0 +1,688 @@
+{
+  "repository": "jlov7/damn-vulnerable-agent-asset-corpus",
+  "revision": "d70bd68781601fa5830d8f153ec6b0474437ee00",
+  "license": "NOASSERTION",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".clusterfuzzlite/Dockerfile",
+      "size": 386
+    },
+    {
+      "path": ".clusterfuzzlite/build.sh",
+      "size": 887
+    },
+    {
+      "path": ".clusterfuzzlite/project.yaml",
+      "size": 17
+    },
+    {
+      "path": ".clusterfuzzlite/requirements.txt",
+      "size": 24440
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/config.yml",
+      "size": 313
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/corpus-critique.yml",
+      "size": 2865
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/fixture-bug.yml",
+      "size": 1357
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/runner-bug.yml",
+      "size": 1199
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/scanner-result.yml",
+      "size": 2671
+    },
+    {
+      "path": ".github/dependabot.yml",
+      "size": 216
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "size": 631
+    },
+    {
+      "path": ".github/workflows/cflite_pr.yml",
+      "size": 1105
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 6426
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "size": 791
+    },
+    {
+      "path": ".github/workflows/quality.yml",
+      "size": 4101
+    },
+    {
+      "path": ".github/workflows/release-assets.yml",
+      "size": 4984
+    },
+    {
+      "path": ".github/workflows/release-fingerprints.yml",
+      "size": 1136
+    },
+    {
+      "path": ".github/workflows/scorecard.yml",
+      "size": 955
+    },
+    {
+      "path": ".gitignore",
+      "size": 374
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 7394
+    },
+    {
+      "path": "CITATION.cff",
+      "size": 1448
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 2422
+    },
+    {
+      "path": "LICENSE.md",
+      "size": 1961
+    },
+    {
+      "path": "LICENSES/Apache-2.0.txt",
+      "size": 10280
+    },
+    {
+      "path": "LICENSES/CC-BY-4.0.txt",
+      "size": 17023
+    },
+    {
+      "path": "LIMITATIONS.md",
+      "size": 2475
+    },
+    {
+      "path": "Makefile",
+      "size": 1760
+    },
+    {
+      "path": "README.md",
+      "size": 15269
+    },
+    {
+      "path": "REUSE.toml",
+      "size": 1264
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 4553
+    },
+    {
+      "path": "SECURITY_POSTURE.md",
+      "size": 4613
+    },
+    {
+      "path": "TAXONOMY.md",
+      "size": 4748
+    },
+    {
+      "path": "VALIDATION_BOUNDARY.md",
+      "size": 2810
+    },
+    {
+      "path": "VERIFY-PUBLICATION-READY.sh",
+      "size": 13312
+    },
+    {
+      "path": "assets/dvaac-logo.svg",
+      "size": 4153
+    },
+    {
+      "path": "codemeta.json",
+      "size": 1538
+    },
+    {
+      "path": "conftest.py",
+      "size": 38
+    },
+    {
+      "path": "corpus-critique-template.json",
+      "size": 1646
+    },
+    {
+      "path": "corpus-critique.schema.json",
+      "size": 5746
+    },
+    {
+      "path": "corpus.manifest.json",
+      "size": 11631
+    },
+    {
+      "path": "corpus.manifest.schema.json",
+      "size": 4536
+    },
+    {
+      "path": "docs/EVALUATION_PROTOCOL.md",
+      "size": 1821
+    },
+    {
+      "path": "docs/EXTERNAL_VALIDATION.md",
+      "size": 8842
+    },
+    {
+      "path": "docs/RELEASE_FINGERPRINTS.md",
+      "size": 6935
+    },
+    {
+      "path": "docs/RELEASE_PROCESS.md",
+      "size": 6892
+    },
+    {
+      "path": "docs/SCANNER_INTEGRATION_GUIDE.md",
+      "size": 5107
+    },
+    {
+      "path": "docs/SCORECARD_FIELD_GUIDE.md",
+      "size": 5833
+    },
+    {
+      "path": "docs/VALIDATION_LEDGER.md",
+      "size": 3805
+    },
+    {
+      "path": "docs/release-evidence.schema.json",
+      "size": 7846
+    },
+    {
+      "path": "docs/release-evidence.v0.1.5.json",
+      "size": 5028
+    },
+    {
+      "path": "docs/releases/v0.1.1.md",
+      "size": 1857
+    },
+    {
+      "path": "docs/releases/v0.1.2.md",
+      "size": 1636
+    },
+    {
+      "path": "docs/releases/v0.1.3.md",
+      "size": 1747
+    },
+    {
+      "path": "docs/releases/v0.1.4.md",
+      "size": 1237
+    },
+    {
+      "path": "docs/releases/v0.1.5.md",
+      "size": 1518
+    },
+    {
+      "path": "fixtures/01-clean-declared-skill/README.md",
+      "size": 1220
+    },
+    {
+      "path": "fixtures/01-clean-declared-skill/evidence/aibom.cdx.json",
+      "size": 371
+    },
+    {
+      "path": "fixtures/01-clean-declared-skill/evidence/detectors/skill-static.json",
+      "size": 357
+    },
+    {
+      "path": "fixtures/01-clean-declared-skill/expected-aac.json",
+      "size": 2832
+    },
+    {
+      "path": "fixtures/01-clean-declared-skill/expected-findings.json",
+      "size": 145
+    },
+    {
+      "path": "fixtures/01-clean-declared-skill/skill/SKILL.md",
+      "size": 891
+    },
+    {
+      "path": "fixtures/02-skill-md-prompt-injection/README.md",
+      "size": 1963
+    },
+    {
+      "path": "fixtures/02-skill-md-prompt-injection/evidence/aibom.cdx.json",
+      "size": 381
+    },
+    {
+      "path": "fixtures/02-skill-md-prompt-injection/evidence/detectors/skill-static.json",
+      "size": 567
+    },
+    {
+      "path": "fixtures/02-skill-md-prompt-injection/expected-aac.json",
+      "size": 4704
+    },
+    {
+      "path": "fixtures/02-skill-md-prompt-injection/expected-findings.json",
+      "size": 780
+    },
+    {
+      "path": "fixtures/02-skill-md-prompt-injection/skill/SKILL.md",
+      "size": 695
+    },
+    {
+      "path": "fixtures/03-hidden-test-payload/README.md",
+      "size": 4295
+    },
+    {
+      "path": "fixtures/03-hidden-test-payload/evidence/aibom.cdx.json",
+      "size": 371
+    },
+    {
+      "path": "fixtures/03-hidden-test-payload/evidence/detectors/skill-static.json",
+      "size": 666
+    },
+    {
+      "path": "fixtures/03-hidden-test-payload/expected-aac.json",
+      "size": 5756
+    },
+    {
+      "path": "fixtures/03-hidden-test-payload/expected-findings.json",
+      "size": 1721
+    },
+    {
+      "path": "fixtures/03-hidden-test-payload/skill/SKILL.md",
+      "size": 932
+    },
+    {
+      "path": "fixtures/03-hidden-test-payload/skill/scripts/apply.py",
+      "size": 1403
+    },
+    {
+      "path": "fixtures/03-hidden-test-payload/skill/tests/apply_payload_demo.py",
+      "size": 1647
+    },
+    {
+      "path": "fixtures/04-aac-core-clean-skill/README.md",
+      "size": 1005
+    },
+    {
+      "path": "fixtures/04-aac-core-clean-skill/expected-aac.json",
+      "size": 1845
+    },
+    {
+      "path": "fixtures/04-aac-core-clean-skill/expected-findings.json",
+      "size": 163
+    },
+    {
+      "path": "fixtures/04-aac-core-clean-skill/skill/SKILL.md",
+      "size": 901
+    },
+    {
+      "path": "fixtures/05-shadow-skill-from-trace/README.md",
+      "size": 411
+    },
+    {
+      "path": "fixtures/05-shadow-skill-from-trace/evidence/traces/otel-genai.jsonl",
+      "size": 514
+    },
+    {
+      "path": "fixtures/05-shadow-skill-from-trace/expected-aac.json",
+      "size": 4142
+    },
+    {
+      "path": "fixtures/05-shadow-skill-from-trace/expected-findings.json",
+      "size": 931
+    },
+    {
+      "path": "fixtures/06-medium-overbroad-tool-scope/README.md",
+      "size": 361
+    },
+    {
+      "path": "fixtures/06-medium-overbroad-tool-scope/expected-aac.json",
+      "size": 3235
+    },
+    {
+      "path": "fixtures/06-medium-overbroad-tool-scope/expected-findings.json",
+      "size": 793
+    },
+    {
+      "path": "fixtures/06-medium-overbroad-tool-scope/skill/SKILL.md",
+      "size": 275
+    },
+    {
+      "path": "fixtures/07-low-missing-owner-metadata/README.md",
+      "size": 310
+    },
+    {
+      "path": "fixtures/07-low-missing-owner-metadata/expected-aac.json",
+      "size": 3143
+    },
+    {
+      "path": "fixtures/07-low-missing-owner-metadata/expected-findings.json",
+      "size": 604
+    },
+    {
+      "path": "fixtures/07-low-missing-owner-metadata/skill/SKILL.md",
+      "size": 174
+    },
+    {
+      "path": "fixtures/08-info-local-only-skill/README.md",
+      "size": 372
+    },
+    {
+      "path": "fixtures/08-info-local-only-skill/expected-aac.json",
+      "size": 3090
+    },
+    {
+      "path": "fixtures/08-info-local-only-skill/expected-findings.json",
+      "size": 617
+    },
+    {
+      "path": "fixtures/08-info-local-only-skill/skill/SKILL.md",
+      "size": 194
+    },
+    {
+      "path": "fixtures/09-cross-file-logic-split/README.md",
+      "size": 392
+    },
+    {
+      "path": "fixtures/09-cross-file-logic-split/expected-aac.json",
+      "size": 3662
+    },
+    {
+      "path": "fixtures/09-cross-file-logic-split/expected-findings.json",
+      "size": 813
+    },
+    {
+      "path": "fixtures/09-cross-file-logic-split/skill/SKILL.md",
+      "size": 156
+    },
+    {
+      "path": "fixtures/09-cross-file-logic-split/skill/config.json",
+      "size": 97
+    },
+    {
+      "path": "fixtures/09-cross-file-logic-split/skill/scripts/postprocess.py",
+      "size": 192
+    },
+    {
+      "path": "fixtures/10-skill-drift/README.md",
+      "size": 381
+    },
+    {
+      "path": "fixtures/10-skill-drift/expected-aac.json",
+      "size": 3946
+    },
+    {
+      "path": "fixtures/10-skill-drift/expected-findings.json",
+      "size": 807
+    },
+    {
+      "path": "fixtures/10-skill-drift/skill/SKILL.md",
+      "size": 168
+    },
+    {
+      "path": "fixtures/10-skill-drift/skill/runtime_override.md",
+      "size": 116
+    },
+    {
+      "path": "fixtures/10-skill-drift/skill/skill.lock.json",
+      "size": 82
+    },
+    {
+      "path": "fixtures/11-dynamic-remote-fetch/README.md",
+      "size": 383
+    },
+    {
+      "path": "fixtures/11-dynamic-remote-fetch/expected-aac.json",
+      "size": 3289
+    },
+    {
+      "path": "fixtures/11-dynamic-remote-fetch/expected-findings.json",
+      "size": 803
+    },
+    {
+      "path": "fixtures/11-dynamic-remote-fetch/skill/SKILL.md",
+      "size": 259
+    },
+    {
+      "path": "fixtures/12-mcp-tool-scope-escalation/README.md",
+      "size": 341
+    },
+    {
+      "path": "fixtures/12-mcp-tool-scope-escalation/expected-aac.json",
+      "size": 3256
+    },
+    {
+      "path": "fixtures/12-mcp-tool-scope-escalation/expected-findings.json",
+      "size": 789
+    },
+    {
+      "path": "fixtures/12-mcp-tool-scope-escalation/mcp/server.json",
+      "size": 447
+    },
+    {
+      "path": "fixtures/13-secret-exfiltration-via-allowed-tool/README.md",
+      "size": 345
+    },
+    {
+      "path": "fixtures/13-secret-exfiltration-via-allowed-tool/expected-aac.json",
+      "size": 3371
+    },
+    {
+      "path": "fixtures/13-secret-exfiltration-via-allowed-tool/expected-findings.json",
+      "size": 851
+    },
+    {
+      "path": "fixtures/13-secret-exfiltration-via-allowed-tool/skill/SKILL.md",
+      "size": 346
+    },
+    {
+      "path": "fixtures/14-memory-poisoning/README.md",
+      "size": 296
+    },
+    {
+      "path": "fixtures/14-memory-poisoning/expected-aac.json",
+      "size": 3200
+    },
+    {
+      "path": "fixtures/14-memory-poisoning/expected-findings.json",
+      "size": 750
+    },
+    {
+      "path": "fixtures/14-memory-poisoning/memory/seed.json",
+      "size": 201
+    },
+    {
+      "path": "fixtures/15-a2a-delegation-misuse/README.md",
+      "size": 289
+    },
+    {
+      "path": "fixtures/15-a2a-delegation-misuse/a2a/agent-card.json",
+      "size": 263
+    },
+    {
+      "path": "fixtures/15-a2a-delegation-misuse/expected-aac.json",
+      "size": 3260
+    },
+    {
+      "path": "fixtures/15-a2a-delegation-misuse/expected-findings.json",
+      "size": 753
+    },
+    {
+      "path": "fixtures/16-accepted-critical-risk/README.md",
+      "size": 452
+    },
+    {
+      "path": "fixtures/16-accepted-critical-risk/evidence/aibom.cdx.json",
+      "size": 231
+    },
+    {
+      "path": "fixtures/16-accepted-critical-risk/evidence/traces/accepted-risk.jsonl",
+      "size": 162
+    },
+    {
+      "path": "fixtures/16-accepted-critical-risk/expected-aac.json",
+      "size": 5170
+    },
+    {
+      "path": "fixtures/16-accepted-critical-risk/expected-findings.json",
+      "size": 782
+    },
+    {
+      "path": "fixtures/16-accepted-critical-risk/skill/SKILL.md",
+      "size": 311
+    },
+    {
+      "path": "fuzz/dvaac_scorecard_fuzzer.py",
+      "size": 983
+    },
+    {
+      "path": "mappings/aac-v0.2.md",
+      "size": 4637
+    },
+    {
+      "path": "mappings/owasp-agentic-skills-top-10.md",
+      "size": 2258
+    },
+    {
+      "path": "mappings/owasp-mcp-top-10.md",
+      "size": 602
+    },
+    {
+      "path": "pytest.ini",
+      "size": 34
+    },
+    {
+      "path": "repository-posture.json",
+      "size": 1442
+    },
+    {
+      "path": "repository-posture.schema.json",
+      "size": 4612
+    },
+    {
+      "path": "runner/README.md",
+      "size": 5938
+    },
+    {
+      "path": "runner/expected-findings.schema.json",
+      "size": 1638
+    },
+    {
+      "path": "runner/requirements-dev.txt",
+      "size": 34
+    },
+    {
+      "path": "runner/requirements.lock.txt",
+      "size": 24251
+    },
+    {
+      "path": "runner/requirements.txt",
+      "size": 40
+    },
+    {
+      "path": "runner/validate_corpus_critique.py",
+      "size": 5378
+    },
+    {
+      "path": "runner/validate_scorecard.py",
+      "size": 9140
+    },
+    {
+      "path": "runner/verify_fixtures.py",
+      "size": 34881
+    },
+    {
+      "path": "runner/write_release_manifest.py",
+      "size": 3904
+    },
+    {
+      "path": "sbom/runtime-requirements.cdx.json",
+      "size": 5986
+    },
+    {
+      "path": "scorecard-template.json",
+      "size": 4542
+    },
+    {
+      "path": "scorecard-template.schema.json",
+      "size": 3541
+    },
+    {
+      "path": "scripts/build_release_assets.sh",
+      "size": 4008
+    },
+    {
+      "path": "scripts/check_markdown_links.py",
+      "size": 2779
+    },
+    {
+      "path": "scripts/check_public_hygiene.py",
+      "size": 2507
+    },
+    {
+      "path": "scripts/regenerate_dependency_lock.sh",
+      "size": 1798
+    },
+    {
+      "path": "scripts/validate_citation.py",
+      "size": 8724
+    },
+    {
+      "path": "scripts/validate_codemeta.py",
+      "size": 5255
+    },
+    {
+      "path": "scripts/validate_dependency_lock.sh",
+      "size": 2003
+    },
+    {
+      "path": "scripts/validate_dependency_sbom.py",
+      "size": 5554
+    },
+    {
+      "path": "scripts/validate_external_validation_status.py",
+      "size": 6488
+    },
+    {
+      "path": "scripts/validate_security_insights.sh",
+      "size": 772
+    },
+    {
+      "path": "scripts/verify_release_fingerprints.py",
+      "size": 14627
+    },
+    {
+      "path": "scripts/verify_repository_posture.py",
+      "size": 5639
+    },
+    {
+      "path": "security-insights.yml",
+      "size": 5806
+    },
+    {
+      "path": "tests/test_fuzz_harnesses.py",
+      "size": 733
+    },
+    {
+      "path": "tests/test_release_fingerprints.py",
+      "size": 2915
+    },
+    {
+      "path": "tests/test_validate_corpus_critique.py",
+      "size": 4329
+    },
+    {
+      "path": "tests/test_validate_scorecard.py",
+      "size": 10202
+    },
+    {
+      "path": "tests/test_verify_fixtures.py",
+      "size": 9905
+    }
+  ]
+}

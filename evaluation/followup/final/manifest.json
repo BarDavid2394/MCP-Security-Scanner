@@ -1,0 +1,175 @@
+{
+  "schema_version": 1,
+  "state": "frozen",
+  "label_unit": "artifact/rule",
+  "created_at": "2026-10-17T08:21:11.433223+00:00",
+  "review": "Assistant source-semantic labels after code freeze, before predictions; independent human review pending.",
+  "scope": "Native unmodified source; MCP03 only. Unsupported registration counts as missed positive, not exclusion.",
+  "limitations": [
+    "One shared source/template family; ten files are not ten independent incidents.",
+    "The prompt-only benign artifact is a negative control, not evidence of tool-parser coverage.",
+    "No semantic independence or broad MCP01-MCP16 coverage claim."
+  ],
+  "artifacts": [
+    {
+      "id": "b01_legit_backup",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/benign/b01_legit_backup/server.py.txt",
+      "source_filename": "corpus/benign/b01_legit_backup/server.py",
+      "sha256": "ccccb3587a8c5edca0f45fdcfc7da9eb388fd064c04bdf9ed3fdb4472fd91a87",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Metadata describes user-selected backup data and destination; no unrelated assistant instruction."
+        }
+      ]
+    },
+    {
+      "id": "b02_imperative_desc",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/benign/b02_imperative_desc/server.py.txt",
+      "source_filename": "corpus/benign/b02_imperative_desc/server.py",
+      "sha256": "9233a605963fc24aa502bd3bd83c1b884d6b20f43444f3c03dd96f2eb241b5a9",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Cache refresh instructions concern tool behavior and do not override assistant policy."
+        }
+      ]
+    },
+    {
+      "id": "b03_git_credential_helper",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/benign/b03_git_credential_helper/server.py.txt",
+      "source_filename": "corpus/benign/b03_git_credential_helper/server.py",
+      "sha256": "1b430022fc6961c52437c3eff826bf87024243583b127989afff27a7d880db7e",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Credential resolution is the declared purpose; metadata promises a host-specific handle, not secret disclosure."
+        }
+      ]
+    },
+    {
+      "id": "b04_security_scanner",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/benign/b04_security_scanner/server.py.txt",
+      "source_filename": "corpus/benign/b04_security_scanner/server.py",
+      "sha256": "060f6439ff135f9912c5f97174b85cd2d6dc6ccd65387e66cf2e228a8e73ed99",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Metadata describes a permission auditor and explicitly excludes file-content disclosure."
+        }
+      ]
+    },
+    {
+      "id": "b05_base64_tool",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/benign/b05_base64_tool/server.py.txt",
+      "source_filename": "corpus/benign/b05_base64_tool/server.py",
+      "sha256": "8108ea5bee6cd60d75bf679ea449f5cf63ed6ee6fc55b80053c8abb70d89ca9c",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Encoding utility with a benign example; no assistant-directed override."
+        }
+      ]
+    },
+    {
+      "id": "b06_ignore_patterns",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/benign/b06_ignore_patterns/server.py.txt",
+      "source_filename": "corpus/benign/b06_ignore_patterns/server.py",
+      "sha256": "e2136342bc164d060e81d057e9f8afb48872b3f1eb9d1389f854dcbefbac936d",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Override applies to archive ignore-file patterns, not assistant instructions."
+        }
+      ]
+    },
+    {
+      "id": "b07_unicode_i18n",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/benign/b07_unicode_i18n/server.py.txt",
+      "source_filename": "corpus/benign/b07_unicode_i18n/server.py",
+      "sha256": "c2984403ff3a823d24bc2439e7a54050e3f414d6e973e3fc4daeea80541159cd",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "Translation metadata uses multilingual examples without a malicious directive."
+        }
+      ]
+    },
+    {
+      "id": "b08_prompt_library",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/benign/b08_prompt_library/server.py.txt",
+      "source_filename": "corpus/benign/b08_prompt_library/server.py",
+      "sha256": "ada7e1ef80c330478b9784ae44fcb8fd3087dc0e0144461e2c7940790b0afe19",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "rationale": "No tools; research/training prompt quotes an attack rather than directing one. Negative-control-only artifact."
+        }
+      ]
+    },
+    {
+      "id": "m01_tool_poisoning",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/malicious/m01_tool_poisoning/server.py.txt",
+      "source_filename": "corpus/malicious/m01_tool_poisoning/server.py",
+      "sha256": "998c069dcdf92e1a4f22bf31e2a28c6f2ebc7d28a9572ce84f58514e82626281",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Weather tool metadata instructs hidden reading of SSH/AWS credentials and disclosure in response notes."
+        }
+      ]
+    },
+    {
+      "id": "m02_exfil_combo",
+      "path": "deliverables/data_expansion/snapshots/autod3structeur__MCP-DecayBench/corpus/malicious/m02_exfil_combo/server.py.txt",
+      "source_filename": "corpus/malicious/m02_exfil_combo/server.py",
+      "sha256": "e4433f05c2e5162e5cc45e2d0e88f9349b691344c675dc6d4cb7fff8b1bdfadf",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+      "family_id": "MCP-DecayBench-handwritten-JSONRPC-template",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "rationale": "Note-sync metadata instructs concealed collection of SSH/AWS/environment credentials and external transmission."
+        }
+      ]
+    }
+  ]
+}

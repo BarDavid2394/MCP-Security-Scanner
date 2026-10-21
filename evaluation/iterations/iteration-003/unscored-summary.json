@@ -1,0 +1,11 @@
+{
+  "count": 48,
+  "by_rule": {
+    "MCP08-MISSING-AUDIT": 30,
+    "MCP06-UNTRUSTED-CONTEXT": 15,
+    "MCP03-TOOL-POISON": 1,
+    "MCP05-COMMAND-INJECTION": 1,
+    "MCP07-PERMISSIVE-BIND": 1
+  },
+  "status": "Not independently adjudicated and not counted as TP/FP. No global zero-false-positive claim."
+}

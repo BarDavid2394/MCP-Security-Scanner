@@ -1,0 +1,14 @@
+# MCP Security Scanner Dependencies
+
+# No external dependencies required for core functionality!
+# The scanner uses Python standard library only:
+# - ast (Abstract Syntax Trees)
+# - re (Regular expressions)
+# - json (JSON handling)
+# - pathlib (Path operations)
+# - argparse (CLI parsing)
+# - dataclasses (Data structures)
+
+# Optional dependencies for enhanced features:
+# rich>=13.0.0      # Beautiful console output (optional)
+# click>=8.0.0      # Advanced CLI framework (optional)

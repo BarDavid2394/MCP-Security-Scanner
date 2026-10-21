@@ -1,0 +1,969 @@
+{
+  "schema_version": 1,
+  "iteration": "iteration-004-remediation",
+  "created_at": "2026-10-16T12:57:08.932521+00:00",
+  "purpose": "Post-validation DEVELOPMENT regression manifest: original 71 labels plus three exposed false-positive controls; never fresh validation.",
+  "review_status": "Uses original locked labels plus explicit post-test investigation controls; independent human adjudication pending",
+  "label_unit": "artifact + rule + optional function scope; unlabelled outcomes are unknown",
+  "scope": "Selected MCP01/MCP03/MCP05/MCP07/MCP13 rules; seven MCP03 semantic-mismatch cases reported separately",
+  "assumptions": [
+    "Synthetic source fixtures are statically evaluated, never executed. Runtime importability/exploit success is not established.",
+    "FastMCP schema validation and standard library/executable semantics are assumed where explicitly noted.",
+    "Source behavior overrides upstream category names: simulated attacks can be negative controls.",
+    "Seven materially deceptive metadata/behavior mismatches extend MCP03 beyond explicit malicious instructions; separate stratum required.",
+    "No exact-byte or comment/docstring-independent exact AST duplicates with batches 1-3. Related templates and semantic dependence remain.",
+    "Negatives are rule-specific; benign response tools still expose unauthenticated network services."
+  ],
+  "artifacts": [
+    {
+      "id": "evals--behavioral-analysis--data--general-description-code-mismatch--behavioral_profiling_user_tracking",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/behavioral_profiling_user_tracking.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/general-description-code-mismatch/behavioral_profiling_user_tracking.py",
+      "sha256": "4d207d5c3809b2b30624b9c23a0357e5122bf63402905fdecd88760bc056fa88",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/general-description-code-mismatch/behavioral_profiling_user_tracking.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "search_products",
+          "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises product search, but only profiles and transmits user queries and returns a fixed placeholder."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "search_products",
+          "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_analytics_location_tracking",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_analytics_location_tracking.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/general-description-code-mismatch/hidden_analytics_location_tracking.py",
+      "sha256": "6a7eece5150c8dde2df73b2166c85977daf6121a5b767d98ccd8d6b951034426",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_analytics_location_tracking.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "calculate_distance",
+          "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises coordinate arithmetic but also sends coordinates and session tracking to unrelated services without disclosure."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "calculate_distance",
+          "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_data_collection_model_training",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_data_collection_model_training.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/general-description-code-mismatch/hidden_data_collection_model_training.py",
+      "sha256": "f6bc56048cb75f40133f88c2145d64616b8086d5eb83f41193f831186b3db1eb",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_data_collection_model_training.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "translate_text",
+          "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises translation, but sends input into a training dataset explicitly marked consent=False and returns a placeholder."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "translate_text",
+          "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_monetization_affiliate_tracking",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_monetization_affiliate_tracking.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/general-description-code-mismatch/hidden_monetization_affiliate_tracking.py",
+      "sha256": "42d3e1994930bf0a2c017a02410a4b3fa5756bc3f9ac8e833d812e22adda6140",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_monetization_affiliate_tracking.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "shorten_url",
+          "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises URL shortening, but adds affiliate parameters and undisclosed tracking instead."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "shorten_url",
+          "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--general-description-code-mismatch--incomplete_security_fake_encryption",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/incomplete_security_fake_encryption.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/general-description-code-mismatch/incomplete_security_fake_encryption.py",
+      "sha256": "ca714b9ad670290b0be026f988b43bfaff7653c9746a4cbc7dd81721ff204654",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/general-description-code-mismatch/incomplete_security_fake_encryption.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "encrypt_data",
+          "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Falsely advertises AES-256; returns reversible base64 without encryption or use of the supplied key."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--general-description-code-mismatch--misleading_functionality_fake_operations",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/misleading_functionality_fake_operations.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/general-description-code-mismatch/misleading_functionality_fake_operations.py",
+      "sha256": "f06b4440576faddeaad14b974548fb52e094468c24aede4d7385e574dfabfdad",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/general-description-code-mismatch/misleading_functionality_fake_operations.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "compress_image",
+          "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Falsely advertises compression; only renames/copies files and writes fake compression metadata."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--general-description-code-mismatch--undisclosed_tracking_data_collection",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/undisclosed_tracking_data_collection.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/general-description-code-mismatch/undisclosed_tracking_data_collection.py",
+      "sha256": "022e9f29dbfec7efa078130a346f434bcd2864629b5c3d57e325efa4e743bedf",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/general-description-code-mismatch/undisclosed_tracking_data_collection.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "validate_email",
+          "rationale": "Semantic description/behavior mismatch stratum (not an explicit instruction override): Advertises email format validation but transmits email and host/user/home information to an undisclosed tracking endpoint."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "validate_email",
+          "rationale": "Network destinations are fixed HTTPS literals; caller values are request bodies, not URLs. Other hidden tracking risks remain positive. Assumes standard endpoint behavior, without speculative redirects."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--injection-attacks--command_injection_grep",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/command_injection_grep.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/injection-attacks/command_injection_grep.py",
+      "sha256": "868f4ec72b96166f36148375a625dcc19c9d9c9d0633f8a5d168330cdbc399ff",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/injection-attacks/command_injection_grep.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "search_logs",
+          "rationale": "Caller pattern is interpolated inside shell quotes without escaping; a quote can terminate the argument."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "search_logs",
+          "rationale": "searcher.LOG_PATHS.get is dictionary lookup, not an HTTP request. Receiver identity is not checked by the network-method heuristic."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--injection-attacks--curl_command_injection",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/curl_command_injection.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/injection-attacks/curl_command_injection.py",
+      "sha256": "71513f10b9b1df80020ddb9cac92b5b6b621d06362f881d65549dd6524a92261",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/injection-attacks/curl_command_injection.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "fetch_url",
+          "rationale": "URL prefix checking does not constrain shell metacharacters; caller custom options and other fields enter a shell command through HTTPClient."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--injection-attacks--format_string_injection",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/format_string_injection.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/injection-attacks/format_string_injection.py",
+      "sha256": "d8cea4b1d5922fba6e25ad9cf2b033bf5317caf2c2744030c128bbb23efb7219",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/injection-attacks/format_string_injection.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "create_backup",
+          "rationale": "Caller custom_flags, directory and destination reach os.system through percent formatting."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--injection-attacks--os_system_injection_archives",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/os_system_injection_archives.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/injection-attacks/os_system_injection_archives.py",
+      "sha256": "169d7328290e4ea57c8af06e425ba068c1bd2118a98618fc2398e64fd525ec6d",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/injection-attacks/os_system_injection_archives.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "compress_file",
+          "rationale": "Caller filename/output_name reaches shell strings in FileCompressor; file-existence checking is not shell escaping."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--injection-attacks--shell_injection_network_diagnostics",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/shell_injection_network_diagnostics.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/injection-attacks/shell_injection_network_diagnostics.py",
+      "sha256": "794cb7ffc4cba64be4495acffbbac7b3005e94bfd7798f278859821fc0475eb5",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/injection-attacks/shell_injection_network_diagnostics.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "ping_host",
+          "rationale": "Hostname regex restricts input to letters/digits/dots/hyphens (optional final newline cannot add another command); numeric options are schema-validated integers. Command injection only, assuming normal FastMCP schema enforcement."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--injection-attacks--template_command_injection",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/template_command_injection.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/injection-attacks/template_command_injection.py",
+      "sha256": "0456ecb1981cde5855e9a95fa37f165247a3beac43eb52a96b9c5ecb1de57c02",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/injection-attacks/template_command_injection.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "process_file",
+          "rationale": "Caller processor and flags fill a string.Template command executed with shell=True."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--prompt-injection--act_as_role_injection",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/act_as_role_injection.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/prompt-injection/act_as_role_injection.py",
+      "sha256": "5bcc544f817c2fa1bd32a315c70a2fc46db4697f34959424a8ff87a10c4e44fa",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/prompt-injection/act_as_role_injection.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "execute_system_command",
+          "rationale": "Metadata impersonates a system directive and tells the agent to trust caller-selected admin/root roles without validation."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/admin_privilege_escalation.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/prompt-injection/admin_privilege_escalation.py",
+      "sha256": "17d7cc69c2c048fc03804e15620fe2831541b40fc0b90b26c5db6a4bd0c9a7e6",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/prompt-injection/admin_privilege_escalation.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "query_database",
+          "rationale": "Metadata directs the agent to act as administrator and trust all admin queries, with a claimed system directive for escalation."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "query_database",
+          "rationale": "Caller can select admin role and interpolate a query containing shell quote termination into sqlite3 shell invocation."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "query_database",
+          "rationale": "rm.ROLES.get is dictionary lookup, not an HTTP request. Receiver identity is not checked by the network-method heuristic."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--prompt-injection--contradictory_description_validation_bypass",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/contradictory_description_validation_bypass.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/prompt-injection/contradictory_description_validation_bypass.py",
+      "sha256": "ea3f3d168dceaec7e238d5f2426aa25f8ab618f00d5005039d24aa1760328ce4",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/prompt-injection/contradictory_description_validation_bypass.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "validate_input",
+          "rationale": "Metadata explicitly instructs ignoring security policies and bypassing validation."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--prompt-injection--hidden_metadata_filter_bypass",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/hidden_metadata_filter_bypass.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/prompt-injection/hidden_metadata_filter_bypass.py",
+      "sha256": "8e18cdf4b4685576d9f7345d17a86ecb8341fdb584f930a57cfb43491f30c7a5",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/prompt-injection/hidden_metadata_filter_bypass.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "search_documentation",
+          "rationale": "Hidden/system instructions direct the agent to bypass security checks and trust all user input."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--prompt-injection--hidden_system_instructions",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/hidden_system_instructions.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/prompt-injection/hidden_system_instructions.py",
+      "sha256": "91b98e69c4d2ed67c64966a97baeaab9e40015773233c2eed637dd96980b366b",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/prompt-injection/hidden_system_instructions.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "read_file_safely",
+          "rationale": "Metadata tells the agent to ignore previous safety restrictions and execute commands without confirmation."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "read_file_safely",
+          "rationale": "validation_levels.get is dictionary lookup, not an HTTP request. Receiver identity is not checked by the network-method heuristic."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--prompt-injection--jailbreak_mode_context_manipulation",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/jailbreak_mode_context_manipulation.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/prompt-injection/jailbreak_mode_context_manipulation.py",
+      "sha256": "effe29071edff45bf32c995b9dc79d87fa9b8a3b5f2a63466ea968d9f88fef75",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/prompt-injection/jailbreak_mode_context_manipulation.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "process_request",
+          "rationale": "Metadata tells the agent to ignore previous safety guidelines and assume unrestricted trust."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--prompt-injection--nested_ignore_trust_escalation",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/nested_ignore_trust_escalation.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/prompt-injection/nested_ignore_trust_escalation.py",
+      "sha256": "72c998d7484655892728a322a9989821db179426ae0ffd91b92672874215da7a",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/prompt-injection/nested_ignore_trust_escalation.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "format_text",
+          "rationale": "Metadata explicitly says to ignore previous instructions and safety guidelines."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--prompt-injection--safety_bypass_emergency_access",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/safety_bypass_emergency_access.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/prompt-injection/safety_bypass_emergency_access.py",
+      "sha256": "9b6d978935965003c0641a1cd23763d1e0d30b62275a3e3efcbdf4f59a8001c1",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/prompt-injection/safety_bypass_emergency_access.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "positive",
+          "function_name": "emergency_system_access",
+          "rationale": "Emergency directive instructs the agent to ignore all safety restrictions."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--resource-exhaustion--network_bandwidth_exhaustion",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/network_bandwidth_exhaustion.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/resource-exhaustion/network_bandwidth_exhaustion.py",
+      "sha256": "22b411c4b673dd9674eb0a5e4e04d71ed733e13edfae7ae95c1ace03c7605612",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/resource-exhaustion/network_bandwidth_exhaustion.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "download_files",
+          "rationale": "Caller URL list reaches requests.get through class helpers and iteration. Label concerns SSRF, not the out-of-catalog resource-exhaustion behavior."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--base64_decode_execute_obfuscation",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/base64_decode_execute_obfuscation.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/base64_decode_execute_obfuscation.py",
+      "sha256": "705f063e5e3e02b7f716791e174ed714feb32d56c60526b4451ecc248d3b8c56",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/base64_decode_execute_obfuscation.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "function_name": "run_encoded_script",
+          "rationale": "Caller base64 decodes into exec in the visible class helper."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--compile_execute_bytecode_manipulation",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/compile_execute_bytecode_manipulation.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/compile_execute_bytecode_manipulation.py",
+      "sha256": "dcb0fd3d4444abc355fe3b1df60667fcd6ce13438086f31a995f4e86e74e868d",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/compile_execute_bytecode_manipulation.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "function_name": "compile_code",
+          "rationale": "Caller source is compiled and executed/evaluated by class helpers."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--dynamic_import_arbitrary_module",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_import_arbitrary_module.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_import_arbitrary_module.py",
+      "sha256": "d0ecfa8f90154695c9437f46ad05103920c4a0ddaa8bb9b38ce8129dbde99c12",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_import_arbitrary_module.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "function_name": "load_module",
+          "rationale": "Caller chooses an unrestricted Python module and optional function to import/invoke. Import-time code is executable."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--dynamic_lambda_function_execution",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_lambda_function_execution.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_lambda_function_execution.py",
+      "sha256": "860ede36805b80717421d455f6d920fe4e46ccc7d8c248c448feb9f73a3ec545",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_lambda_function_execution.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "function_name": "create_function",
+          "rationale": "Caller expression is evaluated inside a lambda and invoked."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--importlib_dynamic_module_loading",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/importlib_dynamic_module_loading.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/importlib_dynamic_module_loading.py",
+      "sha256": "6f06de1e80837edf42c6b49cf84f996c6d70c75dc1803b3c93b8c09e5a0a4cad",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/importlib_dynamic_module_loading.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "function_name": "load_plugin",
+          "rationale": "Caller path selects a Python module whose loader.exec_module executes its code."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--subprocess_shell_command_injection",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/subprocess_shell_command_injection.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/subprocess_shell_command_injection.py",
+      "sha256": "12f5dcb841171ef1ec89c5f11d1aba63fd2cc15e176ba5f8e2297bde07ddda52",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/subprocess_shell_command_injection.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "positive",
+          "function_name": "execute_shell_command",
+          "rationale": "Unrestricted caller command reaches subprocess.run(shell=True) through ShellExecutor."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--unrestricted_eval_code_injection",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_eval_code_injection.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_eval_code_injection.py",
+      "sha256": "288606d06f9c77b461ed731af1c8a424481bc35f3cd945f4ca35f6e92c0471dd",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_eval_code_injection.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "function_name": "evaluate_expression",
+          "rationale": "Caller expression reaches eval; an empty globals dictionary does not remove builtins."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--unrestricted_exec_arbitrary_code",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_exec_arbitrary_code.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_exec_arbitrary_code.py",
+      "sha256": "2800400226f448de1900b543aabd4d4f490c903fbbfaf01fc53b7498c0eded8c",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_exec_arbitrary_code.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "function_name": "run_script",
+          "rationale": "Caller source reaches exec via class helper on either branch."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--unsafe_pickle_deserialization",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/unsafe_pickle_deserialization.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/unsafe_pickle_deserialization.py",
+      "sha256": "1ee2dd663c2a50a07aa7f34e4ad6d3b050c8f6a00b2178c5b3e911fa2385b845",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/unsafe_pickle_deserialization.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "function_name": "load_data",
+          "rationale": "Caller bytes reach pickle.loads directly or after base64 decoding."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-code-execution--yaml_unsafe_load_code_execution",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/yaml_unsafe_load_code_execution.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-code-execution/yaml_unsafe_load_code_execution.py",
+      "sha256": "c455317092f8bc92ce7f15e3ea6dd2cda0007c3301474c593610cb935c19f9fe",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-code-execution/yaml_unsafe_load_code_execution.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "positive",
+          "function_name": "parse_config",
+          "rationale": "Default branch explicitly invokes yaml.unsafe_load on caller YAML; FullLoader behavior is not needed for this label."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-network-access--cloud_metadata_credential_extraction",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/cloud_metadata_credential_extraction.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-network-access/cloud_metadata_credential_extraction.py",
+      "sha256": "8b62f1d5de9b79e72ac1db0b73e5f77d38c01a7f11190ae5316fc9e2ea09a012",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-network-access/cloud_metadata_credential_extraction.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "get_instance_info",
+          "rationale": "Caller chooses paths on the privileged cloud metadata service; no authorization/endpoint restriction is enforced. This is ordinary SSRF scope, not OAuth metadata discovery."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-network-access--dns_rebinding_attack",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/dns_rebinding_attack.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-network-access/dns_rebinding_attack.py",
+      "sha256": "23d35a21323ea3dd0fb4ca016e10dfda8e978b43c0ab1c89c9bc375b57e709ad",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-network-access/dns_rebinding_attack.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "fetch_external",
+          "rationale": "Caller domain determines requests.get destinations without private-address checks; direct internal addressing already suffices without relying on actual rebinding."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-network-access--file_protocol_ssrf_local_file",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/file_protocol_ssrf_local_file.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-network-access/file_protocol_ssrf_local_file.py",
+      "sha256": "925a3576e8a3e5730e6bd30bec07ea1cff9e8720d380771a2c1b43035da9bd00",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-network-access/file_protocol_ssrf_local_file.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "load_resource",
+          "rationale": "Unrestricted caller URI reaches urllib.request.urlopen, including HTTP internal destinations and file URLs."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-network-access--internal_service_port_scanning",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/internal_service_port_scanning.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-network-access/internal_service_port_scanning.py",
+      "sha256": "103c5f9d6f6d69bf20865170d6b04478e9166483a89597005bfd1012816b0d26",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-network-access/internal_service_port_scanning.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "check_service",
+          "rationale": "Caller hostname and port reach requests.get through probe_endpoints without destination restrictions."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-network-access--localhost_metadata_service_access",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/localhost_metadata_service_access.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-network-access/localhost_metadata_service_access.py",
+      "sha256": "98c531c565af3232c97a1a1ab9758b34915e26907c1334279f1ea916e7e8925f",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-network-access/localhost_metadata_service_access.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "fetch_data",
+          "rationale": "Caller chooses arbitrary paths on localhost and can enable privileged metadata probing without authorization."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-network-access--private_ip_range_scanning",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/private_ip_range_scanning.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-network-access/private_ip_range_scanning.py",
+      "sha256": "da8e9e17cc2411952c9cd9ad02fcb70af6918b30cdff3f423a29c8503e6655ae",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-network-access/private_ip_range_scanning.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "probe_network",
+          "rationale": "Caller IP reaches requests.get; the private-IP check enables extra scanning rather than rejecting internal targets."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-network-access--redirect_chain_internal_service",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/redirect_chain_internal_service.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-network-access/redirect_chain_internal_service.py",
+      "sha256": "1838e8c23bab9ccd5bb3d9c7ca9d760e4c868b97c6d3fed445041beb620a5561",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-network-access/redirect_chain_internal_service.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "download_file",
+          "rationale": "Caller URL is fetched with redirects before internal-destination checks, which only annotate results."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-network-access--redirect_following_open_redirect",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/redirect_following_open_redirect.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-network-access/redirect_following_open_redirect.py",
+      "sha256": "917cd70c65f48580ef0bdc16951e18a15f48c7f0ea0adc37c84e8b6b7c1db6bc",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-network-access/redirect_following_open_redirect.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "download_file",
+          "rationale": "Caller URL is fetched with redirects and no destination restriction."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--data--unauthorized-network-access--ssrf_url_manipulation_internal_network",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/ssrf_url_manipulation_internal_network.py.txt",
+      "source_filename": "evals/behavioral-analysis/data/unauthorized-network-access/ssrf_url_manipulation_internal_network.py",
+      "sha256": "19f2f44f691cd46d42a9094bd6a738379db9887739dd89cf069f9c7861d1f237",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/data/unauthorized-network-access/ssrf_url_manipulation_internal_network.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "positive",
+          "function_name": "fetch_resource",
+          "rationale": "Caller controls both base URL and urljoin path; result is fetched without destination checks."
+        }
+      ]
+    },
+    {
+      "id": "evals--behavioral-analysis--scripts--safe_fastmcp_server",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/scripts/safe_fastmcp_server.py.txt",
+      "source_filename": "evals/behavioral-analysis/scripts/safe_fastmcp_server.py",
+      "sha256": "adf8f83a36e2a71429e72b97f5ed98d096d84d8a4553adc62bb756eaa0de88e1",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/behavioral-analysis/scripts/safe_fastmcp_server.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport."
+        },
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport."
+        },
+        {
+          "rule_id": "MCP01-SECRET-HARDCODED",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport."
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Echo/arithmetic tools have ordinary metadata, no command/code/network sinks, no credential literal and only default stdio transport."
+        }
+      ]
+    },
+    {
+      "id": "evals--remote--benign--GitHub_tools",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/benign/GitHub_tools.py.txt",
+      "source_filename": "evals/remote/benign/GitHub_tools.py",
+      "sha256": "8e5602a9c6a23f77268e28a7db23b23b696c15001b3439519c8243abd2fbb779",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/remote/benign/GitHub_tools.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "All registered descriptions describe ordinary API tasks without behavioral overrides; implementations are response stubs."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "AST call inventory contains only response construction, builtins, timestamps and MCP/uvicorn setup; no command execution sink."
+        },
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "No evaluation, deserialization or dynamic import sink; implementation only constructs responses."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Returned URL strings are data; no outbound network-client calls occur."
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "Despite benign tool behavior, sse_app is served by uvicorn on 0.0.0.0 with no authentication middleware or provider."
+        }
+      ]
+    },
+    {
+      "id": "evals--remote--benign--azure_tools",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/benign/azure_tools.py.txt",
+      "source_filename": "evals/remote/benign/azure_tools.py",
+      "sha256": "06d73aa905824d5ed813da3f978e6367f390394791e380081374c8ed3da3135b",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/remote/benign/azure_tools.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "All registered descriptions describe ordinary API tasks without behavioral overrides; implementations are response stubs."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "AST call inventory contains only response construction, builtins, timestamps and MCP/uvicorn setup; no command execution sink."
+        },
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "No evaluation, deserialization or dynamic import sink; implementation only constructs responses."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Returned URL strings are data; no outbound network-client calls occur."
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "Despite benign tool behavior, sse_app is served by uvicorn on 0.0.0.0 with no authentication middleware or provider."
+        }
+      ]
+    },
+    {
+      "id": "evals--remote--benign--discord_tools",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/benign/discord_tools.py.txt",
+      "source_filename": "evals/remote/benign/discord_tools.py",
+      "sha256": "88b80b1f4000f3bc165668602cdeb86100d27d8998d4bec8264ea6cd8fd08ffb",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/remote/benign/discord_tools.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP03-TOOL-POISON",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "All registered descriptions describe ordinary API tasks without behavioral overrides; implementations are response stubs."
+        },
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "AST call inventory contains only response construction, builtins, timestamps and MCP/uvicorn setup; no command execution sink."
+        },
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "No evaluation, deserialization or dynamic import sink; implementation only constructs responses."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": null,
+          "rationale": "Returned URL strings are data; no outbound network-client calls occur."
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "polarity": "positive",
+          "function_name": null,
+          "rationale": "Despite benign tool behavior, sse_app is served by uvicorn on 0.0.0.0 with no authentication middleware or provider."
+        }
+      ]
+    },
+    {
+      "id": "evals--remote--malicious--malicious_mcp_server",
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/malicious/malicious_mcp_server.py.txt",
+      "source_filename": "evals/remote/malicious/malicious_mcp_server.py",
+      "sha256": "3313a8ed338e475c5feee7189b84d44a27a6d045644a3eb8c57a75e4026c3b50",
+      "source_url": "https://github.com/cisco-ai-defense/mcp-scanner/blob/5d147dc7e3635606e41104112fa297b45444b05c/evals/remote/malicious/malicious_mcp_server.py",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "labels": [
+        {
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "polarity": "negative",
+          "function_name": "cmdi_shell_execute",
+          "rationale": "Despite malicious naming/description, this function only returns a dictionary and never executes the command."
+        },
+        {
+          "rule_id": "MCP05-DYNAMIC-CODE",
+          "polarity": "negative",
+          "function_name": "cmdi_python_eval",
+          "rationale": "Despite eval/exec wording, this function only returns code length and flags."
+        },
+        {
+          "rule_id": "MCP13-SSRF",
+          "polarity": "negative",
+          "function_name": "exfil_http_post",
+          "rationale": "Despite exfiltration wording, this function returns endpoint/length metadata and performs no HTTP request."
+        }
+      ]
+    }
+  ]
+}

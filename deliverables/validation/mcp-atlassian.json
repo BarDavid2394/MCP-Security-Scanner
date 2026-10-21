@@ -1,0 +1,339 @@
+{
+  "scanner": "MCP Security Scanner",
+  "version": "2.0.0",
+  "catalog_version": "2026.1",
+  "timestamp": "2026-10-11T12:07:47.690420",
+  "scan_info": {
+    "target_id": "mcp-atlassian",
+    "target": "evaluation\\corpus\\mcp-atlassian\\src",
+    "files_scanned": 123,
+    "tools_analyzed": 98,
+    "servers_found": 0,
+    "total_findings": 13,
+    "critical_count": 0,
+    "high_count": 8,
+    "parse_errors": [],
+    "status": "completed"
+  },
+  "summary": {
+    "total": 13,
+    "by_severity": {
+      "MEDIUM": 5,
+      "HIGH": 8
+    },
+    "by_type": {
+      "context_injection_&_over-sharing": 5,
+      "token_mismanagement_&_secret_exposure": 6,
+      "confused_deputy": 1,
+      "unsafe_oauth_authorization_urls": 1
+    },
+    "by_attack": {
+      "MCP10": 5,
+      "MCP01": 6,
+      "MCP11": 1,
+      "MCP15": 1
+    },
+    "by_rule": {
+      "MCP10-SHARED-CONTEXT": 4,
+      "MCP01-SECRET-OUTPUT": 6,
+      "MCP11-CONFUSED-DEPUTY": 1,
+      "MCP15-UNSAFE-AUTH-URL": 1,
+      "MCP10-OVER-SHARING": 1
+    },
+    "by_confidence": {
+      "MEDIUM": 5,
+      "HIGH": 8
+    },
+    "fixable": 0,
+    "risk_score": 89,
+    "risk_level": "HIGH"
+  },
+  "findings": [
+    {
+      "vulnerability_type": "context_injection_&_over-sharing",
+      "severity": "MEDIUM",
+      "title": "MCP10: Insufficiently scoped mutable context",
+      "description": "Global mutable state '_CACHE_TTL' may be shared across users or sessions.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\servers\\dependencies.py",
+      "line_number": 96,
+      "function_name": null,
+      "matched_pattern": "MCP10-SHARED-CONTEXT",
+      "matched_text": "_CACHE_TTL",
+      "recommendation": "Store context per authenticated user and session with expiry and explicit field allowlists.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP10",
+      "rule_id": "MCP10-SHARED-CONTEXT",
+      "confidence": "MEDIUM",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "context_injection_&_over-sharing",
+      "severity": "MEDIUM",
+      "title": "MCP10: Insufficiently scoped mutable context",
+      "description": "Global mutable state '_CACHE_MAXSIZE' may be shared across users or sessions.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\servers\\dependencies.py",
+      "line_number": 97,
+      "function_name": null,
+      "matched_pattern": "MCP10-SHARED-CONTEXT",
+      "matched_text": "_CACHE_MAXSIZE",
+      "recommendation": "Store context per authenticated user and session with expiry and explicit field allowlists.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP10",
+      "rule_id": "MCP10-SHARED-CONTEXT",
+      "confidence": "MEDIUM",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "context_injection_&_over-sharing",
+      "severity": "MEDIUM",
+      "title": "MCP10: Insufficiently scoped mutable context",
+      "description": "Global mutable state '_CACHE_MISS' may be shared across users or sessions.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\servers\\dependencies.py",
+      "line_number": 103,
+      "function_name": null,
+      "matched_pattern": "MCP10-SHARED-CONTEXT",
+      "matched_text": "_CACHE_MISS",
+      "recommendation": "Store context per authenticated user and session with expiry and explicit field allowlists.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP10",
+      "rule_id": "MCP10-SHARED-CONTEXT",
+      "confidence": "MEDIUM",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "context_injection_&_over-sharing",
+      "severity": "MEDIUM",
+      "title": "MCP10: Insufficiently scoped mutable context",
+      "description": "Global mutable state '_validation_cache_lock' may be shared across users or sessions.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\servers\\dependencies.py",
+      "line_number": 104,
+      "function_name": null,
+      "matched_pattern": "MCP10-SHARED-CONTEXT",
+      "matched_text": "_validation_cache_lock",
+      "recommendation": "Store context per authenticated user and session with expiry and explicit field allowlists.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP10",
+      "rule_id": "MCP10-SHARED-CONTEXT",
+      "confidence": "MEDIUM",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "token_mismanagement_&_secret_exposure",
+      "severity": "HIGH",
+      "title": "MCP01: Secret included in output or logs",
+      "description": "Credential-bearing data appears to be returned or logged.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\servers\\dependencies.py",
+      "line_number": 1,
+      "function_name": null,
+      "matched_pattern": "MCP01-SECRET-OUTPUT",
+      "matched_text": "[REDACTED]",
+      "recommendation": "Redact credentials and never place them in tool output, model context, or logs.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP01",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "token_mismanagement_&_secret_exposure",
+      "severity": "HIGH",
+      "title": "MCP01: Secret included in output or logs",
+      "description": "Credential-bearing data appears to be returned or logged.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\servers\\main.py",
+      "line_number": 1,
+      "function_name": null,
+      "matched_pattern": "MCP01-SECRET-OUTPUT",
+      "matched_text": "[REDACTED]",
+      "recommendation": "Redact credentials and never place them in tool output, model context, or logs.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP01",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "token_mismanagement_&_secret_exposure",
+      "severity": "HIGH",
+      "title": "MCP01: Secret included in output or logs",
+      "description": "Credential-bearing data appears to be returned or logged.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\environment.py",
+      "line_number": 1,
+      "function_name": null,
+      "matched_pattern": "MCP01-SECRET-OUTPUT",
+      "matched_text": "[REDACTED]",
+      "recommendation": "Redact credentials and never place them in tool output, model context, or logs.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP01",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "token_mismanagement_&_secret_exposure",
+      "severity": "HIGH",
+      "title": "MCP01: Secret included in output or logs",
+      "description": "Credential-bearing data appears to be returned or logged.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\oauth.py",
+      "line_number": 1,
+      "function_name": null,
+      "matched_pattern": "MCP01-SECRET-OUTPUT",
+      "matched_text": "[REDACTED]",
+      "recommendation": "Redact credentials and never place them in tool output, model context, or logs.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP01",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "token_mismanagement_&_secret_exposure",
+      "severity": "HIGH",
+      "title": "MCP01: Secret included in output or logs",
+      "description": "Credential-bearing data appears to be returned or logged.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\oauth_setup.py",
+      "line_number": 1,
+      "function_name": null,
+      "matched_pattern": "MCP01-SECRET-OUTPUT",
+      "matched_text": "[REDACTED]",
+      "recommendation": "Redact credentials and never place them in tool output, model context, or logs.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP01",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "confused_deputy",
+      "severity": "MEDIUM",
+      "title": "MCP11: OAuth proxy lacks per-client consent",
+      "description": "OAuth proxy flow does not show per-client consent, state, and client binding controls.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\oauth_setup.py",
+      "line_number": 1,
+      "function_name": null,
+      "matched_pattern": "MCP11-CONFUSED-DEPUTY",
+      "matched_text": null,
+      "recommendation": "Bind consent and OAuth state to each client_id and exactly validate redirect_uri.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP11",
+      "rule_id": "MCP11-CONFUSED-DEPUTY",
+      "confidence": "MEDIUM",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices"
+      ]
+    },
+    {
+      "vulnerability_type": "unsafe_oauth_authorization_urls",
+      "severity": "HIGH",
+      "title": "MCP15: Authorization URL handled unsafely",
+      "description": "A dynamic authorization URL is opened without visible scheme validation.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\oauth_setup.py",
+      "line_number": 1,
+      "function_name": null,
+      "matched_pattern": "MCP15-UNSAFE-AUTH-URL",
+      "matched_text": null,
+      "recommendation": "Allow only HTTPS (or development loopback HTTP) and never open URLs through a shell.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP15",
+      "rule_id": "MCP15-UNSAFE-AUTH-URL",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices"
+      ]
+    },
+    {
+      "vulnerability_type": "context_injection_&_over-sharing",
+      "severity": "HIGH",
+      "title": "MCP10: Sensitive context returned",
+      "description": "A tool may return an entire environment or broad context object.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\proxy.py",
+      "line_number": 1,
+      "function_name": null,
+      "matched_pattern": "MCP10-OVER-SHARING",
+      "matched_text": null,
+      "recommendation": "Return only explicitly selected fields and exclude credentials and unrelated session data.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP10",
+      "rule_id": "MCP10-OVER-SHARING",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "token_mismanagement_&_secret_exposure",
+      "severity": "HIGH",
+      "title": "MCP01: Secret included in output or logs",
+      "description": "Credential-bearing data appears to be returned or logged.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\toolsets.py",
+      "line_number": 1,
+      "function_name": null,
+      "matched_pattern": "MCP01-SECRET-OUTPUT",
+      "matched_text": "[REDACTED]",
+      "recommendation": "Redact credentials and never place them in tool output, model context, or logs.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP01",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    }
+  ]
+}

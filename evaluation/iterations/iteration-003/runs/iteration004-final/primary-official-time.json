@@ -1,0 +1,24 @@
+{
+  "target_id": "official-time",
+  "target": "evaluation/corpus/official-servers/src/time",
+  "input_files": {
+    "pyproject.toml": "28216a67f831118c268bdbdc53d228b90432e1fe2a763fb52544a30fcdeb8014",
+    "src/mcp_server_time/__init__.py": "9074241831cbd6a2aba1697b8fd9e7ba09f76c1c907877ab03cee1a8a267776b",
+    "src/mcp_server_time/__main__.py": "9305fda65f8d5a186c729a1a5ea0b54cdf320f8f49c1c96b19426c96dd8299a7",
+    "src/mcp_server_time/server.py": "6840409526b2d9a81eabe03568b9b86789692be7f164dd04147c42ae387fe80e",
+    "test/time_server_test.py": "aa46b84caefa38bb33b0ac06aa3e68684c9e1497d90064cdba10f99f5fa6f62b",
+    "uv.lock": "bb24036a9f82ceee54b61651ea6183cce9b57c43737a1c8e0185e5c498d200a2"
+  },
+  "status": "completed",
+  "scan_info": {
+    "files_scanned": 6,
+    "tools_analyzed": 2,
+    "servers_found": 1,
+    "total_findings": 0,
+    "critical_count": 0,
+    "high_count": 0,
+    "parse_errors": []
+  },
+  "findings": [],
+  "elapsed_seconds": 0.214888
+}

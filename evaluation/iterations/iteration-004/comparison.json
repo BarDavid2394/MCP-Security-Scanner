@@ -1,0 +1,238 @@
+{
+  "development_before": {
+    "tp": 24,
+    "fp": 3,
+    "fn": 12,
+    "tn": 20,
+    "errors": 0,
+    "precision": 0.8888888888888888,
+    "recall": 0.6666666666666666,
+    "false_positive_rate": 0.13043478260869565,
+    "label_coverage": 1.0
+  },
+  "development_after": {
+    "tp": 36,
+    "fp": 0,
+    "fn": 0,
+    "tn": 23,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "older_batches": {
+    "iteration-001": {
+      "tp": 4,
+      "fp": 1,
+      "fn": 4,
+      "tn": 15,
+      "errors": 0,
+      "precision": 0.8,
+      "recall": 0.5,
+      "false_positive_rate": 0.0625,
+      "label_coverage": 1.0
+    },
+    "iteration-002": {
+      "tp": 14,
+      "fp": 0,
+      "fn": 0,
+      "tn": 13,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "fresh_before": {
+    "tp": 10,
+    "fp": 0,
+    "fn": 34,
+    "tn": 27,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.22727272727272727,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "fresh_after": {
+    "tp": 10,
+    "fp": 0,
+    "fn": 34,
+    "tn": 27,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.22727272727272727,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "fresh_changed_decisions": [],
+  "strata": {
+    "explicit_metadata_instructions": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 7,
+      "tn": 0,
+      "errors": 0
+    },
+    "semantic_description_mismatch": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 7,
+      "tn": 0,
+      "errors": 0
+    },
+    "excluding_semantic_mismatch": {
+      "tp": 10,
+      "fp": 0,
+      "fn": 27,
+      "tn": 27,
+      "errors": 0
+    }
+  },
+  "primary": [
+    {
+      "target_id": "aws-documentation",
+      "status": "completed",
+      "files": 30,
+      "tools": 7,
+      "findings_before": 3,
+      "findings_after": 3,
+      "inputs_identical": true,
+      "added": [],
+      "removed": []
+    },
+    {
+      "target_id": "fastmcp-examples",
+      "status": "completed",
+      "files": 141,
+      "tools": 156,
+      "findings_before": 33,
+      "findings_after": 34,
+      "inputs_identical": true,
+      "added": [
+        [
+          "MCP13-SSRF",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\fastmcp\\examples\\get_file.py",
+          31,
+          "get_test_pdf_from_url"
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "target_id": "markitdown-mcp",
+      "status": "completed",
+      "files": 5,
+      "tools": 1,
+      "findings_before": 1,
+      "findings_after": 1,
+      "inputs_identical": true,
+      "added": [],
+      "removed": []
+    },
+    {
+      "target_id": "mcp-atlassian",
+      "status": "completed",
+      "files": 117,
+      "tools": 98,
+      "findings_before": 6,
+      "findings_after": 6,
+      "inputs_identical": true,
+      "added": [],
+      "removed": []
+    },
+    {
+      "target_id": "official-fetch",
+      "status": "completed",
+      "files": 7,
+      "tools": 1,
+      "findings_before": 1,
+      "findings_after": 1,
+      "inputs_identical": true,
+      "added": [],
+      "removed": []
+    },
+    {
+      "target_id": "official-git",
+      "status": "completed",
+      "files": 6,
+      "tools": 12,
+      "findings_before": 0,
+      "findings_after": 0,
+      "inputs_identical": true,
+      "added": [],
+      "removed": []
+    },
+    {
+      "target_id": "official-time",
+      "status": "completed",
+      "files": 6,
+      "tools": 2,
+      "findings_before": 0,
+      "findings_after": 0,
+      "inputs_identical": true,
+      "added": [],
+      "removed": []
+    },
+    {
+      "target_id": "python-sdk-examples",
+      "status": "completed",
+      "files": 243,
+      "tools": 117,
+      "findings_before": 50,
+      "findings_after": 54,
+      "inputs_identical": true,
+      "added": [
+        [
+          "MCP01-SECRET-HARDCODED",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\python-sdk\\examples\\servers\\simple-auth\\mcp_simple_auth\\simple_auth_provider.py",
+          39,
+          null
+        ],
+        [
+          "MCP01-SECRET-HARDCODED",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\python-sdk\\examples\\stories\\bearer_auth\\server.py",
+          17,
+          null
+        ],
+        [
+          "MCP01-SECRET-HARDCODED",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\python-sdk\\examples\\stories\\identity_assertion\\server.py",
+          23,
+          null
+        ],
+        [
+          "MCP01-SECRET-HARDCODED",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\python-sdk\\examples\\stories\\oauth_client_credentials\\server.py",
+          20,
+          null
+        ]
+      ],
+      "removed": []
+    },
+    {
+      "target_id": "quickstart-weather",
+      "status": "completed",
+      "files": 3,
+      "tools": 2,
+      "findings_before": 0,
+      "findings_after": 0,
+      "inputs_identical": true,
+      "added": [],
+      "removed": []
+    },
+    {
+      "target_id": "simple-mcp-server",
+      "status": "completed",
+      "files": 8,
+      "tools": 2,
+      "findings_before": 0,
+      "findings_after": 0,
+      "inputs_identical": true,
+      "added": [],
+      "removed": []
+    }
+  ]
+}

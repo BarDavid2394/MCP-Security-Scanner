@@ -1,0 +1,867 @@
+{
+  "audit_date": "2026-10-11",
+  "method": "Read-only metadata/hash audit; no scanner, training, network review, or holdout execution.",
+  "git_head": "cc0013370c19332d22c8190eb77f9b17250ab425",
+  "repositories": {
+    "checkouts": 43,
+    "distinct_remotes": 42,
+    "files": 4741,
+    "bytes": 745416472,
+    "source_file_copies": 2496,
+    "unique_file_hashes": 4360,
+    "unique_source_hashes": 2365,
+    "directories_with_saved_scan_evidence": 14,
+    "groups": {
+      "corpus": {
+        "directories": 8,
+        "files": 791,
+        "bytes": 10759322
+      },
+      "corpus-external": {
+        "directories": 35,
+        "files": 3950,
+        "bytes": 734657150
+      }
+    }
+  },
+  "historical_primary": {
+    "targets": 10,
+    "files": 566,
+    "tools": 398,
+    "findings": 83,
+    "labels": {
+      "FP": 32,
+      "Needs context": 38,
+      "TP": 13
+    },
+    "conclusive_precision": 0.28888888888888886,
+    "targets_detail": [
+      {
+        "target_id": "official-fetch",
+        "target": "evaluation\\corpus\\official-servers\\src\\fetch",
+        "files_scanned": 7,
+        "tools_analyzed": 1,
+        "servers_found": 1,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 5,
+          "syntax_errors": 0,
+          "decorated_tools": 0,
+          "low_level_handlers": 2,
+          "tool_constructors": 1
+        },
+        "findings": 1,
+        "by_attack": {
+          "MCP13": 1
+        },
+        "fixable": 0,
+        "parser_coverage": null
+      },
+      {
+        "target_id": "official-git",
+        "target": "evaluation\\corpus\\official-servers\\src\\git",
+        "files_scanned": 6,
+        "tools_analyzed": 12,
+        "servers_found": 1,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 4,
+          "syntax_errors": 0,
+          "decorated_tools": 0,
+          "low_level_handlers": 2,
+          "tool_constructors": 12
+        },
+        "findings": 0,
+        "by_attack": {},
+        "fixable": 0,
+        "parser_coverage": null
+      },
+      {
+        "target_id": "official-time",
+        "target": "evaluation\\corpus\\official-servers\\src\\time",
+        "files_scanned": 6,
+        "tools_analyzed": 2,
+        "servers_found": 1,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 4,
+          "syntax_errors": 0,
+          "decorated_tools": 0,
+          "low_level_handlers": 2,
+          "tool_constructors": 2
+        },
+        "findings": 0,
+        "by_attack": {},
+        "fixable": 0,
+        "parser_coverage": null
+      },
+      {
+        "target_id": "python-sdk-examples",
+        "target": "evaluation\\corpus\\python-sdk\\examples",
+        "files_scanned": 243,
+        "tools_analyzed": 117,
+        "servers_found": 17,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 225,
+          "syntax_errors": 0,
+          "decorated_tools": 117,
+          "low_level_handlers": 0,
+          "tool_constructors": 43
+        },
+        "findings": 45,
+        "by_attack": {
+          "MCP01": 5,
+          "MCP04": 4,
+          "MCP06": 2,
+          "MCP07": 25,
+          "MCP09": 1,
+          "MCP11": 6,
+          "MCP15": 2
+        },
+        "fixable": 0,
+        "parser_coverage": 1.0
+      },
+      {
+        "target_id": "quickstart-weather",
+        "target": "evaluation\\corpus\\quickstart-resources\\weather-server-python",
+        "files_scanned": 3,
+        "tools_analyzed": 2,
+        "servers_found": 0,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 1,
+          "syntax_errors": 0,
+          "decorated_tools": 2,
+          "low_level_handlers": 0,
+          "tool_constructors": 0
+        },
+        "findings": 0,
+        "by_attack": {},
+        "fixable": 0,
+        "parser_coverage": 1.0
+      },
+      {
+        "target_id": "fastmcp-examples",
+        "target": "evaluation\\corpus\\fastmcp\\examples",
+        "files_scanned": 141,
+        "tools_analyzed": 156,
+        "servers_found": 2,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 122,
+          "syntax_errors": 0,
+          "decorated_tools": 152,
+          "low_level_handlers": 0,
+          "tool_constructors": 0
+        },
+        "findings": 20,
+        "by_attack": {
+          "MCP04": 2,
+          "MCP06": 4,
+          "MCP07": 11,
+          "MCP08": 2,
+          "MCP10": 1
+        },
+        "fixable": 0,
+        "parser_coverage": 1.0263157894736843
+      },
+      {
+        "target_id": "mcp-atlassian",
+        "target": "evaluation\\corpus\\mcp-atlassian\\src",
+        "files_scanned": 117,
+        "tools_analyzed": 98,
+        "servers_found": 0,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 117,
+          "syntax_errors": 0,
+          "decorated_tools": 98,
+          "low_level_handlers": 0,
+          "tool_constructors": 0
+        },
+        "findings": 13,
+        "by_attack": {
+          "MCP01": 6,
+          "MCP10": 5,
+          "MCP11": 1,
+          "MCP15": 1
+        },
+        "fixable": 0,
+        "parser_coverage": 1.0
+      },
+      {
+        "target_id": "markitdown-mcp",
+        "target": "evaluation\\corpus\\markitdown\\packages\\markitdown-mcp",
+        "files_scanned": 5,
+        "tools_analyzed": 1,
+        "servers_found": 0,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 4,
+          "syntax_errors": 0,
+          "decorated_tools": 1,
+          "low_level_handlers": 0,
+          "tool_constructors": 0
+        },
+        "findings": 1,
+        "by_attack": {
+          "MCP07": 1
+        },
+        "fixable": 0,
+        "parser_coverage": 1.0
+      },
+      {
+        "target_id": "simple-mcp-server",
+        "target": "evaluation\\corpus\\simple-mcp-server\\src",
+        "files_scanned": 8,
+        "tools_analyzed": 2,
+        "servers_found": 0,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 8,
+          "syntax_errors": 0,
+          "decorated_tools": 2,
+          "low_level_handlers": 0,
+          "tool_constructors": 0
+        },
+        "findings": 0,
+        "by_attack": {},
+        "fixable": 0,
+        "parser_coverage": 1.0
+      },
+      {
+        "target_id": "aws-documentation",
+        "target": "evaluation\\corpus\\awslabs-mcp\\src\\aws-documentation-mcp-server",
+        "files_scanned": 30,
+        "tools_analyzed": 7,
+        "servers_found": 0,
+        "parse_errors": [],
+        "source_inventory": {
+          "python_files": 28,
+          "syntax_errors": 0,
+          "decorated_tools": 7,
+          "low_level_handlers": 0,
+          "tool_constructors": 0
+        },
+        "findings": 3,
+        "by_attack": {
+          "MCP10": 3
+        },
+        "fixable": 0,
+        "parser_coverage": 1.0
+      }
+    ]
+  },
+  "historical_use": {
+    "additional_slots": 638,
+    "total_non_repeated_scope_slots": 1204,
+    "selected_additional_reports": [
+      "external-mcptox-command-improved.json",
+      "external-msb.json",
+      "external-mcpsecbench.json",
+      "external-excel-017.json",
+      "external-excel-018.json",
+      "holdout-mcpsafety-clean-mcp03.json"
+    ],
+    "all_saved_scan_reports": 28
+  },
+  "mcptox": {
+    "source_files": 485,
+    "flagged_files": 393,
+    "findings": 1107,
+    "pure_tool_top_level_groups": 45,
+    "pure_tool_entries": 485,
+    "response_reported_data_length": 1348,
+    "response_server_groups": 45
+  },
+  "holdout": {
+    "state": "staging",
+    "sources": 7,
+    "artifacts": 33,
+    "labels": 50,
+    "polarities": {
+      "negative": 20,
+      "positive": 30
+    },
+    "by_source": {
+      "agentinel": 6,
+      "allen-mcpaudit": 3,
+      "appsecco-labs": 8,
+      "dvmcp": 7,
+      "glatinone-mcpscan": 2,
+      "mception": 5,
+      "sachin-mcpaudit": 2
+    },
+    "rule_counts": {
+      "MCP01-SECRET-HARDCODED": {
+        "negative": 2,
+        "positive": 2
+      },
+      "MCP01-SECRET-OUTPUT": {
+        "negative": 2,
+        "positive": 3
+      },
+      "MCP02-BROAD-SCOPE": {
+        "positive": 1
+      },
+      "MCP03-TOOL-POISON": {
+        "negative": 5,
+        "positive": 5
+      },
+      "MCP05-COMMAND-INJECTION": {
+        "negative": 5,
+        "positive": 5
+      },
+      "MCP05-DYNAMIC-CODE": {
+        "negative": 2,
+        "positive": 5
+      },
+      "MCP06-UNTRUSTED-CONTEXT": {
+        "positive": 4
+      },
+      "MCP07-PERMISSIVE-BIND": {
+        "negative": 1,
+        "positive": 1
+      },
+      "MCP09-CONFUSABLE-NAME": {
+        "positive": 2
+      },
+      "MCP13-SSRF": {
+        "negative": 3,
+        "positive": 2
+      }
+    },
+    "hash_matches": [
+      {
+        "artifact_id": "agentinel--fixtures--clean--comms_only_server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-agentinel/fixtures/clean/comms_only_server.py"
+        ]
+      },
+      {
+        "artifact_id": "agentinel--fixtures--clean--echo_server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-agentinel/fixtures/clean/echo_server.py"
+        ]
+      },
+      {
+        "artifact_id": "agentinel--fixtures--clean--fetch_only_server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-agentinel/fixtures/clean/fetch_only_server.py"
+        ]
+      },
+      {
+        "artifact_id": "agentinel--fixtures--clean--files_only_server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-agentinel/fixtures/clean/files_only_server.py"
+        ]
+      },
+      {
+        "artifact_id": "agentinel--fixtures--vulnerable--poisoned_server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-agentinel/fixtures/vulnerable/poisoned_server.py"
+        ]
+      },
+      {
+        "artifact_id": "agentinel--fixtures--vulnerable--unicode_smuggle_server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-agentinel/fixtures/vulnerable/unicode_smuggle_server.py"
+        ]
+      },
+      {
+        "artifact_id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-allen-mcpaudit/test/fixtures/borderline-server/src/index.js"
+        ]
+      },
+      {
+        "artifact_id": "allen-mcpaudit--test--fixtures--clean-server--src--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-allen-mcpaudit/test/fixtures/clean-server/src/index.js"
+        ]
+      },
+      {
+        "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-allen-mcpaudit/test/fixtures/vulnerable-server/src/index.js"
+        ]
+      },
+      {
+        "artifact_id": "appsecco-labs--vulnerable-mcp-server-filesystem-workspace-actions--vulnerable-mcp-server-filesystem-workspace-actions-mcp-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-appsecco/vulnerable-mcp-server-filesystem-workspace-actions/vulnerable-mcp-server-filesystem-workspace-actions-mcp.py"
+        ]
+      },
+      {
+        "artifact_id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-appsecco/vulnerable-mcp-server-indirect-prompt-injection/index.js"
+        ]
+      },
+      {
+        "artifact_id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection-remote-mcp--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-appsecco/vulnerable-mcp-server-indirect-prompt-injection-remote-mcp/index.js"
+        ]
+      },
+      {
+        "artifact_id": "appsecco-labs--vulnerable-mcp-server-malicious-code-exec--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-appsecco/vulnerable-mcp-server-malicious-code-exec/index.js"
+        ]
+      },
+      {
+        "artifact_id": "appsecco-labs--vulnerable-mcp-server-malicious-tools--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-appsecco/vulnerable-mcp-server-malicious-tools/index.js"
+        ]
+      },
+      {
+        "artifact_id": "appsecco-labs--vulnerable-mcp-server-namespace-typosquatting--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-appsecco/vulnerable-mcp-server-namespace-typosquatting/index.js"
+        ]
+      },
+      {
+        "artifact_id": "appsecco-labs--vulnerable-mcp-server-secrets-pii--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-appsecco/vulnerable-mcp-server-secrets-pii/index.js"
+        ]
+      },
+      {
+        "artifact_id": "appsecco-labs--vulnerable-mcp-server-wikipedia-http-streamable--wikipedia-mcp-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-appsecco/vulnerable-mcp-server-wikipedia-http-streamable/wikipedia-mcp.py"
+        ]
+      },
+      {
+        "artifact_id": "dvmcp--challenges--easy--challenge2--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-dvmcp/challenges/easy/challenge2/server.py"
+        ]
+      },
+      {
+        "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-dvmcp/challenges/easy/challenge3/server.py"
+        ]
+      },
+      {
+        "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-dvmcp/challenges/hard/challenge8/server.py"
+        ]
+      },
+      {
+        "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-dvmcp/challenges/hard/challenge9/server.py"
+        ]
+      },
+      {
+        "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-dvmcp/challenges/medium/challenge5/server.py"
+        ]
+      },
+      {
+        "artifact_id": "dvmcp--challenges--medium--challenge6--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-dvmcp/challenges/medium/challenge6/server.py"
+        ]
+      },
+      {
+        "artifact_id": "dvmcp--challenges--medium--challenge7--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-dvmcp/challenges/medium/challenge7/server.py"
+        ]
+      },
+      {
+        "artifact_id": "glatinone-mcpscan--tests--fixtures--clean--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-glatinone-mcpscan/tests/fixtures/clean/server.py"
+        ]
+      },
+      {
+        "artifact_id": "glatinone-mcpscan--tests--fixtures--vulnerable--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-glatinone-mcpscan/tests/fixtures/vulnerable/server.py"
+        ]
+      },
+      {
+        "artifact_id": "mception--tests--fixtures--servers--node_figma_plugin--code-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-mception/tests/fixtures/servers/node_figma_plugin/code.js"
+        ]
+      },
+      {
+        "artifact_id": "mception--tests--fixtures--servers--node_real_exec--src--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-mception/tests/fixtures/servers/node_real_exec/src/index.js"
+        ]
+      },
+      {
+        "artifact_id": "mception--tests--fixtures--servers--node_regex_exec--src--index-js",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-mception/tests/fixtures/servers/node_regex_exec/src/index.js"
+        ]
+      },
+      {
+        "artifact_id": "mception--tests--fixtures--servers--python_method_exec--mcp_server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-mception/tests/fixtures/servers/python_method_exec/mcp_server.py"
+        ]
+      },
+      {
+        "artifact_id": "mception--tests--fixtures--servers--python_subprocess--mcp_server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-mception/tests/fixtures/servers/python_subprocess/mcp_server.py"
+        ]
+      },
+      {
+        "artifact_id": "sachin-mcpaudit--tests--fixtures--behavioral-eval--data--benign_add--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-sachin-mcpaudit/tests/fixtures/behavioral-eval/data/benign_add/server.py"
+        ]
+      },
+      {
+        "artifact_id": "sachin-mcpaudit--tests--fixtures--behavioral-eval--data--fake_encrypt--server-py",
+        "hash_verified": true,
+        "copies": [
+          "evaluation/corpus-external/curate-sachin-mcpaudit/tests/fixtures/behavioral-eval/data/fake_encrypt/server.py"
+        ]
+      }
+    ],
+    "frozen_manifest_present": false,
+    "holdout_corpus_present": false,
+    "holdout_results_present": false
+  },
+  "semantic_reviews": [
+    {
+      "report": "atlassian-llm-pilot.json",
+      "reviewed": 6,
+      "cached": 1,
+      "verdicts": {
+        "LIKELY": 1,
+        "UNLIKELY": 2,
+        "NEEDS_CONTEXT": 3
+      },
+      "labels": {
+        "FP": 6
+      },
+      "exact_agreements": 2,
+      "records": [
+        {
+          "rule_id": "MCP10-SHARED-CONTEXT",
+          "path": "evaluation/corpus/mcp-atlassian/src/mcp_atlassian/servers/dependencies.py",
+          "line": 96,
+          "label": "FP",
+          "verdict": "LIKELY",
+          "cached": true,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": false
+        },
+        {
+          "rule_id": "MCP10-SHARED-CONTEXT",
+          "path": "evaluation/corpus/mcp-atlassian/src/mcp_atlassian/servers/dependencies.py",
+          "line": 97,
+          "label": "FP",
+          "verdict": "UNLIKELY",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": true
+        },
+        {
+          "rule_id": "MCP10-SHARED-CONTEXT",
+          "path": "evaluation/corpus/mcp-atlassian/src/mcp_atlassian/servers/dependencies.py",
+          "line": 103,
+          "label": "FP",
+          "verdict": "UNLIKELY",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": true
+        },
+        {
+          "rule_id": "MCP10-SHARED-CONTEXT",
+          "path": "evaluation/corpus/mcp-atlassian/src/mcp_atlassian/servers/dependencies.py",
+          "line": 104,
+          "label": "FP",
+          "verdict": "NEEDS_CONTEXT",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": false
+        },
+        {
+          "rule_id": "MCP11-CONFUSED-DEPUTY",
+          "path": "evaluation/corpus/mcp-atlassian/src/mcp_atlassian/utils/oauth_setup.py",
+          "line": 1,
+          "label": "FP",
+          "verdict": "NEEDS_CONTEXT",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": false
+        },
+        {
+          "rule_id": "MCP15-UNSAFE-AUTH-URL",
+          "path": "evaluation/corpus/mcp-atlassian/src/mcp_atlassian/utils/oauth_setup.py",
+          "line": 1,
+          "label": "FP",
+          "verdict": "NEEDS_CONTEXT",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "report": "atlassian-llm-review-cached.json",
+      "reviewed": 1,
+      "cached": 1,
+      "verdicts": {
+        "LIKELY": 1
+      },
+      "labels": {
+        "FP": 1
+      },
+      "exact_agreements": 0,
+      "records": [
+        {
+          "rule_id": "MCP10-SHARED-CONTEXT",
+          "path": "evaluation/corpus/mcp-atlassian/src/mcp_atlassian/servers/dependencies.py",
+          "line": 96,
+          "label": "FP",
+          "verdict": "LIKELY",
+          "cached": true,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "report": "atlassian-llm-review.json",
+      "reviewed": 1,
+      "cached": 0,
+      "verdicts": {
+        "LIKELY": 1
+      },
+      "labels": {
+        "FP": 1
+      },
+      "exact_agreements": 0,
+      "records": [
+        {
+          "rule_id": "MCP10-SHARED-CONTEXT",
+          "path": "evaluation/corpus/mcp-atlassian/src/mcp_atlassian/servers/dependencies.py",
+          "line": 96,
+          "label": "FP",
+          "verdict": "LIKELY",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": false
+        }
+      ]
+    },
+    {
+      "report": "fastmcp-llm-pilot.json",
+      "reviewed": 10,
+      "cached": 0,
+      "verdicts": {
+        "NEEDS_CONTEXT": 4,
+        "LIKELY": 4,
+        "UNLIKELY": 2
+      },
+      "labels": {
+        "Needs context": 6,
+        "FP": 3,
+        "TP": 1
+      },
+      "exact_agreements": 7,
+      "records": [
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "path": "evaluation/corpus/fastmcp/examples/apps/approvals/approvals_server.py",
+          "line": 333,
+          "label": "Needs context",
+          "verdict": "NEEDS_CONTEXT",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": true
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "path": "evaluation/corpus/fastmcp/examples/apps/contacts/contacts_server.py",
+          "line": 148,
+          "label": "Needs context",
+          "verdict": "NEEDS_CONTEXT",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": true
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "path": "evaluation/corpus/fastmcp/examples/apps/explorer/explorer_server.py",
+          "line": 590,
+          "label": "Needs context",
+          "verdict": "NEEDS_CONTEXT",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": true
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "path": "evaluation/corpus/fastmcp/examples/apps/inventory/inventory_server.py",
+          "line": 445,
+          "label": "Needs context",
+          "verdict": "LIKELY",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": false
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "path": "evaluation/corpus/fastmcp/examples/apps/quiz/quiz_server.py",
+          "line": 266,
+          "label": "Needs context",
+          "verdict": "NEEDS_CONTEXT",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": true
+        },
+        {
+          "rule_id": "MCP10-SHARED-CONTEXT",
+          "path": "evaluation/corpus/fastmcp/examples/apps/system_monitor/system_monitor_server.py",
+          "line": 45,
+          "label": "FP",
+          "verdict": "LIKELY",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": false
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "path": "evaluation/corpus/fastmcp/examples/auth/auth0_mcp/server.py",
+          "line": 39,
+          "label": "FP",
+          "verdict": "UNLIKELY",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": true
+        },
+        {
+          "rule_id": "MCP07-MISSING-AUTH",
+          "path": "evaluation/corpus/fastmcp/examples/auth/authkit/server.py",
+          "line": 34,
+          "label": "FP",
+          "verdict": "UNLIKELY",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": true
+        },
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "path": "evaluation/corpus/fastmcp/examples/code_mode/server.py",
+          "line": 71,
+          "label": "TP",
+          "verdict": "LIKELY",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": true
+        },
+        {
+          "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+          "path": "evaluation/corpus/fastmcp/examples/elicitation.py",
+          "line": 26,
+          "label": "Needs context",
+          "verdict": "LIKELY",
+          "cached": false,
+          "prompt_version": "2026.1-review-1",
+          "model": "gpt-5.6-luna",
+          "agrees": false
+        }
+      ]
+    }
+  ],
+  "test_methods": {
+    "test_cli_integration.py": 3,
+    "test_fixer.py": 2,
+    "test_holdout.py": 5,
+    "test_reviewer.py": 5,
+    "test_scanner.py": 44
+  },
+  "fixture_files": {
+    "tests": 3,
+    "evaluation": 3
+  },
+  "historical_fixer_checks": {
+    "mutated_tool_poisoning": {
+      "dry_run_exit": 0,
+      "dry_run_unchanged": true,
+      "apply_exit": 0,
+      "changed": true,
+      "syntax_valid": true,
+      "backup_created": true,
+      "second_exit": 0,
+      "idempotent": true
+    },
+    "mutated_prompt_injection": {
+      "dry_run_exit": 0,
+      "dry_run_unchanged": true,
+      "apply_exit": 0,
+      "changed": true,
+      "syntax_valid": true,
+      "backup_created": true,
+      "second_exit": 0,
+      "idempotent": true
+    }
+  }
+}

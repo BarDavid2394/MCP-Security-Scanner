@@ -1,0 +1,28 @@
+{
+  "repository": "abhijeet497/vuln-ssrf-node-mcp",
+  "revision": "ff76c104784f73637c965a3082e1f8f94fa7b6d2",
+  "license": null,
+  "truncated": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 20
+    },
+    {
+      "path": "README.md",
+      "size": 450
+    },
+    {
+      "path": "index.js",
+      "size": 923
+    },
+    {
+      "path": "package-lock.json",
+      "size": 39023
+    },
+    {
+      "path": "package.json",
+      "size": 204
+    }
+  ]
+}

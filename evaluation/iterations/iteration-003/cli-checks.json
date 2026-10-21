@@ -1,0 +1,276 @@
+[
+  {
+    "case": "imported_alias",
+    "exit_code": 1,
+    "expected": 1,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T15:32:34.473148",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpe7aieecz\\imported_alias.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 1,
+        "by_severity": {
+          "HIGH": 1
+        },
+        "by_type": {
+          "command_injection_&_execution": 1
+        },
+        "by_attack": {
+          "MCP05": 1
+        },
+        "by_rule": {
+          "MCP05-COMMAND-INJECTION": 1
+        },
+        "by_confidence": {
+          "HIGH": 1
+        },
+        "fixable": 0,
+        "risk_score": 8,
+        "risk_level": "HIGH"
+      },
+      "findings": [
+        {
+          "vulnerability_type": "command_injection_&_execution",
+          "severity": "HIGH",
+          "title": "MCP05: Tool input reaches command execution",
+          "description": "Tool-controlled data can reach a command execution sink.",
+          "file_path": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpe7aieecz\\imported_alias.py",
+          "line_number": 7,
+          "function_name": "inspect",
+          "matched_pattern": "MCP05-COMMAND-INJECTION",
+          "matched_text": "subprocess.run",
+          "recommendation": "Use a fixed executable and argument allowlist; never use shell=True with tool input.",
+          "code_snippet": null,
+          "metadata": {
+            "evidence": {
+              "rule_id": "MCP05-COMMAND-INJECTION",
+              "source": "value",
+              "sink": "subprocess.run",
+              "path": [
+                "value",
+                "subprocess.run"
+              ],
+              "protections": [],
+              "missing_protections": [
+                "fixed executable",
+                "argument allowlist"
+              ]
+            }
+          },
+          "attack_id": "MCP05",
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "confidence": "HIGH",
+          "fixable": false,
+          "source_kind": "python",
+          "references": [
+            "https://github.com/OWASP/www-project-mcp-top-10"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case": "safe_alias_argv",
+    "exit_code": 0,
+    "expected": 0,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T15:32:34.601446",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpe7aieecz\\safe_alias_argv.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 0,
+        "by_severity": {},
+        "by_type": {},
+        "by_attack": {},
+        "by_rule": {},
+        "by_confidence": {},
+        "fixable": 0,
+        "risk_score": 0,
+        "risk_level": "NONE"
+      },
+      "findings": []
+    }
+  },
+  {
+    "case": "secret_return",
+    "exit_code": 1,
+    "expected": 1,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T15:32:34.730196",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpe7aieecz\\secret_return.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 1,
+        "by_severity": {
+          "HIGH": 1
+        },
+        "by_type": {
+          "token_mismanagement_&_secret_exposure": 1
+        },
+        "by_attack": {
+          "MCP01": 1
+        },
+        "by_rule": {
+          "MCP01-SECRET-OUTPUT": 1
+        },
+        "by_confidence": {
+          "HIGH": 1
+        },
+        "fixable": 0,
+        "risk_score": 8,
+        "risk_level": "HIGH"
+      },
+      "findings": [
+        {
+          "vulnerability_type": "token_mismanagement_&_secret_exposure",
+          "severity": "HIGH",
+          "title": "MCP01: Secret included in output or logs",
+          "description": "Credential-bearing data can reach a tool return value.",
+          "file_path": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpe7aieecz\\secret_return.py",
+          "line_number": 7,
+          "function_name": "inspect",
+          "matched_pattern": "MCP01-SECRET-OUTPUT",
+          "matched_text": "[REDACTED]",
+          "recommendation": "Return selected non-secret fields and redact credentials before producing tool output.",
+          "code_snippet": null,
+          "metadata": {},
+          "attack_id": "MCP01",
+          "rule_id": "MCP01-SECRET-OUTPUT",
+          "confidence": "HIGH",
+          "fixable": false,
+          "source_kind": "python",
+          "references": [
+            "https://github.com/OWASP/www-project-mcp-top-10"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case": "boolean_environment",
+    "exit_code": 0,
+    "expected": 0,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T15:32:34.855455",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpe7aieecz\\boolean_environment.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 0,
+        "by_severity": {},
+        "by_type": {},
+        "by_attack": {},
+        "by_rule": {},
+        "by_confidence": {},
+        "fixable": 0,
+        "risk_score": 0,
+        "risk_level": "NONE"
+      },
+      "findings": []
+    }
+  },
+  {
+    "case": "low_level_dispatch",
+    "exit_code": 1,
+    "expected": 1,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T15:32:34.981029",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpe7aieecz\\low_level_dispatch.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 1
+      },
+      "summary": {
+        "total": 1,
+        "by_severity": {
+          "HIGH": 1
+        },
+        "by_type": {
+          "command_injection_&_execution": 1
+        },
+        "by_attack": {
+          "MCP05": 1
+        },
+        "by_rule": {
+          "MCP05-COMMAND-INJECTION": 1
+        },
+        "by_confidence": {
+          "HIGH": 1
+        },
+        "fixable": 0,
+        "risk_score": 8,
+        "risk_level": "HIGH"
+      },
+      "findings": [
+        {
+          "vulnerability_type": "command_injection_&_execution",
+          "severity": "HIGH",
+          "title": "MCP05: Tool input reaches command execution",
+          "description": "Tool-controlled data can reach a command execution sink.",
+          "file_path": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpe7aieecz\\low_level_dispatch.py",
+          "line_number": 14,
+          "function_name": "run",
+          "matched_pattern": "MCP05-COMMAND-INJECTION",
+          "matched_text": "subprocess.run",
+          "recommendation": "Use a fixed executable and argument allowlist; never use shell=True with tool input.",
+          "code_snippet": null,
+          "metadata": {
+            "evidence": {
+              "rule_id": "MCP05-COMMAND-INJECTION",
+              "source": "arguments",
+              "sink": "subprocess.run",
+              "path": [
+                "arguments",
+                "subprocess.run"
+              ],
+              "protections": [],
+              "missing_protections": [
+                "fixed executable",
+                "argument allowlist"
+              ]
+            }
+          },
+          "attack_id": "MCP05",
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "confidence": "HIGH",
+          "fixable": false,
+          "source_kind": "python",
+          "references": [
+            "https://github.com/OWASP/www-project-mcp-top-10"
+          ]
+        }
+      ]
+    }
+  }
+]

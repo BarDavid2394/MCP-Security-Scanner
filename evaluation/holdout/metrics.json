@@ -1,0 +1,588 @@
+{
+  "manifest_fingerprint": "1f0dbec84b0a7c328ad518ddc03de8d293f3dc04bfa8e265c87b35d3d16b5651",
+  "rules": {
+    "MCP01-SECRET-HARDCODED": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 1,
+      "tn": 2,
+      "errors": 0,
+      "unscored_predictions": 4,
+      "precision": 1.0,
+      "recall": 0.5
+    },
+    "MCP01-SECRET-OUTPUT": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 1,
+      "tn": 2,
+      "errors": 0,
+      "unscored_predictions": 0,
+      "precision": 1.0,
+      "recall": 0.6666666666666666
+    },
+    "MCP02-BROAD-SCOPE": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "tn": 0,
+      "errors": 0,
+      "unscored_predictions": 0,
+      "precision": null,
+      "recall": 0.0
+    },
+    "MCP03-TOOL-POISON": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 2,
+      "tn": 5,
+      "errors": 0,
+      "unscored_predictions": 0,
+      "precision": 1.0,
+      "recall": 0.6
+    },
+    "MCP05-COMMAND-INJECTION": {
+      "tp": 3,
+      "fp": 1,
+      "fn": 2,
+      "tn": 4,
+      "errors": 0,
+      "unscored_predictions": 1,
+      "precision": 0.75,
+      "recall": 0.6
+    },
+    "MCP05-DYNAMIC-CODE": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 4,
+      "tn": 2,
+      "errors": 0,
+      "unscored_predictions": 1,
+      "precision": 1.0,
+      "recall": 0.2
+    },
+    "MCP06-UNTRUSTED-CONTEXT": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 3,
+      "tn": 0,
+      "errors": 0,
+      "unscored_predictions": 5,
+      "precision": 1.0,
+      "recall": 0.25
+    },
+    "MCP07-MISSING-AUTH": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0,
+      "unscored_predictions": 8,
+      "precision": null,
+      "recall": null
+    },
+    "MCP07-PERMISSIVE-BIND": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 1,
+      "tn": 1,
+      "errors": 0,
+      "unscored_predictions": 7,
+      "precision": null,
+      "recall": 0.0
+    },
+    "MCP08-MISSING-AUDIT": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 0,
+      "errors": 0,
+      "unscored_predictions": 11,
+      "precision": null,
+      "recall": null
+    },
+    "MCP09-CONFUSABLE-NAME": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 2,
+      "tn": 0,
+      "errors": 0,
+      "unscored_predictions": 0,
+      "precision": null,
+      "recall": 0.0
+    },
+    "MCP13-SSRF": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 0,
+      "tn": 3,
+      "errors": 0,
+      "unscored_predictions": 0,
+      "precision": 1.0,
+      "recall": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--clean-server--src--index-js",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-secrets-pii--index-js",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--clean-server--src--index-js",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-secrets-pii--index-js",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge7--server-py",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP02-BROAD-SCOPE",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "agentinel--fixtures--clean--comms_only_server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "agentinel--fixtures--clean--echo_server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "agentinel--fixtures--clean--fetch_only_server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "agentinel--fixtures--clean--files_only_server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "agentinel--fixtures--vulnerable--poisoned_server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "agentinel--fixtures--vulnerable--unicode_smuggle_server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-malicious-tools--index-js",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge2--server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "sachin-mcpaudit--tests--fixtures--behavioral-eval--data--benign_add--server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "sachin-mcpaudit--tests--fixtures--behavioral-eval--data--fake_encrypt--server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--clean-server--src--index-js",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--clean--server-py",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--vulnerable--server-py",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "mception--tests--fixtures--servers--node_real_exec--src--index-js",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "mception--tests--fixtures--servers--node_regex_exec--src--index-js",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "mception--tests--fixtures--servers--python_method_exec--mcp_server-py",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "mception--tests--fixtures--servers--python_subprocess--mcp_server-py",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--clean-server--src--index-js",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-filesystem-workspace-actions--vulnerable-mcp-server-filesystem-workspace-actions-mcp-py",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-malicious-code-exec--index-js",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "mception--tests--fixtures--servers--node_figma_plugin--code-js",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection--index-js",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection-remote-mcp--index-js",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-wikipedia-http-streamable--wikipedia-mcp-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge6--server-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--clean--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--vulnerable--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-namespace-typosquatting--index-js",
+      "rule_id": "MCP09-CONFUSABLE-NAME",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP09-CONFUSABLE-NAME",
+      "polarity": "positive",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--clean-server--src--index-js",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--clean--server-py",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--vulnerable--server-py",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "positive",
+      "outcome": "tp"
+    }
+  ],
+  "unscored_predictions": [
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection-remote-mcp--index-js",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection-remote-mcp--index-js",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-malicious-code-exec--index-js",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-wikipedia-http-streamable--wikipedia-mcp-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-wikipedia-http-streamable--wikipedia-mcp-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge2--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP01-SECRET-HARDCODED"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--easy--challenge3--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP01-SECRET-HARDCODED"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP05-COMMAND-INJECTION"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge8--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--hard--challenge9--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP01-SECRET-HARDCODED"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP05-DYNAMIC-CODE"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge5--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge6--server-py",
+      "rule_id": "MCP07-MISSING-AUTH"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge6--server-py",
+      "rule_id": "MCP07-PERMISSIVE-BIND"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge6--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "dvmcp--challenges--medium--challenge7--server-py",
+      "rule_id": "MCP01-SECRET-HARDCODED"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--clean--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--vulnerable--server-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT"
+    },
+    {
+      "artifact_id": "glatinone-mcpscan--tests--fixtures--vulnerable--server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    },
+    {
+      "artifact_id": "mception--tests--fixtures--servers--python_subprocess--mcp_server-py",
+      "rule_id": "MCP08-MISSING-AUDIT"
+    }
+  ],
+  "micro": {
+    "tp": 13,
+    "fp": 1,
+    "fn": 17,
+    "tn": 19,
+    "errors": 0,
+    "precision": 0.9285714285714286,
+    "recall": 0.43333333333333335,
+    "false_positive_rate": 0.05,
+    "label_coverage": 1.0
+  }
+}

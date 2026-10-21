@@ -1,0 +1,26 @@
+{
+  "target_id": "simple-mcp-server",
+  "target": "evaluation/corpus/simple-mcp-server/src",
+  "input_files": {
+    "app.py": "330f671c082b383ecedc75e35ddd83519cae36980f3ff335dedd25898234c24c",
+    "config/logger.py": "1bc2cb9ced92e07fa795c1b6b78ee902143d89c2ad9390631c5018f6d8497ebe",
+    "services/fast_api/_doc/html.py": "1a97ffc2ec21569cb6ece23b84727ad92ebf9e683c384dbcd2408b321e07b62a",
+    "services/fast_api/api.py": "26646350c0940b2155bef58d6948133e65325fee4e5047b596df96440cad2797",
+    "services/fast_mcp/private_server/oauth_server.py": "56029589f4d2ebdcb7146eba5dc538ad0db90e865cc3dc09189d9851b9c7b4ee",
+    "services/fast_mcp/private_server/server.py": "d5587fa3660d1c4ff9171f96ac833c168d8c77c0af345a7494abc831cb5c2ec0",
+    "services/fast_mcp/public_server/server.py": "c8b7088876cf32ee683fb17fb2e510064215cf2768bf6e1e64800e1dc17015aa",
+    "utils/clear_console.py": "5d61f5c76730def0e1a073450ebc9b8ab20827531ce1a4445800ba05dc39ccd4"
+  },
+  "status": "completed",
+  "scan_info": {
+    "files_scanned": 8,
+    "tools_analyzed": 2,
+    "servers_found": 0,
+    "total_findings": 0,
+    "critical_count": 0,
+    "high_count": 0,
+    "parse_errors": []
+  },
+  "findings": [],
+  "elapsed_seconds": 0.209212
+}

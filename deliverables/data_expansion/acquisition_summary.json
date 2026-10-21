@@ -1,0 +1,78 @@
+[
+  {
+    "repository": "autod3structeur/MCP-DecayBench",
+    "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+    "files": 23,
+    "bytes": 39154
+  },
+  {
+    "repository": "cisco-ai-defense/mcp-scanner",
+    "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+    "files": 155,
+    "bytes": 672670
+  },
+  {
+    "repository": "vaultmcp/vault",
+    "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+    "files": 32,
+    "bytes": 529749
+  },
+  {
+    "repository": "akanthed/SecureAI-Scan",
+    "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+    "files": 102,
+    "bytes": 83739
+  },
+  {
+    "repository": "dnyandeobharambe/mcp-security-patterns",
+    "revision": "12c68c68502b0b81fc9adac57a069fc7a061ce12",
+    "files": 63,
+    "bytes": 314227
+  },
+  {
+    "repository": "ferentin-net/mcp-guard",
+    "error": "Command '['git', 'ls-remote', 'https://github.com/ferentin-net/mcp-guard.git', 'HEAD']' returned non-zero exit status 128."
+  },
+  {
+    "repository": "osuleimen/sekrd-mcp-vuln-test",
+    "revision": "15b2defcb834399ca566e1b37e3ff54bb10f880f",
+    "files": 3,
+    "bytes": 3227
+  },
+  {
+    "repository": "johnhalloran321/mcp_safety_training",
+    "revision": "e633468aa7cd8cb92f07f3e610bc5e1981f475df",
+    "files": 2,
+    "bytes": 26378
+  },
+  {
+    "repository": "vedikasaklani/mcp-code-vulns",
+    "revision": "29e4f5b8ba381167374443bc276d32cbcf44edcb",
+    "files": 3,
+    "bytes": 7958
+  },
+  {
+    "repository": "abhijeet497/vuln-cmdinjection-node-mcp",
+    "revision": "e603094a3aca96c5e2db4077608ec09d2997cedf",
+    "files": 3,
+    "bytes": 1503
+  },
+  {
+    "repository": "abhijeet497/vuln-ssrf-node-mcp",
+    "revision": "ff76c104784f73637c965a3082e1f8f94fa7b6d2",
+    "files": 3,
+    "bytes": 1577
+  },
+  {
+    "repository": "ak4hit/mcp-hardening-benchmark",
+    "revision": "5c523b3fcbc88b485b75cdac3b0faba54a9a0910",
+    "files": 35,
+    "bytes": 154502
+  },
+  {
+    "repository": "n1ps/bordair-dataset",
+    "revision": "0e7dbe76ff8730312136019400becbe26d74e4ee",
+    "files": 110,
+    "bytes": 50654835
+  }
+]

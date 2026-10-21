@@ -1,0 +1,157 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-08-20",
+  "policy": "Discovery only. Entries are not ground truth and are not part of the frozen holdout until independently verified, pinned, mapped, hashed, and curated.",
+  "candidates": [
+    {
+      "id": "connor-component-poc-dataset",
+      "url": "https://github.com/yiheng98/Connor",
+      "revision": "326ab9116699442d2744b445b38c69524fbf43e6",
+      "reported_size": {"constructed_malicious_pocs": 114, "additional_malicious_servers": 20},
+      "data_kind": "source-level MCP servers with benign and malicious directories",
+      "status": "high-priority-unverified",
+      "notes": "Peer-reviewed-paper companion. Likely the strongest new static-source candidate; must inspect overlap, language mix, exact benign count, and per-PoC mappings before admission."
+    },
+    {
+      "id": "crossmcp-bench",
+      "url": "https://huggingface.co/datasets/MLZoo/CrossMCP-Bench",
+      "reported_size": {"attacks": 130, "benign": 147},
+      "data_kind": "authorization-conditioned MCP traces",
+      "status": "adapter-required",
+      "notes": "Strong explicit labels but not static source artifacts. Keep outside source precision until a trace analyzer exists."
+    },
+    {
+      "id": "mcpsec-runtime-cases",
+      "url": "https://docs.rs/crate/mcpsec/latest",
+      "reported_size": {"attacks": 64},
+      "data_kind": "gateway runtime tests",
+      "status": "adapter-required",
+      "notes": "Includes confused deputy, audit tampering, SSRF, tool poisoning, and squatting."
+    },
+    {
+      "id": "fevziegeyurtsevenler-mcp-tool-poisoning",
+      "url": "https://huggingface.co/datasets/fevziegeyurtsevenler/mcp-tool-poisoning",
+      "reported_size": {"rows": 25},
+      "data_kind": "MCP tool-poisoning records",
+      "status": "unverified",
+      "notes": "Newly published dataset; schema, provenance, generation method, and overlap remain to be checked."
+    },
+    {
+      "id": "kasa-mcp-indirect-channel-probes",
+      "url": "https://huggingface.co/datasets/Earthen937/kasa-mcp-indirect-channel-probes",
+      "reported_size": {"rows": 80},
+      "data_kind": "indirect-channel probes",
+      "status": "unverified",
+      "notes": "Potential MCP06 hard cases; determine whether records contain source, metadata, or runtime-only prompts."
+    },
+    {
+      "id": "mcp-sandbox-authority-boundary-profile",
+      "url": "https://huggingface.co/datasets/msaleme/mcp-sandbox-authority-boundary-profile",
+      "reported_size": {"rows": 81},
+      "data_kind": "authority-boundary scenarios",
+      "status": "unverified",
+      "notes": "Potential MCP02/MCP11/MCP16 coverage; requires exact taxonomy mapping."
+    },
+    {
+      "id": "genai-incidents-mcp-subset",
+      "url": "https://huggingface.co/datasets/emmanuelgjr/genai-incidents",
+      "data_kind": "curated incident records with primary references",
+      "status": "provenance-index-only",
+      "notes": "Useful for finding original artifacts such as malicious npm MCP packages, but incident rows are not source labels themselves."
+    },
+    {
+      "id": "mcp-attackbench",
+      "url": "https://aclanthology.org/2026.findings-acl.240/",
+      "reported_size": {"attacks": 70448, "evaluated_attacks": 2153, "evaluated_benign": 3105},
+      "data_kind": "MCP-formatted synthetic and augmented records",
+      "status": "not-publicly-located",
+      "notes": "Do not count until the authors publish the promised underlying records."
+    },
+    {
+      "id": "mcpshield-scan-2026",
+      "url": "https://huggingface.co/datasets/MCPShield/mcp-security-scan-2026",
+      "reported_size": {"repositories": 4867, "scanner_findings": 11650},
+      "data_kind": "third-party scanner output",
+      "status": "candidate-mining-only",
+      "notes": "Never use as SOT without independent manual validation."
+    },
+    {
+      "id": "agentinel-labeled-fixtures",
+      "url": "https://github.com/markusweldon/agentinel",
+      "revision": "daaede15274643040d79326a1e6626f710e4b042",
+      "reported_size": {"vulnerable_servers": 3, "clean_servers": 4, "real_world_tool_specs": 184},
+      "data_kind": "Python MCP source fixtures with explicit vulnerable and benign-control directories",
+      "status": "high-priority-self-eval",
+      "notes": "Strong MCP03 positives and hard negatives. Labels were authored for Agentinel, so reserve for external evaluation only after file-level mapping and overlap review. Do not treat the 35-server risk catalog as vulnerability ground truth."
+    },
+    {
+      "id": "allenwu-mcpaudit-fixtures",
+      "url": "https://github.com/allenwu-blip/mcpaudit",
+      "revision": "b9ec7aa6d86497a02932dce314ccaac93b66feb8",
+      "reported_size": {"vulnerable_projects": 1, "clean_projects": 1, "borderline_projects": 1, "labeled_rules": 14},
+      "data_kind": "JavaScript MCP source/manifest fixtures with expected rule and clean-control assertions",
+      "status": "high-priority-self-eval",
+      "notes": "Useful after TypeScript/JavaScript support: overlaps MCP01, MCP03, MCP04, MCP05, and MCP13. Borderline project is particularly valuable for precision, but must remain untouched until holdout admission."
+    },
+    {
+      "id": "appsecco-vulnerable-mcp-labs",
+      "url": "https://github.com/appsecco/vulnerable-mcp-servers-lab",
+      "revision": "47b7f2082261136b667daa7be9273698e66e479e",
+      "reported_size": {"labeled_vulnerable_servers": 9},
+      "data_kind": "Python and JavaScript intentionally vulnerable MCP servers with per-server vulnerability documentation",
+      "status": "high-priority-positive-only",
+      "notes": "Direct mappings include MCP01, MCP03, MCP04, MCP05, MCP06, and MCP09. No explicit clean corpus, so this contributes recall labels but not precision negatives."
+    },
+    {
+      "id": "dvmcp-ten-challenges",
+      "url": "https://github.com/harishsg993010/damn-vulnerable-MCP-server",
+      "revision": "79734c19f5104cd11486c90926d245560f53befa",
+      "reported_size": {"labeled_challenges": 10},
+      "data_kind": "Python MCP challenge source with one documented vulnerability class per challenge plus a multi-vector case",
+      "status": "high-priority-positive-only",
+      "notes": "Public challenge documentation explicitly maps prompt injection, tool poisoning, scope, rug pull, shadowing, indirect injection, token theft, code execution, remote command injection, and a multi-vector chain. Pin revision and map only scanner-supported static labels before admission."
+    },
+    {
+      "id": "mception-expected-fixtures",
+      "url": "https://github.com/soufianetahiri/mception",
+      "revision": "45bbd1a5a73aea8bd26663569c059b9ab371717b",
+      "reported_size": {"source_fixture_projects": 6},
+      "data_kind": "Python/JavaScript source fixtures paired with expected.json results",
+      "status": "promising-self-eval",
+      "notes": "Includes true and negative command-execution lookalikes, including regex.exec and Python method-exec controls. Map expected rule IDs rather than directory names."
+    },
+    {
+      "id": "sachin-mcpaudit-regression-fixtures",
+      "url": "https://github.com/sachinML/MCPAudit",
+      "revision": "2bbaa163e93935e61c8b3adb84ae5b8b76a22c35",
+      "reported_size": {"regression_cases": 11, "behavioral_cases": 2},
+      "data_kind": "MCP server source with expected JSON regression labels and behavior-mismatch controls",
+      "status": "promising-self-eval",
+      "notes": "Potentially valuable for MCP03 description-versus-implementation and multi-file parsing. Requires exact expected-label mapping and duplicate check against already acquired MCPTox/MSB material."
+    },
+    {
+      "id": "glatinone-mcpscan-fixtures",
+      "url": "https://github.com/glatinone/mcpscan",
+      "revision": "3878ab808912d68d0625f6c24c9d80d67412422c",
+      "reported_size": {"vulnerable_fixture_trees": 1, "clean_fixture_trees": 1},
+      "data_kind": "Python/JavaScript/config MCP fixtures with vulnerable and clean directory labels",
+      "status": "promising-self-eval",
+      "notes": "Overlaps command injection, tool metadata injection, secrets, mutable dependencies, and configuration risks. File-level labels must be reconstructed from tests before admission."
+    },
+    {
+      "id": "agentinjectionbench-mcp-subset",
+      "url": "https://huggingface.co/datasets/sincpp/AgentInjectionBench",
+      "data_kind": "Explicitly labeled prompt-injection conversations including MCP tool responses",
+      "status": "adapter-required",
+      "notes": "Useful for MCP06 runtime/output analysis, but not static MCP source precision. Keep separate until the analyzer accepts transcript/tool-result artifacts."
+    },
+    {
+      "id": "policylayer-mcp-server-catalogue",
+      "url": "https://huggingface.co/datasets/PolicyLayer/mcp-server-catalogue",
+      "reported_size": {"servers": 2031, "tools": 31000},
+      "data_kind": "Registry tool metadata with risk-category classifier outputs",
+      "status": "candidate-mining-only",
+      "notes": "Large metadata index with source repository links, but its classifications are automated and are not vulnerability SOT. Use only to locate artifacts for independent labeling."
+    }
+  ]
+}

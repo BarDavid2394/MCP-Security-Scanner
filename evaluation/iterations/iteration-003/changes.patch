@@ -1,0 +1,645 @@
+--- iteration002/mcp_scanner/analyzers/project_risks.py
++++ iteration003/mcp_scanner/analyzers/project_risks.py
+@@ -11,6 +11,7 @@
+ from ..evidence import Evidence
+ from ..dataflow import PythonDataFlow
+ from ..security_graph import SecurityGraph
++from ..secret_flow import SecretFlow
+ from ..parsers.python_parser import MCPServerInfo, ToolDefinition
+ 
+ 
+@@ -66,14 +67,31 @@
+                             f"Global mutable state '{name}' may be shared across users or sessions.",
+                             "Store context per authenticated user and session with expiry and explicit field allowlists.", "MEDIUM", matched=name))
+ 
+-        if re.search(r"(?i)return\s+(?:dict\()?\s*(?:os\.environ|globals\(\)|locals\(\)|context|memory|history|session)(?:\)|\b)", source):
+-            findings.append(self._finding("MCP10-OVER-SHARING", info.filepath, 1,
+-                "A tool may return an entire environment or broad context object.",
+-                "Return only explicitly selected fields and exclude credentials and unrelated session data.", "HIGH"))
+-        if re.search(r"(?i)(return|logger\.[a-z]+|logging\.[a-z]+)\s*\([^\n]*(token|secret|password|authorization)", source):
+-            findings.append(self._finding("MCP01-SECRET-OUTPUT", info.filepath, 1,
+-                "Credential-bearing data appears to be returned or logged.",
+-                "Redact credentials and never place them in tool output, model context, or logs.", "HIGH", matched="[REDACTED]"))
++        secret_flow = SecretFlow(tree)
++        for tool in info.tools:
++            if not isinstance(tool.raw_node, (ast.FunctionDef, ast.AsyncFunctionDef)):
++                continue
++            returned, _ = secret_flow.analyze(tool.raw_node)
++            for node, flags in returned:
++                if "secret" in flags:
++                    findings.append(self._finding("MCP01-SECRET-OUTPUT", info.filepath, node.lineno,
++                        "Credential-bearing data can reach a tool return value.",
++                        "Return selected non-secret fields and redact credentials before producing tool output.",
++                        "HIGH", "python", "[REDACTED]", tool.name))
++                if "broad" in flags:
++                    findings.append(self._finding("MCP10-OVER-SHARING", info.filepath, node.lineno,
++                        "A tool can return an entire environment or broad context object.",
++                        "Return explicitly selected fields without unrelated session data or credentials.",
++                        "HIGH", "python", "[REDACTED]", tool.name))
++        module_scope = ast.FunctionDef(name="<module>", args=ast.arguments(posonlyargs=[], args=[], kwonlyargs=[], kw_defaults=[], defaults=[]),
++                                       body=tree.body, decorator_list=[])
++        functions = [module_scope] + [n for n in ast.walk(tree) if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))]
++        for function in functions:
++            _, logs = secret_flow.analyze(function)
++            for call in logs:
++                findings.append(self._finding("MCP01-SECRET-OUTPUT", info.filepath, call.lineno,
++                    "Credential-bearing data can reach a logging call.",
++                    "Redact credentials before writing logs.", "HIGH", "python", "[REDACTED]", function.name))
+ 
+         network_transport = re.search(r"(?i)(streamable[_-]?http|transport\s*=\s*['\"](?:http|sse)|fastapi|starlette|uvicorn)", source)
+         server_construction = re.search(
+@@ -190,13 +208,15 @@
+     def _analyze_tool_ast(self, tool: ToolDefinition) -> List[Finding]:
+         findings: List[Finding] = []
+         try:
+-            module = ast.parse(tool.function_body)
++            low_level = tool.registration_style == "low_level" and isinstance(tool.raw_node, (ast.FunctionDef, ast.AsyncFunctionDef))
++            module = ast.Module(body=[tool.raw_node], type_ignores=[]) if low_level else ast.parse(tool.function_body)
+         except SyntaxError:
+             return findings
+         params = set(tool.parameters)
+         sensitive = False
+         audited = bool(re.search(r"(?i)(audit|logger\.|logging\.|telemetry|trace)", tool.function_body))
+-        command_flows = PythonDataFlow().command_flows(module, tool.parameters, getattr(self, "_command_helpers", {}),
++        flow_parameters = tool.parameters + ([a.arg for a in tool.raw_node.args.args] if low_level else [])
++        command_flows = PythonDataFlow().command_flows(module, flow_parameters, getattr(self, "_command_helpers", {}),
+                                                       getattr(self, "_command_context", None), tool.raw_node)
+         flow_lines = {flow.line: flow for flow in command_flows}
+         for node in ast.walk(module):
+@@ -205,7 +225,7 @@
+             name = self._call_name(node.func).lower()
+             dump = ast.dump(node)
+             uses_param = any(re.search(rf"\b{re.escape(param)}\b", dump) for param in params)
+-            line = tool.line_number + getattr(node, "lineno", 1) - 1
++            line = getattr(node, "lineno", 1) if low_level else tool.line_number + getattr(node, "lineno", 1) - 1
+             flow = flow_lines.get(getattr(node, "lineno", 1))
+             if flow:
+                 sensitive = True
+--- iteration002/mcp_scanner/command_safety.py
++++ iteration003/mcp_scanner/command_safety.py
+@@ -6,6 +6,7 @@
+ """
+ import ast
+ import re
++from .python_bindings import PythonBindings
+ 
+ 
+ READ_ONLY_PROGRAMS = {"cat", "df", "du", "head", "ls", "pwd", "stat", "tail", "wc"}
+@@ -176,7 +177,7 @@
+         if any(k.arg not in allowed_options or not isinstance(k.value, ast.Constant) for k in call.keywords): return False
+         if helper and call.keywords: return False
+         shell = next((kw.value for kw in call.keywords if kw.arg == "shell"), None)
+-        sink = name(call.func).lower()
++        sink = PythonBindings(self.module, self.function).resolve(call.func, allow_unbound=True).lower()
+         index = helper[0] if helper else 0
+         if index >= len(call.args): return False
+         argument = call.args[index]
+--- iteration002/mcp_scanner/dataflow.py
++++ iteration003/mcp_scanner/dataflow.py
+@@ -5,6 +5,7 @@
+ import ast
+ from dataclasses import dataclass
+ from .command_safety import CommandSafety
++from .python_bindings import PythonBindings
+ 
+ 
+ @dataclass(frozen=True)
+@@ -51,11 +52,12 @@
+         for _ in range(4):
+             changed = False
+             for function in functions:
++                bindings = PythonBindings(tree, function)
+                 params = [arg.arg for arg in function.args.args]
+                 for call in (n for n in ast.walk(function) if isinstance(n, ast.Call)):
+-                    name = call_name(call.func).lower()
++                    name = bindings.resolve(call.func, allow_unbound=True).lower()
+                     sink = name if name in COMMAND_SINKS else None
+-                    nested = summaries.get(name.split(".")[-1])
++                    nested = summaries.get(call_name(call.func).split(".")[-1])
+                     for index, param in enumerate(params):
+                         argument_index = nested[0] if nested else None
+                         expressions = ([call.args[argument_index]] if nested and len(call.args) > argument_index
+@@ -77,13 +79,14 @@
+         function = node if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)) else next(
+             (n for n in getattr(node, "body", []) if isinstance(n, (ast.FunctionDef, ast.AsyncFunctionDef))), None)
+         safety = CommandSafety(context, function, registration)
++        bindings = PythonBindings(context, function)
+         taint: dict[str, tuple[str, ...]] = {
+             p: (p,) for p in parameters if p.lower() not in {"self", "cls", "ctx", "context"}
+         }
+         protected: dict[str, tuple[str, ...]] = {}
+         # Recognize fail-closed allowlist/validator guards before propagation.
+         command_lines = [getattr(n, "lineno", 0) for n in ast.walk(node)
+-                         if isinstance(n, ast.Call) and call_name(n.func).lower() in COMMAND_SINKS]
++                         if isinstance(n, ast.Call) and bindings.resolve(n.func, allow_unbound=True).lower() in COMMAND_SINKS]
+         first_command = min(command_lines, default=10**9)
+         for guard in (n for n in ast.walk(node) if isinstance(n, ast.If) and getattr(n, "lineno", 0) < first_command):
+             exits = any(isinstance(n, (ast.Raise, ast.Return)) for statement in guard.body for n in ast.walk(statement))
+@@ -142,8 +145,8 @@
+         flows: list[Flow] = []
+         helpers = helpers or {}
+         for call in (n for n in ast.walk(node) if isinstance(n, ast.Call)):
+-            sink = call_name(call.func).lower()
+-            helper_name = sink.split(".")[-1]
++            sink = bindings.resolve(call.func, allow_unbound=True).lower()
++            helper_name = call_name(call.func).split(".")[-1]
+             helper = helpers.get(helper_name)
+             if sink not in COMMAND_SINKS and not helper:
+                 continue
+--- iteration002/mcp_scanner/parsers/python_parser.py
++++ iteration003/mcp_scanner/parsers/python_parser.py
+@@ -6,6 +6,7 @@
+ """
+ 
+ import ast
++import copy
+ from dataclasses import dataclass, field
+ from pathlib import Path
+ from typing import List, Optional, Dict, Any
+@@ -211,11 +212,30 @@
+ 
+         tools = []
+         seen = set()
++        # Resolve only uniquely assigned literal lists returned by a handler.
++        # Do not execute factories or guess across conflicting assignments.
++        lists = {}
++        for statement in tree.body:
++            if isinstance(statement, (ast.Assign, ast.AnnAssign)):
++                targets = statement.targets if isinstance(statement, ast.Assign) else [statement.target]
++                for target in targets:
++                    if isinstance(target, ast.Name):
++                        lists[target.id] = statement.value if target.id not in lists else None
++        def declarations_in(value, visited=frozenset()):
++            if isinstance(value, ast.Name) and value.id not in visited:
++                return declarations_in(lists.get(value.id), visited | {value.id})
++            if isinstance(value, (ast.List, ast.Tuple)):
++                return [item for item in value.elts if isinstance(item, ast.Call) and self._get_call_name(item) == "Tool"]
++            return []
+         for handler in list_handlers:
+-            declarations = [
+-                node for node in ast.walk(handler)
+-                if isinstance(node, ast.Call) and self._get_call_name(node) == "Tool"
+-            ]
++            declarations = []
++            for returned in (n for n in ast.walk(handler) if isinstance(n, ast.Return)):
++                declarations.extend(declarations_in(returned.value))
++            receiver = next(self._get_decorator_name(d).rsplit(".", 1)[0] for d in handler.decorator_list
++                            if self._get_decorator_name(d).endswith(".list_tools")) if any(
++                                self._get_decorator_name(d).endswith(".list_tools") for d in handler.decorator_list) else ""
++            linked_handlers = [h for h in call_handlers if any(
++                self._get_decorator_name(d) == (receiver + "." if receiver else "") + "call_tool" for d in h.decorator_list)]
+             for node in declarations:
+                 name = self._constant_call_argument(node, "name", 0)
+                 if not isinstance(name, str) or name in seen:
+@@ -223,10 +243,10 @@
+                 description = self._constant_call_argument(node, "description", 1)
+                 description = description if isinstance(description, str) else ""
+                 parameters = self._schema_properties(node)
+-                implementation = self._find_dispatch_branch(call_handlers, name)
+-                if implementation is None and len(declarations) == 1 and len(call_handlers) == 1:
+-                    implementation = call_handlers[0]
+-                implementation_source = self._node_source(implementation) if implementation else ""
++                implementation = self._find_dispatch_branch(linked_handlers, name)
++                if implementation is None and len(declarations) == 1 and len(linked_handlers) == 1:
++                    implementation = linked_handlers[0]
++                implementation_source = ast.unparse(implementation) if implementation else ""
+                 implementation_line = self._node_line(implementation) if implementation else None
+                 tools.append(ToolDefinition(
+                     name=name,
+@@ -234,9 +254,8 @@
+                     docstring=None,
+                     line_number=node.lineno,
+                     end_line_number=getattr(node, "end_lineno", node.lineno),
+-                    # Existing analyzers assume a complete function here. Until
+-                    # the evidence/data-flow layer consumes implementation_source,
+-                    # avoid analyzing an entire dispatcher once per declared tool.
++                    # Project analyzers use the isolated raw implementation.
++                    # Keep legacy text/fixer analyzers away from a synthetic body.
+                     function_body="def _low_level_tool():\n    pass",
+                     parameters=parameters,
+                     decorators=["server.list_tools", "server.call_tool"] if implementation else ["server.list_tools"],
+@@ -317,22 +336,40 @@
+         return []
+ 
+     def _find_dispatch_branch(self, handlers: List[ast.AST], tool_name: str) -> Optional[ast.AST]:
+-        """Find an if/match branch comparing the dispatcher name to a tool name."""
++        """Build a function with the shared prelude and only the matched branch.
++
++        Including an entire if/elif chain incorrectly attributes sibling sinks.
++        Ambiguous comparisons are deliberately left unlinked.
++        """
++        matches = []
+         for handler in handlers:
+-            for node in ast.walk(handler):
+-                if isinstance(node, ast.If):
+-                    comparison_values = {
+-                        value for part in ast.walk(node.test)
+-                        if isinstance((value := self._resolve_static_value(part)), str)
+-                    }
+-                    if tool_name in comparison_values:
+-                        return node
+-                if isinstance(node, ast.match_case):
+-                    pattern = node.pattern
+-                    if isinstance(pattern, ast.MatchValue):
+-                        if self._resolve_static_value(pattern.value) == tool_name:
+-                            return node
+-        return None
++            if not handler.args.args: continue
++            discriminant = handler.args.args[0].arg
++            prefix = []
++            for statement in handler.body:
++                selected = None
++                node = statement
++                while isinstance(node, ast.If):
++                    test = node.test
++                    if (isinstance(test, ast.Compare) and isinstance(test.left, ast.Name)
++                            and test.left.id == discriminant and len(test.ops) == len(test.comparators) == 1
++                            and self._resolve_static_value(test.comparators[0]) == tool_name):
++                        if isinstance(test.ops[0], ast.Eq): selected = node.body
++                        elif isinstance(test.ops[0], ast.NotEq): selected = node.orelse
++                        break
++                    node = node.orelse[0] if len(node.orelse) == 1 and isinstance(node.orelse[0], ast.If) else None
++                if isinstance(statement, ast.Match) and isinstance(statement.subject, ast.Name) and statement.subject.id == discriminant:
++                    for case in statement.cases:
++                        if isinstance(case.pattern, ast.MatchValue) and self._resolve_static_value(case.pattern.value) == tool_name:
++                            selected = case.body
++                if selected:
++                    function = copy.deepcopy(handler)
++                    function.body = copy.deepcopy(prefix + selected)
++                    function.decorator_list = []
++                    matches.append(function)
++                    break
++                prefix.append(statement)
++        return matches[0] if len(matches) == 1 else None
+ 
+     def _node_source(self, node: ast.AST) -> str:
+         start_line = self._node_line(node) or 1
+--- iteration002/mcp_scanner/python_bindings.py
++++ iteration003/mcp_scanner/python_bindings.py
+@@ -0,0 +1,63 @@
++"""Bounded import resolution without importing or executing inspected code."""
++import ast
++
++
++def dotted(node):
++    if isinstance(node, ast.Name):
++        return node.id
++    if isinstance(node, ast.Attribute):
++        root = dotted(node.value)
++        return root + "." + node.attr if root else ""
++    return ""
++
++
++def scope_nodes(body):
++    """Visit one lexical scope; nested definitions bind names but own their bodies."""
++    for node in body:
++        yield node
++        if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef, ast.Lambda)):
++            continue
++        yield from scope_nodes(ast.iter_child_nodes(node))
++
++
++class PythonBindings:
++    def __init__(self, module, function=None):
++        self.global_bindings = self._collect(getattr(module, "body", []))
++        self.local_bindings = self._collect(function.body) if function else {}
++        if function:
++            args = function.args
++            for arg in args.posonlyargs + args.args + args.kwonlyargs + [a for a in (args.vararg, args.kwarg) if a]:
++                self.local_bindings[arg.arg] = None
++
++    @staticmethod
++    def _collect(body):
++        values = {}
++        def bind(key, value=None):
++            values[key] = value if key not in values else None
++        for node in scope_nodes(body):
++            if isinstance(node, ast.Import):
++                for alias in node.names:
++                    bind(alias.asname or alias.name.split(".")[0], alias.name if alias.asname else alias.name.split(".")[0])
++            elif isinstance(node, ast.ImportFrom):
++                for alias in node.names:
++                    bind(alias.asname or alias.name, (node.module or "") + "." + alias.name if not node.level else None)
++            elif isinstance(node, ast.Name) and isinstance(node.ctx, (ast.Store, ast.Del)):
++                bind(node.id)
++            elif isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef, ast.ClassDef)):
++                bind(node.name)
++            elif isinstance(node, (ast.Attribute, ast.Subscript)) and isinstance(node.ctx, (ast.Store, ast.Del)):
++                value = node
++                while isinstance(value, (ast.Attribute, ast.Subscript)):
++                    value = value.value
++                if isinstance(value, ast.Name): bind(value.id)
++        return values
++
++    def resolve(self, node, allow_unbound=False):
++        value = dotted(node)
++        if not value: return ""
++        root, *tail = value.split(".")
++        table = self.local_bindings if root in self.local_bindings else self.global_bindings
++        if root in table:
++            binding = table[root]
++            return ".".join([binding] + tail) if binding else ""
++        return value if allow_unbound else ""
+--- iteration002/mcp_scanner/secret_flow.py
++++ iteration003/mcp_scanner/secret_flow.py
+@@ -0,0 +1,147 @@
++"""Bounded AST evidence for credentials reaching returns or logging calls.
++
++Only provenance flags are retained. Secret values never enter findings.
++"""
++import ast
++import re
++from .python_bindings import PythonBindings, dotted, scope_nodes
++
++SECRET_NAME = re.compile(r"^(?:token|secret|password|passwd|credentials?|authorization|cookie|(?:api|access|auth|refresh|client|private|session|secret)[_-]?(?:key|token|secret|password))$", re.I)
++SECRET_SHAPE = re.compile(r"(?:gh[pousr]_[A-Za-z0-9_]{30,}|sk-[A-Za-z0-9_-]{20,}|AKIA[0-9A-Z]{16}|eyJ[A-Za-z0-9_-]{8,}\.[A-Za-z0-9_-]+\.[A-Za-z0-9_-]{20,})")
++SECRET = frozenset({"secret"})
++BROAD = frozenset({"broad"})
++
++
++class SecretFlow:
++    def __init__(self, module):
++        self.module = module
++        self.functions = {}
++        for node in module.body:
++            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
++                self.functions[node.name] = node if node.name not in self.functions else None
++        self.module_bindings = PythonBindings(module)
++        self.global_values = {}
++        self.loggers = set()
++        for statement in module.body:
++            if isinstance(statement, (ast.Assign, ast.AnnAssign)) and statement.value is not None:
++                targets = statement.targets if isinstance(statement, ast.Assign) else [statement.target]
++                for target in targets:
++                    if isinstance(target, ast.Name):
++                        value = self.value(statement.value, self.global_values, self.module_bindings, ())
++                        self.global_values[target.id] = self.assigned(target.id, statement.value, value)
++                        if target.id in {"context", "memory", "history", "session"} and isinstance(statement.value, (ast.Dict, ast.List, ast.Call)):
++                            self.global_values[target.id] |= BROAD
++                        if isinstance(statement.value, ast.Call) and self.module_bindings.resolve(statement.value.func) == "logging.getLogger":
++                            self.loggers.add(target.id)
++                        else:
++                            self.loggers.discard(target.id)
++
++    @staticmethod
++    def assigned(name, expression, flags):
++        # A named literal credential is evidence; boolean presence indicators,
++        # explicit masks, and empty defaults are not credential values.
++        if (SECRET_NAME.fullmatch(name) and isinstance(expression, ast.Constant)
++                and isinstance(expression.value, str) and expression.value
++                and expression.value not in {"[REDACTED]", "***", "****", "your-api-key-here"}):
++            return flags | SECRET
++        return flags
++
++    def value(self, node, state, bindings, stack):
++        if node is None: return frozenset()
++        if isinstance(node, ast.Name):
++            if node.id in state: return state[node.id]
++            if SECRET_NAME.fullmatch(node.id): return SECRET
++            if node.id in {"context", "memory", "history", "session"}: return BROAD
++            return frozenset()
++        if isinstance(node, ast.Constant):
++            return SECRET if isinstance(node.value, str) and SECRET_SHAPE.search(node.value) else frozenset()
++        if isinstance(node, ast.Compare) or isinstance(node, ast.UnaryOp) and isinstance(node.op, ast.Not):
++            return frozenset()
++        if isinstance(node, ast.Attribute):
++            if bindings.resolve(node) == "os.environ": return SECRET | BROAD
++            if node.attr in {"status_code", "returncode"}: return frozenset()
++            return self.value(node.value, state, bindings, stack)
++        if isinstance(node, ast.Dict):
++            result = frozenset()
++            for key, item in zip(node.keys, node.values):
++                flags = self.value(item, state, bindings, stack)
++                if isinstance(key, ast.Constant) and isinstance(key.value, str):
++                    flags = self.assigned(key.value, item, flags)
++                result |= flags
++            return result
++        if isinstance(node, ast.Call):
++            qualified = bindings.resolve(node.func, allow_unbound=True)
++            if qualified in {"bool", "len", "isinstance", "hasattr"}: return frozenset()
++            if isinstance(node.func, ast.Attribute) and node.func.attr == "keys" and not node.args and not node.keywords:
++                return frozenset()
++            if qualified in {"globals", "locals"}: return BROAD
++            if qualified in {"os.getenv", "os.environ.get"}:
++                key = node.args[0] if node.args else None
++                return SECRET if isinstance(key, ast.Constant) and isinstance(key.value, str) and SECRET_NAME.fullmatch(key.value) else frozenset()
++            if isinstance(node.func, ast.Name) and len(stack) < 4 and node.func.id not in stack:
++                helper = self.functions.get(node.func.id)
++                if helper is not None and node.func.id not in bindings.local_bindings:
++                    args = [self.value(a, state, bindings, stack) for a in node.args]
++                    kwargs = {k.arg: self.value(k.value, state, bindings, stack) for k in node.keywords if k.arg}
++                    params = helper.args.posonlyargs + helper.args.args
++                    supplied = {p.arg: flag for p, flag in zip(params, args)}
++                    supplied.update(kwargs)
++                    returns, _ = self.analyze(helper, supplied, stack + (node.func.id,))
++                    return frozenset().union(*(flags for _, flags in returns))
++            if isinstance(node.func, ast.Attribute) and node.func.attr == "get" and node.args:
++                key = node.args[0]
++                if isinstance(key, ast.Constant) and isinstance(key.value, str) and SECRET_NAME.fullmatch(key.value):
++                    return SECRET
++            # Unknown transformations retain provenance; do not trust a helper
++            # merely because its name contains "sanitize" or "redact".
++            values = list(node.args) + [k.value for k in node.keywords]
++            if isinstance(node.func, ast.Attribute): values.append(node.func.value)
++            return frozenset().union(*(self.value(a, state, bindings, stack) for a in values))
++        if isinstance(node, ast.Subscript) and bindings.resolve(node.value) == "os.environ":
++            key = node.slice
++            return SECRET if isinstance(key, ast.Constant) and isinstance(key.value, str) and SECRET_NAME.fullmatch(key.value) else frozenset()
++        return frozenset().union(*(self.value(child, state, bindings, stack) for child in ast.iter_child_nodes(node)))
++
++    def analyze(self, function, supplied=None, stack=()):
++        bindings = PythonBindings(self.module, function)
++        state = dict(self.global_values)
++        # Local bindings shadow globals. Ordinary local names such as a token
++        # in a tokenizer loop do not establish credential provenance.
++        for local in bindings.local_bindings:
++            state[local] = frozenset()
++        params = function.args.posonlyargs + function.args.args + function.args.kwonlyargs
++        for param in params:
++            state[param.arg] = SECRET if SECRET_NAME.fullmatch(param.arg) else frozenset()
++        if supplied: state.update(supplied)
++        returns, logs = [], []
++        loggers = self.loggers - set(bindings.local_bindings)
++        conditional = {id(child) for branch in ast.walk(function)
++                       if isinstance(branch, (ast.If, ast.For, ast.AsyncFor, ast.While, ast.Try, ast.Match))
++                       for child in ast.walk(branch)}
++        for statement in scope_nodes(function.body):
++            if isinstance(statement, (ast.For, ast.AsyncFor)):
++                flags = self.value(statement.iter, state, bindings, stack)
++                for target in ast.walk(statement.target):
++                    if isinstance(target, ast.Name): state[target.id] = flags
++            elif isinstance(statement, (ast.Assign, ast.AnnAssign)) and statement.value is not None:
++                targets = statement.targets if isinstance(statement, ast.Assign) else [statement.target]
++                flags = self.value(statement.value, state, bindings, stack)
++                for target in targets:
++                    if isinstance(target, ast.Name):
++                        # Union over possible branches favors retaining evidence.
++                        value = self.assigned(target.id, statement.value, flags)
++                        state[target.id] = state.get(target.id, frozenset()) | value if id(statement) in conditional else value
++                        if isinstance(statement.value, ast.Call) and bindings.resolve(statement.value.func) == "logging.getLogger":
++                            loggers.add(target.id)
++                        else:
++                            loggers.discard(target.id)
++            elif isinstance(statement, ast.Return):
++                returns.append((statement, self.value(statement.value, state, bindings, stack)))
++            elif isinstance(statement, ast.Call):
++                qualified = bindings.resolve(statement.func)
++                parts = dotted(statement.func).split(".")
++                if ((qualified.startswith("logging.") and qualified.split(".")[-1] in {"debug", "info", "warning", "error", "exception", "critical", "log"})
++                        or len(parts) == 2 and parts[0] in loggers and parts[1] in {"debug", "info", "warning", "error", "exception", "critical", "log"}):
++                    flags = frozenset().union(*(self.value(a, state, bindings, stack) for a in statement.args + [k.value for k in statement.keywords]))
++                    if "secret" in flags: logs.append(statement)
++        return returns, logs
+--- iteration002/mcp_scanner/security_graph.py
++++ iteration003/mcp_scanner/security_graph.py
+@@ -113,7 +113,9 @@
+                 context = ast.parse(self.sources.get(Path(tool.source_file).resolve(), ""))
+             except SyntaxError:
+                 context = None
+-            for flow in PythonDataFlow().command_flows(tool.raw_node, tool.parameters, helpers, context):
++            parameters = tool.parameters + ([a.arg for a in tool.raw_node.args.args]
++                if tool.registration_style == "low_level" and isinstance(tool.raw_node, (ast.FunctionDef, ast.AsyncFunctionDef)) else [])
++            for flow in PythonDataFlow().command_flows(tool.raw_node, parameters, helpers, context):
+                 helper = next((part[:-2] for part in flow.path if part.endswith("()")), None)
+                 definitions = self.command_helpers.get(helper or "", [])
+                 if definitions and all(path.resolve() != Path(tool.source_file).resolve() for path, _, _ in definitions):
+--- /dev/null
++++ iteration003/tests/test_iteration_three.py
+@@ -0,0 +1,126 @@
++"""Iteration 003 controls derived from exposed iteration 002 error classes."""
++import json
++import unittest
++from mcp_scanner.scanner import MCPScanner
++from mcp_scanner.parsers.python_parser import PythonMCPParser
++
++
++def tool(body, params="value: str", imports="", extra=""):
++    return ('from fastmcp import FastMCP\n' + imports + '\nmcp=FastMCP("test")\n' + extra +
++            '\n@mcp.tool()\ndef inspect(' + params + '):\n' + '\n'.join('    '+line for line in body.splitlines()) + '\n')
++
++
++def low_level(body, names=("run", "status"), extra=""):
++    return ("import subprocess\nimport os\nfrom mcp.server import Server\nfrom mcp import types\nserver=Server('test')\n" +
++            "TOOLS = [" + ','.join(f"types.Tool(name={name!r}, description='test', inputSchema={{'type':'object'}})" for name in names) + "]\n" +
++            extra + "\n@server.list_tools()\nasync def list_tools():\n    return TOOLS\n" +
++            "@server.call_tool()\nasync def call_tool(name, arguments):\n" + '\n'.join('    '+line for line in body.splitlines()) + '\n')
++
++
++class IterationThreeTests(unittest.TestCase):
++    def findings(self, source, rule):
++        return [f for f in MCPScanner().scan_source(source).findings if f.rule_id == rule]
++
++    def command(self, source):
++        return self.findings(source, "MCP05-COMMAND-INJECTION")
++
++    def secrets(self, source):
++        return self.findings(source, "MCP01-SECRET-OUTPUT")
++
++    def test_module_and_direct_command_aliases(self):
++        for imp, call in [('import subprocess as sp', 'sp.run'), ('from subprocess import run as launch', 'launch'), ('from os import system', 'system')]:
++            with self.subTest(imp=imp):
++                self.assertTrue(self.command(tool(f'{call}(value)', imports=imp)))
++
++    def test_local_import_alias(self):
++        self.assertTrue(self.command(tool('from subprocess import run as launch\nlaunch(value, shell=True)')))
++
++    def test_import_shadowing_and_unrelated_run_are_not_sinks(self):
++        cases = [tool('sp.run(value)', 'value: str, sp=None', 'import subprocess as sp'),
++                 tool('sp = client\nsp.run(value)', 'value: str, client=None', 'import subprocess as sp'),
++                 tool('run(value)', imports='from unrelated import run'),
++                 tool('subprocess.run(value)', imports='import unrelated as subprocess'),
++                 tool('run(value)', imports='from subprocess import run', extra='def run(value):\n    return value')]
++        for source in cases:
++            with self.subTest(source=source): self.assertFalse(self.command(source))
++
++    def test_safe_aliased_argv_and_unsafe_executable(self):
++        self.assertFalse(self.command(tool('sp.run(["du", value])', imports='import subprocess as sp')))
++        self.assertTrue(self.command(tool('sp.run([value])', imports='import subprocess as sp')))
++
++    def test_helper_with_aliased_sink(self):
++        self.assertTrue(self.command(tool('return launch(value)', imports='import subprocess as sp', extra='def launch(cmd):\n    return sp.run(cmd, shell=True)')))
++
++    def test_module_tool_list_and_sibling_isolation(self):
++        source = low_level('if name == "run":\n    subprocess.run(arguments["cmd"], shell=True)\nelif name == "status":\n    return {"ok": True}')
++        parsed = PythonMCPParser().parse_source(source)
++        self.assertEqual(2, len(parsed.tools))
++        self.assertEqual({'run'}, {f.function_name for f in self.command(source)})
++        self.assertNotIn('subprocess.run', next(t for t in parsed.tools if t.name == 'status').implementation_source)
++
++    def test_negated_low_level_guard(self):
++        source = low_level('if name != "run":\n    return None\nelse:\n    subprocess.run(arguments["cmd"], shell=True)', names=('run',))
++        self.assertTrue(self.command(source))
++
++    def test_multiple_servers_do_not_share_dispatchers(self):
++        source = low_level('if name == "run":\n    return "safe"', names=('run',))
++        source += "\nother=Server('other')\n@other.call_tool()\nasync def other_call(name, arguments):\n    subprocess.run(arguments['cmd'], shell=True)\n"
++        self.assertFalse(self.command(source))
++
++    def test_secret_values_in_containers_aliases_and_helpers(self):
++        for body in ['return {"token": API_TOKEN}', 'alias=API_TOKEN\nreturn {"nested": [alias]}', 'return reveal()']:
++            source = tool(body, imports='import os', extra='API_TOKEN=os.getenv("API_TOKEN")\ndef reveal():\n    return {"env": os.environ}')
++            with self.subTest(body=body): self.assertTrue(self.secrets(source))
++
++    def test_low_level_secret_helper_and_clean_sibling(self):
++        source = low_level('if name == "run":\n    return reveal()\nelif name == "status":\n    return {"ok": True}', extra='def reveal():\n    return {"env": os.environ}\n')
++        self.assertEqual({'run'}, {f.function_name for f in self.secrets(source)})
++
++    def test_logging_aliases_function_and_module_scope(self):
++        source = 'import logging as lg\nlog=lg.getLogger(__name__)\npassword="sensitive-fixture-value"\nlog.info("password %s", password)\ndef connect(password):\n    log.info("password %s", password)\n'
++        self.assertEqual(2, len(self.secrets(source)))
++
++    def test_logging_shadow_is_not_assumed_logger(self):
++        source = 'import logging\nlog=logging.getLogger(__name__)\ndef inspect(log, password):\n    log.info(password)\n'
++        self.assertFalse(self.secrets(source))
++
++    def test_status_pagination_and_explicit_redaction_are_negative(self):
++        bodies = ['return {"connected": bool(API_TOKEN), "tokenizer_version": "v2", "passwordless_mode": True}',
++                  'next_token="opaque-cursor"\nreturn {"next_token": next_token}',
++                  'token=API_TOKEN\ntoken="[REDACTED]"\nreturn {"token": token}',
++                  'return redact(API_TOKEN)']
++        for body in bodies:
++            source = tool(body, imports='import os', extra='API_TOKEN=os.getenv("API_TOKEN")\ndef redact(value):\n    return "[REDACTED]"')
++            with self.subTest(body=body): self.assertFalse(self.secrets(source))
++
++    def test_boolean_environment_guard_is_not_dump(self):
++        for body in ['return os.environ.get("ALLOW_WRITE") == "1"', 'return bool(os.environ)', 'return enabled()']:
++            source = tool(body, imports='import os', extra='def enabled():\n    return os.environ.get("ALLOW_WRITE", "").strip() in ("1", "yes")')
++            with self.subTest(body=body):
++                self.assertFalse(self.findings(source, "MCP10-OVER-SHARING"))
++                self.assertFalse(self.secrets(source))
++        self.assertTrue(self.findings(tool('return {"env": os.environ}', imports='import os'), "MCP10-OVER-SHARING"))
++
++    def test_secret_output_is_redacted_in_serialization(self):
++        source = tool('return {"key": "sk-abcdefghijklmnopqrstuvwxyz123456"}')
++        result = MCPScanner().scan_source(source)
++        self.assertTrue(self.secrets(source))
++        serialized = json.dumps([f.to_dict() for f in result.findings])
++        self.assertNotIn('sk-abcdefghijklmnopqrstuvwxyz123456', serialized)
++
++    def test_storage_keys_and_lexical_tokens_are_not_credentials(self):
++        self.assertFalse(self.secrets(tool('return f"Key {key} not found"', params='key: str')))
++        source = 'import logging\nlogger=logging.getLogger(__name__)\ndef words(text):\n    for token in text.split():\n        logger.info("word %s", token)\n'
++        self.assertFalse(self.secrets(source))
++
++    def test_http_status_does_not_inherit_request_credential(self):
++        source = 'import logging\nlogger=logging.getLogger(__name__)\ndef request(client, token):\n    response=client.post("https://api.example", data={"token": token})\n    logger.info("Status %s", response.status_code)\n'
++        self.assertFalse(self.secrets(source))
++
++    def test_credential_mapping_keys_and_values_are_distinct(self):
++        self.assertFalse(self.secrets(tool('return list(credentials.keys())', params='credentials: dict')))
++        self.assertTrue(self.secrets(tool('return list(credentials.values())', params='credentials: dict')))
++
++
++if __name__ == '__main__':
++    unittest.main()
+--- iteration002/tests/test_scanner.py
++++ iteration003/tests/test_scanner.py
+@@ -65,7 +65,7 @@
+         self.assertEqual("fetch", parsed.name)
+         self.assertEqual("low_level", parsed.registration_style)
+         self.assertEqual(["url"], parsed.parameters)
+-        self.assertIn('name == "fetch"', parsed.implementation_source)
++        self.assertIn("async def call_tool", parsed.implementation_source)
+         self.assertIsNotNone(parsed.implementation_line)
+ 
+         result = MCPScanner().scan_source(source, "low_level.py")

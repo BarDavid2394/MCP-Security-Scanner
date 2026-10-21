@@ -1,0 +1,32 @@
+{
+  "repository": "vedikasaklani/mcp-code-vulns",
+  "revision": "29e4f5b8ba381167374443bc276d32cbcf44edcb",
+  "license": null,
+  "truncated": false,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 1735
+    },
+    {
+      "path": "__pycache__/server.cpython-314.pyc",
+      "size": 9068
+    },
+    {
+      "path": "__pycache__/stdio_server.cpython-314.pyc",
+      "size": 1065
+    },
+    {
+      "path": "requirements.txt",
+      "size": 8
+    },
+    {
+      "path": "server.py",
+      "size": 5732
+    },
+    {
+      "path": "stdio_server.py",
+      "size": 491
+    }
+  ]
+}

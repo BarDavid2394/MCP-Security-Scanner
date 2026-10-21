@@ -1,0 +1,38 @@
+[
+  {
+    "dataset": "johnhalloran/mcp-fbas",
+    "revision": "13b90e6d1518212815078479d2bb147e51f558cc",
+    "upstream_path": "README.md",
+    "local_path": "deliverables/data_expansion/huggingface/johnhalloran__mcp-fbas/README.md.txt",
+    "bytes": 10143,
+    "sha256": "8296e5af372b19bf3b62d4fe4724e8ac1f5163ca7b2d3ac79565f8483ba2fe52",
+    "url": "https://huggingface.co/datasets/johnhalloran/mcp-fbas/resolve/13b90e6d1518212815078479d2bb147e51f558cc/README.md"
+  },
+  {
+    "dataset": "johnhalloran/mcp-fbas",
+    "revision": "13b90e6d1518212815078479d2bb147e51f558cc",
+    "upstream_path": "data/train-00000-of-00001.parquet",
+    "local_path": "deliverables/data_expansion/huggingface/johnhalloran__mcp-fbas/data/train-00000-of-00001.parquet.txt",
+    "bytes": 1538354,
+    "sha256": "04815a3f9dbdbed7906a700a2a27f60e111ee498e0275e1e008b0bc7d5c50e04",
+    "url": "https://huggingface.co/datasets/johnhalloran/mcp-fbas/resolve/13b90e6d1518212815078479d2bb147e51f558cc/data/train-00000-of-00001.parquet"
+  },
+  {
+    "dataset": "johnhalloran/mcp-fbas",
+    "revision": "13b90e6d1518212815078479d2bb147e51f558cc",
+    "upstream_path": "test_attack/test-00000-of-00001.parquet",
+    "local_path": "deliverables/data_expansion/huggingface/johnhalloran__mcp-fbas/test_attack/test-00000-of-00001.parquet.txt",
+    "bytes": 192736,
+    "sha256": "fbb959907c4dc7caee6c1e06c064017d35cddcbd0ba873cd342950f04151c000",
+    "url": "https://huggingface.co/datasets/johnhalloran/mcp-fbas/resolve/13b90e6d1518212815078479d2bb147e51f558cc/test_attack/test-00000-of-00001.parquet"
+  },
+  {
+    "dataset": "johnhalloran/mcp-fbas",
+    "revision": "13b90e6d1518212815078479d2bb147e51f558cc",
+    "upstream_path": "test_benign/test-00000-of-00001.parquet",
+    "local_path": "deliverables/data_expansion/huggingface/johnhalloran__mcp-fbas/test_benign/test-00000-of-00001.parquet.txt",
+    "bytes": 7506,
+    "sha256": "3deadcd0e85725d8e7a4b2ead4b7181f9201829d4b8d82db1d85087e6a566290",
+    "url": "https://huggingface.co/datasets/johnhalloran/mcp-fbas/resolve/13b90e6d1518212815078479d2bb147e51f558cc/test_benign/test-00000-of-00001.parquet"
+  }
+]

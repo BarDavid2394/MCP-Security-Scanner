@@ -1,0 +1,30 @@
+{
+  "scanner": "MCP Security Scanner",
+  "version": "2.0.0",
+  "catalog_version": "2026.1",
+  "timestamp": "2026-10-11T12:07:34.593012",
+  "scan_info": {
+    "target_id": "quickstart-weather",
+    "target": "evaluation\\corpus\\quickstart-resources\\weather-server-python",
+    "files_scanned": 3,
+    "tools_analyzed": 2,
+    "servers_found": 0,
+    "total_findings": 0,
+    "critical_count": 0,
+    "high_count": 0,
+    "parse_errors": [],
+    "status": "completed"
+  },
+  "summary": {
+    "total": 0,
+    "by_severity": {},
+    "by_type": {},
+    "by_attack": {},
+    "by_rule": {},
+    "by_confidence": {},
+    "fixable": 0,
+    "risk_score": 0,
+    "risk_level": "NONE"
+  },
+  "findings": []
+}

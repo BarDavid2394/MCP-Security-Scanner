@@ -1,0 +1,61 @@
+ M evaluation/README.md
+ M evaluation/scripts/holdout_common.py
+ M evaluation/scripts/run_holdout.py
+ M evaluation/scripts/score_holdout.py
+ M mcp_scanner/analyzers/project_risks.py
+ M mcp_scanner/analyzers/tool_poisoning.py
+ M mcp_scanner/dataflow.py
+ M mcp_scanner/defenses/transforms.py
+ M mcp_scanner/parsers/python_parser.py
+ M mcp_scanner/patterns/signatures.py
+ M mcp_scanner/scanner.py
+ M mcp_scanner/security_graph.py
+ M mcp_scanner/utils/helpers.py
+ M tests/test_holdout.py
+ M tests/test_scanner.py
+?? AGENTS.md
+?? CLAUDE.md
+?? PRESENTATION_HANDOFF_FOR_GEMINI.md
+?? SESSION_HANDOFF.md
+?? deliverables/Demo.html
+?? deliverables/Final_Validation_Evidence.zip
+?? deliverables/Final_Validation_Report.html
+?? deliverables/Final_Validation_Report.md
+?? deliverables/PRESENTER_NOTES.md
+?? deliverables/demo_results.json
+?? deliverables/final_validation_cases.csv
+?? evaluation/campaign/
+?? evaluation/holdout/CONSUMED.json
+?? evaluation/holdout/frozen-manifest.json
+?? evaluation/holdout/frozen-manifest.sha256
+?? evaluation/holdout/metrics.json
+?? evaluation/iterations/
+?? evaluation/scripts/build_material_pilot.py
+?? evaluation/scripts/prepare_campaign.py
+?? evaluation/scripts/prepare_followup.py
+?? evaluation/scripts/report_campaign.py
+?? evaluation/scripts/run_iteration.py
+?? mcp_scanner/command_safety.py
+?? mcp_scanner/external_content.py
+?? mcp_scanner/literal_secrets.py
+?? mcp_scanner/metadata_behavior.py
+?? mcp_scanner/metadata_instructions.py
+?? mcp_scanner/python_bindings.py
+?? mcp_scanner/reachable_python.py
+?? mcp_scanner/secret_flow.py
+?? mcp_scanner/static_values.py
+?? presentation_demo.py
+?? presentation_json_report_example.html
+?? presentation_json_report_example.json
+?? presentation_report_example.cmd
+?? presentation_report_sample.py
+?? tests/test_command_safety.py
+?? tests/test_iteration_five.py
+?? tests/test_iteration_four.py
+?? tests/test_iteration_four_repairs.py
+?? tests/test_iteration_regressions.py
+?? tests/test_iteration_scoring.py
+?? tests/test_iteration_seven.py
+?? tests/test_iteration_six.py
+?? tests/test_iteration_three.py
+?? tests/test_material_pilot.py

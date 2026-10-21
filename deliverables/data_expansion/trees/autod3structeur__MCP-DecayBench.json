@@ -1,0 +1,168 @@
+{
+  "repository": "autod3structeur/MCP-DecayBench",
+  "revision": "7ce4e4541b494b7f1df1840499ee14e6a5fed69b",
+  "license": "NOASSERTION",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 528
+    },
+    {
+      "path": ".gitignore",
+      "size": 183
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 1487
+    },
+    {
+      "path": "LICENSE",
+      "size": 831
+    },
+    {
+      "path": "README.md",
+      "size": 3995
+    },
+    {
+      "path": "corpus/SCHEMA.md",
+      "size": 2434
+    },
+    {
+      "path": "corpus/benign/b01_legit_backup/label.json",
+      "size": 750
+    },
+    {
+      "path": "corpus/benign/b01_legit_backup/server.py",
+      "size": 3018
+    },
+    {
+      "path": "corpus/benign/b02_imperative_desc/label.json",
+      "size": 802
+    },
+    {
+      "path": "corpus/benign/b02_imperative_desc/server.py",
+      "size": 2859
+    },
+    {
+      "path": "corpus/benign/b03_git_credential_helper/label.json",
+      "size": 701
+    },
+    {
+      "path": "corpus/benign/b03_git_credential_helper/server.py",
+      "size": 2389
+    },
+    {
+      "path": "corpus/benign/b04_security_scanner/label.json",
+      "size": 659
+    },
+    {
+      "path": "corpus/benign/b04_security_scanner/server.py",
+      "size": 2336
+    },
+    {
+      "path": "corpus/benign/b05_base64_tool/label.json",
+      "size": 542
+    },
+    {
+      "path": "corpus/benign/b05_base64_tool/server.py",
+      "size": 2244
+    },
+    {
+      "path": "corpus/benign/b06_ignore_patterns/label.json",
+      "size": 637
+    },
+    {
+      "path": "corpus/benign/b06_ignore_patterns/server.py",
+      "size": 2247
+    },
+    {
+      "path": "corpus/benign/b07_unicode_i18n/label.json",
+      "size": 637
+    },
+    {
+      "path": "corpus/benign/b07_unicode_i18n/server.py",
+      "size": 2370
+    },
+    {
+      "path": "corpus/benign/b08_prompt_library/label.json",
+      "size": 762
+    },
+    {
+      "path": "corpus/benign/b08_prompt_library/server.py",
+      "size": 2051
+    },
+    {
+      "path": "corpus/malicious/m01_tool_poisoning/label.json",
+      "size": 632
+    },
+    {
+      "path": "corpus/malicious/m01_tool_poisoning/server.py",
+      "size": 3009
+    },
+    {
+      "path": "corpus/malicious/m02_exfil_combo/label.json",
+      "size": 794
+    },
+    {
+      "path": "corpus/malicious/m02_exfil_combo/server.py",
+      "size": 2455
+    },
+    {
+      "path": "docs/METHODOLOGY.md",
+      "size": 6913
+    },
+    {
+      "path": "docs/TAXONOMY.md",
+      "size": 3108
+    },
+    {
+      "path": "fixtures/make_sample.py",
+      "size": 1686
+    },
+    {
+      "path": "fixtures/server_template.py",
+      "size": 2560
+    },
+    {
+      "path": "harness/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "harness/adapters/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "harness/adapters/base.py",
+      "size": 1995
+    },
+    {
+      "path": "harness/adapters/cisco_mcp_scanner.py",
+      "size": 5395
+    },
+    {
+      "path": "harness/adapters/mcp_scan.py",
+      "size": 4249
+    },
+    {
+      "path": "harness/adapters/reference_keyword.py",
+      "size": 1930
+    },
+    {
+      "path": "harness/adapters/snyk_agent_scan.py",
+      "size": 4783
+    },
+    {
+      "path": "harness/run.py",
+      "size": 3071
+    },
+    {
+      "path": "harness/scoring.py",
+      "size": 2732
+    },
+    {
+      "path": "harness/test_benchmark.py",
+      "size": 3050
+    }
+  ]
+}

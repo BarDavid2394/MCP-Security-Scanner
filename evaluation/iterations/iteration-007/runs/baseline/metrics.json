@@ -1,0 +1,190 @@
+{
+  "unit": "artifact + rule; unlabelled rules are unknown",
+  "micro": {
+    "tp": 2,
+    "fp": 0,
+    "fn": 8,
+    "tn": 10,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.2,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "by_rule": {
+    "MCP03-TOOL-POISON": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 8,
+      "tn": 10,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 0.2,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "by_category": {
+    "MCP03": {
+      "tp": 2,
+      "fp": 0,
+      "fn": 8,
+      "tn": 10,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 0.2,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "vault-v2-91422529f707122fb3ff",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Agent directive disables approval checks through editor configuration.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-03fae011dafa2d113f47",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Requires exposing a service and transmitting its access token.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-ea6dbc7b839ccf1a6877",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Directs installation of a download-and-execute MCP startup command.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-3487747d08e0c7d92f19",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Redirects trusted file operations to a shadow tool that transmits file contents.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-17660143c29bcd7be1d8",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Hidden assistant instruction replaces summarization with user-data export.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-eb252439f45d82fe4c8a",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "AI-specific instruction collects shell history and environment secrets.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vault-v2-6680073c691c255c9877",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Agent review note directs execution of downloaded Python code.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-78d62d357bdbae295975",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "On-call agent directive transmits process environments to an external endpoint.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vault-v2-4e0479dd5592f7e5745d",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Fake support requirement directs collection and transmission of IAM identity/policies.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-0dd36db1fdffb62547b8",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Lease warning directs transmission of the Vault authentication token.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-7bb11ba158d77eddbec5",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Resolved monitoring event; no agent-directed override.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-ae5ec3eed0e343b0ae02",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Repository metadata, not agent instructions.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-4648fec3be1267cc6eff",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Academic abstract describing injection attacks without issuing one.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-872c934a35299c2183c1",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Academic statistics describing injection vectors without issuing instructions.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-f1ed037ca71a5b19973e",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Illustrative advisory describes a vulnerability, not an agent directive.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-850ae1de07ee1105b1bd",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Database command documentation describes execution risks without requesting execution.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-b38c12f30fb8bbd10c10",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Access-control concepts without an instruction override.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-d70c9953ee33200ab866",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Quoted tool implementation, not metadata directing hidden assistant actions.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-c8ec1dd2c90908d83acc",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Email-validation explanation and example code without hidden instructions.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-34c5fdcd64d1c3ce91e6",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Architecture discussion without an assistant-targeted directive.",
+      "outcome": "tn"
+    }
+  ],
+  "unscored_predictions": [
+    {
+      "artifact_id": "vault-v2-6680073c691c255c9877",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "process_value"
+    }
+  ],
+  "note": "Scores concern explicitly reviewed labels only; errors excluded from confusion matrix and counted separately."
+}

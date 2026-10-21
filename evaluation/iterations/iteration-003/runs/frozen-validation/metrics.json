@@ -1,0 +1,845 @@
+{
+  "unit": "artifact + rule + optional function scope; unlabelled outcomes are unknown",
+  "micro": {
+    "tp": 24,
+    "fp": 3,
+    "fn": 12,
+    "tn": 20,
+    "errors": 0,
+    "precision": 0.8888888888888888,
+    "recall": 0.6666666666666666,
+    "false_positive_rate": 0.13043478260869565,
+    "label_coverage": 1.0
+  },
+  "by_rule": {
+    "MCP01-SECRET-HARDCODED": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP01-SECRET-OUTPUT": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": null,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP03-TOOL-POISON": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 4,
+      "tn": 6,
+      "errors": 0,
+      "precision": 0.6666666666666666,
+      "recall": 0.3333333333333333,
+      "false_positive_rate": 0.14285714285714285,
+      "label_coverage": 1.0
+    },
+    "MCP05-COMMAND-INJECTION": {
+      "tp": 11,
+      "fp": 2,
+      "fn": 5,
+      "tn": 6,
+      "errors": 0,
+      "precision": 0.8461538461538461,
+      "recall": 0.6875,
+      "false_positive_rate": 0.25,
+      "label_coverage": 1.0
+    },
+    "MCP05-DYNAMIC-CODE": {
+      "tp": 5,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP07-MISSING-AUTH": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "by_category": {
+    "MCP01": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 3,
+      "tn": 4,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP03": {
+      "tp": 2,
+      "fp": 1,
+      "fn": 4,
+      "tn": 6,
+      "errors": 0,
+      "precision": 0.6666666666666666,
+      "recall": 0.3333333333333333,
+      "false_positive_rate": 0.14285714285714285,
+      "label_coverage": 1.0
+    },
+    "MCP05": {
+      "tp": 16,
+      "fp": 2,
+      "fn": 5,
+      "tn": 8,
+      "errors": 0,
+      "precision": 0.8888888888888888,
+      "recall": 0.7619047619047619,
+      "false_positive_rate": 0.2,
+      "label_coverage": 1.0
+    },
+    "MCP07": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "benchmark--fixtures--false_negative--aliased_dangerous_function",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_task",
+      "rationale": "Caller command reaches os.system imported as invoke.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_negative--class_method_sink",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_task",
+      "rationale": "Caller command reaches subprocess.check_output(shell=True) through Runner.invoke.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_negative--dynamic_description",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "lookup",
+      "rationale": "The description factory concatenates an instruction to read credentials and conceal that action.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_negative--multi_hop_dataflow",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_report",
+      "rationale": "Caller command reaches a shell through two local helpers.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_negative--obfuscated_command",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_task",
+      "rationale": "getattr selects subprocess.check_output, which receives caller command with shell=True.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_positive--benign_imperative_description",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": "exchange_rate",
+      "rationale": "The imperative only requests a valid currency parameter.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_positive--legitimate_base64_description",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": "decode_fixture",
+      "rationale": "The encoded example decodes to ordinary fixture text, not behavioral instructions.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_positive--registration_resemblance",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Explicit non-MCP scope control: a local ReportRegistry callback is not an MCP registration. Not a general command-safety claim.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_positive--safe_deserialization",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "function_name": "parse_payload",
+      "rationale": "json.loads does not evaluate caller Python code.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_positive--safe_deserialization",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "negative",
+      "function_name": "parse_yaml",
+      "rationale": "yaml.safe_load does not construct arbitrary Python objects.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_positive--safe_subprocess_args",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "dns_lookup",
+      "rationale": "Fixed nslookup argv with shell=False and an alphanumeric/dot hostname guard.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "tests--fixtures--live--clean_server",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Weather metadata contains no behavioral override.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--live--clean_server",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Default stdio server has no exposed HTTP/SSE transport in this source.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--live--safe_server",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Order/report metadata describes ordinary tasks.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--live--safe_server",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Default stdio server has no exposed HTTP/SSE transport in this source.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--live--vulnerable_server",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "setup",
+      "rationale": "Setup metadata demands priority and concealment.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--live--vulnerable_server",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": "clean_tool",
+      "rationale": "The sibling tool has an ordinary description.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--live--vulnerable_sse_server",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "setup",
+      "rationale": "Setup metadata claims priority over all other actions.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--live--vulnerable_sse_server",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "SSE transport lacks visible request authentication, even though it binds loopback.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "service_action",
+      "rationale": "A fixed developer-controlled set gates the action before shell use.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "run_named_diagnostic",
+      "rationale": "A fixed dictionary selects a constant command; the key is checked before use.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_description_example",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "All tool metadata describes ordinary tasks or parameter requirements; the foreign scanner pragma is not our ground truth.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_example",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "export_report",
+      "rationale": "Both parameters are constrained by fixed allowlists before fixed-executable argv use.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_readiness_example",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "SSE transport has no visible enforcement: merely importing require_bearer_token does not authenticate requests. Loopback limits exposure but is not request authentication.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_same_file_helper",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "clone_repository",
+      "rationale": "Helper invokes fixed git clone argv, no shell; the only variable is embedded inside a fixed HTTPS URL argument.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_secrets_derived_values",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Values are explicitly one-way hashes/digests/checksums, not credential literals.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_secrets_example",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Credentials come from environment; remaining values are explicit placeholders or documentation examples.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_secrets_example",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "The registered integration_help tool returns a fixed help message, not credentials.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_diagnostic_command",
+      "rationale": "A short denylist leaves shell metacharacters and arbitrary commands available.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_guard_after_sink",
+      "rationale": "Allowlist check occurs after command execution.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_inverted_allowlist",
+      "rationale": "The inverted guard permits non-allowlisted actions to reach the shell.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_user_controlled_allowlist",
+      "rationale": "Caller controls both the action and its allowlist.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "run_dynamic_allowlist",
+      "rationale": "Despite the upstream name, the visible helper returns a fixed literal safe action set.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_character_filter_still_dangerous",
+      "rationale": "Blocking spaces leaves shell metacharacters usable.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_mixed_safe_and_vulnerable",
+      "rationale": "The second caller-controlled command is unguarded.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_guard_nested_in_condition",
+      "rationale": "Caller can disable the guard via debug_mode.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_guard_with_conditional_exit",
+      "rationale": "Guard exits only when caller log_only is true.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "run_guard_inside_try",
+      "rationale": "For schema-validated string input and the visible fixed set, membership is non-throwing and disallowed input returns before the sink. The try block alone does not establish a bypass.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_nonterminating_guard",
+      "rationale": "The guard prints but does not prevent command execution.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_description_example",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "setup",
+      "rationale": "Metadata demands priority invocation and concealment from the user.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_description_example",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "function_name": "fetch_notes",
+      "rationale": "An isolated zero-width marker has no behavioral payload; suspicious formatting alone is not poisoning.",
+      "outcome": "fp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_description_example",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "sync_data",
+      "rationale": "Encoded text instructs using this tool instead of every other tool.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_description_example",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "function_name": "get_weather_v2",
+      "rationale": "Metadata redirects callers away from a named different tool; labelled unauthorized routing under this fixture's threat model.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_distinct_sinks",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "run_math",
+      "rationale": "Caller expression is evaluated as Python.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_distinct_sinks",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "run_formula",
+      "rationale": "Caller expression is evaluated as Python.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_distinct_sinks",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "run_pair_same_line",
+      "rationale": "Caller expression is evaluated as Python.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_duplicate_sink",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "A registered compute implementation evaluates caller Python. File-level label avoids double-counting identical function names and the same physical sink via a wrapper.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_example",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "DB_PASSWORD is a fabricated but explicitly embedded credential literal.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_example",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "export_report",
+      "rationale": "Both tool arguments enter a shell command string.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_example",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "function_name": "run_snippet",
+      "rationale": "Caller expr reaches eval.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_programmatic_example",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_backup",
+      "rationale": "The FastMCP add_tool-registered method interpolates backup_label into a shell command.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_readiness_example",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "SSE transport has no authentication enforcement and binds all interfaces.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_same_file_helper",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "clone_repository",
+      "rationale": "Tool input enters a shell string passed through a local helper.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_secrets_example",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "Source embeds explicit fabricated passwords/API credentials in multiline text and nested dictionaries.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_secrets_example",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Registered tools return written/registered-count status only; the credential-returning helper is neither registered nor called by a tool.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_secrets_hashicorp_token",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "HASHICORP_TOKEN embeds an explicitly credential-shaped fixture value, not a hash/digest.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_transport_auth_boundaries",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "Application login tool and token-related names do not gate the exposed HTTP transport.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_transport_auth_decorators",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "Per-tool no-op decorators do not enforce authentication on the transport.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_transport_auth_explicitly_disabled",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "auth=None explicitly disables server authentication on the HTTP transport.",
+      "outcome": "tp"
+    }
+  ],
+  "unscored_predictions": [
+    {
+      "artifact_id": "benchmark--fixtures--false_negative--aliased_dangerous_function",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_task"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_negative--class_method_sink",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_task"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_negative--multi_hop_dataflow",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_report"
+    },
+    {
+      "artifact_id": "benchmark--fixtures--false_positive--safe_subprocess_args",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "dns_lookup"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "service_action"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_named_diagnostic"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "service_action"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_named_diagnostic"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_example",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "read_report"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_example",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "export_report"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_example",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "read_report"
+    },
+    {
+      "artifact_id": "tests--fixtures--safe_same_file_helper",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "clone_repository"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP03-TOOL-POISON",
+      "function_name": "run_dynamic_allowlist"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_diagnostic_command"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_guard_after_sink"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_inverted_allowlist"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_user_controlled_allowlist"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_dynamic_allowlist"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_character_filter_still_dangerous"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_mixed_safe_and_vulnerable"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_guard_nested_in_condition"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_guard_with_conditional_exit"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_guard_inside_try"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "run_nonterminating_guard"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_diagnostic_command"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_guard_after_sink"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_inverted_allowlist"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_user_controlled_allowlist"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_dynamic_allowlist"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_character_filter_still_dangerous"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_mixed_safe_and_vulnerable"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_guard_nested_in_condition"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_guard_with_conditional_exit"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_guard_inside_try"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_command_validation",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_nonterminating_guard"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_distinct_sinks",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_math"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_distinct_sinks",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_formula"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_distinct_sinks",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_pair_same_line"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_duplicate_sink",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "compute"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_example",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "function_name": "read_log"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_example",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "export_report"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_example",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "read_log"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_example",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_snippet"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_example",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "function_name": "sync_and_notify"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_example",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "sync_and_notify"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_readiness_example",
+      "rule_id": "MCP07-PERMISSIVE-BIND",
+      "function_name": null
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_same_file_helper",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "clone_repository"
+    },
+    {
+      "artifact_id": "tests--fixtures--vulnerable_secrets_example",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "write_ops_notes"
+    }
+  ],
+  "note": "Scores concern explicitly reviewed labels only; errors excluded from confusion matrix and counted separately."
+}

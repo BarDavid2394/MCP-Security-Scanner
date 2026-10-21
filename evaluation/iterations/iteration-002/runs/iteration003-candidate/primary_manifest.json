@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "retrieved_date": "2026-08-09",
+  "safety_policy": "Source is downloaded and statically scanned only; dependencies and server code are never installed or executed.",
+  "repositories": [
+    {"id":"official-servers","url":"https://github.com/modelcontextprotocol/servers.git","commit":"76d64c822f5125032f89eb71dbdb94e42b434821","license":"MIT/Apache-2.0","sparse_paths":["src/fetch","src/git","src/time"]},
+    {"id":"python-sdk","url":"https://github.com/modelcontextprotocol/python-sdk.git","commit":"a4f4ccd091138771535e17191123f20b30fda68e","license":"MIT","sparse_paths":["examples"]},
+    {"id":"quickstart-resources","url":"https://github.com/modelcontextprotocol/quickstart-resources.git","commit":"8e373f0f2e4a68c23b6bbd2e516ae729e8fa9930","license":"MIT","sparse_paths":["weather-server-python"]},
+    {"id":"fastmcp","url":"https://github.com/jlowin/fastmcp.git","commit":"8a1820f1c38401fa02c8996a7a30e864561b80d3","license":"Apache-2.0","sparse_paths":["examples"]},
+    {"id":"mcp-atlassian","url":"https://github.com/sooperset/mcp-atlassian.git","commit":"12fb6fa9e75de20fa70f56ae0d896a79c5a38c4e","license":"MIT","sparse_paths":["src"]},
+    {"id":"markitdown","url":"https://github.com/microsoft/markitdown.git","commit":"fd239d5d2be43d9b68329730206b9312c7d5a388","license":"MIT","sparse_paths":["packages/markitdown-mcp"]},
+    {"id":"simple-mcp-server","url":"https://github.com/rb58853/simple-mcp-server.git","commit":"5abc25c7fde28434a9dee4fbb92e6d84f86b84fc","license":"MIT","sparse_paths":["src"]},
+    {"id":"awslabs-mcp","url":"https://github.com/awslabs/mcp.git","commit":"7ad53dc06ff7999235ab5addbbbb98042718c33a","license":"Apache-2.0","sparse_paths":["src/aws-documentation-mcp-server"]}
+  ],
+  "targets": [
+    {"id":"official-fetch","repository":"official-servers","path":"src/fetch","class":"official-reference","expected_capabilities":["network","external-content","stdio","low-level-api"]},
+    {"id":"official-git","repository":"official-servers","path":"src/git","class":"official-reference","expected_capabilities":["git","filesystem","process","low-level-api"]},
+    {"id":"official-time","repository":"official-servers","path":"src/time","class":"official-reference","expected_capabilities":["time","decorator-api"]},
+    {"id":"python-sdk-examples","repository":"python-sdk","path":"examples","class":"official-sdk","expected_capabilities":["framework-examples","mixed-api"]},
+    {"id":"quickstart-weather","repository":"quickstart-resources","path":"weather-server-python","class":"official-quickstart","expected_capabilities":["network","decorator-api"]},
+    {"id":"fastmcp-examples","repository":"fastmcp","path":"examples","class":"framework","expected_capabilities":["framework-examples","decorator-api","http"]},
+    {"id":"mcp-atlassian","repository":"mcp-atlassian","path":"src","class":"community","expected_capabilities":["network","authentication","external-content"]},
+    {"id":"markitdown-mcp","repository":"markitdown","path":"packages/markitdown-mcp","class":"vendor","expected_capabilities":["files","external-content","decorator-api"]},
+    {"id":"simple-mcp-server","repository":"simple-mcp-server","path":"src","class":"community","expected_capabilities":["http","decorator-api"]},
+    {"id":"aws-documentation","repository":"awslabs-mcp","path":"src/aws-documentation-mcp-server","class":"vendor","expected_capabilities":["network","external-content","decorator-api"]}
+  ]
+}

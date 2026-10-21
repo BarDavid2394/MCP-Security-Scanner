@@ -1,0 +1,81 @@
+{
+  "scanner": "MCP Security Scanner",
+  "version": "2.0.0",
+  "catalog_version": "2026.1",
+  "timestamp": "2026-10-11T12:07:32.527841",
+  "scan_info": {
+    "target_id": "official-fetch",
+    "target": "evaluation\\corpus\\official-servers\\src\\fetch",
+    "files_scanned": 7,
+    "tools_analyzed": 1,
+    "servers_found": 1,
+    "total_findings": 1,
+    "critical_count": 0,
+    "high_count": 1,
+    "parse_errors": [],
+    "status": "completed"
+  },
+  "summary": {
+    "total": 1,
+    "by_severity": {
+      "HIGH": 1
+    },
+    "by_type": {
+      "server-side_request_forgery": 1
+    },
+    "by_attack": {
+      "MCP13": 1
+    },
+    "by_rule": {
+      "MCP13-SSRF": 1
+    },
+    "by_confidence": {
+      "HIGH": 1
+    },
+    "fixable": 0,
+    "risk_score": 8,
+    "risk_level": "HIGH"
+  },
+  "findings": [
+    {
+      "vulnerability_type": "server-side_request_forgery",
+      "severity": "HIGH",
+      "title": "MCP13: Tool-controlled URL reaches network client",
+      "description": "A tool-controlled value is used as the HTTP request destination.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\official-servers\\src\\fetch\\src\\mcp_server_fetch\\server.py",
+      "line_number": 237,
+      "function_name": "fetch",
+      "matched_pattern": "MCP13-SSRF",
+      "matched_text": "fetch_url",
+      "recommendation": "Allowlist schemes and hosts, block private/reserved addresses, and validate every redirect.",
+      "code_snippet": null,
+      "metadata": {
+        "evidence": {
+          "rule_id": "MCP13-SSRF",
+          "source": "tool-controlled parameter",
+          "sink": "fetch_url destination",
+          "path": [
+            "arguments",
+            "args",
+            "url",
+            "fetch_url(destination)"
+          ],
+          "protections": [],
+          "missing_protections": [
+            "scheme/host allowlist",
+            "private-address rejection",
+            "redirect validation"
+          ]
+        }
+      },
+      "attack_id": "MCP13",
+      "rule_id": "MCP13-SSRF",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices"
+      ]
+    }
+  ]
+}

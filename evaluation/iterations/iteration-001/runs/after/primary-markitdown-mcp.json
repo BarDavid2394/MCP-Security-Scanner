@@ -1,0 +1,46 @@
+{
+  "target_id": "markitdown-mcp",
+  "target": "evaluation/corpus/markitdown/packages/markitdown-mcp",
+  "input_files": {
+    "pyproject.toml": "fe5baf52851d0329c94085194a141fe40cdbf1f635329e8198cb1cda4624b8bf",
+    "src/markitdown_mcp/__about__.py": "5858575340884433307e66574c58e1da874e124da0887ccbe588ca4561db0dfd",
+    "src/markitdown_mcp/__init__.py": "aad7baf69a1421fdd8b3d599f4b976d0e6f5cd1d50b1239cb104004f3a8e6762",
+    "src/markitdown_mcp/__main__.py": "b25095870ca49cfe709d4cdc699a587c0471f7ae27094c2a52976d9bf6a6c0bf",
+    "tests/__init__.py": "3e089afc601dcfc1e8813b9c9a3ac3564184f164e42a9fd17e583ee6b4bf3b75"
+  },
+  "status": "completed",
+  "scan_info": {
+    "files_scanned": 5,
+    "tools_analyzed": 1,
+    "servers_found": 0,
+    "total_findings": 1,
+    "critical_count": 0,
+    "high_count": 0,
+    "parse_errors": []
+  },
+  "findings": [
+    {
+      "vulnerability_type": "insufficient_authentication_&_authorization",
+      "severity": "MEDIUM",
+      "title": "MCP07: Network server lacks visible authorization",
+      "description": "A network-capable MCP transport has no visible authentication or authorization enforcement.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\markitdown\\packages\\markitdown-mcp\\src\\markitdown_mcp\\__main__.py",
+      "line_number": 6,
+      "function_name": null,
+      "matched_pattern": "MCP07-MISSING-AUTH",
+      "matched_text": null,
+      "recommendation": "Authenticate every request and authorize each tool/resource operation.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP07",
+      "rule_id": "MCP07-MISSING-AUTH",
+      "confidence": "MEDIUM",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    }
+  ],
+  "elapsed_seconds": 0.27168
+}

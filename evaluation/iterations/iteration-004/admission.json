@@ -1,0 +1,736 @@
+{
+  "candidate_files": 145,
+  "admitted_files": 46,
+  "status_counts": {
+    "deferred-after-structural-inventory": 84,
+    "admitted": 46,
+    "excluded-after-source-review": 15
+  },
+  "decisions": [
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/arbitrary_file_copy_sensitive_data.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/arbitrary_file_deletion_recursive.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/arbitrary_file_write_system_overwrite.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/archive_extraction_zip_slip_attack.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/directory_traversal_write_path_manipulation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/file_permission_manipulation_privilege_escalation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/file_permissions_suid_bit_manipulation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/path_traversal_directory_enumeration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/symlink_attack_file_access_bypass.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/arbitrary-resource-read-write/symlink_manipulation_privilege_escalation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/backdoor/cron_job_multiple_schedules.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/backdoor/dns_tunneling_c2_communication.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/backdoor/environment_variable_trigger_multi_condition.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/backdoor/magic_string_backdoor.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/backdoor/multi_layer_obfuscated_backdoor.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/backdoor/multi_mechanism_persistence.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/backdoor/multi_method_reverse_shell.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/backdoor/ssh_key_injection_multi_user.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/backdoor/time_based_conditional_activation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/api_token_config_exfiltration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/browser_history_exfiltration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/clipboard_monitoring_exfiltration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/database_exfiltration_chunking.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/docker_secrets_registry_exfiltration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/environment_secrets_exfiltration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/file_exfiltration_with_encoding.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/git_repository_data_exfiltration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/multi_cloud_credentials_exfiltration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/postmark_bcc_exfiltration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/data-exfiltration/ssh_key_certificate_exfiltration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/anti_debugging_analysis_evasion.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/log_tampering_evidence_removal.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/multi_method_container_escape.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/multi_technique_process_hiding.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/multi_technique_sandbox_escape.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/process_forking_monitoring_evasion.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/rootkit_installation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/security_feature_disabling.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/timestamp_manipulation_anti_forensics.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/defense-evasion/vm_sandbox_detection.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/behavioral_profiling_user_tracking.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_analytics_location_tracking.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_data_collection_model_training.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_monetization_affiliate_tracking.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/incomplete_security_fake_encryption.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/misleading_functionality_fake_operations.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/undisclosed_third_party_dependencies.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "External processing or persistence alone needs a clearer consent/threat model to establish malicious metadata; deferred for adjudication."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/undisclosed_tracking_data_collection.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/undocumented_api_calls_data_sharing.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "External processing or persistence alone needs a clearer consent/threat model to establish malicious metadata; deferred for adjudication."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/unexpected_side_effects_data_persistence.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "External processing or persistence alone needs a clearer consent/threat model to establish malicious metadata; deferred for adjudication."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/behavior_redirection_endpoint_manipulation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/cache_poisoning_result_manipulation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/context_poisoning_privilege_injection.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/goal_subversion_objective_replacement.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/instruction_override_safety_bypass.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/malicious_tool_registration_auto_invoke.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/security_policy_bypass_rule_manipulation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/state_persistence_malicious_config.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/system_prompt_manipulation_override.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/goal-manipulation/workflow_tampering_step_injection.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/command_injection_grep.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/curl_command_injection.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/format_string_injection.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/ldap_injection_dynamic_filter.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/nosql_injection_mongodb.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/os_system_injection_archives.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/shell_injection_network_diagnostics.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/sql_injection_dynamic_query.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/template_command_injection.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/xpath_injection_dynamic_query.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/act_as_role_injection.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/admin_privilege_escalation.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/contradictory_description_validation_bypass.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/hidden_metadata_filter_bypass.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/hidden_system_instructions.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/jailbreak_mode_context_manipulation.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/nested_ignore_trust_escalation.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/override_instruction_injection.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Describes configurable behavior and claims directives; ambiguity between configuration documentation and agent-directed override requires independent adjudication."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/safety_bypass_emergency_access.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/system_prompt_override.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Describes configurable behavior and claims directives; ambiguity between configuration documentation and agent-directed override requires independent adjudication."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/cpu_exhaustion_attack.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Resource exhaustion has no dedicated rule in catalog 2026.1; do not relabel as MCP16."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/disk_space_exhaustion_attack.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Resource exhaustion has no dedicated rule in catalog 2026.1; do not relabel as MCP16."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/file_descriptor_exhaustion.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Resource exhaustion has no dedicated rule in catalog 2026.1; do not relabel as MCP16."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/fork_bomb_process_exhaustion.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Resource exhaustion has no dedicated rule in catalog 2026.1; do not relabel as MCP16."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/memory_exhaustion_attack.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Resource exhaustion has no dedicated rule in catalog 2026.1; do not relabel as MCP16."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/network_bandwidth_exhaustion.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/regex_dos_redos_attack.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Resource exhaustion has no dedicated rule in catalog 2026.1; do not relabel as MCP16."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/stack_exhaustion_infinite_recursion.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Resource exhaustion has no dedicated rule in catalog 2026.1; do not relabel as MCP16."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/thread_exhaustion_attack.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Resource exhaustion has no dedicated rule in catalog 2026.1; do not relabel as MCP16."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/zip_bomb_decompression_attack.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Resource exhaustion has no dedicated rule in catalog 2026.1; do not relabel as MCP16."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/cheetah_template_injection.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/django_template_injection_custom_tags.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/format_method_injection_attribute_access.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/fstring_injection_dynamic_eval.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/jinja2_autoescape_disabled.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/jinja2_ssti_dynamic_template.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/mako_template_injection_email.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/mustache_template_injection_partials.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/string_template_injection_config.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/template-injection/tornado_template_injection_web.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/api_key_harvesting_environment.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/conditional_behavior_privileged_users.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/credential_harvesting_local_storage.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/output_manipulation_system_mods.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/privilege_escalation_system_file_mod.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/response_poisoning_content_injection.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/result_poisoning_data_injection.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/session_hijacking_token_manipulation.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/stealth_logging_interaction_tracking.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/tool-poisoning/trigger_based_malicious_behavior.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/base64_decode_execute_obfuscation.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/compile_execute_bytecode_manipulation.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_import_arbitrary_module.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_lambda_function_execution.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/importlib_dynamic_module_loading.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/subprocess_shell_command_injection.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_eval_code_injection.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_exec_arbitrary_code.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/unsafe_pickle_deserialization.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/yaml_unsafe_load_code_execution.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/cloud_metadata_credential_extraction.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/dns_rebinding_attack.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/file_protocol_ssrf_local_file.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/internal_service_port_scanning.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/localhost_metadata_service_access.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/private_ip_range_scanning.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/redirect_chain_internal_service.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/redirect_following_open_redirect.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/ssrf_url_manipulation_internal_network.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/unix_socket_docker_exploitation.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "requests.get(http+unix://...) lacks the required transport adapter; reachable exploitation through this tool is not established."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/environment_variable_enumeration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/filesystem_mount_information_access.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/network_configuration_access.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/process_information_access.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/routing_table_arp_cache_access.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/system_file_access_enumeration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/system_hardware_information_access.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/system_log_access.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/user_account_enumeration.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-system-access/user_database_access.py.txt",
+      "status": "deferred-after-structural-inventory",
+      "reason": "Only AST structure inventoried. Detailed source-to-catalog adjudication remains; not scanned in this batch. Related Cisco family is now exposed."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/scripts/safe_fastmcp_server.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/benign/GitHub_tools.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/benign/azure_tools.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/benign/discord_tools.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/malicious/malicious_mcp_server.py.txt",
+      "status": "admitted",
+      "reason": "Source-reviewed rule-specific labels locked before predictions."
+    }
+  ]
+}

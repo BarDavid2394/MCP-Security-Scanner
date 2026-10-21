@@ -1,0 +1,12 @@
+{
+  "verified_at": "2026-10-16T12:32:35.070506+00:00",
+  "code_unchanged_since_freeze": true,
+  "labels_unchanged": true,
+  "holdout_manifest_unchanged": true,
+  "freeze_then_labels_then_scan": true,
+  "no_new_scored_regressions_on_fresh_batch": true,
+  "tests": 100,
+  "cli_checks": 5,
+  "primary_completed": 10,
+  "primary_inputs_identical": true
+}

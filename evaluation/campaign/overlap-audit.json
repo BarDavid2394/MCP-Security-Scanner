@@ -1,0 +1,6 @@
+{
+  "exact_hash_overlaps_with_development": [],
+  "checked_development_hashes": 779,
+  "holdout_artifacts": 33,
+  "note": "Checks recorded batches and historical primary corpus. Semantic family overlap and human-label independence are not proven by hashes."
+}

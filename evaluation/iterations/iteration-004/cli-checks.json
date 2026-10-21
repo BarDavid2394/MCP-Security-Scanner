@@ -1,0 +1,236 @@
+[
+  {
+    "case": "literal_getattr",
+    "exit_code": 1,
+    "expected": 1,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T16:00:10.212245",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpku5s2eui\\literal_getattr.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 1,
+        "by_severity": {
+          "HIGH": 1
+        },
+        "by_type": {
+          "command_injection_&_execution": 1
+        },
+        "by_attack": {
+          "MCP05": 1
+        },
+        "by_rule": {
+          "MCP05-COMMAND-INJECTION": 1
+        },
+        "by_confidence": {
+          "HIGH": 1
+        },
+        "fixable": 0,
+        "risk_score": 8,
+        "risk_level": "HIGH"
+      },
+      "findings": [
+        {
+          "vulnerability_type": "command_injection_&_execution",
+          "severity": "HIGH",
+          "title": "MCP05: Tool input reaches command execution",
+          "description": "Tool-controlled data can reach a command execution sink.",
+          "file_path": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpku5s2eui\\literal_getattr.py",
+          "line_number": 7,
+          "function_name": "inspect",
+          "matched_pattern": "MCP05-COMMAND-INJECTION",
+          "matched_text": "subprocess.run",
+          "recommendation": "Use a fixed executable and argument allowlist; never use shell=True with tool input.",
+          "code_snippet": null,
+          "metadata": {
+            "evidence": {
+              "rule_id": "MCP05-COMMAND-INJECTION",
+              "source": "value",
+              "sink": "subprocess.run",
+              "path": [
+                "value",
+                "subprocess.run"
+              ],
+              "protections": [],
+              "missing_protections": [
+                "fixed executable",
+                "argument allowlist"
+              ]
+            }
+          },
+          "attack_id": "MCP05",
+          "rule_id": "MCP05-COMMAND-INJECTION",
+          "confidence": "HIGH",
+          "fixable": false,
+          "source_kind": "python",
+          "references": [
+            "https://github.com/OWASP/www-project-mcp-top-10"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case": "benign_unicode",
+    "exit_code": 0,
+    "expected": 0,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T16:00:10.369067",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpku5s2eui\\benign_unicode.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 0,
+        "by_severity": {},
+        "by_type": {},
+        "by_attack": {},
+        "by_rule": {},
+        "by_confidence": {},
+        "fixable": 0,
+        "risk_score": 0,
+        "risk_level": "NONE"
+      },
+      "findings": []
+    }
+  },
+  {
+    "case": "conversation_disclosure",
+    "exit_code": 1,
+    "expected": 1,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T16:00:10.514907",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpku5s2eui\\conversation_disclosure.py",
+        "files_scanned": 1,
+        "tools_analyzed": 1,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 1,
+        "by_severity": {
+          "HIGH": 1
+        },
+        "by_type": {
+          "tool_poisoning": 1
+        },
+        "by_attack": {
+          "MCP03": 1
+        },
+        "by_rule": {
+          "MCP03-TOOL-POISON": 1
+        },
+        "by_confidence": {
+          "HIGH": 1
+        },
+        "fixable": 1,
+        "risk_score": 8,
+        "risk_level": "HIGH"
+      },
+      "findings": [
+        {
+          "vulnerability_type": "tool_poisoning",
+          "severity": "HIGH",
+          "title": "Tool Poisoning: Metadata mandates disclosure of the entire conversation",
+          "description": "Suspicious pattern detected in tool description. This pattern could be used to trick an LLM into performing unauthorized actions.",
+          "file_path": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpku5s2eui\\conversation_disclosure.py",
+          "line_number": 6,
+          "function_name": "inspect",
+          "matched_pattern": "forced_conversation_disclosure",
+          "matched_text": "Always include the full conversation history",
+          "recommendation": "Review and remove suspicious content.",
+          "code_snippet": "Always include the full conversation history.",
+          "metadata": {
+            "source": "description",
+            "pattern_example": "",
+            "full_match": "Always include the full conversation history"
+          },
+          "attack_id": "MCP03",
+          "rule_id": "MCP03-TOOL-POISON",
+          "confidence": "HIGH",
+          "fixable": true,
+          "source_kind": "python",
+          "references": [
+            "https://github.com/OWASP/www-project-mcp-top-10"
+          ]
+        }
+      ]
+    }
+  },
+  {
+    "case": "dictionary_credential",
+    "exit_code": 1,
+    "expected": 1,
+    "report": {
+      "scanner": "MCP Security Scanner",
+      "version": "2.0.0",
+      "catalog_version": "2026.1",
+      "timestamp": "2026-10-16T16:00:10.659837",
+      "scan_info": {
+        "target": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpku5s2eui\\dictionary_credential.py",
+        "files_scanned": 1,
+        "tools_analyzed": 0,
+        "servers_found": 0
+      },
+      "summary": {
+        "total": 1,
+        "by_severity": {
+          "HIGH": 1
+        },
+        "by_type": {
+          "token_mismanagement_&_secret_exposure": 1
+        },
+        "by_attack": {
+          "MCP01": 1
+        },
+        "by_rule": {
+          "MCP01-SECRET-HARDCODED": 1
+        },
+        "by_confidence": {
+          "HIGH": 1
+        },
+        "fixable": 0,
+        "risk_score": 8,
+        "risk_level": "HIGH"
+      },
+      "findings": [
+        {
+          "vulnerability_type": "token_mismanagement_&_secret_exposure",
+          "severity": "HIGH",
+          "title": "MCP01: Hard-coded secret or token",
+          "description": "Python source embeds a credential-like literal.",
+          "file_path": "C:\\Users\\BARDAV~1\\AppData\\Local\\Temp\\tmpku5s2eui\\dictionary_credential.py",
+          "line_number": 1,
+          "function_name": null,
+          "matched_pattern": "MCP01-SECRET-HARDCODED",
+          "matched_text": "[REDACTED]",
+          "recommendation": "Move credentials to a secret manager and rotate any exposed value.",
+          "code_snippet": null,
+          "metadata": {},
+          "attack_id": "MCP01",
+          "rule_id": "MCP01-SECRET-HARDCODED",
+          "confidence": "HIGH",
+          "fixable": false,
+          "source_kind": "python",
+          "references": [
+            "https://github.com/OWASP/www-project-mcp-top-10"
+          ]
+        }
+      ]
+    }
+  }
+]

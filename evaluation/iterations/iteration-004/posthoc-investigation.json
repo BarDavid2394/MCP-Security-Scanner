@@ -1,0 +1,34 @@
+{
+  "recorded_at": "2026-10-16T13:00:09.965890+00:00",
+  "policy": "Selected after predictions; excluded from locked validation metrics and available only for future development. No code fixes made.",
+  "confirmed_additional_false_positives": [
+    {
+      "artifact_id": "evals--behavioral-analysis--data--injection-attacks--command_injection_grep",
+      "function_name": "search_logs",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "outcome": "fp",
+      "reason": "searcher.LOG_PATHS.get is dictionary lookup, not an HTTP request. Receiver identity is not checked by the network-method heuristic.",
+      "next_step": "Require known HTTP client bindings and preserve dictionary .get negative controls."
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+      "function_name": "query_database",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "outcome": "fp",
+      "reason": "rm.ROLES.get is dictionary lookup, not an HTTP request. Receiver identity is not checked by the network-method heuristic.",
+      "next_step": "Require known HTTP client bindings and preserve dictionary .get negative controls."
+    },
+    {
+      "artifact_id": "evals--behavioral-analysis--data--prompt-injection--hidden_system_instructions",
+      "function_name": "read_file_safely",
+      "rule_id": "MCP13-SSRF",
+      "polarity": "negative",
+      "outcome": "fp",
+      "reason": "validation_levels.get is dictionary lookup, not an HTTP request. Receiver identity is not checked by the network-method heuristic.",
+      "next_step": "Require known HTTP client bindings and preserve dictionary .get negative controls."
+    }
+  ],
+  "remaining_unadjudicated_findings": 13
+}

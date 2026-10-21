@@ -1,0 +1,131 @@
+{
+  "1": [],
+  "2": [],
+  "3": [],
+  "4": [],
+  "5": [],
+  "6": [],
+  "7": [],
+  "8": [
+    {
+      "artifact_id": "agentinel--fixtures--vulnerable--unicode_smuggle_server-py",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "provenance": "maintainer-fixture",
+      "rationale": "Maintainer labels invisible/bidi metadata as tool poisoning.",
+      "outcome": "tp",
+      "before": "fn"
+    },
+    {
+      "artifact_id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "provenance": "maintainer-fixture",
+      "rationale": "Maintainer borderline fixture is asserted to produce zero findings, including the mapped rule.",
+      "outcome": "tn",
+      "before": "fp"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-malicious-code-exec--index-js",
+      "rule_id": "MCP05-DYNAMIC-CODE",
+      "polarity": "positive",
+      "provenance": "maintainer-fixture",
+      "rationale": "Per-server documentation labels attacker-controlled eval execution.",
+      "outcome": "tp",
+      "before": "fn"
+    },
+    {
+      "artifact_id": "appsecco-labs--vulnerable-mcp-server-wikipedia-http-streamable--wikipedia-mcp-py",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "provenance": "maintainer-fixture",
+      "rationale": "Per-server documentation labels unsanitized public content entering agent context.",
+      "outcome": "tp",
+      "before": "fn"
+    }
+  ],
+  "9": [
+    {
+      "artifact_id": "vault-v2-bdc596b03c3bd46dce5c",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Requires sending credential configuration before patching.",
+      "outcome": "tp",
+      "before": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-d1577a433d514df44634",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Requires uploading a private SSH key as researcher credentials.",
+      "outcome": "tp",
+      "before": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-872272d6c7e5d098c8c5",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Requires an agent to submit environment and user-session data to an external service.",
+      "outcome": "tp",
+      "before": "fn"
+    },
+    {
+      "artifact_id": "vault-v2-f289f4d8fc5f2a9bdb58",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Directs deployment agent to upload production environment and token data.",
+      "outcome": "tp",
+      "before": "fn"
+    }
+  ],
+  "10": [
+    {
+      "artifact_id": "execfile-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Fixed git read operation, operand follows option terminator, shell disabled.",
+      "outcome": "tn",
+      "before": "fp"
+    },
+    {
+      "artifact_id": "shell-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Explicit shell false with fixed executable and operand boundary.",
+      "outcome": "tn",
+      "before": "fp"
+    },
+    {
+      "artifact_id": "interpreter-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Fixed non-interpreter read operation with option terminator.",
+      "outcome": "tn",
+      "before": "fp"
+    },
+    {
+      "artifact_id": "quoted-negative",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "rationale": "Example string is data, not executable code.",
+      "outcome": "tn",
+      "before": "fp"
+    },
+    {
+      "artifact_id": "filetext-positive",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "rationale": "Raw file text crosses tool result boundary.",
+      "outcome": "tp",
+      "before": "fn"
+    },
+    {
+      "artifact_id": "filealias-positive",
+      "rule_id": "MCP06-UNTRUSTED-CONTEXT",
+      "polarity": "positive",
+      "rationale": "Raw file text alias reaches tool result.",
+      "outcome": "tp",
+      "before": "fn"
+    }
+  ]
+}

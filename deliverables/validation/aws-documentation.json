@@ -1,0 +1,107 @@
+{
+  "scanner": "MCP Security Scanner",
+  "version": "2.0.0",
+  "catalog_version": "2026.1",
+  "timestamp": "2026-10-11T12:07:49.752370",
+  "scan_info": {
+    "target_id": "aws-documentation",
+    "target": "evaluation\\corpus\\awslabs-mcp\\src\\aws-documentation-mcp-server",
+    "files_scanned": 30,
+    "tools_analyzed": 7,
+    "servers_found": 0,
+    "total_findings": 3,
+    "critical_count": 0,
+    "high_count": 0,
+    "parse_errors": [],
+    "status": "completed"
+  },
+  "summary": {
+    "total": 3,
+    "by_severity": {
+      "MEDIUM": 3
+    },
+    "by_type": {
+      "context_injection_&_over-sharing": 3
+    },
+    "by_attack": {
+      "MCP10": 3
+    },
+    "by_rule": {
+      "MCP10-SHARED-CONTEXT": 3
+    },
+    "by_confidence": {
+      "MEDIUM": 3
+    },
+    "fixable": 0,
+    "risk_score": 15,
+    "risk_level": "MEDIUM"
+  },
+  "findings": [
+    {
+      "vulnerability_type": "context_injection_&_over-sharing",
+      "severity": "MEDIUM",
+      "title": "MCP10: Insufficiently scoped mutable context",
+      "description": "Global mutable state 'SESSION_UUID' may be shared across users or sessions.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\awslabs-mcp\\src\\aws-documentation-mcp-server\\awslabs\\aws_documentation_mcp_server\\server_aws.py",
+      "line_number": 51,
+      "function_name": null,
+      "matched_pattern": "MCP10-SHARED-CONTEXT",
+      "matched_text": "SESSION_UUID",
+      "recommendation": "Store context per authenticated user and session with expiry and explicit field allowlists.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP10",
+      "rule_id": "MCP10-SHARED-CONTEXT",
+      "confidence": "MEDIUM",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "context_injection_&_over-sharing",
+      "severity": "MEDIUM",
+      "title": "MCP10: Insufficiently scoped mutable context",
+      "description": "Global mutable state 'SESSION_UUID' may be shared across users or sessions.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\awslabs-mcp\\src\\aws-documentation-mcp-server\\awslabs\\aws_documentation_mcp_server\\server_aws_cn.py",
+      "line_number": 37,
+      "function_name": null,
+      "matched_pattern": "MCP10-SHARED-CONTEXT",
+      "matched_text": "SESSION_UUID",
+      "recommendation": "Store context per authenticated user and session with expiry and explicit field allowlists.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP10",
+      "rule_id": "MCP10-SHARED-CONTEXT",
+      "confidence": "MEDIUM",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    },
+    {
+      "vulnerability_type": "context_injection_&_over-sharing",
+      "severity": "MEDIUM",
+      "title": "MCP10: Insufficiently scoped mutable context",
+      "description": "Global mutable state 'SEARCH_RESULT_CACHE' may be shared across users or sessions.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\awslabs-mcp\\src\\aws-documentation-mcp-server\\awslabs\\aws_documentation_mcp_server\\server_utils.py",
+      "line_number": 128,
+      "function_name": null,
+      "matched_pattern": "MCP10-SHARED-CONTEXT",
+      "matched_text": "SEARCH_RESULT_CACHE",
+      "recommendation": "Store context per authenticated user and session with expiry and explicit field allowlists.",
+      "code_snippet": null,
+      "metadata": {},
+      "attack_id": "MCP10",
+      "rule_id": "MCP10-SHARED-CONTEXT",
+      "confidence": "MEDIUM",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://github.com/OWASP/www-project-mcp-top-10"
+      ]
+    }
+  ]
+}

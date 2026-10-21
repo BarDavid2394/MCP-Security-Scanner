@@ -1,0 +1,13 @@
+{
+  "count": 16,
+  "by_rule": {
+    "MCP06-UNTRUSTED-CONTEXT": 3,
+    "MCP13-SSRF": 3,
+    "MCP08-MISSING-AUDIT": 7,
+    "MCP03-TOOL-POISON": 2,
+    "MCP07-MISSING-AUTH": 1
+  },
+  "posthoc_confirmed_false_positives": 3,
+  "not_yet_adjudicated": 13,
+  "note": "Zero FP in locked labels is not a zero-FP claim for all scanner output."
+}

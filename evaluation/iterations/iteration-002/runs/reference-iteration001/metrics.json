@@ -1,0 +1,309 @@
+{
+  "unit": "artifact + rule + optional function scope; unlabelled outcomes are unknown",
+  "micro": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 10,
+    "tn": 13,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.2857142857142857,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "by_rule": {
+    "MCP01-SECRET-HARDCODED": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 0,
+      "tn": 2,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP01-SECRET-OUTPUT": {
+      "tp": 0,
+      "fp": 0,
+      "fn": 5,
+      "tn": 2,
+      "errors": 0,
+      "precision": null,
+      "recall": 0.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP05-COMMAND-INJECTION": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 5,
+      "tn": 9,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "by_category": {
+    "MCP01": {
+      "tp": 3,
+      "fp": 0,
+      "fn": 5,
+      "tn": 4,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 0.375,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    },
+    "MCP05": {
+      "tp": 1,
+      "fp": 0,
+      "fn": 5,
+      "tn": 9,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 0.16666666666666666,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "clean_secret--config",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Environment credentials and an explicit your-api-key-here placeholder; no embedded credential.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "clean_secret_leak--server",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Tools return token presence as a boolean, tokenizer version and passwordless mode, without credential values.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "clean_secret_leak--server",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Token is read from the environment; non-secret literals describe status.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "clean_secret_leak_lowlevel--server",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "Dispatcher and helper return query/count or status, not credentials.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "clean_tool_scope_lowlevel--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "File removal does not execute a command; permission-gate quality is outside this label.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "clean_tool_scope_same_file_gate--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "run_shell_tool",
+      "rationale": "When the deployment write gate is enabled, caller cmd selects the executable in subprocess.run(cmd, shell=False). Authorization does not constrain the executable.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "clean_tool_scope_same_file_gate--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "delete_file_tool",
+      "rationale": "delete_file_tool calls os.remove without process execution.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "clean_tool_scope_subprocess_name_no_real_sink--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "The subprocess-named helper performs only arithmetic.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vuln_secret--config",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "Fixture embeds credential-shaped hardcoded values.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vuln_secret--config",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "log.info formats the supplied password into a log record.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_secret_leak--server",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "Tools return the process environment, the configured API token and a key literal.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_secret_leak--server",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "get_key_tool embeds a credential-shaped literal.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vuln_secret_leak_lowlevel--server",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "A dispatched helper exposes the server environment. File-level label avoids requiring branch attribution.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_secret_leak_lowlevel_negated_guard--server",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "The else branch returns the server environment.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_secret_leak_pagination--server",
+      "rule_id": "MCP01-SECRET-OUTPUT",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "get_creds_tool returns an access token; pagination-only sibling functions are not separate scored negatives.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_secret_leak_pagination--server",
+      "rule_id": "MCP01-SECRET-HARDCODED",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "get_creds_tool embeds an access_token fixture literal. JWT validity is not assumed.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_aliased_subprocess--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "probe_status_tool",
+      "rationale": "Caller supplies the entire argv, including executable, to aliased subprocess.run.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_aliased_subprocess--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "check_task_tool",
+      "rationale": "Caller cmd reaches aliased subprocess.run with shell=True.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_bare_imported_sinks--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "check_state_tool",
+      "rationale": "Caller cmd reaches directly imported subprocess.run with shell=True.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_bare_imported_sinks--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": "fetch_report_tool",
+      "rationale": "Caller cmd reaches directly imported subprocess.call with shell=True.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_bare_imported_sinks--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "sync_status_tool",
+      "rationale": "Directly imported os.remove deletes a file without command execution.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_bare_imported_sinks--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": "refresh_cache_tool",
+      "rationale": "Directly imported shutil.rmtree removes a directory without command execution.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_lowlevel--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "positive",
+      "function_name": null,
+      "rationale": "call_tool passes caller-controlled cmd to subprocess.run with shell=True.",
+      "outcome": "fn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_lowlevel_negated_guard--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "os.remove is file deletion, not command execution. Other security properties are unlabelled.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_lowlevel_sibling_gate--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "File reads/removal introduce no process execution, regardless of the inadequate gate.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_same_file_class_collision--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "ReportHandlers.helper removes a path; no command is executed.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vuln_tool_scope_subprocess_readonly_probe--server",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "polarity": "negative",
+      "function_name": null,
+      "rationale": "The tool supplies a constant nvidia-smi argv and constant timeout; no user command input reaches the helper.",
+      "outcome": "tn"
+    }
+  ],
+  "unscored_predictions": [
+    {
+      "artifact_id": "clean_tool_scope_lowlevel--server",
+      "rule_id": "MCP10-OVER-SHARING",
+      "function_name": null
+    },
+    {
+      "artifact_id": "clean_tool_scope_same_file_gate--server",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "function_name": "run_shell_tool"
+    },
+    {
+      "artifact_id": "clean_tool_scope_same_file_gate--server",
+      "rule_id": "MCP10-OVER-SHARING",
+      "function_name": null
+    }
+  ],
+  "note": "Scores concern explicitly reviewed labels only; errors excluded from confusion matrix and counted separately."
+}

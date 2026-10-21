@@ -1,0 +1,149 @@
+{
+  "development_before": {
+    "tp": 4,
+    "fp": 9,
+    "fn": 4,
+    "tn": 7,
+    "errors": 0,
+    "precision": 0.3076923076923077,
+    "recall": 0.5,
+    "false_positive_rate": 0.5625,
+    "label_coverage": 1.0
+  },
+  "development_after": {
+    "tp": 4,
+    "fp": 1,
+    "fn": 4,
+    "tn": 15,
+    "errors": 0,
+    "precision": 0.8,
+    "recall": 0.5,
+    "false_positive_rate": 0.0625,
+    "label_coverage": 1.0
+  },
+  "fresh": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 10,
+    "tn": 13,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.2857142857142857,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "fresh_reference": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 10,
+    "tn": 13,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.2857142857142857,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "fresh_decisions_identical": true,
+  "primary": [
+    {
+      "target_id": "aws-documentation",
+      "status": "completed",
+      "files": 30,
+      "tools": 7,
+      "findings_before": 3,
+      "findings_after": 3,
+      "findings_identical": true,
+      "inputs_identical": true
+    },
+    {
+      "target_id": "fastmcp-examples",
+      "status": "completed",
+      "files": 141,
+      "tools": 156,
+      "findings_before": 33,
+      "findings_after": 33,
+      "findings_identical": true,
+      "inputs_identical": true
+    },
+    {
+      "target_id": "markitdown-mcp",
+      "status": "completed",
+      "files": 5,
+      "tools": 1,
+      "findings_before": 1,
+      "findings_after": 1,
+      "findings_identical": true,
+      "inputs_identical": true
+    },
+    {
+      "target_id": "mcp-atlassian",
+      "status": "completed",
+      "files": 117,
+      "tools": 98,
+      "findings_before": 13,
+      "findings_after": 13,
+      "findings_identical": true,
+      "inputs_identical": true
+    },
+    {
+      "target_id": "official-fetch",
+      "status": "completed",
+      "files": 7,
+      "tools": 1,
+      "findings_before": 1,
+      "findings_after": 1,
+      "findings_identical": true,
+      "inputs_identical": true
+    },
+    {
+      "target_id": "official-git",
+      "status": "completed",
+      "files": 6,
+      "tools": 12,
+      "findings_before": 0,
+      "findings_after": 0,
+      "findings_identical": true,
+      "inputs_identical": true
+    },
+    {
+      "target_id": "official-time",
+      "status": "completed",
+      "files": 6,
+      "tools": 2,
+      "findings_before": 0,
+      "findings_after": 0,
+      "findings_identical": true,
+      "inputs_identical": true
+    },
+    {
+      "target_id": "python-sdk-examples",
+      "status": "completed",
+      "files": 243,
+      "tools": 117,
+      "findings_before": 53,
+      "findings_after": 53,
+      "findings_identical": true,
+      "inputs_identical": true
+    },
+    {
+      "target_id": "quickstart-weather",
+      "status": "completed",
+      "files": 3,
+      "tools": 2,
+      "findings_before": 0,
+      "findings_after": 0,
+      "findings_identical": true,
+      "inputs_identical": true
+    },
+    {
+      "target_id": "simple-mcp-server",
+      "status": "completed",
+      "files": 8,
+      "tools": 2,
+      "findings_before": 0,
+      "findings_after": 0,
+      "findings_identical": true,
+      "inputs_identical": true
+    }
+  ]
+}

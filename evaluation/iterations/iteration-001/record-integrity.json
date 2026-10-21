@@ -1,0 +1,8 @@
+{
+  "code_archives_verified": 3,
+  "manifest_hashes_verified": 3,
+  "after_code_matches_worktree": true,
+  "holdout_manifest_unchanged": true,
+  "overwrite_attempt_rejected": true,
+  "original_predictions_unchanged": true
+}

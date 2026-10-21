@@ -1,0 +1,156 @@
+{
+  "repository": "ak4hit/mcp-hardening-benchmark",
+  "revision": "5c523b3fcbc88b485b75cdac3b0faba54a9a0910",
+  "license": "MIT",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 516
+    },
+    {
+      "path": "LICENSE",
+      "size": 1063
+    },
+    {
+      "path": "README.md",
+      "size": 9010
+    },
+    {
+      "path": "benchmark/MCP-Benchmark.md",
+      "size": 3816
+    },
+    {
+      "path": "cve_db.json",
+      "size": 632
+    },
+    {
+      "path": "examples/sample-report.json",
+      "size": 4665
+    },
+    {
+      "path": "mcp_benchmark/__init__.py",
+      "size": 127
+    },
+    {
+      "path": "mcp_benchmark/checks/__init__.py",
+      "size": 54
+    },
+    {
+      "path": "mcp_benchmark/checks/auth_checks.py",
+      "size": 9823
+    },
+    {
+      "path": "mcp_benchmark/checks/logging_checks.py",
+      "size": 6737
+    },
+    {
+      "path": "mcp_benchmark/checks/network_checks.py",
+      "size": 5217
+    },
+    {
+      "path": "mcp_benchmark/checks/process_checks.py",
+      "size": 5788
+    },
+    {
+      "path": "mcp_benchmark/checks/secret_checks.py",
+      "size": 9182
+    },
+    {
+      "path": "mcp_benchmark/checks/tool_checks.py",
+      "size": 12450
+    },
+    {
+      "path": "mcp_benchmark/checks/transport_checks.py",
+      "size": 8479
+    },
+    {
+      "path": "mcp_benchmark/cli/__init__.py",
+      "size": 31
+    },
+    {
+      "path": "mcp_benchmark/cli/main.py",
+      "size": 10978
+    },
+    {
+      "path": "mcp_benchmark/core/__init__.py",
+      "size": 33
+    },
+    {
+      "path": "mcp_benchmark/core/fingerprint.py",
+      "size": 8682
+    },
+    {
+      "path": "mcp_benchmark/core/models.py",
+      "size": 2583
+    },
+    {
+      "path": "mcp_benchmark/core/runner.py",
+      "size": 6610
+    },
+    {
+      "path": "mcp_benchmark/core/scorer.py",
+      "size": 4056
+    },
+    {
+      "path": "mcp_benchmark/output/__init__.py",
+      "size": 59
+    },
+    {
+      "path": "mcp_benchmark/output/html_report.py",
+      "size": 7295
+    },
+    {
+      "path": "mcp_benchmark/output/json_report.py",
+      "size": 1718
+    },
+    {
+      "path": "mcp_benchmark/output/sarif_report.py",
+      "size": 3664
+    },
+    {
+      "path": "mcp_benchmark/output/terminal.py",
+      "size": 4287
+    },
+    {
+      "path": "profiles/level1-basic.json",
+      "size": 273
+    },
+    {
+      "path": "profiles/level2-hardened.json",
+      "size": 375
+    },
+    {
+      "path": "requirements.txt",
+      "size": 100
+    },
+    {
+      "path": "setup.py",
+      "size": 766
+    },
+    {
+      "path": "tests/mock_server.py",
+      "size": 6904
+    },
+    {
+      "path": "tests/test_auth_checks.py",
+      "size": 4097
+    },
+    {
+      "path": "tests/test_fingerprint.py",
+      "size": 5597
+    },
+    {
+      "path": "tests/test_process_checks.py",
+      "size": 2415
+    },
+    {
+      "path": "tests/test_scorer.py",
+      "size": 3288
+    },
+    {
+      "path": "tests/test_tool_checks.py",
+      "size": 3748
+    }
+  ]
+}

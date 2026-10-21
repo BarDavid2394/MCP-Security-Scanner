@@ -1,0 +1,44 @@
+﻿group,directory,files,bytes,source_files,python_files,script_files,revision,remote,matching_saved_reports,report_names
+corpus,awslabs-mcp,56,4886605,28,28,0,7ad53dc06ff7999235ab5addbbbb98042718c33a,https://github.com/awslabs/mcp.git,1,evaluation/raw-results/aws-documentation.json
+corpus,fastmcp,192,1336574,123,123,0,8a1820f1c38401fa02c8996a7a30e864561b80d3,https://github.com/jlowin/fastmcp.git,2,evaluation/raw-results/fastmcp-examples.json; evaluation/fastmcp-llm-pilot.json
+corpus,markitdown,18,38927,4,4,0,fd239d5d2be43d9b68329730206b9312c7d5a388,https://github.com/microsoft/markitdown.git,1,evaluation/raw-results/markitdown-mcp.json
+corpus,mcp-atlassian,134,2259516,117,117,0,12fb6fa9e75de20fa70f56ae0d896a79c5a38c4e,https://github.com/sooperset/mcp-atlassian.git,4,evaluation/raw-results/mcp-atlassian.json; evaluation/atlassian-llm-pilot.json; evaluation/atlassian-llm-review-cached.json; evaluation/atlassian-llm-review.json
+corpus,official-servers,47,910763,13,13,0,76d64c822f5125032f89eb71dbdb94e42b434821,https://github.com/modelcontextprotocol/servers.git,4,evaluation/raw-results/external-official-fetch.json; evaluation/raw-results/official-fetch.json; evaluation/raw-results/official-git.json; evaluation/raw-results/official-time.json
+corpus,python-sdk,317,1074598,225,225,0,a4f4ccd091138771535e17191123f20b30fda68e,https://github.com/modelcontextprotocol/python-sdk.git,1,evaluation/raw-results/python-sdk-examples.json
+corpus,quickstart-resources,10,220236,1,1,0,8e373f0f2e4a68c23b6bbd2e516ae729e8fa9930,https://github.com/modelcontextprotocol/quickstart-resources.git,1,evaluation/raw-results/quickstart-weather.json
+corpus,simple-mcp-server,17,32103,8,8,0,5abc25c7fde28434a9dee4fbb92e6d84f86b84fc,https://github.com/rb58853/simple-mcp-server.git,1,evaluation/raw-results/simple-mcp-server.json
+corpus-external,AgentDefense-Bench,113,134511633,36,36,0,b5dfdf3c6cf33fb3c0b39865384b9ca833aa4183,https://github.com/arunsanna/AgentDefense-Bench.git,0,
+corpus-external,bad-mcp,69,151044,0,0,0,0d66abba39dae941c1855262650609f856b53005,https://github.com/canack/bad-mcp.git,0,
+corpus-external,curate-agentinel,79,573555,49,49,0,daaede15274643040d79326a1e6626f710e4b042,https://github.com/markusweldon/agentinel.git,0,
+corpus-external,curate-allen-mcpaudit,38,258114,21,0,21,b9ec7aa6d86497a02932dce314ccaac93b66feb8,https://github.com/allenwu-blip/mcpaudit.git,0,
+corpus-external,curate-appsecco,54,1383186,11,2,9,47b7f2082261136b667daa7be9273698e66e479e,https://github.com/appsecco/vulnerable-mcp-servers-lab.git,0,
+corpus-external,curate-connor,473,530339654,170,170,0,326ab9116699442d2744b445b38c69524fbf43e6,https://github.com/yiheng98/Connor.git,0,
+corpus-external,curate-dvmcp,69,266194,31,31,0,79734c19f5104cd11486c90926d245560f53befa,https://github.com/harishsg993010/damn-vulnerable-MCP-server.git,0,
+corpus-external,curate-glatinone-mcpscan,92,395715,57,53,4,3878ab808912d68d0625f6c24c9d80d67412422c,https://github.com/glatinone/mcpscan.git,0,
+corpus-external,curate-mception,80,2272195,55,52,3,45bbd1a5a73aea8bd26663569c059b9ab371717b,https://github.com/soufianetahiri/mception.git,0,
+corpus-external,curate-sachin-mcpaudit,648,4679218,366,360,6,2bbaa163e93935e61c8b3adb84ae5b8b76a22c35,https://github.com/sachinML/MCPAudit.git,0,
+corpus-external,excel-mcp-0.1.7,26,305719,14,14,0,f0c0ecdcd7e5c13fb446f12f3b6c8e3e729f6417,https://github.com/haris-musa/excel-mcp-server.git,1,evaluation/raw-results/external-excel-017.json
+corpus-external,excel-mcp-0.1.8,31,350065,15,15,0,f51340ecd5778952405044b203d3a2d4c8a46833,https://github.com/haris-musa/excel-mcp-server.git,1,evaluation/raw-results/external-excel-018.json
+corpus-external,malicious-demo-mcp-server,4,22114,1,1,0,8bc36eb3810196d2d05d73a8c7976b93ff5d4be7,https://github.com/smart-mcp-proxy/malicious-demo-mcp-server.git,0,
+corpus-external,mcp-attack-labs,141,1612894,78,78,0,a5ef3f931bd5a87c41c2eddafc70fb606f2d2f9c,https://github.com/aminrj-labs/mcp-attack-labs.git,0,
+corpus-external,mcp-ctf-challenge,42,125756,26,26,0,ccbb84683ddc86201982b4177d3b81ba19f1612b,https://github.com/aganita/mcp-ctf-challenge.git,0,
+corpus-external,mcp-injection-experiments,4,5993,3,3,0,7382a5e64d825b2c7c2bace11f8fb9f2f16e01e2,https://github.com/invariantlabs-ai/mcp-injection-experiments.git,0,
+corpus-external,mcp-poisoning-poc,38,57781,22,22,0,67fd8c6fdeeec33be27cdd16271855914f1ab000,https://github.com/gensecaihq/mcp-poisoning-poc.git,0,
+corpus-external,mcp-security-benchmark,56,318775,7,7,0,9d7df73618c3f7b54211860edc2e3061279fe07d,https://github.com/gautamvarmadatla/mcp-security-benchmark.git,0,
+corpus-external,mcp_vulnerable_testbed,0,0,0,0,0,3857b56d91943f57cbdc92a45968c0c7b5cf0c38,https://github.com/bryankthompson/mcp_vulnerable_testbed.git,0,
+corpus-external,MCPSafety,471,2620238,190,190,0,7872437b6369aac1150e3a19e350a981dc554f81,https://github.com/xjzzzzzzzz/MCPSafety.git,1,evaluation/raw-results/holdout-mcpsafety-clean-mcp03.json
+corpus-external,MCPSecBench,85,8408444,10,9,1,7612c5a3e811dcf01f64e4f2bb324591a2feaaf4,https://github.com/AIS2Lab/MCPSecBench.git,2,evaluation/raw-results/external-mcpsecbench-benign-add.json; evaluation/raw-results/external-mcpsecbench.json
+corpus-external,MCPTox-Benchmark,489,21320750,485,485,0,f85189f9ad12504c197c7f920ab818a40657b1fa,https://github.com/zhiqiangwang4/MCPTox-Benchmark.git,3,evaluation/raw-results/external-mcptox-command-improved.json; evaluation/raw-results/external-mcptox-improved.json; evaluation/raw-results/external-mcptox.json
+corpus-external,MSB,163,3379422,108,108,0,c1d6a70171e4d2c44c87a2ae909d13df00c6aa8d,https://github.com/dongsenzhang/MSB.git,1,evaluation/raw-results/external-msb.json
+corpus-external,new-holdout-dvmcp,19,61195,8,8,0,f136acd1a11dc8719b74f55cff356a27703eb430,https://github.com/Karanxa/dvmcp.git,0,
+corpus-external,new-holdout-mcp-attack-surface,9,6762,3,3,0,38ce0501105ca8d24de2f22fa2a91df70bd6ac01,https://github.com/atef-ataya/mcp-attack-surface.git,0,
+corpus-external,new-holdout-mcp-insecure-demo,37,340362,22,9,13,578510c6eebb88e096476cae99444f591d6d43a1,https://github.com/kenhuangus/mcp-insecure-demo.git,0,
+corpus-external,new-holdout-mcp-vulnerabilities,42,1228125,31,31,0,68525cc4b72c4a594e779d8fb8c89b00eda9199c,https://github.com/Tomby68/mcp-vulnerabilities.git,0,
+corpus-external,new-holdout-mcpguard,15,91063,6,6,0,1404d22fc4f78d49954d66478a81fbdfb2c5bf21,https://github.com/sriyakatreddi/mcpguard.git,0,
+corpus-external,new-holdout-mcppt,26,755657,16,16,0,fb089ee1035c8ecdab6bd7f453383f6d8864c380,https://github.com/gurudeepmallam-cmd/mcppt.git,0,
+corpus-external,new-holdout-unbound-mcp-security-test,12,24486,3,3,0,2c1e48509937cc8c11da0fe4c7709f3099206310,https://github.com/websentry-ai/unbound-mcp-security-test.git,0,
+corpus-external,new-holdout-vulnerablemcp,48,3969534,6,0,6,ecbb0fa461477e156459ac719bc328a3e42dbda9,https://github.com/vineethsai/vulnerablemcp.git,0,
+corpus-external,safe-mcp,318,3140593,46,46,0,f566c85a77162c50c98151ee433a4e774110c81b,https://github.com/SAFE-MCP/safe-mcp.git,0,
+corpus-external,vuln-mcp,28,2765698,10,4,6,9370a5229a7ae27576b25e1764bc8b427e475b13,https://github.com/akto-api-security/vuln-mcp.git,0,
+corpus-external,web-hf-crossmcp-bench,127,6372890,71,71,0,6269d7fcd7a42c96a87eddc7dd328d2bc5630663,https://huggingface.co/datasets/MLZoo/CrossMCP-Bench,0,
+corpus-external,web-hf-mcpshield-scan,4,2542326,0,0,0,69f4f624cef494841d8855efdcf9131473d63bd0,https://huggingface.co/datasets/MCPShield/mcp-security-scan-2026,0,

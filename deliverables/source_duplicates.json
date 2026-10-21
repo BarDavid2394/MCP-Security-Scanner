@@ -1,0 +1,329 @@
+[
+  {
+    "sha256": "a385b789a7a9f521e13f69f38a17b8d3c4740471ceb1cf24f88c25dbf7d803f3",
+    "copies": 3,
+    "paths": [
+      "evaluation/corpus/fastmcp/examples/auth/azure_oauth/client.py",
+      "evaluation/corpus/fastmcp/examples/auth/google_oauth/client.py",
+      "evaluation/corpus/fastmcp/examples/auth/workos_oauth/client.py"
+    ]
+  },
+  {
+    "sha256": "e9065abb3aed1cf507cffb732b768d2ffbeba4b6c8ff912c206b8e916cf973de",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus/fastmcp/examples/auth/huggingface_oauth/client.py",
+      "evaluation/corpus/fastmcp/examples/auth/oci_oauth/client.py"
+    ]
+  },
+  {
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "copies": 87,
+    "paths": [
+      "evaluation/corpus/fastmcp/examples/smart_home/src/smart_home/lights/__init__.py",
+      "evaluation/corpus/official-servers/src/fetch/tests/__init__.py",
+      "evaluation/corpus/python-sdk/examples/servers/simple-pagination/mcp_simple_pagination/__init__.py",
+      "evaluation/corpus/python-sdk/examples/servers/simple-prompt/mcp_simple_prompt/__init__.py",
+      "evaluation/corpus/python-sdk/examples/servers/simple-resource/mcp_simple_resource/__init__.py",
+      "evaluation/corpus/python-sdk/examples/servers/simple-streamablehttp/mcp_simple_streamablehttp/__init__.py",
+      "evaluation/corpus/python-sdk/examples/servers/simple-streamablehttp-stateless/mcp_simple_streamablehttp_stateless/__init__.py",
+      "evaluation/corpus/python-sdk/examples/servers/simple-tool/mcp_simple_tool/__init__.py",
+      "evaluation/corpus/python-sdk/examples/snippets/clients/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/apps/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/bearer_auth/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/custom_methods/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/dual_era/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/error_handling/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/extensions/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/identity_assertion/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/json_response/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/legacy_elicitation/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/legacy_routing/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/lifespan/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/middleware/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/mrtr/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/oauth/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/oauth_client_credentials/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/pagination/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/parallel_calls/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/prompts/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/reconnect/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/refund_desk/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/resources/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/roots/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/sampling/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/schema_validators/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/serve_one/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/sse_polling/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/standalone_get/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/starlette_mount/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/stateless_legacy/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/stickynotes/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/streaming/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/subscriptions/__init__.py",
+      "evaluation/corpus/python-sdk/examples/stories/tools/__init__.py",
+      "evaluation/corpus-external/curate-agentinel/src/agentinel/report/__init__.py",
+      "evaluation/corpus-external/curate-agentinel/tests/__init__.py",
+      "evaluation/corpus-external/curate-connor/Connor/detector/__init__.py",
+      "evaluation/corpus-external/curate-connor/Connor/dto/__init__.py",
+      "evaluation/corpus-external/curate-connor/Connor/static_utils/__init__.py",
+      "evaluation/corpus-external/curate-dvmcp/tests/__init__.py",
+      "evaluation/corpus-external/curate-dvmcp/tests/integration/__init__.py",
+      "evaluation/corpus-external/curate-dvmcp/tests/unit/__init__.py",
+      "evaluation/corpus-external/curate-mception/src/mception/rules/__init__.py",
+      "evaluation/corpus-external/curate-mception/tests/__init__.py",
+      "evaluation/corpus-external/mcp-ctf-challenge/src/__init__.py",
+      "evaluation/corpus-external/mcp-ctf-challenge/src/challenges/__init__.py",
+      "evaluation/corpus-external/mcp-ctf-challenge/src/challenges/easy/__init__.py",
+      "evaluation/corpus-external/mcp-ctf-challenge/src/challenges/medium/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/benchmark/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/callbacks/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/callbacks/handlers/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/common/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/evaluator/github/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/evaluator/google_maps/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/evaluator/google_search/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/evaluator/notion/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/evaluator/playwright/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/evaluator/weather/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/evaluator/yfinance/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/chroma/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/date/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/echo/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/github/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/google_search/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/google_sheets/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/playwright/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/terminal/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/url_fetch/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/weather/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/wikipedia/__init__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/yahoo_finance/__init__.py",
+      "evaluation/corpus-external/MSB/data/__init__.py",
+      "evaluation/corpus-external/MSB/mcp_use/telemetry/__init__.py",
+      "evaluation/corpus-external/new-holdout-mcppt/tests/__init__.py",
+      "evaluation/corpus-external/web-hf-crossmcp-bench/benchmark/__init__.py",
+      "evaluation/corpus-external/web-hf-crossmcp-bench/src/ifg_guard/__init__.py"
+    ]
+  },
+  {
+    "sha256": "e932170f033c4adbd40e38e8a2acfc0b5653499798a3818a2be39cefd5666816",
+    "copies": 4,
+    "paths": [
+      "evaluation/corpus/python-sdk/examples/servers/simple-pagination/mcp_simple_pagination/__main__.py",
+      "evaluation/corpus/python-sdk/examples/servers/simple-prompt/mcp_simple_prompt/__main__.py",
+      "evaluation/corpus/python-sdk/examples/servers/simple-resource/mcp_simple_resource/__main__.py",
+      "evaluation/corpus/python-sdk/examples/servers/simple-tool/mcp_simple_tool/__main__.py"
+    ]
+  },
+  {
+    "sha256": "bb10c5b4aea21665be7fe0429a4cd4e0e38ee68e385cf0edecc2fb7a48cd579c",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/AgentDefense-Bench/mcp_specific/cve-2025-6514.py",
+      "evaluation/corpus-external/MCPSecBench/code/cve-2025-6514.py"
+    ]
+  },
+  {
+    "sha256": "c16bf0699ab57b64e4eb4281d55e6b9057b2fdffa320fed93b8272c1288e6abf",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/AgentDefense-Bench/mcp_specific/squatting.py",
+      "evaluation/corpus-external/MCPSecBench/code/squatting.py"
+    ]
+  },
+  {
+    "sha256": "b1264afc3368b4043a6d9f9364acdd159336034182bcfbb37d4c668411ccd362",
+    "copies": 3,
+    "paths": [
+      "evaluation/corpus-external/curate-connor/PoCs/backdoor_PoC/p19/main.py",
+      "evaluation/corpus-external/curate-connor/PoCs/payload_exec_PoC/p19/main.py",
+      "evaluation/corpus-external/curate-connor/PoCs/reverse_shell_PoC/p19/main.py"
+    ]
+  },
+  {
+    "sha256": "0f413a15de47764d939be90b7fc58ba88917645ad16834f282265140bea2fb3c",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/curate-dvmcp/__init__.py",
+      "evaluation/corpus-external/curate-dvmcp/common/__init__.py"
+    ]
+  },
+  {
+    "sha256": "39a451498f44c100f564ee5b9742a807398627c95734574cb99e4835b1df4174",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/curate-dvmcp/challenges/easy/challenge1/server_sse.py",
+      "evaluation/corpus-external/new-holdout-mcp-vulnerabilities/DVMCPS-Demos/prompt-injection/server.py"
+    ]
+  },
+  {
+    "sha256": "468d8fc07e2fdc564afd8851cb00529c35b9b8240d97c33abbc97bd927ddbc1e",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/__main__.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/__main__.py"
+    ]
+  },
+  {
+    "sha256": "7cce61f0c8b671c8c8954de1e7e9bea41b0cb681fcb69468d6b57622d917f3f2",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/calculations.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/calculations.py"
+    ]
+  },
+  {
+    "sha256": "23aa97dc216ffa76275ad8b88c1c0b4ab74b280833d76a630ffe2eccb51fc0c1",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/cell_utils.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/cell_utils.py"
+    ]
+  },
+  {
+    "sha256": "bf5162f7d120f15140daff70e0615c9446610dc44baa7bc344f6f783eaae21a4",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/cell_validation.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/cell_validation.py"
+    ]
+  },
+  {
+    "sha256": "44f39437e9b0f9c7a655c12ed321c5a03f5d114b7c2ea43411414f4188a68260",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/chart.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/chart.py"
+    ]
+  },
+  {
+    "sha256": "3fb07bcee8ff12f495329ee47982da5c0f2c4cc2db383a19582372b3dda63cbc",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/data.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/data.py"
+    ]
+  },
+  {
+    "sha256": "419f6eb6674ac33df8a8ee28bcfe77d1c2996edc5e11092cdfa48c5cf681721e",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/exceptions.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/exceptions.py"
+    ]
+  },
+  {
+    "sha256": "ffe8f671b30345b93170f1106881d519edf32b8d271ad8731a6c8cdd4555f616",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/formatting.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/formatting.py"
+    ]
+  },
+  {
+    "sha256": "ed7f173bc56d1ea69d1a320f843e0f5c5853abeeecb4dbd9d306ce4d005cb0d9",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/pivot.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/pivot.py"
+    ]
+  },
+  {
+    "sha256": "06893318beb5fac93944573e978e7629f8c3ab3aad40706076015fabe0fe6c4c",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/sheet.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/sheet.py"
+    ]
+  },
+  {
+    "sha256": "ee31ae10c6c072b71ac7ed7c53dbdf4b5121bf12bbca4aee53a24cf75c5b707b",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/tables.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/tables.py"
+    ]
+  },
+  {
+    "sha256": "b1b6ec8183272936abd8a41bd35f9eb794bae29ea9754df2b81d3655a0d79cef",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/validation.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/validation.py"
+    ]
+  },
+  {
+    "sha256": "2d16c3bc09d1ba4730c730e1b50d05ef48634fdb6d1f1f72581a66977efbeaaf",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/excel-mcp-0.1.7/src/excel_mcp/workbook.py",
+      "evaluation/corpus-external/excel-mcp-0.1.8/src/excel_mcp/workbook.py"
+    ]
+  },
+  {
+    "sha256": "822b38edb31a5e956069fefb47dae0efc54c931d6f637c475e8c503b1c264ff4",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/mcp-attack-labs/labs/01-mcp-tool-poisoning/reference/mcp-injection-experiments/direct-poisoning.py",
+      "evaluation/corpus-external/mcp-injection-experiments/direct-poisoning.py"
+    ]
+  },
+  {
+    "sha256": "087ef272b337c919755fca5d7a19cb14c728a179b67cceac863073bb412c2796",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/mcp-attack-labs/labs/01-mcp-tool-poisoning/reference/mcp-injection-experiments/shadowing.py",
+      "evaluation/corpus-external/mcp-injection-experiments/shadowing.py"
+    ]
+  },
+  {
+    "sha256": "39eb9037585d2dc3e7ef982c6e7556007860588aa38b64b249c9e77d1f9d8c0f",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/mcp-attack-labs/labs/01-mcp-tool-poisoning/reference/mcp-injection-experiments/whatsapp-takeover.py",
+      "evaluation/corpus-external/mcp-injection-experiments/whatsapp-takeover.py"
+    ]
+  },
+  {
+    "sha256": "7e7aa46a753fb168f7cefdc2b0752c05a59483e6d4d9d80a73370d10f9efad89",
+    "copies": 6,
+    "paths": [
+      "evaluation/corpus-external/mcp-poisoning-poc/src/__init__.py",
+      "evaluation/corpus-external/mcp-poisoning-poc/src/attacks/__init__.py",
+      "evaluation/corpus-external/mcp-poisoning-poc/src/defenses/__init__.py",
+      "evaluation/corpus-external/mcp-poisoning-poc/src/demo/__init__.py",
+      "evaluation/corpus-external/mcp-poisoning-poc/src/utils/__init__.py",
+      "evaluation/corpus-external/mcp-poisoning-poc/tests/__init__.py"
+    ]
+  },
+  {
+    "sha256": "8621f9612429dd880e329f475bacd7fa6ef9928313594b78481bbfc105e8c49f",
+    "copies": 12,
+    "paths": [
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/chroma/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/date/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/echo/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/github/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/google_search/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/google_sheets/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/playwright/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/terminal/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/url_fetch/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/weather/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/wikipedia/__main__.py",
+      "evaluation/corpus-external/MCPSafety/mcpuniverse/mcp/servers/yahoo_finance/__main__.py"
+    ]
+  },
+  {
+    "sha256": "f74141a639101b5f886f45e9999d6601bca9ae394796c64e2ab4d65c088f3595",
+    "copies": 2,
+    "paths": [
+      "evaluation/corpus-external/new-holdout-mcp-vulnerabilities/combined-dual-logger/server.py",
+      "evaluation/corpus-external/new-holdout-mcp-vulnerabilities/dual-llm-mcp/server.py"
+    ]
+  }
+]

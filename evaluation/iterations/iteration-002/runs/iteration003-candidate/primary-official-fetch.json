@@ -1,0 +1,66 @@
+{
+  "target_id": "official-fetch",
+  "target": "evaluation/corpus/official-servers/src/fetch",
+  "input_files": {
+    "pyproject.toml": "6d1b83d594f86ef258440dc15e5a487220fe56163dc1ebabc96d1ae734fbb164",
+    "src/mcp_server_fetch/__init__.py": "485e562fadd273fa425ca6b3af7ff3e5e1ad826018365b789526aec9c9954268",
+    "src/mcp_server_fetch/__main__.py": "416074fae3c8d3fe39a7bb0945e07b14e53d1487cded42983a6d4e195673ca7a",
+    "src/mcp_server_fetch/server.py": "73cf6b453284f4d8aaed9eaa175de4c231f73b3e05088360cf1b39dbece4dc1d",
+    "tests/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "tests/test_server.py": "58ee856630f0f894206558a1ee0389dfcdaec0c9c21536627c5efb69ce24675b",
+    "uv.lock": "76ccc3b2185f0825274c4f160bff25e515eb06285e0edee8fd27ecfbe9a5b127"
+  },
+  "status": "completed",
+  "scan_info": {
+    "files_scanned": 7,
+    "tools_analyzed": 1,
+    "servers_found": 1,
+    "total_findings": 1,
+    "critical_count": 0,
+    "high_count": 1,
+    "parse_errors": []
+  },
+  "findings": [
+    {
+      "vulnerability_type": "server-side_request_forgery",
+      "severity": "HIGH",
+      "title": "MCP13: Tool-controlled URL reaches network client",
+      "description": "A tool-controlled value is used as the HTTP request destination.",
+      "file_path": "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\official-servers\\src\\fetch\\src\\mcp_server_fetch\\server.py",
+      "line_number": 237,
+      "function_name": "fetch",
+      "matched_pattern": "MCP13-SSRF",
+      "matched_text": "fetch_url",
+      "recommendation": "Allowlist schemes and hosts, block private/reserved addresses, and validate every redirect.",
+      "code_snippet": null,
+      "metadata": {
+        "evidence": {
+          "rule_id": "MCP13-SSRF",
+          "source": "tool-controlled parameter",
+          "sink": "fetch_url destination",
+          "path": [
+            "arguments",
+            "args",
+            "url",
+            "fetch_url(destination)"
+          ],
+          "protections": [],
+          "missing_protections": [
+            "scheme/host allowlist",
+            "private-address rejection",
+            "redirect validation"
+          ]
+        }
+      },
+      "attack_id": "MCP13",
+      "rule_id": "MCP13-SSRF",
+      "confidence": "HIGH",
+      "fixable": false,
+      "source_kind": "python",
+      "references": [
+        "https://modelcontextprotocol.io/docs/tutorials/security/security_best_practices"
+      ]
+    }
+  ],
+  "elapsed_seconds": 0.313612
+}

@@ -1,0 +1,73 @@
+{
+  "_id": "6a50bb76852217d250f8b8ee",
+  "id": "Agent-Threat-Rule/atr-skill-benchmark",
+  "author": "Agent-Threat-Rule",
+  "sha": "7219b10d2ac077e3db8c87d43d653a67935cdb5d",
+  "lastModified": "2026-07-10T09:29:28.000Z",
+  "private": false,
+  "gated": false,
+  "disabled": false,
+  "tags": [
+    "task_categories:text-classification",
+    "language:en",
+    "license:mit",
+    "size_categories:n<1K",
+    "format:json",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:polars",
+    "library:mlcroissant",
+    "region:us",
+    "agent-security",
+    "prompt-injection",
+    "skill-security",
+    "mcp",
+    "detection"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tATR Skill-Security Benchmark\n\t\n\nA labeled corpus of SKILL.md files for evaluating detection of malicious agent\nskills \u2014 prompt injection, tool poisoning, credential theft, malware droppers\nand supply-chain attacks hidden inside natural-language agent instructions.\nPublished as part of Agent Threat Rules (ATR),\nan open, vendor-neutral detection standard for AI agents (like Sigma, but for\nagent attacks).\n\n\t\n\t\t\n\t\n\t\n\t\tWhy this exists\n\t\n\nSKILL.md files are natural-language instructions\u2026 See the full description on the dataset page: https://huggingface.co/datasets/Agent-Threat-Rule/atr-skill-benchmark.",
+  "downloads": 100,
+  "likes": 2,
+  "cardData": {
+    "license": "mit",
+    "task_categories": [
+      "text-classification"
+    ],
+    "language": [
+      "en"
+    ],
+    "tags": [
+      "agent-security",
+      "prompt-injection",
+      "skill-security",
+      "mcp",
+      "detection"
+    ],
+    "size_categories": [
+      "n<1K"
+    ],
+    "pretty_name": "ATR Skill-Security Benchmark",
+    "configs": [
+      {
+        "config_name": "default",
+        "data_files": "atr-skill-benchmark.jsonl"
+      }
+    ]
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "atr-skill-benchmark.jsonl"
+    },
+    {
+      "rfilename": "build_dataset.py"
+    }
+  ],
+  "createdAt": "2026-07-10T09:29:26.000Z",
+  "usedStorage": 1800028
+}

@@ -1,0 +1,4 @@
+{
+  "command": "python -m unittest discover -v",
+  "exit_code": 0
+}

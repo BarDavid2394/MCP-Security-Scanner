@@ -1,0 +1,371 @@
+{
+  "downloaded_files": 1267,
+  "readback_verified_files": 1266,
+  "unique_file_hashes": 1251,
+  "downloaded_bytes": 66013869,
+  "github_repositories": 18,
+  "hf_datasets": 2,
+  "exact_overlap_files": 12,
+  "native_fixture_candidates": [
+    {
+      "repository": "akanthed/SecureAI-Scan",
+      "files": 25,
+      "exact_unique_files": 25,
+      "nonempty_files": 25,
+      "polarity_hints": {
+        "negative": 15,
+        "positive": 10
+      },
+      "syntax": {
+        "valid": 25
+      }
+    },
+    {
+      "repository": "autod3structeur/MCP-DecayBench",
+      "files": 10,
+      "exact_unique_files": 10,
+      "nonempty_files": 10,
+      "polarity_hints": {
+        "negative": 8,
+        "positive": 2
+      },
+      "syntax": {
+        "valid": 10
+      }
+    },
+    {
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "files": 146,
+      "exact_unique_files": 146,
+      "nonempty_files": 146,
+      "polarity_hints": {
+        "positive": 142,
+        "negative": 4
+      },
+      "syntax": {
+        "valid": 145,
+        "unreadable": 1
+      }
+    },
+    {
+      "repository": "jaimenbell/mcp-security-scanner",
+      "files": 104,
+      "exact_unique_files": 98,
+      "nonempty_files": 97,
+      "polarity_hints": {
+        "negative": 36,
+        "unclassified": 28,
+        "positive": 40
+      },
+      "syntax": {
+        "valid": 104
+      }
+    },
+    {
+      "repository": "jspillers10/mcp-security-scanner",
+      "files": 57,
+      "exact_unique_files": 57,
+      "nonempty_files": 57,
+      "polarity_hints": {
+        "positive": 29,
+        "negative": 25,
+        "unclassified": 3
+      },
+      "syntax": {
+        "valid": 57
+      }
+    }
+  ],
+  "native_total": 342,
+  "native_unique": 336,
+  "native_nonempty": 335,
+  "native_unique_nonempty": 335,
+  "bordair": {
+    "attack": {
+      "records": 38772,
+      "distinct_text_fields": 14304,
+      "text_only_records": 14899,
+      "distinct_text_only": 13836,
+      "categories": {
+        "agent_skill_supply_chain": 14,
+        "audio_native_llm_jailbreak": 17,
+        "coding_agent_injection": 19,
+        "cross_modal_decomposition": 13,
+        "lora_supply_chain": 14,
+        "mcp_cross_server_exfil": 9,
+        "rag_optimization_attack": 18,
+        "reasoning_dos_overthink": 27,
+        "serialization_boundary_rce": 15,
+        "video_generation_jailbreak": 23,
+        "vla_robotic_injection": 15,
+        "audio_adversarial_asr": 15,
+        "beast_suffixes": 35,
+        "chart_diagram_injection": 15,
+        "cipher_jailbreaks": 19,
+        "computer_use_injection": 25,
+        "detector_evasion": 20,
+        "instruction_hierarchy_bypass": 15,
+        "mcp_tool_injection": 25,
+        "memory_poisoning": 25,
+        "multi_agent_contagion": 20,
+        "pdf_active_content": 15,
+        "rag_chunk_boundary": 20,
+        "reasoning_token_injection": 20,
+        "unicode_tag_smuggling": 15,
+        "agent_cot_manipulation": 20,
+        "ascii_art_injection": 12,
+        "code_switch_attack": 20,
+        "homoglyph_unicode_attack": 20,
+        "indirect_injection": 30,
+        "qr_barcode_injection": 15,
+        "structured_data_injection": 20,
+        "system_prompt_extraction": 30,
+        "tool_call_injection": 20,
+        "autodan_jailbreak": 1656,
+        "combined_multiturn_gcg": 80,
+        "combined_pair_gcg": 72,
+        "encoding_obfuscation": 3995,
+        "gcg_adversarial_suffix": 2400,
+        "jailbreak_template": 8100,
+        "crescendo_multi_turn": 60,
+        "crescendo_full_transcript": 10,
+        "pair_jailbreak": 12,
+        "tap_jailbreak": 8,
+        "skeleton_key_multi_turn": 12,
+        "many_shot_jailbreak": 16,
+        "direct_override": 2063,
+        "exfiltration": 2063,
+        "dan_jailbreak": 2063,
+        "template_injection": 2063,
+        "authority_impersonation": 2063,
+        "social_engineering": 2063,
+        "context_switching": 2063,
+        "compliance_forcing": 2063,
+        "multilingual": 1553,
+        "creative_exfiltration": 1553,
+        "hypothetical": 1043,
+        "rule_manipulation": 1043
+      }
+    },
+    "benign": {
+      "records": 14763,
+      "distinct_text_fields": 14763,
+      "text_only_records": 14763,
+      "distinct_text_only": 14763,
+      "categories": {
+        "benign": 14763
+      }
+    },
+    "explicit_mcp_records": 34
+  },
+  "vault": [
+    {
+      "file": "snapshots/vaultmcp__vault/packages/corpus/injection-patterns.json.txt",
+      "records": 200,
+      "labels": {
+        "pattern-bank-unlabelled": 200
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/proxy/test/fixtures/benign-encoded/fixtures.json.txt",
+      "records": 70,
+      "labels": {
+        "clean": 70
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/benign/01-mcp-readmes.json.txt",
+      "records": 25,
+      "labels": {
+        "clean": 25
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/benign/02-security-research.json.txt",
+      "records": 20,
+      "labels": {
+        "clean": 20
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/benign/03-tech-docs.json.txt",
+      "records": 25,
+      "labels": {
+        "clean": 25
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/benign/04-prose-news.json.txt",
+      "records": 20,
+      "labels": {
+        "clean": 20
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/benign/05-code-snippets.json.txt",
+      "records": 20,
+      "labels": {
+        "clean": 20
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/benign-v2/benign.json.txt",
+      "records": 100,
+      "labels": {
+        "clean": 100
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/01-published-papers.json.txt",
+      "records": 35,
+      "labels": {
+        "malicious": 35
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/02-garak-probes.json.txt",
+      "records": 30,
+      "labels": {
+        "malicious": 30
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/03-blog-pocs.json.txt",
+      "records": 30,
+      "labels": {
+        "malicious": 30
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/04-owasp-llm.json.txt",
+      "records": 20,
+      "labels": {
+        "malicious": 20
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/05a-encoded-base64-hex.json.txt",
+      "records": 3,
+      "labels": {
+        "malicious": 3
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/05b-encoded-rot-caesar-url.json.txt",
+      "records": 8,
+      "labels": {
+        "malicious": 8
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/05c-encoded-unicode-zwj.json.txt",
+      "records": 8,
+      "labels": {
+        "malicious": 8
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/06a-multi-turn-sleepers.json.txt",
+      "records": 12,
+      "labels": {
+        "malicious": 12
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/06b-multi-turn-context-poison.json.txt",
+      "records": 12,
+      "labels": {
+        "malicious": 12
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/07a-roleplay-dan-family.json.txt",
+      "records": 10,
+      "labels": {
+        "malicious": 10
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/07b-roleplay-developer-mode.json.txt",
+      "records": 10,
+      "labels": {
+        "malicious": 10
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-attacks-burned-v1/07c-jailbreak-framing.json.txt",
+      "records": 10,
+      "labels": {
+        "malicious": 10
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-v2-novel/attacks.json.txt",
+      "records": 50,
+      "labels": {
+        "malicious": 44,
+        "suspicious": 6
+      }
+    },
+    {
+      "file": "snapshots/vaultmcp__vault/packages/eval/datasets/holdout-v2-paraphrase/attacks.json.txt",
+      "records": 30,
+      "labels": {
+        "malicious": 18,
+        "suspicious": 12
+      }
+    }
+  ],
+  "andy": {
+    "records": 218,
+    "labels": {
+      "attack": 118,
+      "benign": 100
+    }
+  },
+  "atr": {
+    "records": 498,
+    "labels": {
+      "benign": 466,
+      "malicious": 32
+    },
+    "source_families": {
+      "evasive-stub": 9,
+      "mcp-official": 7,
+      "ninja": 40,
+      "real": 415,
+      "adv": 14,
+      "ninja-evasive": 4,
+      "openclaw": 3,
+      "snyk": 6
+    }
+  },
+  "fbas": [
+    {
+      "split": "data",
+      "rows": 2646,
+      "columns": [
+        "chosen",
+        "rejected"
+      ]
+    },
+    {
+      "split": "test_attack",
+      "rows": 109,
+      "columns": [
+        "cveId",
+        "description",
+        "commands",
+        "mcp_commands",
+        "prompt"
+      ]
+    },
+    {
+      "split": "test_benign",
+      "rows": 171,
+      "columns": [
+        "prompt"
+      ]
+    }
+  ]
+}

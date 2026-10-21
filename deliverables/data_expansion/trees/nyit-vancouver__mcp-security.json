@@ -1,0 +1,864 @@
+{
+  "repository": "nyit-vancouver/mcp-security",
+  "revision": "9c354050e9f911a55f6bbf8aa94274ce0ca5fc03",
+  "license": null,
+  "truncated": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 168
+    },
+    {
+      "path": "README.md",
+      "size": 5035
+    },
+    {
+      "path": "assistant_bot/.gitignore",
+      "size": 20
+    },
+    {
+      "path": "assistant_bot/Dockerfile",
+      "size": 190
+    },
+    {
+      "path": "assistant_bot/README.md",
+      "size": 514
+    },
+    {
+      "path": "assistant_bot/computer_tools/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "assistant_bot/computer_tools/command.py",
+      "size": 527
+    },
+    {
+      "path": "assistant_bot/computer_tools/files.py",
+      "size": 772
+    },
+    {
+      "path": "assistant_bot/main.py",
+      "size": 1584
+    },
+    {
+      "path": "assistant_bot/requirements.txt",
+      "size": 76
+    },
+    {
+      "path": "detection/.gitignore",
+      "size": 51
+    },
+    {
+      "path": "detection/.pre-commit-config.yaml",
+      "size": 1073
+    },
+    {
+      "path": "detection/.python-version",
+      "size": 5
+    },
+    {
+      "path": "detection/Dockerfile",
+      "size": 350
+    },
+    {
+      "path": "detection/README.md",
+      "size": 27181
+    },
+    {
+      "path": "detection/TESTING.md",
+      "size": 6871
+    },
+    {
+      "path": "detection/configs/profiles.yaml",
+      "size": 132
+    },
+    {
+      "path": "detection/detection/__init__.py",
+      "size": 273
+    },
+    {
+      "path": "detection/detection/cli.py",
+      "size": 1941
+    },
+    {
+      "path": "detection/detection/core/__init__.py",
+      "size": 313
+    },
+    {
+      "path": "detection/detection/core/models.py",
+      "size": 1128
+    },
+    {
+      "path": "detection/detection/core/registry.py",
+      "size": 1680
+    },
+    {
+      "path": "detection/detection/core/session.py",
+      "size": 996
+    },
+    {
+      "path": "detection/detection/knowledge/README.md",
+      "size": 120
+    },
+    {
+      "path": "detection/detection/knowledge/__init__.py",
+      "size": 138
+    },
+    {
+      "path": "detection/detection/knowledge/service.py",
+      "size": 591
+    },
+    {
+      "path": "detection/detection/mitigation/__init__.py",
+      "size": 155
+    },
+    {
+      "path": "detection/detection/mitigation/mitigation_engine.py",
+      "size": 2749
+    },
+    {
+      "path": "detection/detection/mitigation/policy_templates/README.md",
+      "size": 138
+    },
+    {
+      "path": "detection/detection/pipelines/__init__.py",
+      "size": 279
+    },
+    {
+      "path": "detection/detection/pipelines/dynamic.py",
+      "size": 6489
+    },
+    {
+      "path": "detection/detection/pipelines/rag.py",
+      "size": 439
+    },
+    {
+      "path": "detection/detection/pipelines/static.py",
+      "size": 1697
+    },
+    {
+      "path": "detection/detection/plugins/__init__.py",
+      "size": 48
+    },
+    {
+      "path": "detection/detection/plugins/dynamic/__init__.py",
+      "size": 8118
+    },
+    {
+      "path": "detection/detection/plugins/rag/__init__.py",
+      "size": 314
+    },
+    {
+      "path": "detection/detection/plugins/static/__init__.py",
+      "size": 40
+    },
+    {
+      "path": "detection/detection/plugins/static/metadata/__init__.py",
+      "size": 4201
+    },
+    {
+      "path": "detection/detection/plugins/static/python/__init__.py",
+      "size": 4099
+    },
+    {
+      "path": "detection/detection/plugins/static/typescript/__init__.py",
+      "size": 379
+    },
+    {
+      "path": "detection/detection/reporting/__init__.py",
+      "size": 156
+    },
+    {
+      "path": "detection/detection/reporting/cef_formatter.py",
+      "size": 7453
+    },
+    {
+      "path": "detection/detection/reporting/report_builder.py",
+      "size": 2639
+    },
+    {
+      "path": "detection/detection/rules/__init__.py",
+      "size": 225
+    },
+    {
+      "path": "detection/detection/rules/keywords.toml",
+      "size": 6097
+    },
+    {
+      "path": "detection/detection/rules/loader.py",
+      "size": 3514
+    },
+    {
+      "path": "detection/detection/sandbox/__init__.py",
+      "size": 135
+    },
+    {
+      "path": "detection/detection/sandbox/providers/__init__.py",
+      "size": 211
+    },
+    {
+      "path": "detection/detection/sandbox/providers/docker_provider.py",
+      "size": 12601
+    },
+    {
+      "path": "detection/detection/sandbox/runner.py",
+      "size": 629
+    },
+    {
+      "path": "detection/docker-entrypoint.sh",
+      "size": 364
+    },
+    {
+      "path": "detection/docs/detection-roadmap.md",
+      "size": 3336
+    },
+    {
+      "path": "detection/docs/ignore_words.txt",
+      "size": 59
+    },
+    {
+      "path": "detection/docs/mcptox_static_analysis.md",
+      "size": 4118
+    },
+    {
+      "path": "detection/examples/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "detection/examples/benchmarks/README.md",
+      "size": 1887
+    },
+    {
+      "path": "detection/examples/benchmarks/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "detection/examples/benchmarks/mcptox/.gitignore",
+      "size": 155
+    },
+    {
+      "path": "detection/examples/benchmarks/mcptox/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "detection/examples/benchmarks/mcptox/prepare_samples.py",
+      "size": 4266
+    },
+    {
+      "path": "detection/examples/benchmarks/mcptox/pure_tool.json",
+      "size": 298286
+    },
+    {
+      "path": "detection/examples/benchmarks/mcptox/run_mcptox_benchmark.py",
+      "size": 7859
+    },
+    {
+      "path": "detection/examples/dynamic_analysis_demo.py",
+      "size": 8992
+    },
+    {
+      "path": "detection/examples/static_analysis_test.py",
+      "size": 4810
+    },
+    {
+      "path": "detection/main.py",
+      "size": 87
+    },
+    {
+      "path": "detection/pyproject.toml",
+      "size": 482
+    },
+    {
+      "path": "detection/pytest/__init__.py",
+      "size": 155
+    },
+    {
+      "path": "detection/pytest/__main__.py",
+      "size": 119
+    },
+    {
+      "path": "detection/pytest/runner.py",
+      "size": 3663
+    },
+    {
+      "path": "detection/sandbox/Dockerfile",
+      "size": 1595
+    },
+    {
+      "path": "detection/sandbox/QUICKSTART.md",
+      "size": 8818
+    },
+    {
+      "path": "detection/sandbox/README.md",
+      "size": 10104
+    },
+    {
+      "path": "detection/sandbox/docker-compose.yml",
+      "size": 1528
+    },
+    {
+      "path": "detection/sandbox/monitors/bpf_programs.c",
+      "size": 10796
+    },
+    {
+      "path": "detection/sandbox/monitors/ebpf_monitor.py",
+      "size": 11312
+    },
+    {
+      "path": "detection/sandbox/monitors/entrypoint.sh",
+      "size": 2373
+    },
+    {
+      "path": "detection/tests/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "detection/tests/integration/test_dynamic_pipeline.py",
+      "size": 10995
+    },
+    {
+      "path": "detection/tests/unit/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "detection/tests/unit/test_rules_loader.py",
+      "size": 5543
+    },
+    {
+      "path": "detection/uv.lock",
+      "size": 29966
+    },
+    {
+      "path": "docker-compose.yml",
+      "size": 896
+    },
+    {
+      "path": "fast-agent/agent.py",
+      "size": 5989
+    },
+    {
+      "path": "fast-agent/fast_agent_app.egg-info/PKG-INFO",
+      "size": 233
+    },
+    {
+      "path": "fast-agent/fast_agent_app.egg-info/SOURCES.txt",
+      "size": 253
+    },
+    {
+      "path": "fast-agent/fast_agent_app.egg-info/dependency_links.txt",
+      "size": 1
+    },
+    {
+      "path": "fast-agent/fast_agent_app.egg-info/entry_points.txt",
+      "size": 46
+    },
+    {
+      "path": "fast-agent/fast_agent_app.egg-info/requires.txt",
+      "size": 32
+    },
+    {
+      "path": "fast-agent/fast_agent_app.egg-info/top_level.txt",
+      "size": 6
+    },
+    {
+      "path": "fast-agent/fastagent.config.yaml",
+      "size": 2139
+    },
+    {
+      "path": "fast-agent/fastagent.jsonl",
+      "size": 3006
+    },
+    {
+      "path": "fast-agent/fastagent.secrets.yaml",
+      "size": 1127
+    },
+    {
+      "path": "fast-agent/pyproject.toml",
+      "size": 495
+    },
+    {
+      "path": "fast-agent/uv.lock",
+      "size": 185950
+    },
+    {
+      "path": "mcp-server/.gitattributes",
+      "size": 42
+    },
+    {
+      "path": "mcp-server/.gitignore",
+      "size": 5279
+    },
+    {
+      "path": "mcp-server/.npmrc",
+      "size": 100
+    },
+    {
+      "path": "mcp-server/CODE_OF_CONDUCT.md",
+      "size": 5223
+    },
+    {
+      "path": "mcp-server/CONTRIBUTING.md",
+      "size": 1944
+    },
+    {
+      "path": "mcp-server/LICENSE",
+      "size": 1071
+    },
+    {
+      "path": "mcp-server/SECURITY.md",
+      "size": 762
+    },
+    {
+      "path": "mcp-server/package-lock.json",
+      "size": 242423
+    },
+    {
+      "path": "mcp-server/package.json",
+      "size": 845
+    },
+    {
+      "path": "mcp-server/scripts/release.py",
+      "size": 5892
+    },
+    {
+      "path": "mcp-server/src/everything/CLAUDE.md",
+      "size": 1157
+    },
+    {
+      "path": "mcp-server/src/everything/Dockerfile",
+      "size": 466
+    },
+    {
+      "path": "mcp-server/src/everything/README.md",
+      "size": 9584
+    },
+    {
+      "path": "mcp-server/src/everything/everything.ts",
+      "size": 36112
+    },
+    {
+      "path": "mcp-server/src/everything/index.ts",
+      "size": 1175
+    },
+    {
+      "path": "mcp-server/src/everything/instructions.md",
+      "size": 1309
+    },
+    {
+      "path": "mcp-server/src/everything/package.json",
+      "size": 1066
+    },
+    {
+      "path": "mcp-server/src/everything/sidenotes/sidenote-2025-10-09T23-36-39-486Z.txt",
+      "size": 125
+    },
+    {
+      "path": "mcp-server/src/everything/sse.ts",
+      "size": 2136
+    },
+    {
+      "path": "mcp-server/src/everything/stdio.ts",
+      "size": 671
+    },
+    {
+      "path": "mcp-server/src/everything/streamableHttp.ts",
+      "size": 11689
+    },
+    {
+      "path": "mcp-server/src/everything/tsconfig.json",
+      "size": 146
+    },
+    {
+      "path": "mcp-server/src/fetch/.python-version",
+      "size": 5
+    },
+    {
+      "path": "mcp-server/src/fetch/Dockerfile",
+      "size": 1199
+    },
+    {
+      "path": "mcp-server/src/fetch/LICENSE",
+      "size": 1059
+    },
+    {
+      "path": "mcp-server/src/fetch/README.md",
+      "size": 6587
+    },
+    {
+      "path": "mcp-server/src/fetch/pyproject.toml",
+      "size": 1019
+    },
+    {
+      "path": "mcp-server/src/fetch/src/mcp_server_fetch/__init__.py",
+      "size": 717
+    },
+    {
+      "path": "mcp-server/src/fetch/src/mcp_server_fetch/__main__.py",
+      "size": 57
+    },
+    {
+      "path": "mcp-server/src/fetch/src/mcp_server_fetch/server.py",
+      "size": 10646
+    },
+    {
+      "path": "mcp-server/src/fetch/uv.lock",
+      "size": 100444
+    },
+    {
+      "path": "mcp-server/src/filesystem/Dockerfile",
+      "size": 567
+    },
+    {
+      "path": "mcp-server/src/filesystem/README.md",
+      "size": 11187
+    },
+    {
+      "path": "mcp-server/src/filesystem/__tests__/directory-tree.test.ts",
+      "size": 6143
+    },
+    {
+      "path": "mcp-server/src/filesystem/__tests__/lib.test.ts",
+      "size": 24973
+    },
+    {
+      "path": "mcp-server/src/filesystem/__tests__/path-utils.test.ts",
+      "size": 6783
+    },
+    {
+      "path": "mcp-server/src/filesystem/__tests__/path-validation.test.ts",
+      "size": 41370
+    },
+    {
+      "path": "mcp-server/src/filesystem/__tests__/roots-utils.test.ts",
+      "size": 2920
+    },
+    {
+      "path": "mcp-server/src/filesystem/index.ts",
+      "size": 27327
+    },
+    {
+      "path": "mcp-server/src/filesystem/jest.config.cjs",
+      "size": 455
+    },
+    {
+      "path": "mcp-server/src/filesystem/lib.ts",
+      "size": 13003
+    },
+    {
+      "path": "mcp-server/src/filesystem/package.json",
+      "size": 1095
+    },
+    {
+      "path": "mcp-server/src/filesystem/path-utils.ts",
+      "size": 3566
+    },
+    {
+      "path": "mcp-server/src/filesystem/path-validation.ts",
+      "size": 2731
+    },
+    {
+      "path": "mcp-server/src/filesystem/roots-utils.ts",
+      "size": 2766
+    },
+    {
+      "path": "mcp-server/src/filesystem/tsconfig.json",
+      "size": 208
+    },
+    {
+      "path": "mcp-server/src/git/.gitignore",
+      "size": 18
+    },
+    {
+      "path": "mcp-server/src/git/.python-version",
+      "size": 5
+    },
+    {
+      "path": "mcp-server/src/git/Dockerfile",
+      "size": 1316
+    },
+    {
+      "path": "mcp-server/src/git/LICENSE",
+      "size": 1059
+    },
+    {
+      "path": "mcp-server/src/git/README.md",
+      "size": 10768
+    },
+    {
+      "path": "mcp-server/src/git/pyproject.toml",
+      "size": 1118
+    },
+    {
+      "path": "mcp-server/src/git/src/mcp_server_git/__init__.py",
+      "size": 650
+    },
+    {
+      "path": "mcp-server/src/git/src/mcp_server_git/__main__.py",
+      "size": 55
+    },
+    {
+      "path": "mcp-server/src/git/src/mcp_server_git/py.typed",
+      "size": 0
+    },
+    {
+      "path": "mcp-server/src/git/src/mcp_server_git/server.py",
+      "size": 15188
+    },
+    {
+      "path": "mcp-server/src/git/tests/test_server.py",
+      "size": 3624
+    },
+    {
+      "path": "mcp-server/src/git/uv.lock",
+      "size": 51550
+    },
+    {
+      "path": "mcp-server/src/memory/Dockerfile",
+      "size": 557
+    },
+    {
+      "path": "mcp-server/src/memory/README.md",
+      "size": 9302
+    },
+    {
+      "path": "mcp-server/src/memory/index.ts",
+      "size": 15929
+    },
+    {
+      "path": "mcp-server/src/memory/package.json",
+      "size": 755
+    },
+    {
+      "path": "mcp-server/src/memory/tsconfig.json",
+      "size": 166
+    },
+    {
+      "path": "mcp-server/src/sequentialthinking/Dockerfile",
+      "size": 570
+    },
+    {
+      "path": "mcp-server/src/sequentialthinking/README.md",
+      "size": 5218
+    },
+    {
+      "path": "mcp-server/src/sequentialthinking/index.ts",
+      "size": 9573
+    },
+    {
+      "path": "mcp-server/src/sequentialthinking/package.json",
+      "size": 843
+    },
+    {
+      "path": "mcp-server/src/sequentialthinking/tsconfig.json",
+      "size": 200
+    },
+    {
+      "path": "mcp-server/src/time/.python-version",
+      "size": 5
+    },
+    {
+      "path": "mcp-server/src/time/Dockerfile",
+      "size": 1337
+    },
+    {
+      "path": "mcp-server/src/time/README.md",
+      "size": 7262
+    },
+    {
+      "path": "mcp-server/src/time/pyproject.toml",
+      "size": 976
+    },
+    {
+      "path": "mcp-server/src/time/src/mcp_server_time/__init__.py",
+      "size": 500
+    },
+    {
+      "path": "mcp-server/src/time/src/mcp_server_time/__main__.py",
+      "size": 41
+    },
+    {
+      "path": "mcp-server/src/time/src/mcp_server_time/server.py",
+      "size": 7437
+    },
+    {
+      "path": "mcp-server/src/time/test/time_server_test.py",
+      "size": 17930
+    },
+    {
+      "path": "mcp-server/src/time/uv.lock",
+      "size": 60209
+    },
+    {
+      "path": "mcp-server/tsconfig.json",
+      "size": 322
+    },
+    {
+      "path": "mcp-tools-detection/.gitignore",
+      "size": 419
+    },
+    {
+      "path": "mcp-tools-detection/Dockerfile",
+      "size": 322
+    },
+    {
+      "path": "mcp-tools-detection/QUICK_START.md",
+      "size": 6567
+    },
+    {
+      "path": "mcp-tools-detection/README.md",
+      "size": 18730
+    },
+    {
+      "path": "mcp-tools-detection/UV_GUIDE.md",
+      "size": 8766
+    },
+    {
+      "path": "mcp-tools-detection/app.py",
+      "size": 10406
+    },
+    {
+      "path": "mcp-tools-detection/config.py",
+      "size": 1172
+    },
+    {
+      "path": "mcp-tools-detection/db_storage_example.py",
+      "size": 8519
+    },
+    {
+      "path": "mcp-tools-detection/detection_adapter.py",
+      "size": 13108
+    },
+    {
+      "path": "mcp-tools-detection/detection_rules.yaml",
+      "size": 560
+    },
+    {
+      "path": "mcp-tools-detection/detector.py",
+      "size": 3172
+    },
+    {
+      "path": "mcp-tools-detection/main.py",
+      "size": 97
+    },
+    {
+      "path": "mcp-tools-detection/pyproject.toml",
+      "size": 952
+    },
+    {
+      "path": "mcp-tools-detection/start.bat",
+      "size": 1197
+    },
+    {
+      "path": "mcp-tools-detection/start.sh",
+      "size": 1448
+    },
+    {
+      "path": "mcp-tools-detection/storage.py",
+      "size": 4346
+    },
+    {
+      "path": "mcp-tools-detection/templates/index.html",
+      "size": 29814
+    },
+    {
+      "path": "mcp-tools-detection/templates/test.html",
+      "size": 11694
+    },
+    {
+      "path": "mcp-tools-detection/test_api.py",
+      "size": 6391
+    },
+    {
+      "path": "temp/add-two.py",
+      "size": 569
+    },
+    {
+      "path": "temp/pyproject.toml",
+      "size": 298
+    },
+    {
+      "path": "test-result/logs/mcp-server-tool-poisoning.log",
+      "size": 295584
+    },
+    {
+      "path": "test-result/logs/mcp-server-useful-tools.log",
+      "size": 274848
+    },
+    {
+      "path": "test-result/screenshots.docx",
+      "size": 1628110
+    },
+    {
+      "path": "threat-model/MCP threat model.json",
+      "size": 86033
+    },
+    {
+      "path": "threat-model/MCP threat model.pdf",
+      "size": 112817
+    },
+    {
+      "path": "threat-model/README.md",
+      "size": 145
+    },
+    {
+      "path": "threat-model/Threat_Model_DREAD_Analysis.xlsx",
+      "size": 140989
+    },
+    {
+      "path": "tool-poisoning/.python-version",
+      "size": 5
+    },
+    {
+      "path": "tool-poisoning/README.md",
+      "size": 0
+    },
+    {
+      "path": "tool-poisoning/pyproject.toml",
+      "size": 185
+    },
+    {
+      "path": "tool-poisoning/testlog.log",
+      "size": 5302
+    },
+    {
+      "path": "tool-poisoning/tool-poisoning.py",
+      "size": 2431
+    },
+    {
+      "path": "tool-poisoning/uv.lock",
+      "size": 96617
+    },
+    {
+      "path": "useful-tools/.python-version",
+      "size": 5
+    },
+    {
+      "path": "useful-tools/README.md",
+      "size": 0
+    },
+    {
+      "path": "useful-tools/download_server.py",
+      "size": 4656
+    },
+    {
+      "path": "useful-tools/pyproject.toml",
+      "size": 185
+    },
+    {
+      "path": "useful-tools/testlog.log",
+      "size": 6162
+    },
+    {
+      "path": "useful-tools/useful-tools.py",
+      "size": 2529
+    },
+    {
+      "path": "useful-tools/uv.lock",
+      "size": 96617
+    },
+    {
+      "path": "useful-tools/validate.sh",
+      "size": 365
+    }
+  ]
+}

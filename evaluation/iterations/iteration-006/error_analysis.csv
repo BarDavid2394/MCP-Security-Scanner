@@ -1,0 +1,7 @@
+artifact_id,source_record_id,rule,before,after,label_rationale
+synthetic-secret-output-inline-positive,synthetic,MCP01-SECRET-OUTPUT,fn,tp,Returns the environment credential verbatim.
+synthetic-secret-output-helper-positive,synthetic,MCP01-SECRET-OUTPUT,fn,tp,Returns the environment credential verbatim.
+synthetic-shell-input-inline-negative,synthetic,MCP05-COMMAND-INJECTION,fp,tn,Fixed executable and format with caller data as an argv element; no shell interpretation.
+synthetic-shell-input-helper-negative,synthetic,MCP05-COMMAND-INJECTION,fp,tn,Fixed executable and format with caller data as an argv element; no shell interpretation.
+synthetic-document-context-inline-positive,synthetic,MCP06-UNTRUSTED-CONTEXT,fn,tp,External file contents are returned verbatim as tool output available to model context.
+synthetic-document-context-helper-positive,synthetic,MCP06-UNTRUSTED-CONTEXT,fn,tp,External file contents are returned verbatim as tool output available to model context.

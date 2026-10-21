@@ -1,0 +1,1856 @@
+{
+  "repository": "cisco-ai-defense/mcp-scanner",
+  "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+  "license": "Apache-2.0",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".env.example",
+      "size": 324
+    },
+    {
+      "path": ".github/workflows/build-macos.yml",
+      "size": 3668
+    },
+    {
+      "path": ".github/workflows/ci-cd-run.yml",
+      "size": 20887
+    },
+    {
+      "path": ".github/workflows/codeql.yml",
+      "size": 4686
+    },
+    {
+      "path": ".github/workflows/python-tests.yml",
+      "size": 623
+    },
+    {
+      "path": ".github/workflows/release.yml",
+      "size": 752
+    },
+    {
+      "path": ".gitignore",
+      "size": 4868
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "size": 619
+    },
+    {
+      "path": "CODEOWNERS",
+      "size": 102
+    },
+    {
+      "path": "CODE_OF_CONDUCT.md",
+      "size": 5486
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 2682
+    },
+    {
+      "path": "LICENSE",
+      "size": 11357
+    },
+    {
+      "path": "README.md",
+      "size": 34191
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 2361
+    },
+    {
+      "path": "claude-code-plugin/.claude-plugin/marketplace.json",
+      "size": 1078
+    },
+    {
+      "path": "claude-code-plugin/.claude-plugin/plugin.json",
+      "size": 474
+    },
+    {
+      "path": "claude-code-plugin/README.md",
+      "size": 3560
+    },
+    {
+      "path": "claude-code-plugin/commands/deep-scan.md",
+      "size": 712
+    },
+    {
+      "path": "claude-code-plugin/commands/quick-scan.md",
+      "size": 552
+    },
+    {
+      "path": "claude-code-plugin/commands/scan-behavioral.md",
+      "size": 766
+    },
+    {
+      "path": "claude-code-plugin/commands/scan-config.md",
+      "size": 502
+    },
+    {
+      "path": "claude-code-plugin/commands/scan-known-configs.md",
+      "size": 564
+    },
+    {
+      "path": "claude-code-plugin/commands/scan-prompts.md",
+      "size": 569
+    },
+    {
+      "path": "claude-code-plugin/commands/scan-remote.md",
+      "size": 471
+    },
+    {
+      "path": "claude-code-plugin/commands/scan-resources.md",
+      "size": 542
+    },
+    {
+      "path": "claude-code-plugin/commands/scan-static.md",
+      "size": 1430
+    },
+    {
+      "path": "claude-code-plugin/skills/security-scan/SKILL.md",
+      "size": 9380
+    },
+    {
+      "path": "docs/README.md",
+      "size": 1832
+    },
+    {
+      "path": "docs/api-reference.md",
+      "size": 16249
+    },
+    {
+      "path": "docs/architecture.md",
+      "size": 13371
+    },
+    {
+      "path": "docs/authentication.md",
+      "size": 4865
+    },
+    {
+      "path": "docs/behavioral-scanning.md",
+      "size": 10640
+    },
+    {
+      "path": "docs/development.md",
+      "size": 491
+    },
+    {
+      "path": "docs/llm-providers.md",
+      "size": 13038
+    },
+    {
+      "path": "docs/logging.md",
+      "size": 5558
+    },
+    {
+      "path": "docs/mcp-threats-taxonomy.md",
+      "size": 15448
+    },
+    {
+      "path": "docs/npm-scanning.md",
+      "size": 10143
+    },
+    {
+      "path": "docs/output-formats.md",
+      "size": 22408
+    },
+    {
+      "path": "docs/programmatic-usage.md",
+      "size": 8234
+    },
+    {
+      "path": "docs/programmatic_exception_handling.md",
+      "size": 2582
+    },
+    {
+      "path": "docs/pypi-scanning.md",
+      "size": 10493
+    },
+    {
+      "path": "docs/readiness-scanning.md",
+      "size": 12958
+    },
+    {
+      "path": "docs/static-scanning.md",
+      "size": 9234
+    },
+    {
+      "path": "docs/virustotal-scanning.md",
+      "size": 4531
+    },
+    {
+      "path": "docs/vulnerable-package-scanning.md",
+      "size": 9067
+    },
+    {
+      "path": "evals/README.md",
+      "size": 7286
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/arbitrary_file_copy_sensitive_data.py",
+      "size": 3039
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/arbitrary_file_deletion_recursive.py",
+      "size": 2635
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/arbitrary_file_write_system_overwrite.py",
+      "size": 3188
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/archive_extraction_zip_slip_attack.py",
+      "size": 3822
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/directory_traversal_write_path_manipulation.py",
+      "size": 3016
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/file_permission_manipulation_privilege_escalation.py",
+      "size": 3372
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/file_permissions_suid_bit_manipulation.py",
+      "size": 2786
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/path_traversal_directory_enumeration.py",
+      "size": 2817
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/symlink_attack_file_access_bypass.py",
+      "size": 3088
+    },
+    {
+      "path": "evals/behavioral-analysis/data/arbitrary-resource-read-write/symlink_manipulation_privilege_escalation.py",
+      "size": 3223
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/cron_job_multiple_schedules.py",
+      "size": 2417
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/dns_tunneling_c2_communication.py",
+      "size": 2231
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/environment_variable_trigger_multi_condition.py",
+      "size": 2534
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/magic_string_backdoor.py",
+      "size": 2093
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/multi_feature_web_shell.py",
+      "size": 2677
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/multi_layer_obfuscated_backdoor.py",
+      "size": 2289
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/multi_mechanism_persistence.py",
+      "size": 2784
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/multi_method_reverse_shell.py",
+      "size": 2713
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/ssh_key_injection_multi_user.py",
+      "size": 2488
+    },
+    {
+      "path": "evals/behavioral-analysis/data/backdoor/time_based_conditional_activation.py",
+      "size": 2493
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/api_token_config_exfiltration.py",
+      "size": 3280
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/browser_history_exfiltration.py",
+      "size": 3048
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/clipboard_monitoring_exfiltration.py",
+      "size": 2131
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/database_exfiltration_chunking.py",
+      "size": 3572
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/docker_secrets_registry_exfiltration.py",
+      "size": 2794
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/environment_secrets_exfiltration.py",
+      "size": 3940
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/file_exfiltration_with_encoding.py",
+      "size": 2602
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/git_repository_data_exfiltration.py",
+      "size": 2650
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/multi_cloud_credentials_exfiltration.py",
+      "size": 3563
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/postmark_bcc_exfiltration.py",
+      "size": 9368
+    },
+    {
+      "path": "evals/behavioral-analysis/data/data-exfiltration/ssh_key_certificate_exfiltration.py",
+      "size": 5230
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/anti_debugging_analysis_evasion.py",
+      "size": 2763
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/log_tampering_evidence_removal.py",
+      "size": 2536
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/multi_method_container_escape.py",
+      "size": 2545
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/multi_technique_process_hiding.py",
+      "size": 3000
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/multi_technique_sandbox_escape.py",
+      "size": 2152
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/process_forking_monitoring_evasion.py",
+      "size": 2169
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/rootkit_installation.py",
+      "size": 3012
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/security_feature_disabling.py",
+      "size": 2341
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/timestamp_manipulation_anti_forensics.py",
+      "size": 2901
+    },
+    {
+      "path": "evals/behavioral-analysis/data/defense-evasion/vm_sandbox_detection.py",
+      "size": 3639
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/behavioral_profiling_user_tracking.py",
+      "size": 2463
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/hidden_analytics_location_tracking.py",
+      "size": 2339
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/hidden_data_collection_model_training.py",
+      "size": 2893
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/hidden_monetization_affiliate_tracking.py",
+      "size": 2673
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/incomplete_security_fake_encryption.py",
+      "size": 2141
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/misleading_functionality_fake_operations.py",
+      "size": 2313
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/undisclosed_third_party_dependencies.py",
+      "size": 2629
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/undisclosed_tracking_data_collection.py",
+      "size": 1999
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/undocumented_api_calls_data_sharing.py",
+      "size": 2336
+    },
+    {
+      "path": "evals/behavioral-analysis/data/general-description-code-mismatch/unexpected_side_effects_data_persistence.py",
+      "size": 2203
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/behavior_redirection_endpoint_manipulation.py",
+      "size": 2998
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/cache_poisoning_result_manipulation.py",
+      "size": 3570
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/context_poisoning_privilege_injection.py",
+      "size": 3008
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/goal_subversion_objective_replacement.py",
+      "size": 3371
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/instruction_override_safety_bypass.py",
+      "size": 3461
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/malicious_tool_registration_auto_invoke.py",
+      "size": 3296
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/security_policy_bypass_rule_manipulation.py",
+      "size": 3158
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/state_persistence_malicious_config.py",
+      "size": 3520
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/system_prompt_manipulation_override.py",
+      "size": 3039
+    },
+    {
+      "path": "evals/behavioral-analysis/data/goal-manipulation/workflow_tampering_step_injection.py",
+      "size": 3163
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/command_injection_grep.py",
+      "size": 2529
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/curl_command_injection.py",
+      "size": 4333
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/format_string_injection.py",
+      "size": 4028
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/ldap_injection_dynamic_filter.py",
+      "size": 3332
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/nosql_injection_mongodb.py",
+      "size": 3818
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/os_system_injection_archives.py",
+      "size": 3200
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/shell_injection_network_diagnostics.py",
+      "size": 3030
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/sql_injection_dynamic_query.py",
+      "size": 2893
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/template_command_injection.py",
+      "size": 3896
+    },
+    {
+      "path": "evals/behavioral-analysis/data/injection-attacks/xpath_injection_dynamic_query.py",
+      "size": 2900
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/act_as_role_injection.py",
+      "size": 3020
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/admin_privilege_escalation.py",
+      "size": 3056
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/contradictory_description_validation_bypass.py",
+      "size": 3271
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/hidden_metadata_filter_bypass.py",
+      "size": 2820
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/hidden_system_instructions.py",
+      "size": 2728
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/jailbreak_mode_context_manipulation.py",
+      "size": 2920
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/nested_ignore_trust_escalation.py",
+      "size": 2651
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/override_instruction_injection.py",
+      "size": 3597
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/safety_bypass_emergency_access.py",
+      "size": 3207
+    },
+    {
+      "path": "evals/behavioral-analysis/data/prompt-injection/system_prompt_override.py",
+      "size": 4024
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/cpu_exhaustion_attack.py",
+      "size": 1988
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/disk_space_exhaustion_attack.py",
+      "size": 2046
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/file_descriptor_exhaustion.py",
+      "size": 2341
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/fork_bomb_process_exhaustion.py",
+      "size": 2285
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/memory_exhaustion_attack.py",
+      "size": 1892
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/network_bandwidth_exhaustion.py",
+      "size": 2672
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/regex_dos_redos_attack.py",
+      "size": 2401
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/stack_exhaustion_infinite_recursion.py",
+      "size": 2136
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/thread_exhaustion_attack.py",
+      "size": 2577
+    },
+    {
+      "path": "evals/behavioral-analysis/data/resource-exhaustion/zip_bomb_decompression_attack.py",
+      "size": 2526
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/cheetah_template_injection.py",
+      "size": 3594
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/django_template_injection_custom_tags.py",
+      "size": 3811
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/format_method_injection_attribute_access.py",
+      "size": 3260
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/fstring_injection_dynamic_eval.py",
+      "size": 3395
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/jinja2_autoescape_disabled.py",
+      "size": 3122
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/jinja2_ssti_dynamic_template.py",
+      "size": 3232
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/mako_template_injection_email.py",
+      "size": 3670
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/mustache_template_injection_partials.py",
+      "size": 3458
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/string_template_injection_config.py",
+      "size": 3807
+    },
+    {
+      "path": "evals/behavioral-analysis/data/template-injection/tornado_template_injection_web.py",
+      "size": 3624
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/api_key_harvesting_environment.py",
+      "size": 2110
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/conditional_behavior_privileged_users.py",
+      "size": 2678
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/credential_harvesting_local_storage.py",
+      "size": 3297
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/output_manipulation_system_mods.py",
+      "size": 2934
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/privilege_escalation_system_file_mod.py",
+      "size": 3361
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/response_poisoning_content_injection.py",
+      "size": 4219
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/result_poisoning_data_injection.py",
+      "size": 3746
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/session_hijacking_token_manipulation.py",
+      "size": 4248
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/stealth_logging_interaction_tracking.py",
+      "size": 3310
+    },
+    {
+      "path": "evals/behavioral-analysis/data/tool-poisoning/trigger_based_malicious_behavior.py",
+      "size": 3368
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/base64_decode_execute_obfuscation.py",
+      "size": 1738
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/compile_execute_bytecode_manipulation.py",
+      "size": 2527
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_import_arbitrary_module.py",
+      "size": 2500
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_lambda_function_execution.py",
+      "size": 1684
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/importlib_dynamic_module_loading.py",
+      "size": 1908
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/subprocess_shell_command_injection.py",
+      "size": 1880
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_eval_code_injection.py",
+      "size": 2229
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_exec_arbitrary_code.py",
+      "size": 2352
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/unsafe_pickle_deserialization.py",
+      "size": 2285
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-code-execution/yaml_unsafe_load_code_execution.py",
+      "size": 2252
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/cloud_metadata_credential_extraction.py",
+      "size": 4688
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/dns_rebinding_attack.py",
+      "size": 3348
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/file_protocol_ssrf_local_file.py",
+      "size": 3479
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/internal_service_port_scanning.py",
+      "size": 2925
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/localhost_metadata_service_access.py",
+      "size": 3726
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/private_ip_range_scanning.py",
+      "size": 2881
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/redirect_chain_internal_service.py",
+      "size": 4952
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/redirect_following_open_redirect.py",
+      "size": 4089
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/ssrf_url_manipulation_internal_network.py",
+      "size": 3041
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-network-access/unix_socket_docker_exploitation.py",
+      "size": 3613
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/environment_variable_enumeration.py",
+      "size": 2650
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/filesystem_mount_information_access.py",
+      "size": 3309
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/network_configuration_access.py",
+      "size": 3084
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/process_information_access.py",
+      "size": 3505
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/routing_table_arp_cache_access.py",
+      "size": 2699
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/system_file_access_enumeration.py",
+      "size": 3239
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/system_hardware_information_access.py",
+      "size": 3805
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/system_log_access.py",
+      "size": 3865
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/user_account_enumeration.py",
+      "size": 4041
+    },
+    {
+      "path": "evals/behavioral-analysis/data/unauthorized-system-access/user_database_access.py",
+      "size": 3152
+    },
+    {
+      "path": "evals/behavioral-analysis/scripts/all_malicious_fastmcp_server.py",
+      "size": 1571
+    },
+    {
+      "path": "evals/behavioral-analysis/scripts/helpers_only_server.py",
+      "size": 809
+    },
+    {
+      "path": "evals/behavioral-analysis/scripts/mcp_plus_helpers_server.js",
+      "size": 898
+    },
+    {
+      "path": "evals/behavioral-analysis/scripts/mcp_plus_helpers_server.py",
+      "size": 805
+    },
+    {
+      "path": "evals/behavioral-analysis/scripts/mixed_fastmcp_server.py",
+      "size": 2076
+    },
+    {
+      "path": "evals/behavioral-analysis/scripts/run_behavioral_scan.py",
+      "size": 7040
+    },
+    {
+      "path": "evals/behavioral-analysis/scripts/run_determinism_benchmark.py",
+      "size": 13768
+    },
+    {
+      "path": "evals/behavioral-analysis/scripts/safe_fastmcp_server.js",
+      "size": 878
+    },
+    {
+      "path": "evals/behavioral-analysis/scripts/safe_fastmcp_server.py",
+      "size": 944
+    },
+    {
+      "path": "evals/remote/benign/GitHub_tools.py",
+      "size": 17063
+    },
+    {
+      "path": "evals/remote/benign/azure_tools.py",
+      "size": 89310
+    },
+    {
+      "path": "evals/remote/benign/discord_tools.py",
+      "size": 7962
+    },
+    {
+      "path": "evals/remote/malicious/malicious_mcp_server.py",
+      "size": 72406
+    },
+    {
+      "path": "examples/__init__.py",
+      "size": 642
+    },
+    {
+      "path": "examples/advanced_scanning.py",
+      "size": 7490
+    },
+    {
+      "path": "examples/api_end_to_end.sh",
+      "size": 6307
+    },
+    {
+      "path": "examples/api_endpoints_end_to_end.py",
+      "size": 6698
+    },
+    {
+      "path": "examples/cli_end_to_end.sh",
+      "size": 6173
+    },
+    {
+      "path": "examples/cli_prompts_resources.sh",
+      "size": 2433
+    },
+    {
+      "path": "examples/complete_server_example.py",
+      "size": 6453
+    },
+    {
+      "path": "examples/end_to_end_example.py",
+      "size": 8957
+    },
+    {
+      "path": "examples/example-bearer-server/bearer_sse_server.py",
+      "size": 1930
+    },
+    {
+      "path": "examples/example-bearer-server/bearer_streamable_http_server.py",
+      "size": 1960
+    },
+    {
+      "path": "examples/example-malicious-servers/README.md",
+      "size": 132
+    },
+    {
+      "path": "examples/example-malicious-servers/example_behavioural_malicious_server.py",
+      "size": 5218
+    },
+    {
+      "path": "examples/example-malicious-servers/line_jumping_server.py",
+      "size": 4289
+    },
+    {
+      "path": "examples/example-malicious-servers/malicious_mcp_streamable_server.py",
+      "size": 2492
+    },
+    {
+      "path": "examples/example-malicious-servers/server.py",
+      "size": 2855
+    },
+    {
+      "path": "examples/example-malicious-servers/sse_server.py",
+      "size": 2860
+    },
+    {
+      "path": "examples/example-malicious-servers/stdio_example.py",
+      "size": 12960
+    },
+    {
+      "path": "examples/example-malicious-servers/tricky_server.py",
+      "size": 2544
+    },
+    {
+      "path": "examples/example-oauth-server-clients/oauth_sse_server.py",
+      "size": 6605
+    },
+    {
+      "path": "examples/example-oauth-server-clients/oauth_test_scan.py",
+      "size": 3541
+    },
+    {
+      "path": "examples/explicit_auth_example.py",
+      "size": 8985
+    },
+    {
+      "path": "examples/generate_llm_prompt_example.py",
+      "size": 21730
+    },
+    {
+      "path": "examples/instructions_server.py",
+      "size": 3122
+    },
+    {
+      "path": "examples/llm_prompt_format_json.txt",
+      "size": 33171
+    },
+    {
+      "path": "examples/llm_prompt_read_local_file.txt",
+      "size": 34175
+    },
+    {
+      "path": "examples/llm_prompt_read_secure_file.txt",
+      "size": 35215
+    },
+    {
+      "path": "examples/llm_prompt_safe_calculator.txt",
+      "size": 34407
+    },
+    {
+      "path": "examples/mcp_complete_server.py",
+      "size": 8039
+    },
+    {
+      "path": "examples/mcp_docstring_analyzer.py",
+      "size": 6301
+    },
+    {
+      "path": "examples/model_configuration_example.py",
+      "size": 7310
+    },
+    {
+      "path": "examples/oauth_example.py",
+      "size": 7630
+    },
+    {
+      "path": "examples/programmatic_exception_handling.py",
+      "size": 3618
+    },
+    {
+      "path": "examples/prompts/prompt_scanning.py",
+      "size": 8544
+    },
+    {
+      "path": "examples/prompts/prompt_server.py",
+      "size": 4508
+    },
+    {
+      "path": "examples/prompts/prompt_servers.py",
+      "size": 9374
+    },
+    {
+      "path": "examples/prompts/quick_test.py",
+      "size": 2485
+    },
+    {
+      "path": "examples/prompts/stdio_prompt_server.py",
+      "size": 2322
+    },
+    {
+      "path": "examples/readiness/__init__.py",
+      "size": 699
+    },
+    {
+      "path": "examples/readiness/combined_security_readiness_example.py",
+      "size": 4823
+    },
+    {
+      "path": "examples/readiness/sample_tool_definitions/bad_tool.json",
+      "size": 963
+    },
+    {
+      "path": "examples/readiness/sample_tool_definitions/good_tool.json",
+      "size": 2086
+    },
+    {
+      "path": "examples/readiness/scan_readiness_example.py",
+      "size": 3255
+    },
+    {
+      "path": "examples/resources/resources_example.py",
+      "size": 3230
+    },
+    {
+      "path": "examples/scan_all_tools.py",
+      "size": 2463
+    },
+    {
+      "path": "examples/scan_instructions_example.py",
+      "size": 4979
+    },
+    {
+      "path": "examples/scan_prompts_and_resources_example.py",
+      "size": 11374
+    },
+    {
+      "path": "examples/scan_prompts_example.py",
+      "size": 7560
+    },
+    {
+      "path": "examples/scan_specific_tool.py",
+      "size": 2390
+    },
+    {
+      "path": "examples/sdk_pypi_scanner.py",
+      "size": 4116
+    },
+    {
+      "path": "examples/static_all_analyzers_demo.py",
+      "size": 10788
+    },
+    {
+      "path": "examples/static_scanning_example.py",
+      "size": 13072
+    },
+    {
+      "path": "images/mcp_scanner.gif",
+      "size": 1610673
+    },
+    {
+      "path": "mcp-scanner.spec",
+      "size": 2203
+    },
+    {
+      "path": "mcp_scanner_entry.py",
+      "size": 168
+    },
+    {
+      "path": "mcpscanner/__init__.py",
+      "size": 2335
+    },
+    {
+      "path": "mcpscanner/api/__init__.py",
+      "size": 718
+    },
+    {
+      "path": "mcpscanner/api/api.py",
+      "size": 7666
+    },
+    {
+      "path": "mcpscanner/api/router.py",
+      "size": 40365
+    },
+    {
+      "path": "mcpscanner/cli.py",
+      "size": 115926
+    },
+    {
+      "path": "mcpscanner/config/__init__.py",
+      "size": 783
+    },
+    {
+      "path": "mcpscanner/config/config.py",
+      "size": 15091
+    },
+    {
+      "path": "mcpscanner/config/config_parser.py",
+      "size": 7818
+    },
+    {
+      "path": "mcpscanner/config/constants.py",
+      "size": 19085
+    },
+    {
+      "path": "mcpscanner/core/__init__.py",
+      "size": 1805
+    },
+    {
+      "path": "mcpscanner/core/analyzers/__init__.py",
+      "size": 1859
+    },
+    {
+      "path": "mcpscanner/core/analyzers/api_analyzer.py",
+      "size": 8498
+    },
+    {
+      "path": "mcpscanner/core/analyzers/base.py",
+      "size": 9922
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/__init__.py",
+      "size": 1246
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/alignment/__init__.py",
+      "size": 1640
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/alignment/alignment_llm_client.py",
+      "size": 16089
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/alignment/alignment_orchestrator.py",
+      "size": 22872
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/alignment/alignment_prompt_builder.py",
+      "size": 29267
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/alignment/alignment_response_validator.py",
+      "size": 21982
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/alignment/json_utils.py",
+      "size": 2339
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/alignment/threat_vulnerability_classifier.py",
+      "size": 8008
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/code_analyzer.py",
+      "size": 51581
+    },
+    {
+      "path": "mcpscanner/core/analyzers/behavioral/js_code_analyzer.py",
+      "size": 14589
+    },
+    {
+      "path": "mcpscanner/core/analyzers/llm_analyzer.py",
+      "size": 27660
+    },
+    {
+      "path": "mcpscanner/core/analyzers/meta_analyzer.py",
+      "size": 41546
+    },
+    {
+      "path": "mcpscanner/core/analyzers/prompt_defense_analyzer.py",
+      "size": 16447
+    },
+    {
+      "path": "mcpscanner/core/analyzers/protocol_analyzer.py",
+      "size": 19125
+    },
+    {
+      "path": "mcpscanner/core/analyzers/readiness/__init__.py",
+      "size": 1158
+    },
+    {
+      "path": "mcpscanner/core/analyzers/readiness/llm_judge.py",
+      "size": 13745
+    },
+    {
+      "path": "mcpscanner/core/analyzers/readiness/opa_provider.py",
+      "size": 15032
+    },
+    {
+      "path": "mcpscanner/core/analyzers/readiness/readiness_analyzer.py",
+      "size": 61123
+    },
+    {
+      "path": "mcpscanner/core/analyzers/static_analyzer.py",
+      "size": 22000
+    },
+    {
+      "path": "mcpscanner/core/analyzers/virustotal_analyzer.py",
+      "size": 39525
+    },
+    {
+      "path": "mcpscanner/core/analyzers/vulnerable_package_analyzer.py",
+      "size": 13333
+    },
+    {
+      "path": "mcpscanner/core/analyzers/yara_analyzer.py",
+      "size": 7831
+    },
+    {
+      "path": "mcpscanner/core/auth.py",
+      "size": 17626
+    },
+    {
+      "path": "mcpscanner/core/docker_build.py",
+      "size": 5078
+    },
+    {
+      "path": "mcpscanner/core/exceptions.py",
+      "size": 2230
+    },
+    {
+      "path": "mcpscanner/core/mcp_models.py",
+      "size": 3110
+    },
+    {
+      "path": "mcpscanner/core/models.py",
+      "size": 19675
+    },
+    {
+      "path": "mcpscanner/core/npm_scanner.py",
+      "size": 20542
+    },
+    {
+      "path": "mcpscanner/core/package_sandbox.py",
+      "size": 40610
+    },
+    {
+      "path": "mcpscanner/core/pypi_scanner.py",
+      "size": 28544
+    },
+    {
+      "path": "mcpscanner/core/report_generator.py",
+      "size": 42161
+    },
+    {
+      "path": "mcpscanner/core/result.py",
+      "size": 36811
+    },
+    {
+      "path": "mcpscanner/core/scanner.py",
+      "size": 171201
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/__init__.py",
+      "size": 1555
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/cfg/__init__.py",
+      "size": 963
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/cfg/builder.py",
+      "size": 12566
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/cfg/treesitter_builder.py",
+      "size": 17321
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/context_extractor.py",
+      "size": 40891
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/dataflow/__init__.py",
+      "size": 1342
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/dataflow/available_expressions.py",
+      "size": 7380
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/dataflow/constant_propagation.py",
+      "size": 8432
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/dataflow/forward_analysis.py",
+      "size": 19544
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/dataflow/liveness_analysis.py",
+      "size": 9182
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/dataflow/reaching_definitions.py",
+      "size": 9018
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/dataflow/treesitter_analysis.py",
+      "size": 20074
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/interprocedural/__init__.py",
+      "size": 935
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/interprocedural/call_graph_analyzer.py",
+      "size": 17996
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/interprocedural/cross_file_analyzer.py",
+      "size": 17891
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/interprocedural/treesitter_call_graph.py",
+      "size": 15934
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/javascript/__init__.py",
+      "size": 1051
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/javascript/js_context_extractor.py",
+      "size": 43449
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/native_analyzer.py",
+      "size": 242110
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/parser/__init__.py",
+      "size": 924
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/parser/base.py",
+      "size": 3467
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/parser/python_parser.py",
+      "size": 10588
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/parser/treesitter_parser.py",
+      "size": 16856
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/semantic/__init__.py",
+      "size": 983
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/semantic/name_resolver.py",
+      "size": 10400
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/semantic/treesitter_analyzer.py",
+      "size": 15204
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/semantic/type_analyzer.py",
+      "size": 14224
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/taint/__init__.py",
+      "size": 1121
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/taint/patterns.py",
+      "size": 21658
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/taint/tracker.py",
+      "size": 11447
+    },
+    {
+      "path": "mcpscanner/core/static_analysis/types/__init__.py",
+      "size": 6014
+    },
+    {
+      "path": "mcpscanner/data/prompts/boilerplate_protection_rule_prompt.md",
+      "size": 989
+    },
+    {
+      "path": "mcpscanner/data/prompts/code_alignment_threat_analysis_prompt.md",
+      "size": 77369
+    },
+    {
+      "path": "mcpscanner/data/prompts/meta_analysis_prompt.md",
+      "size": 4486
+    },
+    {
+      "path": "mcpscanner/data/prompts/readiness_judge_prompt.md",
+      "size": 2670
+    },
+    {
+      "path": "mcpscanner/data/prompts/threat_analysis_prompt.md",
+      "size": 19518
+    },
+    {
+      "path": "mcpscanner/data/prompts/threat_vulnerability_classification_prompt.md",
+      "size": 8464
+    },
+    {
+      "path": "mcpscanner/data/prompts/unified_response_schema.md",
+      "size": 2959
+    },
+    {
+      "path": "mcpscanner/data/readiness_policies/error_schema_required.rego",
+      "size": 1865
+    },
+    {
+      "path": "mcpscanner/data/readiness_policies/max_capabilities.rego",
+      "size": 1676
+    },
+    {
+      "path": "mcpscanner/data/readiness_policies/timeout_required.rego",
+      "size": 1543
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/code_execution.yara",
+      "size": 2137
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/coercive_injection.yara",
+      "size": 5359
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/command_injection.yara",
+      "size": 2142
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/credential_harvesting.yara",
+      "size": 8068
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/data_exfiltration.yara",
+      "size": 6056
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/prompt_injection.yara",
+      "size": 3891
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/script_injection.yara",
+      "size": 1975
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/sql_injection.yara",
+      "size": 3419
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/system_manipulation.yara",
+      "size": 2072
+    },
+    {
+      "path": "mcpscanner/data/yara_rules/tool_poisoning.yara",
+      "size": 7877
+    },
+    {
+      "path": "mcpscanner/docker/Dockerfile",
+      "size": 1150
+    },
+    {
+      "path": "mcpscanner/docker/Dockerfile.npm",
+      "size": 1235
+    },
+    {
+      "path": "mcpscanner/docker/Dockerfile.npm.wheel",
+      "size": 700
+    },
+    {
+      "path": "mcpscanner/docker/Dockerfile.wheel",
+      "size": 698
+    },
+    {
+      "path": "mcpscanner/docker/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "mcpscanner/docker/entrypoint.py",
+      "size": 6780
+    },
+    {
+      "path": "mcpscanner/docker/entrypoint_npm.py",
+      "size": 9682
+    },
+    {
+      "path": "mcpscanner/server.py",
+      "size": 4289
+    },
+    {
+      "path": "mcpscanner/threats/threats.py",
+      "size": 32937
+    },
+    {
+      "path": "mcpscanner/utils/__init__.py",
+      "size": 882
+    },
+    {
+      "path": "mcpscanner/utils/analyzer_errors.py",
+      "size": 11073
+    },
+    {
+      "path": "mcpscanner/utils/command_utils.py",
+      "size": 4617
+    },
+    {
+      "path": "mcpscanner/utils/di_container.py",
+      "size": 4831
+    },
+    {
+      "path": "mcpscanner/utils/file_magic.py",
+      "size": 6948
+    },
+    {
+      "path": "mcpscanner/utils/llm_request_params.py",
+      "size": 470
+    },
+    {
+      "path": "mcpscanner/utils/log_format.py",
+      "size": 1771
+    },
+    {
+      "path": "mcpscanner/utils/logging_config.py",
+      "size": 3966
+    },
+    {
+      "path": "mcpscanner/utils/path_safety.py",
+      "size": 4861
+    },
+    {
+      "path": "mcpscanner/utils/proxy_relay.py",
+      "size": 3654
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 5304
+    },
+    {
+      "path": "tests/behavioral/README.md",
+      "size": 1793
+    },
+    {
+      "path": "tests/behavioral/__init__.py",
+      "size": 696
+    },
+    {
+      "path": "tests/behavioral/conftest.py",
+      "size": 1900
+    },
+    {
+      "path": "tests/behavioral/test_alignment_llm_client_bedrock.py",
+      "size": 10537
+    },
+    {
+      "path": "tests/behavioral/test_alignment_orchestrator.py",
+      "size": 4266
+    },
+    {
+      "path": "tests/behavioral/test_analyzer_error_retry.py",
+      "size": 8155
+    },
+    {
+      "path": "tests/behavioral/test_behavioral_raw_cli.py",
+      "size": 6014
+    },
+    {
+      "path": "tests/behavioral/test_code_analyzer.py",
+      "size": 26792
+    },
+    {
+      "path": "tests/behavioral/test_code_review_fixes.py",
+      "size": 30002
+    },
+    {
+      "path": "tests/behavioral/test_finding_class_propagation.py",
+      "size": 7575
+    },
+    {
+      "path": "tests/behavioral/test_integration.py",
+      "size": 10208
+    },
+    {
+      "path": "tests/behavioral/test_json_utils.py",
+      "size": 2419
+    },
+    {
+      "path": "tests/behavioral/test_llm_client.py",
+      "size": 1157
+    },
+    {
+      "path": "tests/behavioral/test_logging_contracts.py",
+      "size": 21413
+    },
+    {
+      "path": "tests/behavioral/test_prompt_builder.py",
+      "size": 8411
+    },
+    {
+      "path": "tests/behavioral/test_response_validator.py",
+      "size": 8867
+    },
+    {
+      "path": "tests/behavioral/test_threat_mapper.py",
+      "size": 9840
+    },
+    {
+      "path": "tests/readiness/__init__.py",
+      "size": 679
+    },
+    {
+      "path": "tests/readiness/fixtures/bad_tool.json",
+      "size": 203
+    },
+    {
+      "path": "tests/readiness/fixtures/good_tool.json",
+      "size": 1186
+    },
+    {
+      "path": "tests/readiness/fixtures/tool_overloaded_scope.json",
+      "size": 388
+    },
+    {
+      "path": "tests/readiness/fixtures/tool_self_referencing.json",
+      "size": 417
+    },
+    {
+      "path": "tests/readiness/fixtures/tool_with_long_timeout.json",
+      "size": 320
+    },
+    {
+      "path": "tests/readiness/fixtures/tool_with_resources.json",
+      "size": 316
+    },
+    {
+      "path": "tests/readiness/test_llm_judge.py",
+      "size": 1326
+    },
+    {
+      "path": "tests/readiness/test_readiness_analyzer.py",
+      "size": 42048
+    },
+    {
+      "path": "tests/readiness/test_readiness_integration.py",
+      "size": 15532
+    },
+    {
+      "path": "tests/static_analysis/README.md",
+      "size": 3211
+    },
+    {
+      "path": "tests/static_analysis/__init__.py",
+      "size": 687
+    },
+    {
+      "path": "tests/static_analysis/test_capability_extraction.py",
+      "size": 49113
+    },
+    {
+      "path": "tests/static_analysis/test_capability_extraction_crossfile.py",
+      "size": 4957
+    },
+    {
+      "path": "tests/static_analysis/test_capability_extraction_disambiguation.py",
+      "size": 12864
+    },
+    {
+      "path": "tests/static_analysis/test_capability_extraction_dynamic.py",
+      "size": 12269
+    },
+    {
+      "path": "tests/static_analysis/test_capability_extraction_negative.py",
+      "size": 6701
+    },
+    {
+      "path": "tests/static_analysis/test_capability_extraction_perf.py",
+      "size": 3428
+    },
+    {
+      "path": "tests/static_analysis/test_cfg.py",
+      "size": 1278
+    },
+    {
+      "path": "tests/static_analysis/test_context_extractor.py",
+      "size": 6032
+    },
+    {
+      "path": "tests/static_analysis/test_cross_file_dataflow.py",
+      "size": 1474
+    },
+    {
+      "path": "tests/static_analysis/test_dataflow.py",
+      "size": 4836
+    },
+    {
+      "path": "tests/static_analysis/test_forward_flows_no_params.py",
+      "size": 4205
+    },
+    {
+      "path": "tests/static_analysis/test_interprocedural.py",
+      "size": 1904
+    },
+    {
+      "path": "tests/static_analysis/test_native_analyzer.py",
+      "size": 12033
+    },
+    {
+      "path": "tests/static_analysis/test_parser.py",
+      "size": 5712
+    },
+    {
+      "path": "tests/static_analysis/test_semantic.py",
+      "size": 1773
+    },
+    {
+      "path": "tests/static_analysis/test_taint.py",
+      "size": 1310
+    },
+    {
+      "path": "tests/static_analysis/test_treesitter_iteration_cap_log.py",
+      "size": 4976
+    },
+    {
+      "path": "tests/static_analysis/test_types.py",
+      "size": 952
+    },
+    {
+      "path": "tests/test_analyzer_errors.py",
+      "size": 6993
+    },
+    {
+      "path": "tests/test_analyzer_failure_reporting.py",
+      "size": 17575
+    },
+    {
+      "path": "tests/test_api_analyzer.py",
+      "size": 15890
+    },
+    {
+      "path": "tests/test_api_meta_analyzer.py",
+      "size": 49655
+    },
+    {
+      "path": "tests/test_auth.py",
+      "size": 18941
+    },
+    {
+      "path": "tests/test_base.py",
+      "size": 10915
+    },
+    {
+      "path": "tests/test_bedrock_integration.py",
+      "size": 14348
+    },
+    {
+      "path": "tests/test_cli.py",
+      "size": 28570
+    },
+    {
+      "path": "tests/test_config.py",
+      "size": 8776
+    },
+    {
+      "path": "tests/test_config_parser.py",
+      "size": 15877
+    },
+    {
+      "path": "tests/test_custom_variable_mcp.py",
+      "size": 6941
+    },
+    {
+      "path": "tests/test_expand_vars_default.py",
+      "size": 1933
+    },
+    {
+      "path": "tests/test_instructions_scanning.py",
+      "size": 14017
+    },
+    {
+      "path": "tests/test_js_context_extractor.py",
+      "size": 10543
+    },
+    {
+      "path": "tests/test_llm_analyzer.py",
+      "size": 17393
+    },
+    {
+      "path": "tests/test_logging_config.py",
+      "size": 6172
+    },
+    {
+      "path": "tests/test_meta_analyzer.py",
+      "size": 113398
+    },
+    {
+      "path": "tests/test_meta_analyzer_bedrock.py",
+      "size": 2385
+    },
+    {
+      "path": "tests/test_meta_audit_serialization.py",
+      "size": 18027
+    },
+    {
+      "path": "tests/test_models.py",
+      "size": 16417
+    },
+    {
+      "path": "tests/test_npm_scanner.py",
+      "size": 57202
+    },
+    {
+      "path": "tests/test_oauth_example_redirects.py",
+      "size": 1807
+    },
+    {
+      "path": "tests/test_openai_llm_integration.py",
+      "size": 4771
+    },
+    {
+      "path": "tests/test_path_safety_symlink_traversal.py",
+      "size": 12773
+    },
+    {
+      "path": "tests/test_prompt_defense_analyzer.py",
+      "size": 14386
+    },
+    {
+      "path": "tests/test_prompt_message_scanning.py",
+      "size": 14859
+    },
+    {
+      "path": "tests/test_protocol_analyzer.py",
+      "size": 8874
+    },
+    {
+      "path": "tests/test_proxy_relay.py",
+      "size": 4694
+    },
+    {
+      "path": "tests/test_pypi_scanner.py",
+      "size": 30661
+    },
+    {
+      "path": "tests/test_report_generator.py",
+      "size": 35965
+    },
+    {
+      "path": "tests/test_resource_scanning.py",
+      "size": 17081
+    },
+    {
+      "path": "tests/test_scanner.py",
+      "size": 46633
+    },
+    {
+      "path": "tests/test_server.py",
+      "size": 12859
+    },
+    {
+      "path": "tests/test_severity_rollup.py",
+      "size": 4852
+    },
+    {
+      "path": "tests/test_static_analyzer.py",
+      "size": 30123
+    },
+    {
+      "path": "tests/test_vulnerable_package_analyzer.py",
+      "size": 39446
+    },
+    {
+      "path": "tests/test_yara_analyzer.py",
+      "size": 7467
+    },
+    {
+      "path": "tests/test_yara_rules_coverage.py",
+      "size": 30283
+    },
+    {
+      "path": "tests/threat_files/class_method_malicious.py",
+      "size": 2128
+    },
+    {
+      "path": "tests/threat_files/cross_file_malicious/helper.py",
+      "size": 1349
+    },
+    {
+      "path": "tests/threat_files/cross_file_malicious/server.py",
+      "size": 2070
+    },
+    {
+      "path": "tests/threat_files/global_state_malicious.py",
+      "size": 2893
+    },
+    {
+      "path": "tests/threat_files/malicious_mcp_server.py",
+      "size": 5218
+    },
+    {
+      "path": "uv.lock",
+      "size": 662572
+    }
+  ]
+}

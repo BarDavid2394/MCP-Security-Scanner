@@ -1,0 +1,95 @@
+{
+  "_id": "69af01ae7aed45131a975ddb",
+  "id": "prodnull/prompt-injection-repo-dataset",
+  "author": "prodnull",
+  "sha": "6c56b897ee4a328fb4f41f4b0d334f5d2db4482a",
+  "lastModified": "2026-03-11T01:45:20.000Z",
+  "private": false,
+  "gated": "auto",
+  "disabled": false,
+  "tags": [
+    "task_categories:text-classification",
+    "language:en",
+    "license:apache-2.0",
+    "size_categories:1K<n<10K",
+    "format:json",
+    "modality:text",
+    "library:datasets",
+    "library:pandas",
+    "library:polars",
+    "library:mlcroissant",
+    "arxiv:2509.22040",
+    "arxiv:2601.17548",
+    "arxiv:2602.10453",
+    "arxiv:2503.14281",
+    "arxiv:2602.14161",
+    "region:us",
+    "prompt-injection",
+    "security",
+    "code-security",
+    "ai-agent-security",
+    "repository-scanning"
+  ],
+  "description": "\n\t\n\t\t\n\t\n\t\n\t\tPrompt Injection Repository File Dataset\n\t\n\nA labeled dataset for detecting prompt injection attacks in repository files \u2014 code, configs, READMEs, CI/CD workflows, and documentation that AI coding agents process as context.\n\n\t\n\t\t\n\t\n\t\n\t\tWhat This Is (and Isn't)\n\t\n\nThis dataset targets a specific threat: indirect prompt injection via repository content. When AI coding agents (Claude Code, Cursor, Copilot, Gemini CLI) clone a repo, every file becomes part of the agent's context.\u2026 See the full description on the dataset page: https://huggingface.co/datasets/prodnull/prompt-injection-repo-dataset.",
+  "downloads": 312,
+  "likes": 14,
+  "cardData": {
+    "language": [
+      "en"
+    ],
+    "license": "apache-2.0",
+    "size_categories": [
+      "1K<n<10K"
+    ],
+    "task_categories": [
+      "text-classification"
+    ],
+    "tags": [
+      "prompt-injection",
+      "security",
+      "code-security",
+      "ai-agent-security",
+      "repository-scanning"
+    ],
+    "pretty_name": "Prompt Injection Repository File Dataset",
+    "dataset_info": {
+      "features": [
+        {
+          "name": "text",
+          "dtype": "string"
+        },
+        {
+          "name": "label",
+          "dtype": {
+            "class_label": {
+              "names": {
+                "0": "benign",
+                "1": "malicious"
+              }
+            }
+          }
+        }
+      ],
+      "splits": [
+        {
+          "name": "train",
+          "num_examples": 5671
+        }
+      ],
+      "config_name": "default"
+    }
+  },
+  "siblings": [
+    {
+      "rfilename": ".gitattributes"
+    },
+    {
+      "rfilename": "README.md"
+    },
+    {
+      "rfilename": "train.jsonl"
+    }
+  ],
+  "createdAt": "2026-03-09T17:21:50.000Z",
+  "usedStorage": 320924
+}

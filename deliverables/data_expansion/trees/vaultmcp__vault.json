@@ -1,0 +1,1704 @@
+{
+  "repository": "vaultmcp/vault",
+  "revision": "66db948b28fc1aa42f52e7297c20b10f682a9065",
+  "license": "MIT",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 2373
+    },
+    {
+      "path": ".github/workflows/release-check.yml",
+      "size": 3616
+    },
+    {
+      "path": ".github/workflows/rh-ledger-seed.yml",
+      "size": 1248
+    },
+    {
+      "path": ".gitignore",
+      "size": 638
+    },
+    {
+      "path": "LICENSE",
+      "size": 1078
+    },
+    {
+      "path": "POSTMORTEM-2026-05-20-contamination.md",
+      "size": 5428
+    },
+    {
+      "path": "README.md",
+      "size": 28380
+    },
+    {
+      "path": "RH-INTEGRATION.md",
+      "size": 5075
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 2252
+    },
+    {
+      "path": "TESTING.md",
+      "size": 3325
+    },
+    {
+      "path": "benchmarks/agentdojo/.gitignore",
+      "size": 35
+    },
+    {
+      "path": "benchmarks/agentdojo/README.md",
+      "size": 3805
+    },
+    {
+      "path": "benchmarks/agentdojo/run_bench.py",
+      "size": 4553
+    },
+    {
+      "path": "benchmarks/agentdojo/test_action_guard.py",
+      "size": 3784
+    },
+    {
+      "path": "benchmarks/agentdojo/vault_defense.py",
+      "size": 5299
+    },
+    {
+      "path": "docs/threat-feed.md",
+      "size": 1733
+    },
+    {
+      "path": "docs/vault-demo.cast",
+      "size": 10460
+    },
+    {
+      "path": "launch-assets/launch-claims.md",
+      "size": 2599
+    },
+    {
+      "path": "package.json",
+      "size": 306
+    },
+    {
+      "path": "packages/LIMITATIONS.md",
+      "size": 13660
+    },
+    {
+      "path": "packages/SECURITY_MODEL.md",
+      "size": 15616
+    },
+    {
+      "path": "packages/check/README.md",
+      "size": 2611
+    },
+    {
+      "path": "packages/check/homebrew/vaultmcp-check.rb",
+      "size": 1447
+    },
+    {
+      "path": "packages/check/install.sh",
+      "size": 3628
+    },
+    {
+      "path": "packages/check/package.json",
+      "size": 1079
+    },
+    {
+      "path": "packages/check/src/index.ts",
+      "size": 11466
+    },
+    {
+      "path": "packages/check/test/check.test.ts",
+      "size": 3810
+    },
+    {
+      "path": "packages/check/tsconfig.json",
+      "size": 381
+    },
+    {
+      "path": "packages/check/tsup.config.ts",
+      "size": 524
+    },
+    {
+      "path": "packages/collector/package.json",
+      "size": 567
+    },
+    {
+      "path": "packages/collector/src/index.ts",
+      "size": 1511
+    },
+    {
+      "path": "packages/collector/src/server.ts",
+      "size": 4092
+    },
+    {
+      "path": "packages/collector/src/sqlite-store.ts",
+      "size": 3768
+    },
+    {
+      "path": "packages/collector/src/store.ts",
+      "size": 3268
+    },
+    {
+      "path": "packages/collector/test/server.test.ts",
+      "size": 5939
+    },
+    {
+      "path": "packages/collector/test/store.test.ts",
+      "size": 3742
+    },
+    {
+      "path": "packages/collector/tsconfig.json",
+      "size": 383
+    },
+    {
+      "path": "packages/collector/tsup.config.ts",
+      "size": 290
+    },
+    {
+      "path": "packages/contracts/.gitignore",
+      "size": 42
+    },
+    {
+      "path": "packages/contracts/deployments.example.json",
+      "size": 293
+    },
+    {
+      "path": "packages/contracts/deployments.json",
+      "size": 696
+    },
+    {
+      "path": "packages/contracts/foundry.toml",
+      "size": 653
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/.gitattributes",
+      "size": 30
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/.github/CODEOWNERS",
+      "size": 66
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/.github/dependabot.yml",
+      "size": 154
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/.github/workflows/ci.yml",
+      "size": 4886
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/.github/workflows/sync.yml",
+      "size": 933
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/.gitignore",
+      "size": 26
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/CONTRIBUTING.md",
+      "size": 11624
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/LICENSE-APACHE",
+      "size": 10897
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/LICENSE-MIT",
+      "size": 1073
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/README.md",
+      "size": 11150
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/RELEASE_CHECKLIST.md",
+      "size": 521
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/foundry.toml",
+      "size": 621
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/package.json",
+      "size": 516
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/scripts/vm.py",
+      "size": 17400
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/Base.sol",
+      "size": 2248
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/Config.sol",
+      "size": 2659
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/LibVariable.sol",
+      "size": 17987
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/Script.sol",
+      "size": 896
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdAssertions.sol",
+      "size": 58829
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdChains.sol",
+      "size": 16053
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdCheats.sol",
+      "size": 39150
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdConfig.sol",
+      "size": 30147
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdConstants.sol",
+      "size": 1882
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdError.sol",
+      "size": 1915
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdInvariant.sol",
+      "size": 7264
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdJson.sol",
+      "size": 14443
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdMath.sol",
+      "size": 2938
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdStorage.sol",
+      "size": 21884
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdStyle.sol",
+      "size": 17505
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdToml.sol",
+      "size": 14097
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/StdUtils.sol",
+      "size": 11980
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/Test.sol",
+      "size": 1075
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/Vm.sol",
+      "size": 134099
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/console.sol",
+      "size": 71039
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/console2.sol",
+      "size": 131
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/interfaces/IERC1155.sol",
+      "size": 7626
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/interfaces/IERC165.sol",
+      "size": 559
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/interfaces/IERC20.sol",
+      "size": 2089
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/interfaces/IERC4626.sol",
+      "size": 11982
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/interfaces/IERC6909.sol",
+      "size": 3503
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/interfaces/IERC721.sol",
+      "size": 9063
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/interfaces/IERC7540.sol",
+      "size": 6712
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/interfaces/IERC7575.sol",
+      "size": 12605
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/interfaces/IMulticall3.sol",
+      "size": 2141
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/src/safeconsole.sol",
+      "size": 408927
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/CommonBase.t.sol",
+      "size": 1333
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/Config.t.sol",
+      "size": 16379
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/LibVariable.t.sol",
+      "size": 16796
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdAssertions.t.sol",
+      "size": 4799
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdChains.t.sol",
+      "size": 9766
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdCheats.t.sol",
+      "size": 24996
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdConstants.t.sol",
+      "size": 1331
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdError.t.sol",
+      "size": 2715
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdJson.t.sol",
+      "size": 1288
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdMath.t.sol",
+      "size": 8712
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdStorage.t.sol",
+      "size": 20413
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdStyle.t.sol",
+      "size": 5877
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdToml.t.sol",
+      "size": 1286
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/StdUtils.t.sol",
+      "size": 14917
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/Vm.t.sol",
+      "size": 674
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/compilation/CompilationScript.sol",
+      "size": 389
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/compilation/CompilationScriptBase.sol",
+      "size": 401
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/compilation/CompilationTest.sol",
+      "size": 381
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/compilation/CompilationTestBase.sol",
+      "size": 393
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/fixtures/broadcast.log.json",
+      "size": 10954
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/fixtures/config.toml",
+      "size": 1835
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/fixtures/test.json",
+      "size": 73
+    },
+    {
+      "path": "packages/contracts/lib/forge-std/test/fixtures/test.toml",
+      "size": 43
+    },
+    {
+      "path": "packages/contracts/package.json",
+      "size": 588
+    },
+    {
+      "path": "packages/contracts/remappings.txt",
+      "size": 30
+    },
+    {
+      "path": "packages/contracts/script/Deploy.s.sol",
+      "size": 1619
+    },
+    {
+      "path": "packages/contracts/script/check-balance.ts",
+      "size": 544
+    },
+    {
+      "path": "packages/contracts/script/deploy-rh-ledger.ts",
+      "size": 3905
+    },
+    {
+      "path": "packages/contracts/script/generate-wallet.ts",
+      "size": 1874
+    },
+    {
+      "path": "packages/contracts/script/register-schemas.ts",
+      "size": 5333
+    },
+    {
+      "path": "packages/contracts/src/TradeReceiptLedger.sol",
+      "size": 5396
+    },
+    {
+      "path": "packages/contracts/src/VaultReputation.sol",
+      "size": 10506
+    },
+    {
+      "path": "packages/contracts/src/interfaces/IEAS.sol",
+      "size": 610
+    },
+    {
+      "path": "packages/contracts/test/TradeReceiptLedger.t.sol",
+      "size": 4183
+    },
+    {
+      "path": "packages/contracts/test/VaultReputation.t.sol",
+      "size": 18030
+    },
+    {
+      "path": "packages/contracts/test/mocks/MockEAS.sol",
+      "size": 547
+    },
+    {
+      "path": "packages/contracts/tsconfig.json",
+      "size": 341
+    },
+    {
+      "path": "packages/corpus/build-embeddings.ts",
+      "size": 2073
+    },
+    {
+      "path": "packages/corpus/corpus-sources.md",
+      "size": 2584
+    },
+    {
+      "path": "packages/corpus/embeddings-meta.json",
+      "size": 13640
+    },
+    {
+      "path": "packages/corpus/embeddings.bin",
+      "size": 213504
+    },
+    {
+      "path": "packages/corpus/index.d.ts",
+      "size": 338
+    },
+    {
+      "path": "packages/corpus/index.js",
+      "size": 1075
+    },
+    {
+      "path": "packages/corpus/injection-patterns.json",
+      "size": 104867
+    },
+    {
+      "path": "packages/corpus/package.json",
+      "size": 668
+    },
+    {
+      "path": "packages/demo-site/Dockerfile",
+      "size": 568
+    },
+    {
+      "path": "packages/demo-site/next-env.d.ts",
+      "size": 262
+    },
+    {
+      "path": "packages/demo-site/next.config.js",
+      "size": 1604
+    },
+    {
+      "path": "packages/demo-site/package.json",
+      "size": 675
+    },
+    {
+      "path": "packages/demo-site/postcss.config.mjs",
+      "size": 81
+    },
+    {
+      "path": "packages/demo-site/public/install.sh",
+      "size": 3628
+    },
+    {
+      "path": "packages/demo-site/public/llms.txt",
+      "size": 2550
+    },
+    {
+      "path": "packages/demo-site/src/app/api/feed/route.ts",
+      "size": 1893
+    },
+    {
+      "path": "packages/demo-site/src/app/api/leaderboard/route.ts",
+      "size": 1227
+    },
+    {
+      "path": "packages/demo-site/src/app/api/rh-ledger/route.ts",
+      "size": 1014
+    },
+    {
+      "path": "packages/demo-site/src/app/api/scan-demo/route.ts",
+      "size": 8650
+    },
+    {
+      "path": "packages/demo-site/src/app/api/score/[server]/route.ts",
+      "size": 1733
+    },
+    {
+      "path": "packages/demo-site/src/app/api/stats/route.ts",
+      "size": 1293
+    },
+    {
+      "path": "packages/demo-site/src/app/api/threats/recent/route.ts",
+      "size": 1184
+    },
+    {
+      "path": "packages/demo-site/src/app/apple-icon.png",
+      "size": 20430
+    },
+    {
+      "path": "packages/demo-site/src/app/badge/[server]/route.ts",
+      "size": 1526
+    },
+    {
+      "path": "packages/demo-site/src/app/badge/robinhood/route.ts",
+      "size": 1278
+    },
+    {
+      "path": "packages/demo-site/src/app/globals.css",
+      "size": 1277
+    },
+    {
+      "path": "packages/demo-site/src/app/icon.png",
+      "size": 178177
+    },
+    {
+      "path": "packages/demo-site/src/app/layout.tsx",
+      "size": 1384
+    },
+    {
+      "path": "packages/demo-site/src/app/page.tsx",
+      "size": 1342
+    },
+    {
+      "path": "packages/demo-site/src/components/AgenticTrading.tsx",
+      "size": 4512
+    },
+    {
+      "path": "packages/demo-site/src/components/AnnounceBar.tsx",
+      "size": 833
+    },
+    {
+      "path": "packages/demo-site/src/components/CABar.tsx",
+      "size": 1036
+    },
+    {
+      "path": "packages/demo-site/src/components/Header.tsx",
+      "size": 2026
+    },
+    {
+      "path": "packages/demo-site/src/components/Hero.tsx",
+      "size": 3251
+    },
+    {
+      "path": "packages/demo-site/src/components/Install.tsx",
+      "size": 1249
+    },
+    {
+      "path": "packages/demo-site/src/components/RobinhoodBoard.tsx",
+      "size": 5677
+    },
+    {
+      "path": "packages/demo-site/src/components/ScanDemo.tsx",
+      "size": 8783
+    },
+    {
+      "path": "packages/demo-site/src/components/ThreatFeed.tsx",
+      "size": 6921
+    },
+    {
+      "path": "packages/demo-site/src/components/WhatWePublish.tsx",
+      "size": 1680
+    },
+    {
+      "path": "packages/demo-site/src/components/WhyVault.tsx",
+      "size": 1471
+    },
+    {
+      "path": "packages/demo-site/src/lib/badge.ts",
+      "size": 4469
+    },
+    {
+      "path": "packages/demo-site/src/lib/chain.ts",
+      "size": 10935
+    },
+    {
+      "path": "packages/demo-site/tailwind.config.ts",
+      "size": 684
+    },
+    {
+      "path": "packages/demo-site/test/badge.test.ts",
+      "size": 3622
+    },
+    {
+      "path": "packages/demo-site/test/chain.test.ts",
+      "size": 1877
+    },
+    {
+      "path": "packages/demo-site/tsconfig.json",
+      "size": 566
+    },
+    {
+      "path": "packages/demo-site/vitest.config.ts",
+      "size": 222
+    },
+    {
+      "path": "packages/eval/datasets/benign-v2/MANIFEST.md",
+      "size": 4580
+    },
+    {
+      "path": "packages/eval/datasets/benign-v2/benign.json",
+      "size": 71766
+    },
+    {
+      "path": "packages/eval/datasets/benign/01-mcp-readmes.json",
+      "size": 19381
+    },
+    {
+      "path": "packages/eval/datasets/benign/02-security-research.json",
+      "size": 15823
+    },
+    {
+      "path": "packages/eval/datasets/benign/03-tech-docs.json",
+      "size": 16449
+    },
+    {
+      "path": "packages/eval/datasets/benign/04-prose-news.json",
+      "size": 12412
+    },
+    {
+      "path": "packages/eval/datasets/benign/05-code-snippets.json",
+      "size": 11130
+    },
+    {
+      "path": "packages/eval/datasets/benign/MANIFEST.md",
+      "size": 4703
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/01-published-papers.json",
+      "size": 14383
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/02-garak-probes.json",
+      "size": 11570
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/03-blog-pocs.json",
+      "size": 12174
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/04-owasp-llm.json",
+      "size": 8353
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/05a-encoded-base64-hex.json",
+      "size": 955
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/05b-encoded-rot-caesar-url.json",
+      "size": 3714
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/05c-encoded-unicode-zwj.json",
+      "size": 3341
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/06a-multi-turn-sleepers.json",
+      "size": 5282
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/06b-multi-turn-context-poison.json",
+      "size": 5172
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/07a-roleplay-dan-family.json",
+      "size": 4098
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/07b-roleplay-developer-mode.json",
+      "size": 4245
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/07c-jailbreak-framing.json",
+      "size": 4171
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/MANIFEST.md",
+      "size": 8281
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-burned-v1/README.md",
+      "size": 1483
+    },
+    {
+      "path": "packages/eval/datasets/holdout-attacks-v2/MANIFEST.md",
+      "size": 6169
+    },
+    {
+      "path": "packages/eval/datasets/holdout-v2-novel/MANIFEST.md",
+      "size": 4296
+    },
+    {
+      "path": "packages/eval/datasets/holdout-v2-novel/attacks.json",
+      "size": 61624
+    },
+    {
+      "path": "packages/eval/datasets/holdout-v2-paraphrase/MANIFEST.md",
+      "size": 3406
+    },
+    {
+      "path": "packages/eval/datasets/holdout-v2-paraphrase/attacks.json",
+      "size": 35562
+    },
+    {
+      "path": "packages/eval/load/fixture-server.mjs",
+      "size": 1842
+    },
+    {
+      "path": "packages/eval/load/loadtest.mjs",
+      "size": 12483
+    },
+    {
+      "path": "packages/eval/load/report.md",
+      "size": 5568
+    },
+    {
+      "path": "packages/eval/package.json",
+      "size": 767
+    },
+    {
+      "path": "packages/eval/real-world/_lib.mjs",
+      "size": 8297
+    },
+    {
+      "path": "packages/eval/real-world/drive-attest.mjs",
+      "size": 5387
+    },
+    {
+      "path": "packages/eval/real-world/drive-fetch.mjs",
+      "size": 12130
+    },
+    {
+      "path": "packages/eval/real-world/drive-filesystem.mjs",
+      "size": 8322
+    },
+    {
+      "path": "packages/eval/real-world/drive-git.mjs",
+      "size": 7212
+    },
+    {
+      "path": "packages/eval/real-world/drive-github.mjs",
+      "size": 1893
+    },
+    {
+      "path": "packages/eval/real-world/drive-postgres.mjs",
+      "size": 2078
+    },
+    {
+      "path": "packages/eval/real-world/fetch.md",
+      "size": 6059
+    },
+    {
+      "path": "packages/eval/real-world/filesystem.md",
+      "size": 8372
+    },
+    {
+      "path": "packages/eval/real-world/git.md",
+      "size": 5762
+    },
+    {
+      "path": "packages/eval/real-world/github.md",
+      "size": 1385
+    },
+    {
+      "path": "packages/eval/real-world/postgres.md",
+      "size": 1607
+    },
+    {
+      "path": "packages/eval/real-world/seed-demo.mjs",
+      "size": 7121
+    },
+    {
+      "path": "packages/eval/red-team/2026-05-19-categorization.md",
+      "size": 8127
+    },
+    {
+      "path": "packages/eval/red-team/attempts/2026-05-20.json",
+      "size": 18094
+    },
+    {
+      "path": "packages/eval/red-team/attempts/2026-05-20.md",
+      "size": 27469
+    },
+    {
+      "path": "packages/eval/red-team/run-bypasses.ts",
+      "size": 23758
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/README.md",
+      "size": 1307
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-19-2253.json",
+      "size": 318556
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-19-2253.md",
+      "size": 7643
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-19-2301.json",
+      "size": 318571
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-19-2301.md",
+      "size": 7643
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-0946.json",
+      "size": 369331
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-0946.md",
+      "size": 6995
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-1006.json",
+      "size": 363501
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-1006.md",
+      "size": 2984
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-1017.json",
+      "size": 363328
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-1017.md",
+      "size": 2376
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-1504.json",
+      "size": 131947
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-1504.md",
+      "size": 7635
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-1934.json",
+      "size": 205174
+    },
+    {
+      "path": "packages/eval/results/archive-pre-clean-launch/eval-2026-05-20-1934.md",
+      "size": 6153
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-20-2033.json",
+      "size": 335120
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-20-2033.md",
+      "size": 8451
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-20-2035.json",
+      "size": 335573
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-20-2035.md",
+      "size": 7980
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-0831.json",
+      "size": 230503
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-0831.md",
+      "size": 8809
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-0832.json",
+      "size": 233770
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-0832.md",
+      "size": 9083
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-083410.json",
+      "size": 198653
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-083410.md",
+      "size": 8916
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-083635.json",
+      "size": 201672
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-083635.md",
+      "size": 9187
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-090116.json",
+      "size": 228197
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-090116.md",
+      "size": 1878
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-090622.json",
+      "size": 190243
+    },
+    {
+      "path": "packages/eval/results/eval-2026-05-21-090622.md",
+      "size": 1956
+    },
+    {
+      "path": "packages/eval/results/eval-clean-baseline-v2-2026-05-21.md",
+      "size": 25669
+    },
+    {
+      "path": "packages/eval/results/eval-clean-baseline-v2-L3-enabled-2026-05-21.md",
+      "size": 15082
+    },
+    {
+      "path": "packages/eval/results/latency-baseline-2026-07-20.md",
+      "size": 1003
+    },
+    {
+      "path": "packages/eval/results/verification-clean-baseline-2026-05-20.md",
+      "size": 7980
+    },
+    {
+      "path": "packages/eval/scoreboard.md",
+      "size": 1244
+    },
+    {
+      "path": "packages/eval/scripts/check-corpus-distance.mjs",
+      "size": 3263
+    },
+    {
+      "path": "packages/eval/src/bench-encoded.ts",
+      "size": 4177
+    },
+    {
+      "path": "packages/eval/src/competitors/anthropic-judge.ts",
+      "size": 2118
+    },
+    {
+      "path": "packages/eval/src/competitors/lakera.ts",
+      "size": 1666
+    },
+    {
+      "path": "packages/eval/src/competitors/openai-moderation.ts",
+      "size": 1369
+    },
+    {
+      "path": "packages/eval/src/competitors/types.ts",
+      "size": 710
+    },
+    {
+      "path": "packages/eval/src/competitors/vault.ts",
+      "size": 2222
+    },
+    {
+      "path": "packages/eval/src/corpus.ts",
+      "size": 17745
+    },
+    {
+      "path": "packages/eval/src/index.ts",
+      "size": 1670
+    },
+    {
+      "path": "packages/eval/src/latency-bench.ts",
+      "size": 6053
+    },
+    {
+      "path": "packages/eval/src/run.ts",
+      "size": 21845
+    },
+    {
+      "path": "packages/eval/src/runner.ts",
+      "size": 3290
+    },
+    {
+      "path": "packages/eval/src/scoreboard.ts",
+      "size": 2444
+    },
+    {
+      "path": "packages/eval/test/runner.test.ts",
+      "size": 3572
+    },
+    {
+      "path": "packages/eval/tsconfig.json",
+      "size": 509
+    },
+    {
+      "path": "packages/proxy/BETA.md",
+      "size": 4679
+    },
+    {
+      "path": "packages/proxy/PRIVACY.md",
+      "size": 2333
+    },
+    {
+      "path": "packages/proxy/bench/distance-probe.ts",
+      "size": 2929
+    },
+    {
+      "path": "packages/proxy/bench/layer3-floor.ts",
+      "size": 2615
+    },
+    {
+      "path": "packages/proxy/bench/layer3-validate.ts",
+      "size": 5532
+    },
+    {
+      "path": "packages/proxy/package.json",
+      "size": 1328
+    },
+    {
+      "path": "packages/proxy/scripts/check-corpus-distance.mjs",
+      "size": 2107
+    },
+    {
+      "path": "packages/proxy/scripts/seed-c1.mjs",
+      "size": 2994
+    },
+    {
+      "path": "packages/proxy/scripts/seed-dashboard.mjs",
+      "size": 4151
+    },
+    {
+      "path": "packages/proxy/src/attestation/client.ts",
+      "size": 10924
+    },
+    {
+      "path": "packages/proxy/src/attestation/encoder.ts",
+      "size": 2624
+    },
+    {
+      "path": "packages/proxy/src/attestation/index.ts",
+      "size": 930
+    },
+    {
+      "path": "packages/proxy/src/attestation/reporter.ts",
+      "size": 4597
+    },
+    {
+      "path": "packages/proxy/src/attestation/rh-ledger.ts",
+      "size": 4732
+    },
+    {
+      "path": "packages/proxy/src/attestation/trade-receipt.ts",
+      "size": 7518
+    },
+    {
+      "path": "packages/proxy/src/attestation/types.ts",
+      "size": 1960
+    },
+    {
+      "path": "packages/proxy/src/audit/index.ts",
+      "size": 227
+    },
+    {
+      "path": "packages/proxy/src/audit/log.ts",
+      "size": 2833
+    },
+    {
+      "path": "packages/proxy/src/capability/classifier.ts",
+      "size": 1737
+    },
+    {
+      "path": "packages/proxy/src/capability/gate.ts",
+      "size": 2419
+    },
+    {
+      "path": "packages/proxy/src/capability/index.ts",
+      "size": 401
+    },
+    {
+      "path": "packages/proxy/src/capability/taint.ts",
+      "size": 2476
+    },
+    {
+      "path": "packages/proxy/src/capability/trade-policy.ts",
+      "size": 14080
+    },
+    {
+      "path": "packages/proxy/src/cli/audit-view.ts",
+      "size": 10603
+    },
+    {
+      "path": "packages/proxy/src/cli/check.ts",
+      "size": 16885
+    },
+    {
+      "path": "packages/proxy/src/cli/dashboard.ts",
+      "size": 13427
+    },
+    {
+      "path": "packages/proxy/src/cli/decide.ts",
+      "size": 2938
+    },
+    {
+      "path": "packages/proxy/src/cli/demo.ts",
+      "size": 15300
+    },
+    {
+      "path": "packages/proxy/src/cli/history.ts",
+      "size": 5420
+    },
+    {
+      "path": "packages/proxy/src/cli/init.ts",
+      "size": 14561
+    },
+    {
+      "path": "packages/proxy/src/cli/inspect-config.ts",
+      "size": 3028
+    },
+    {
+      "path": "packages/proxy/src/cli/inspect-reputation.ts",
+      "size": 3064
+    },
+    {
+      "path": "packages/proxy/src/cli/inspect.ts",
+      "size": 7724
+    },
+    {
+      "path": "packages/proxy/src/config.ts",
+      "size": 12578
+    },
+    {
+      "path": "packages/proxy/src/detection/clients/anthropic.ts",
+      "size": 2713
+    },
+    {
+      "path": "packages/proxy/src/detection/clients/factory.ts",
+      "size": 1974
+    },
+    {
+      "path": "packages/proxy/src/detection/clients/ollama-client.ts",
+      "size": 3162
+    },
+    {
+      "path": "packages/proxy/src/detection/clients/openai-compatible.ts",
+      "size": 3027
+    },
+    {
+      "path": "packages/proxy/src/detection/clients/types.ts",
+      "size": 4222
+    },
+    {
+      "path": "packages/proxy/src/detection/degraded-state.ts",
+      "size": 1188
+    },
+    {
+      "path": "packages/proxy/src/detection/layer0-decoder.ts",
+      "size": 5696
+    },
+    {
+      "path": "packages/proxy/src/detection/layer1-heuristics.ts",
+      "size": 9137
+    },
+    {
+      "path": "packages/proxy/src/detection/layer2-embeddings.ts",
+      "size": 4303
+    },
+    {
+      "path": "packages/proxy/src/detection/layer3-judge.ts",
+      "size": 4128
+    },
+    {
+      "path": "packages/proxy/src/detection/pipeline.ts",
+      "size": 5858
+    },
+    {
+      "path": "packages/proxy/src/detection/streaming.ts",
+      "size": 7417
+    },
+    {
+      "path": "packages/proxy/src/detection/types.ts",
+      "size": 781
+    },
+    {
+      "path": "packages/proxy/src/index.ts",
+      "size": 10143
+    },
+    {
+      "path": "packages/proxy/src/manifest/checker.ts",
+      "size": 2731
+    },
+    {
+      "path": "packages/proxy/src/manifest/fingerprint.ts",
+      "size": 4428
+    },
+    {
+      "path": "packages/proxy/src/manifest/index.ts",
+      "size": 471
+    },
+    {
+      "path": "packages/proxy/src/manifest/store.ts",
+      "size": 1477
+    },
+    {
+      "path": "packages/proxy/src/persistence/index.ts",
+      "size": 242
+    },
+    {
+      "path": "packages/proxy/src/persistence/redact.ts",
+      "size": 2435
+    },
+    {
+      "path": "packages/proxy/src/persistence/store.ts",
+      "size": 9328
+    },
+    {
+      "path": "packages/proxy/src/telemetry/event.ts",
+      "size": 2056
+    },
+    {
+      "path": "packages/proxy/src/telemetry/index.ts",
+      "size": 265
+    },
+    {
+      "path": "packages/proxy/src/telemetry/reporter.ts",
+      "size": 3798
+    },
+    {
+      "path": "packages/proxy/src/transports/http.ts",
+      "size": 18113
+    },
+    {
+      "path": "packages/proxy/src/transports/scan-http.ts",
+      "size": 7133
+    },
+    {
+      "path": "packages/proxy/src/transports/shared.ts",
+      "size": 4111
+    },
+    {
+      "path": "packages/proxy/src/transports/sse-scan.ts",
+      "size": 5528
+    },
+    {
+      "path": "packages/proxy/src/transports/stdio.ts",
+      "size": 14298
+    },
+    {
+      "path": "packages/proxy/test/attestation.test.ts",
+      "size": 11671
+    },
+    {
+      "path": "packages/proxy/test/audit-view.test.ts",
+      "size": 3573
+    },
+    {
+      "path": "packages/proxy/test/audit.test.ts",
+      "size": 3972
+    },
+    {
+      "path": "packages/proxy/test/capability-integration.test.ts",
+      "size": 6512
+    },
+    {
+      "path": "packages/proxy/test/capability.test.ts",
+      "size": 6689
+    },
+    {
+      "path": "packages/proxy/test/check.test.ts",
+      "size": 4200
+    },
+    {
+      "path": "packages/proxy/test/cli.test.ts",
+      "size": 871
+    },
+    {
+      "path": "packages/proxy/test/dashboard.test.ts",
+      "size": 4446
+    },
+    {
+      "path": "packages/proxy/test/demo-command.test.ts",
+      "size": 9166
+    },
+    {
+      "path": "packages/proxy/test/edge-cases.test.ts",
+      "size": 26874
+    },
+    {
+      "path": "packages/proxy/test/fixture-http-mcp.mjs",
+      "size": 3364
+    },
+    {
+      "path": "packages/proxy/test/fixture-mcp-server.mjs",
+      "size": 3429
+    },
+    {
+      "path": "packages/proxy/test/fixtures/benign-encoded/fixtures.json",
+      "size": 38317
+    },
+    {
+      "path": "packages/proxy/test/fp-probe.test.ts",
+      "size": 13624
+    },
+    {
+      "path": "packages/proxy/test/history-cli.test.ts",
+      "size": 4399
+    },
+    {
+      "path": "packages/proxy/test/http-transport.test.ts",
+      "size": 9835
+    },
+    {
+      "path": "packages/proxy/test/init.test.ts",
+      "size": 9515
+    },
+    {
+      "path": "packages/proxy/test/inspect.test.ts",
+      "size": 10269
+    },
+    {
+      "path": "packages/proxy/test/integration.test.ts",
+      "size": 6251
+    },
+    {
+      "path": "packages/proxy/test/l3-degraded.test.ts",
+      "size": 5690
+    },
+    {
+      "path": "packages/proxy/test/layer0-decoder.test.ts",
+      "size": 5567
+    },
+    {
+      "path": "packages/proxy/test/layer1.test.ts",
+      "size": 11179
+    },
+    {
+      "path": "packages/proxy/test/layer2.test.ts",
+      "size": 3358
+    },
+    {
+      "path": "packages/proxy/test/layer3.test.ts",
+      "size": 7942
+    },
+    {
+      "path": "packages/proxy/test/manifest.test.ts",
+      "size": 9593
+    },
+    {
+      "path": "packages/proxy/test/ollama-client.test.ts",
+      "size": 5811
+    },
+    {
+      "path": "packages/proxy/test/persistence.test.ts",
+      "size": 6495
+    },
+    {
+      "path": "packages/proxy/test/pipeline.test.ts",
+      "size": 6650
+    },
+    {
+      "path": "packages/proxy/test/rh-ledger.test.ts",
+      "size": 3396
+    },
+    {
+      "path": "packages/proxy/test/scan-http-transport.test.ts",
+      "size": 4923
+    },
+    {
+      "path": "packages/proxy/test/server-identifier.test.ts",
+      "size": 2945
+    },
+    {
+      "path": "packages/proxy/test/sse-scan.test.ts",
+      "size": 7454
+    },
+    {
+      "path": "packages/proxy/test/streaming.test.ts",
+      "size": 8277
+    },
+    {
+      "path": "packages/proxy/test/telemetry.test.ts",
+      "size": 7697
+    },
+    {
+      "path": "packages/proxy/test/trade-policy-integration.test.ts",
+      "size": 4878
+    },
+    {
+      "path": "packages/proxy/test/trade-policy.test.ts",
+      "size": 16567
+    },
+    {
+      "path": "packages/proxy/test/trade-receipt.test.ts",
+      "size": 7474
+    },
+    {
+      "path": "packages/proxy/tsconfig.json",
+      "size": 383
+    },
+    {
+      "path": "packages/proxy/tsup.config.ts",
+      "size": 1335
+    },
+    {
+      "path": "packages/proxy/vitest.config.ts",
+      "size": 444
+    },
+    {
+      "path": "packages/rh-demo/README.md",
+      "size": 5764
+    },
+    {
+      "path": "packages/rh-demo/content/blog-agentic-trading-security.md",
+      "size": 4188
+    },
+    {
+      "path": "packages/rh-demo/content/ecosystem-application.md",
+      "size": 2375
+    },
+    {
+      "path": "packages/rh-demo/content/grant-application-arbitrum-open-house.md",
+      "size": 3537
+    },
+    {
+      "path": "packages/rh-demo/content/x-thread.md",
+      "size": 2359
+    },
+    {
+      "path": "packages/rh-demo/package.json",
+      "size": 653
+    },
+    {
+      "path": "packages/rh-demo/src/agent.ts",
+      "size": 4883
+    },
+    {
+      "path": "packages/rh-demo/src/chain.ts",
+      "size": 1483
+    },
+    {
+      "path": "packages/rh-demo/src/engine.ts",
+      "size": 3518
+    },
+    {
+      "path": "packages/rh-demo/src/guard.ts",
+      "size": 1605
+    },
+    {
+      "path": "packages/rh-demo/src/index.html",
+      "size": 11274
+    },
+    {
+      "path": "packages/rh-demo/src/run.ts",
+      "size": 6360
+    },
+    {
+      "path": "packages/rh-demo/src/scenario.ts",
+      "size": 4150
+    },
+    {
+      "path": "packages/rh-demo/src/trade-guard.ts",
+      "size": 4097
+    },
+    {
+      "path": "packages/rh-demo/src/trading-server.ts",
+      "size": 2343
+    },
+    {
+      "path": "packages/rh-demo/src/web.ts",
+      "size": 2900
+    },
+    {
+      "path": "packages/rh-demo/test/demo.test.ts",
+      "size": 3296
+    },
+    {
+      "path": "packages/rh-demo/test/trade-guard.test.ts",
+      "size": 2298
+    },
+    {
+      "path": "packages/rh-demo/tsconfig.json",
+      "size": 417
+    },
+    {
+      "path": "packages/rh-registry/README.md",
+      "size": 4320
+    },
+    {
+      "path": "packages/rh-registry/package.json",
+      "size": 554
+    },
+    {
+      "path": "packages/rh-registry/src/index.html",
+      "size": 5751
+    },
+    {
+      "path": "packages/rh-registry/src/mcp-server.ts",
+      "size": 4013
+    },
+    {
+      "path": "packages/rh-registry/src/mcp-tools.ts",
+      "size": 5014
+    },
+    {
+      "path": "packages/rh-registry/src/registry.seed.json",
+      "size": 2204
+    },
+    {
+      "path": "packages/rh-registry/src/server.ts",
+      "size": 1641
+    },
+    {
+      "path": "packages/rh-registry/src/store.ts",
+      "size": 4012
+    },
+    {
+      "path": "packages/rh-registry/src/types.ts",
+      "size": 3257
+    },
+    {
+      "path": "packages/rh-registry/test/mcp-tools.test.ts",
+      "size": 2939
+    },
+    {
+      "path": "packages/rh-registry/test/store.test.ts",
+      "size": 3970
+    },
+    {
+      "path": "packages/rh-registry/tsconfig.json",
+      "size": 391
+    },
+    {
+      "path": "packages/rh-trade/.env.example",
+      "size": 1475
+    },
+    {
+      "path": "packages/rh-trade/README.md",
+      "size": 4418
+    },
+    {
+      "path": "packages/rh-trade/package.json",
+      "size": 653
+    },
+    {
+      "path": "packages/rh-trade/scripts/rh-demo.mjs",
+      "size": 7578
+    },
+    {
+      "path": "packages/rh-trade/scripts/seed-rh-ledger.mjs",
+      "size": 4088
+    },
+    {
+      "path": "packages/rh-trade/src/chain.ts",
+      "size": 1695
+    },
+    {
+      "path": "packages/rh-trade/src/preview.ts",
+      "size": 5982
+    },
+    {
+      "path": "packages/rh-trade/src/server.ts",
+      "size": 5649
+    },
+    {
+      "path": "packages/rh-trade/src/tools.ts",
+      "size": 15183
+    },
+    {
+      "path": "packages/rh-trade/src/uniswap-api.ts",
+      "size": 4205
+    },
+    {
+      "path": "packages/rh-trade/test/e2e-guard.test.ts",
+      "size": 3736
+    },
+    {
+      "path": "packages/rh-trade/test/preview-execute.test.ts",
+      "size": 3300
+    },
+    {
+      "path": "packages/rh-trade/test/preview.test.ts",
+      "size": 3187
+    },
+    {
+      "path": "packages/rh-trade/test/server.test.ts",
+      "size": 6028
+    },
+    {
+      "path": "packages/rh-trade/tsconfig.json",
+      "size": 391
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "size": 122929
+    },
+    {
+      "path": "pnpm-workspace.yaml",
+      "size": 48
+    },
+    {
+      "path": "scripts/beta-status.mjs",
+      "size": 3179
+    },
+    {
+      "path": "scripts/deploy-demo.sh",
+      "size": 300
+    },
+    {
+      "path": "scripts/seed-launch-traffic.mjs",
+      "size": 9492
+    }
+  ]
+}

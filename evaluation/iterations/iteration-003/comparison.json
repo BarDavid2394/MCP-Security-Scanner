@@ -1,0 +1,250 @@
+{
+  "development_before": {
+    "tp": 4,
+    "fp": 0,
+    "fn": 10,
+    "tn": 13,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 0.2857142857142857,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "development_after": {
+    "tp": 14,
+    "fp": 0,
+    "fn": 0,
+    "tn": 13,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "fresh_before": {
+    "tp": 23,
+    "fp": 3,
+    "fn": 13,
+    "tn": 20,
+    "errors": 0,
+    "precision": 0.8846153846153846,
+    "recall": 0.6388888888888888,
+    "false_positive_rate": 0.13043478260869565,
+    "label_coverage": 1.0
+  },
+  "fresh_after": {
+    "tp": 24,
+    "fp": 3,
+    "fn": 12,
+    "tn": 20,
+    "errors": 0,
+    "precision": 0.8888888888888888,
+    "recall": 0.6666666666666666,
+    "false_positive_rate": 0.13043478260869565,
+    "label_coverage": 1.0
+  },
+  "fresh_changed_decisions": [
+    {
+      "artifact_id": "benchmark--fixtures--false_negative--aliased_dangerous_function",
+      "rule_id": "MCP05-COMMAND-INJECTION",
+      "function_name": "run_task",
+      "before": "fn",
+      "after": "tp"
+    }
+  ],
+  "development_posthoc_controls": [
+    {
+      "artifact_id": "clean_tool_scope_lowlevel--server",
+      "remaining_environment_dump_findings": 0
+    },
+    {
+      "artifact_id": "clean_tool_scope_same_file_gate--server",
+      "remaining_environment_dump_findings": 0
+    }
+  ],
+  "primary": [
+    {
+      "target_id": "aws-documentation",
+      "status": "completed",
+      "files": 30,
+      "tools": 7,
+      "findings_before": 3,
+      "findings_after": 3,
+      "inputs_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "target_id": "fastmcp-examples",
+      "status": "completed",
+      "files": 141,
+      "tools": 156,
+      "findings_before": 33,
+      "findings_after": 33,
+      "inputs_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "target_id": "markitdown-mcp",
+      "status": "completed",
+      "files": 5,
+      "tools": 1,
+      "findings_before": 1,
+      "findings_after": 1,
+      "inputs_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "target_id": "mcp-atlassian",
+      "status": "completed",
+      "files": 117,
+      "tools": 98,
+      "findings_before": 13,
+      "findings_after": 6,
+      "inputs_identical": true,
+      "removed": [
+        [
+          "MCP01-SECRET-OUTPUT",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\servers\\dependencies.py",
+          1,
+          null
+        ],
+        [
+          "MCP01-SECRET-OUTPUT",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\servers\\main.py",
+          1,
+          null
+        ],
+        [
+          "MCP01-SECRET-OUTPUT",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\environment.py",
+          1,
+          null
+        ],
+        [
+          "MCP01-SECRET-OUTPUT",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\oauth.py",
+          1,
+          null
+        ],
+        [
+          "MCP01-SECRET-OUTPUT",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\oauth_setup.py",
+          1,
+          null
+        ],
+        [
+          "MCP01-SECRET-OUTPUT",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\toolsets.py",
+          1,
+          null
+        ],
+        [
+          "MCP10-OVER-SHARING",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\mcp-atlassian\\src\\mcp_atlassian\\utils\\proxy.py",
+          1,
+          null
+        ]
+      ],
+      "added": []
+    },
+    {
+      "target_id": "official-fetch",
+      "status": "completed",
+      "files": 7,
+      "tools": 1,
+      "findings_before": 1,
+      "findings_after": 1,
+      "inputs_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "target_id": "official-git",
+      "status": "completed",
+      "files": 6,
+      "tools": 12,
+      "findings_before": 0,
+      "findings_after": 0,
+      "inputs_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "target_id": "official-time",
+      "status": "completed",
+      "files": 6,
+      "tools": 2,
+      "findings_before": 0,
+      "findings_after": 0,
+      "inputs_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "target_id": "python-sdk-examples",
+      "status": "completed",
+      "files": 243,
+      "tools": 117,
+      "findings_before": 53,
+      "findings_after": 50,
+      "inputs_identical": true,
+      "removed": [
+        [
+          "MCP01-SECRET-OUTPUT",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\python-sdk\\examples\\servers\\simple-auth\\mcp_simple_auth\\auth_server.py",
+          1,
+          null
+        ],
+        [
+          "MCP01-SECRET-OUTPUT",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\python-sdk\\examples\\servers\\simple-auth\\mcp_simple_auth\\server.py",
+          1,
+          null
+        ],
+        [
+          "MCP01-SECRET-OUTPUT",
+          "C:\\Users\\Bar David\\Desktop\\projects\\MCP_project\\evaluation\\corpus\\python-sdk\\examples\\servers\\simple-auth\\mcp_simple_auth\\token_verifier.py",
+          1,
+          null
+        ]
+      ],
+      "added": []
+    },
+    {
+      "target_id": "quickstart-weather",
+      "status": "completed",
+      "files": 3,
+      "tools": 2,
+      "findings_before": 0,
+      "findings_after": 0,
+      "inputs_identical": true,
+      "removed": [],
+      "added": []
+    },
+    {
+      "target_id": "simple-mcp-server",
+      "status": "completed",
+      "files": 8,
+      "tools": 2,
+      "findings_before": 0,
+      "findings_after": 0,
+      "inputs_identical": true,
+      "removed": [],
+      "added": []
+    }
+  ],
+  "original_batch_regression": {
+    "tp": 4,
+    "fp": 1,
+    "fn": 4,
+    "tn": 15,
+    "errors": 0,
+    "precision": 0.8,
+    "recall": 0.5,
+    "false_positive_rate": 0.0625,
+    "label_coverage": 1.0
+  }
+}

@@ -1,0 +1,294 @@
+{
+  "candidate_files": 57,
+  "reviewed_files": 43,
+  "admitted_files": 34,
+  "excluded_files": 9,
+  "deferred_files": 14,
+  "decisions": [
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/aliased_dangerous_function.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/class_method_sink.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/dynamic_description.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/indirect_prompt_output.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "The supposedly remote source is a local f-string stub; no actual untrusted external retrieval is established."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/multi_hop_dataflow.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/obfuscated_command.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/runtime_mutation.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Mutation is in an uncalled activate function; effect on already-registered tool metadata is not established."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/benign_imperative_description.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/imported_auth/guard.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/imported_auth/server.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/intended_duplicate_names/server_a.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/intended_duplicate_names/server_b.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/legitimate_base64_description.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/registration_resemblance.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/safe_deserialization.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/safe_subprocess_args.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/validated_paths.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Path traversal has no dedicated rule in our current catalog; do not convert this into an unrelated easy negative."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/cross_file_safe/helper.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/cross_file_safe/tool_server.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/cross_file_two_hops/deeper.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/cross_file_two_hops/helper.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/cross_file_two_hops/tool.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/cross_file_vulnerable/helper.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/cross_file_vulnerable/tool_server.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/clean_server.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/safe_server.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/shadow_server_a.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/shadow_server_b.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/shadow_server_c.py.txt",
+      "status": "deferred-without-source-review",
+      "reason": "Cross-file helper/authentication or multi-server duplicate-name group requires grouped evaluation; not scanned."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/vulnerable_server.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/vulnerable_sse_server.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_command_validation.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_description_example.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_example.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_path_validation.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Dedicated path-traversal checking is outside the current catalog."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_readiness_example.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_same_file_helper.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_secrets_derived_values.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_secrets_example.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_sql_injection.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Dedicated SQL injection checking is outside the current catalog."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_transport_auth_middleware.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "backend=object() is a placeholder, not evidence of a functioning authentication/authorization backend."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_transport_auth_server_config.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "GateProvider implementation is unavailable; effective authentication cannot be independently adjudicated from this file."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_command_validation.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_description_example.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_distinct_sinks.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_duplicate_sink.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_example.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_path_validation.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Dedicated path-traversal checking is outside the current catalog."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_programmatic_example.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_readiness_example.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_same_file_helper.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_secrets_example.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_secrets_hashicorp_token.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_sql_injection.py.txt",
+      "status": "excluded-after-source-review",
+      "reason": "Dedicated SQL injection checking is outside the current catalog."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_transport_auth_boundaries.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_transport_auth_decorators.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    },
+    {
+      "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_transport_auth_explicitly_disabled.py.txt",
+      "status": "admitted",
+      "reason": "Standalone source reviewed and rule-specific labels locked before predictions."
+    }
+  ]
+}

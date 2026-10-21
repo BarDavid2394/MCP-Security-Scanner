@@ -1,0 +1,21 @@
+{
+  "target_id": "quickstart-weather",
+  "target": "evaluation/corpus/quickstart-resources/weather-server-python",
+  "input_files": {
+    "pyproject.toml": "c84e645bb805ddc9c738719d532071a56706fcbd05936b9b490015917c5409e2",
+    "uv.lock": "c30d41380a5199dae30f61dd43ee01f303c1d3ab0b06b4c7a59de2e819a2d6b1",
+    "weather.py": "8de26ed4a367c3b44554ba7b3755f9af6906e6c5c30ddc470c38c97fdc018353"
+  },
+  "status": "completed",
+  "scan_info": {
+    "files_scanned": 3,
+    "tools_analyzed": 2,
+    "servers_found": 0,
+    "total_findings": 0,
+    "critical_count": 0,
+    "high_count": 0,
+    "parse_errors": []
+  },
+  "findings": [],
+  "elapsed_seconds": 0.320355
+}

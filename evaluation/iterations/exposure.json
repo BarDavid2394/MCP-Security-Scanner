@@ -1,0 +1,1563 @@
+{
+  "schema_version": 1,
+  "policy": "Once predictions guide changes, artifacts and related families belong to development; never count them as unseen validation.",
+  "entries": [
+    {
+      "iteration": "iteration-001",
+      "repository": "akanthed/SecureAI-Scan",
+      "revision": "f1f2b423b3a67127295c5aeba3016d5e0f352d0c",
+      "role": "development-after-investigation",
+      "related_family_policy": "Other variants from this repository need leakage review before any independent split.",
+      "artifacts": [
+        {
+          "id": "safe--env_config",
+          "sha256": "1521a3182c786d9da3ace304a802a54c3385836e3d35b6de99e785e540e69de0",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/env_config.py.txt"
+        },
+        {
+          "id": "safe--mcp-tool-sinks--fastmcp_helper_guarded",
+          "sha256": "c2927e58e3e390795aba34d9499c09da166791e32c5a6dbcf8c6af009c0e55a3",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp-tool-sinks/fastmcp_helper_guarded.py.txt"
+        },
+        {
+          "id": "safe--mcp-tool-sinks--guarded_ops",
+          "sha256": "d07314905071ac02b5de3e456eff6287d8cab017323ed31a23f34d8559ee2131",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp-tool-sinks/guarded_ops.py.txt"
+        },
+        {
+          "id": "safe--mcp-tool-sinks--not_mcp_script",
+          "sha256": "ec5335df85849978dc57e308047e9e5b5d4da097621935a085e97f1f5e38ec2e",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp-tool-sinks/not_mcp_script.py.txt"
+        },
+        {
+          "id": "safe--mcp001_module_scope_false_context",
+          "sha256": "d623a4e5988b155f9247e2ebf478f4d71cd4f539102e3b9056b2bb29ab20abe8",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp001_module_scope_false_context.py.txt"
+        },
+        {
+          "id": "safe--mcp_untrusted_tool_source",
+          "sha256": "ab97607226bb2b75f401f92dfdfec1952d2f282155ef6cb2d5e1da88f2eb6f72",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/mcp_untrusted_tool_source.py.txt"
+        },
+        {
+          "id": "safe--system_prompt_field",
+          "sha256": "68eb0cb6dc84eb42c86a95043b0720324d46cad28256b9cc51761f1e06942b98",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/system_prompt_field.py.txt"
+        },
+        {
+          "id": "safe--tool_poisoning",
+          "sha256": "dcd039ea638794d50b0044d984767f500c9e4c24792c636d07f1ceaef441f34c",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/safe/tool_poisoning.py.txt"
+        },
+        {
+          "id": "vulnerable--mcp-tool-sinks--fastmcp_helper",
+          "sha256": "5fcfe7339d84b8ad87302f6c87192d2cbe6522c5d01514b73264dcb573db823b",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_helper.py.txt"
+        },
+        {
+          "id": "vulnerable--mcp-tool-sinks--fastmcp_ops",
+          "sha256": "ff2b406becf3cf6b0a23da46f94cd328a470c9eea3361a75e547d28abb13a498",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_ops.py.txt"
+        },
+        {
+          "id": "vulnerable--mcp-tool-sinks--lowlevel_server",
+          "sha256": "2d2322417659616fa8a414c40eef6c80ed844142d16865a353b0468553940318",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/mcp-tool-sinks/lowlevel_server.py.txt"
+        },
+        {
+          "id": "vulnerable--mcp_untrusted_tool_source",
+          "sha256": "bc95b0b1ab4b94fd646a10e11c3d8584afc9c8d00a11d8c999a2d774f98bb995",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/mcp_untrusted_tool_source.py.txt"
+        },
+        {
+          "id": "vulnerable--tool_poisoning",
+          "sha256": "17ca031ac814d8917ffda8035b9cd31f044ddc45195420b42a318b0001aa3746",
+          "path": "deliverables/data_expansion/snapshots/akanthed__SecureAI-Scan/test-fixtures/vulnerable/tool_poisoning.py.txt"
+        }
+      ],
+      "first_run": "iteration-001/runs/before",
+      "latest_run": "iteration-001/runs/iteration007-regression"
+    },
+    {
+      "iteration": "iteration-002",
+      "repository": "jaimenbell/mcp-security-scanner",
+      "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+      "role": "development-after-investigation",
+      "related_family_policy": "All related variants, including deferred files from this repository, require leakage review; do not count as a new independent source batch.",
+      "first_run": "iteration-002/runs/frozen-validation",
+      "latest_run": "iteration-002/runs/iteration007-regression",
+      "artifacts": [
+        {
+          "id": "clean_secret--config",
+          "sha256": "092b71f016efa43346b9ffb0229110afcc7c8db6f9f2b96f0a9d52629ea2bd29",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_secret/config.py.txt"
+        },
+        {
+          "id": "clean_secret_leak--server",
+          "sha256": "d9655dfabd22e79b3d1a03e25730f39ed875d60605379407255bc838f8248ae8",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_secret_leak/server.py.txt"
+        },
+        {
+          "id": "clean_secret_leak_lowlevel--server",
+          "sha256": "cdcfd5a653f78b868ad0d80b8874862299c97eb5cbad6b74f023caf615b8b175",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_secret_leak_lowlevel/server.py.txt"
+        },
+        {
+          "id": "clean_tool_scope_lowlevel--server",
+          "sha256": "858daa2465e6ae088899df0a246f7173cc7d483541ce8a1d03734b45f2d5e758",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_tool_scope_lowlevel/server.py.txt"
+        },
+        {
+          "id": "clean_tool_scope_same_file_gate--server",
+          "sha256": "16fdd760f7f9c6537c229dc59145df017f19027f0dadfe1ecbf8db1f268fc0a1",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_tool_scope_same_file_gate/server.py.txt"
+        },
+        {
+          "id": "clean_tool_scope_subprocess_name_no_real_sink--server",
+          "sha256": "899d371bc3b0ddc0e666e2d8cee25a3cc59d964bca889c42705e5a711bab0abb",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/clean_tool_scope_subprocess_name_no_real_sink/server.py.txt"
+        },
+        {
+          "id": "vuln_secret--config",
+          "sha256": "eb2fc8500615ff81f6ccf1d3812f5acadf1fe484a204dc3e23ff913f74645850",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret/config.py.txt"
+        },
+        {
+          "id": "vuln_secret_leak--server",
+          "sha256": "bf1241cdbc4e59784238e48d94b4b42eebc99c439a365b4d9e32b049e8b277df",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret_leak/server.py.txt"
+        },
+        {
+          "id": "vuln_secret_leak_lowlevel--server",
+          "sha256": "e41ae2bc5b9cf2dcf1288dfa143878301f796501a9f80da53926edf7521f46e7",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret_leak_lowlevel/server.py.txt"
+        },
+        {
+          "id": "vuln_secret_leak_lowlevel_negated_guard--server",
+          "sha256": "0d545bfa71bef9fad0dbd9e421df9cc701ac5afc8d2d740cee81e0c095cad270",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret_leak_lowlevel_negated_guard/server.py.txt"
+        },
+        {
+          "id": "vuln_secret_leak_pagination--server",
+          "sha256": "f3fa8bc1f1ce0b94e61d31445595cc60f73504377d3942840efc8a045e2cc5d2",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_secret_leak_pagination/server.py.txt"
+        },
+        {
+          "id": "vuln_tool_scope_aliased_subprocess--server",
+          "sha256": "110cd1f4c8e42cf9f8099747c75f8a76ea3a4b0fa2c7f6dfb210223c97be49ff",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_aliased_subprocess/server.py.txt"
+        },
+        {
+          "id": "vuln_tool_scope_bare_imported_sinks--server",
+          "sha256": "46172f11601ad10608ef32091bfce0be7c49f2dc02dc2d76d98432b7ceb8230a",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_bare_imported_sinks/server.py.txt"
+        },
+        {
+          "id": "vuln_tool_scope_lowlevel--server",
+          "sha256": "c9fee6426f3cbda6e4e4b286a1f107234e6ba4e6d6d0587807c4b4a18a89fbde",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_lowlevel/server.py.txt"
+        },
+        {
+          "id": "vuln_tool_scope_lowlevel_negated_guard--server",
+          "sha256": "f3d637445ec1e613e85ec1845c2d4731cf2a29841decd99bfa9834ddb30e11bb",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_lowlevel_negated_guard/server.py.txt"
+        },
+        {
+          "id": "vuln_tool_scope_lowlevel_sibling_gate--server",
+          "sha256": "4e9ebda5e21db5babc1b4573d711ac1fdb3f24097a3c71c3326c3cade56d04c7",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_lowlevel_sibling_gate/server.py.txt"
+        },
+        {
+          "id": "vuln_tool_scope_same_file_class_collision--server",
+          "sha256": "100be6d6921a61bf38ded94638334fab8b2e7833676f9fee435643f01c035eb4",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_same_file_class_collision/server.py.txt"
+        },
+        {
+          "id": "vuln_tool_scope_subprocess_readonly_probe--server",
+          "sha256": "ed4d500efdf5b257c50e647cfe783277424ac31793b288151ac3d603f4224272",
+          "path": "deliverables/data_expansion/snapshots/jaimenbell__mcp-security-scanner/tests/fixtures/vuln_tool_scope_subprocess_readonly_probe/server.py.txt"
+        }
+      ]
+    },
+    {
+      "iteration": "iteration-003",
+      "repository": "jspillers10/mcp-security-scanner",
+      "revision": "9bfc641ec37607025b2dae63d0f96cb7b85dbc92",
+      "role": "development-after-investigation",
+      "related_family_policy": "Related variants, including deferred candidates, are not independent fresh validation without leakage review.",
+      "first_run": "iteration-003/runs/frozen-validation",
+      "latest_run": "iteration-003/runs/iteration007-regression",
+      "artifacts": [
+        {
+          "id": "benchmark--fixtures--false_negative--aliased_dangerous_function",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/aliased_dangerous_function.py.txt",
+          "sha256": "22b76bb6ba670fd3e6531564bd8e28c138bdbe2ba3e3a841b0e58b465821f521"
+        },
+        {
+          "id": "benchmark--fixtures--false_negative--class_method_sink",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/class_method_sink.py.txt",
+          "sha256": "802ff5e3edabde68982cd15ee926279d1065e5f7dbd66324fab0575dc9caf8b5"
+        },
+        {
+          "id": "benchmark--fixtures--false_negative--dynamic_description",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/dynamic_description.py.txt",
+          "sha256": "7c001d4a4f4bed1ac0dda54c9af12f69995c9a02da0f5e911152345e4e386b96"
+        },
+        {
+          "id": "benchmark--fixtures--false_negative--multi_hop_dataflow",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/multi_hop_dataflow.py.txt",
+          "sha256": "303317f7dc0f065ed0f7aa4a9d6b51021668c4670739ace159971f498c1914b8"
+        },
+        {
+          "id": "benchmark--fixtures--false_negative--obfuscated_command",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_negative/obfuscated_command.py.txt",
+          "sha256": "63817086bfe4b75c22cf0f682c4da35313980c0e71c2d621ca64385ef27c36cb"
+        },
+        {
+          "id": "benchmark--fixtures--false_positive--benign_imperative_description",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/benign_imperative_description.py.txt",
+          "sha256": "f0d1f5c1d6e2e1fc2cb3cb637eb765d1e85df15f11b288081e541a81b346322f"
+        },
+        {
+          "id": "benchmark--fixtures--false_positive--legitimate_base64_description",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/legitimate_base64_description.py.txt",
+          "sha256": "0595f8e4ceddbcc15ebc08adf8b097817d67e5fd7c155f2a3260d7f3400116f3"
+        },
+        {
+          "id": "benchmark--fixtures--false_positive--registration_resemblance",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/registration_resemblance.py.txt",
+          "sha256": "9e10f4d55b93d330bc2ae8c39d23bda0904b75a7bf434468b68240d4f2cd2484"
+        },
+        {
+          "id": "benchmark--fixtures--false_positive--safe_deserialization",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/safe_deserialization.py.txt",
+          "sha256": "16df6e47a9bdf4e6bc5dda416eec0da44dd60753fe05acee508a4e213599dc73"
+        },
+        {
+          "id": "benchmark--fixtures--false_positive--safe_subprocess_args",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/benchmark/fixtures/false_positive/safe_subprocess_args.py.txt",
+          "sha256": "20002a9220052bc4a5320598c2b7430fafb1dfb06c581ca0ef8f6f9f348b54d1"
+        },
+        {
+          "id": "tests--fixtures--live--clean_server",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/clean_server.py.txt",
+          "sha256": "a48553e1e0592b6f90022b64486072bc4372ab09770cd7e2b7012d7206e55bfa"
+        },
+        {
+          "id": "tests--fixtures--live--safe_server",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/safe_server.py.txt",
+          "sha256": "6c7572a637ee6a103a5b227a33b21c3113ae707265a85918f5a2533a24634c18"
+        },
+        {
+          "id": "tests--fixtures--live--vulnerable_server",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/vulnerable_server.py.txt",
+          "sha256": "9585be2c6eb71ba6579e2a1ee00cd9d62d5494e36a47334a920544d256dbfc6c"
+        },
+        {
+          "id": "tests--fixtures--live--vulnerable_sse_server",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/live/vulnerable_sse_server.py.txt",
+          "sha256": "e6a11af9375b3afc759c04f08e1e81e17dab2c0eb0d02db74ad00d7056f7ea3a"
+        },
+        {
+          "id": "tests--fixtures--safe_command_validation",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_command_validation.py.txt",
+          "sha256": "3ead8de7a42aa7f934fd07d96ff45b3aea2d336a90e56451beb57a08f296f357"
+        },
+        {
+          "id": "tests--fixtures--safe_description_example",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_description_example.py.txt",
+          "sha256": "60881987eb5553a19f9b2b4feaf942c94e3c10b5faad9506cb0c3fd51205fb28"
+        },
+        {
+          "id": "tests--fixtures--safe_example",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_example.py.txt",
+          "sha256": "9d83e1025b7e08609986fe522cfdbf814a8a9a7eb267f43ed7e992df69fef92d"
+        },
+        {
+          "id": "tests--fixtures--safe_readiness_example",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_readiness_example.py.txt",
+          "sha256": "ba50d4b479e9ff12d49ab1ca11cf3538198393fd0377551a1c2fbaab30d979ea"
+        },
+        {
+          "id": "tests--fixtures--safe_same_file_helper",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_same_file_helper.py.txt",
+          "sha256": "329f5de13b0dfdbb3f3db7c0958b6adb34ad1191ecc93640f4fd7a439e37baf4"
+        },
+        {
+          "id": "tests--fixtures--safe_secrets_derived_values",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_secrets_derived_values.py.txt",
+          "sha256": "dc2d8ef25840c8b6f5cdac7393d455e3269b7bad9d6251faa390d6ed19e7a26e"
+        },
+        {
+          "id": "tests--fixtures--safe_secrets_example",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/safe_secrets_example.py.txt",
+          "sha256": "43a8b75c0f24f567df4c0a061d34eeb5dd4acb0d45a6906509cf816593af73ec"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_command_validation",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_command_validation.py.txt",
+          "sha256": "35991c0f58076554841c4ce7063341cd4c7f9f628b3b1345a4a96d44421bed70"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_description_example",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_description_example.py.txt",
+          "sha256": "e490999bb043266605eb2b2d96c012b0ccdc24159e27354919195ccd33f7830f"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_distinct_sinks",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_distinct_sinks.py.txt",
+          "sha256": "5554789eb165bd5481ef8a990d531933860ab6c7eadbfa90a6e73ae3f70f442f"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_duplicate_sink",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_duplicate_sink.py.txt",
+          "sha256": "c6aaf38676aca26696f9163e3a867b8d6bf78a5e57db3130cedaf317c4641bdd"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_example",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_example.py.txt",
+          "sha256": "c397d119d4ee9107e88cb243aa71c4599c7f95cbba4d861a84ee07dab9d68ea1"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_programmatic_example",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_programmatic_example.py.txt",
+          "sha256": "262923bf7f9f25bdd0b9b829343e4aa24b172d52fa732556567eb74f0df96f5d"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_readiness_example",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_readiness_example.py.txt",
+          "sha256": "448ab1d601ed291f96ffa6a888a8ce35f0c9bbd8ec45cef166c37d3ecfc23ff9"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_same_file_helper",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_same_file_helper.py.txt",
+          "sha256": "50240cdf6d19719c26947591dd94cd699e5e5b9683f8c4b27e5f9d6d9ecefce7"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_secrets_example",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_secrets_example.py.txt",
+          "sha256": "e70a24a3ef4edd47c10d62fa590975c32e856222fa0ad3965b7e7cfb411c423b"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_secrets_hashicorp_token",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_secrets_hashicorp_token.py.txt",
+          "sha256": "de0f94d6dc1febcb3497086918407b05d3b3094ba65ca76f0a5ea8ed554ff7a3"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_transport_auth_boundaries",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_transport_auth_boundaries.py.txt",
+          "sha256": "cf25cc9c1c2c226eaef66434aa40d82af68373d7603e6baf14b524a676032094"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_transport_auth_decorators",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_transport_auth_decorators.py.txt",
+          "sha256": "04dcaafc1dbcd45e9b745da6e7fdcfffce6a0f6e0f8d0edd0b8c558b574cdb21"
+        },
+        {
+          "id": "tests--fixtures--vulnerable_transport_auth_explicitly_disabled",
+          "path": "deliverables/data_expansion/snapshots/jspillers10__mcp-security-scanner/tests/fixtures/vulnerable_transport_auth_explicitly_disabled.py.txt",
+          "sha256": "162491dbf623d4a5b54fd94088192d9cbff52063ab21beba41b1286d78883d23"
+        }
+      ]
+    },
+    {
+      "iteration": "iteration-004",
+      "repository": "cisco-ai-defense/mcp-scanner",
+      "revision": "5d147dc7e3635606e41104112fa297b45444b05c",
+      "role": "development-after-investigation",
+      "related_family_policy": "All Cisco variants need leakage review before any future independent split; 84 deferred sources were structurally inventoried.",
+      "first_run": "iteration-004/runs/frozen-validation",
+      "latest_run": "iteration-004/remediation/runs/iteration007-regression",
+      "artifacts": [
+        {
+          "id": "evals--behavioral-analysis--data--general-description-code-mismatch--behavioral_profiling_user_tracking",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/behavioral_profiling_user_tracking.py.txt",
+          "sha256": "4d207d5c3809b2b30624b9c23a0357e5122bf63402905fdecd88760bc056fa88"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_analytics_location_tracking",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_analytics_location_tracking.py.txt",
+          "sha256": "6a7eece5150c8dde2df73b2166c85977daf6121a5b767d98ccd8d6b951034426"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_data_collection_model_training",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_data_collection_model_training.py.txt",
+          "sha256": "f6bc56048cb75f40133f88c2145d64616b8086d5eb83f41193f831186b3db1eb"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--general-description-code-mismatch--hidden_monetization_affiliate_tracking",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/hidden_monetization_affiliate_tracking.py.txt",
+          "sha256": "42d3e1994930bf0a2c017a02410a4b3fa5756bc3f9ac8e833d812e22adda6140"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--general-description-code-mismatch--incomplete_security_fake_encryption",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/incomplete_security_fake_encryption.py.txt",
+          "sha256": "ca714b9ad670290b0be026f988b43bfaff7653c9746a4cbc7dd81721ff204654"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--general-description-code-mismatch--misleading_functionality_fake_operations",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/misleading_functionality_fake_operations.py.txt",
+          "sha256": "f06b4440576faddeaad14b974548fb52e094468c24aede4d7385e574dfabfdad"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--general-description-code-mismatch--undisclosed_tracking_data_collection",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/general-description-code-mismatch/undisclosed_tracking_data_collection.py.txt",
+          "sha256": "022e9f29dbfec7efa078130a346f434bcd2864629b5c3d57e325efa4e743bedf"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--injection-attacks--command_injection_grep",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/command_injection_grep.py.txt",
+          "sha256": "868f4ec72b96166f36148375a625dcc19c9d9c9d0633f8a5d168330cdbc399ff"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--injection-attacks--curl_command_injection",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/curl_command_injection.py.txt",
+          "sha256": "71513f10b9b1df80020ddb9cac92b5b6b621d06362f881d65549dd6524a92261"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--injection-attacks--format_string_injection",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/format_string_injection.py.txt",
+          "sha256": "d8cea4b1d5922fba6e25ad9cf2b033bf5317caf2c2744030c128bbb23efb7219"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--injection-attacks--os_system_injection_archives",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/os_system_injection_archives.py.txt",
+          "sha256": "169d7328290e4ea57c8af06e425ba068c1bd2118a98618fc2398e64fd525ec6d"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--injection-attacks--shell_injection_network_diagnostics",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/shell_injection_network_diagnostics.py.txt",
+          "sha256": "794cb7ffc4cba64be4495acffbbac7b3005e94bfd7798f278859821fc0475eb5"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--injection-attacks--template_command_injection",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/injection-attacks/template_command_injection.py.txt",
+          "sha256": "0456ecb1981cde5855e9a95fa37f165247a3beac43eb52a96b9c5ecb1de57c02"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--prompt-injection--act_as_role_injection",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/act_as_role_injection.py.txt",
+          "sha256": "5bcc544f817c2fa1bd32a315c70a2fc46db4697f34959424a8ff87a10c4e44fa"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--prompt-injection--admin_privilege_escalation",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/admin_privilege_escalation.py.txt",
+          "sha256": "17d7cc69c2c048fc03804e15620fe2831541b40fc0b90b26c5db6a4bd0c9a7e6"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--prompt-injection--contradictory_description_validation_bypass",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/contradictory_description_validation_bypass.py.txt",
+          "sha256": "ea3f3d168dceaec7e238d5f2426aa25f8ab618f00d5005039d24aa1760328ce4"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--prompt-injection--hidden_metadata_filter_bypass",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/hidden_metadata_filter_bypass.py.txt",
+          "sha256": "8e18cdf4b4685576d9f7345d17a86ecb8341fdb584f930a57cfb43491f30c7a5"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--prompt-injection--hidden_system_instructions",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/hidden_system_instructions.py.txt",
+          "sha256": "91b98e69c4d2ed67c64966a97baeaab9e40015773233c2eed637dd96980b366b"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--prompt-injection--jailbreak_mode_context_manipulation",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/jailbreak_mode_context_manipulation.py.txt",
+          "sha256": "effe29071edff45bf32c995b9dc79d87fa9b8a3b5f2a63466ea968d9f88fef75"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--prompt-injection--nested_ignore_trust_escalation",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/nested_ignore_trust_escalation.py.txt",
+          "sha256": "72c998d7484655892728a322a9989821db179426ae0ffd91b92672874215da7a"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--prompt-injection--safety_bypass_emergency_access",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/prompt-injection/safety_bypass_emergency_access.py.txt",
+          "sha256": "9b6d978935965003c0641a1cd23763d1e0d30b62275a3e3efcbdf4f59a8001c1"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--resource-exhaustion--network_bandwidth_exhaustion",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/resource-exhaustion/network_bandwidth_exhaustion.py.txt",
+          "sha256": "22b411c4b673dd9674eb0a5e4e04d71ed733e13edfae7ae95c1ace03c7605612"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--base64_decode_execute_obfuscation",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/base64_decode_execute_obfuscation.py.txt",
+          "sha256": "705f063e5e3e02b7f716791e174ed714feb32d56c60526b4451ecc248d3b8c56"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--compile_execute_bytecode_manipulation",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/compile_execute_bytecode_manipulation.py.txt",
+          "sha256": "dcb0fd3d4444abc355fe3b1df60667fcd6ce13438086f31a995f4e86e74e868d"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--dynamic_import_arbitrary_module",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_import_arbitrary_module.py.txt",
+          "sha256": "d0ecfa8f90154695c9437f46ad05103920c4a0ddaa8bb9b38ce8129dbde99c12"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--dynamic_lambda_function_execution",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/dynamic_lambda_function_execution.py.txt",
+          "sha256": "860ede36805b80717421d455f6d920fe4e46ccc7d8c248c448feb9f73a3ec545"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--importlib_dynamic_module_loading",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/importlib_dynamic_module_loading.py.txt",
+          "sha256": "6f06de1e80837edf42c6b49cf84f996c6d70c75dc1803b3c93b8c09e5a0a4cad"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--subprocess_shell_command_injection",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/subprocess_shell_command_injection.py.txt",
+          "sha256": "12f5dcb841171ef1ec89c5f11d1aba63fd2cc15e176ba5f8e2297bde07ddda52"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--unrestricted_eval_code_injection",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_eval_code_injection.py.txt",
+          "sha256": "288606d06f9c77b461ed731af1c8a424481bc35f3cd945f4ca35f6e92c0471dd"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--unrestricted_exec_arbitrary_code",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/unrestricted_exec_arbitrary_code.py.txt",
+          "sha256": "2800400226f448de1900b543aabd4d4f490c903fbbfaf01fc53b7498c0eded8c"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--unsafe_pickle_deserialization",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/unsafe_pickle_deserialization.py.txt",
+          "sha256": "1ee2dd663c2a50a07aa7f34e4ad6d3b050c8f6a00b2178c5b3e911fa2385b845"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-code-execution--yaml_unsafe_load_code_execution",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-code-execution/yaml_unsafe_load_code_execution.py.txt",
+          "sha256": "c455317092f8bc92ce7f15e3ea6dd2cda0007c3301474c593610cb935c19f9fe"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-network-access--cloud_metadata_credential_extraction",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/cloud_metadata_credential_extraction.py.txt",
+          "sha256": "8b62f1d5de9b79e72ac1db0b73e5f77d38c01a7f11190ae5316fc9e2ea09a012"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-network-access--dns_rebinding_attack",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/dns_rebinding_attack.py.txt",
+          "sha256": "23d35a21323ea3dd0fb4ca016e10dfda8e978b43c0ab1c89c9bc375b57e709ad"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-network-access--file_protocol_ssrf_local_file",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/file_protocol_ssrf_local_file.py.txt",
+          "sha256": "925a3576e8a3e5730e6bd30bec07ea1cff9e8720d380771a2c1b43035da9bd00"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-network-access--internal_service_port_scanning",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/internal_service_port_scanning.py.txt",
+          "sha256": "103c5f9d6f6d69bf20865170d6b04478e9166483a89597005bfd1012816b0d26"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-network-access--localhost_metadata_service_access",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/localhost_metadata_service_access.py.txt",
+          "sha256": "98c531c565af3232c97a1a1ab9758b34915e26907c1334279f1ea916e7e8925f"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-network-access--private_ip_range_scanning",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/private_ip_range_scanning.py.txt",
+          "sha256": "da8e9e17cc2411952c9cd9ad02fcb70af6918b30cdff3f423a29c8503e6655ae"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-network-access--redirect_chain_internal_service",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/redirect_chain_internal_service.py.txt",
+          "sha256": "1838e8c23bab9ccd5bb3d9c7ca9d760e4c868b97c6d3fed445041beb620a5561"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-network-access--redirect_following_open_redirect",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/redirect_following_open_redirect.py.txt",
+          "sha256": "917cd70c65f48580ef0bdc16951e18a15f48c7f0ea0adc37c84e8b6b7c1db6bc"
+        },
+        {
+          "id": "evals--behavioral-analysis--data--unauthorized-network-access--ssrf_url_manipulation_internal_network",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/data/unauthorized-network-access/ssrf_url_manipulation_internal_network.py.txt",
+          "sha256": "19f2f44f691cd46d42a9094bd6a738379db9887739dd89cf069f9c7861d1f237"
+        },
+        {
+          "id": "evals--behavioral-analysis--scripts--safe_fastmcp_server",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/behavioral-analysis/scripts/safe_fastmcp_server.py.txt",
+          "sha256": "adf8f83a36e2a71429e72b97f5ed98d096d84d8a4553adc62bb756eaa0de88e1"
+        },
+        {
+          "id": "evals--remote--benign--GitHub_tools",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/benign/GitHub_tools.py.txt",
+          "sha256": "8e5602a9c6a23f77268e28a7db23b23b696c15001b3439519c8243abd2fbb779"
+        },
+        {
+          "id": "evals--remote--benign--azure_tools",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/benign/azure_tools.py.txt",
+          "sha256": "06d73aa905824d5ed813da3f978e6367f390394791e380081374c8ed3da3135b"
+        },
+        {
+          "id": "evals--remote--benign--discord_tools",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/benign/discord_tools.py.txt",
+          "sha256": "88b80b1f4000f3bc165668602cdeb86100d27d8998d4bec8264ea6cd8fd08ffb"
+        },
+        {
+          "id": "evals--remote--malicious--malicious_mcp_server",
+          "path": "deliverables/data_expansion/snapshots/cisco-ai-defense__mcp-scanner/evals/remote/malicious/malicious_mcp_server.py.txt",
+          "sha256": "3313a8ed338e475c5feee7189b84d44a27a6d045644a3eb8c57a75e4026c3b50"
+        }
+      ]
+    },
+    {
+      "iteration": "iteration-005",
+      "role": "development-after-investigation",
+      "repository": "andyscott88/prompt-injection-bench",
+      "related_family_policy": "All related records and derived wrappers remain development-only; no random split into final validation.",
+      "artifacts": [
+        {
+          "id": "prompt-injection-bench-c1e6cce16fad31b6e3bf",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-c1e6cce16fad31b6e3bf.py.txt",
+          "sha256": "f14b8230ad41770851ddb9ffb463bb820fcdb0c2ea027a02131add7f47fb4f3b"
+        },
+        {
+          "id": "prompt-injection-bench-0ee795177fecd82823c8",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-0ee795177fecd82823c8.py.txt",
+          "sha256": "653a085c579e9cc5967abf2c6958d06d01205ec09076628f008abddae88823ea"
+        },
+        {
+          "id": "prompt-injection-bench-77eac33a36261c8de864",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-77eac33a36261c8de864.py.txt",
+          "sha256": "56b0bc855f55a9236f903cd5fc00d448d14770e36598b405008b5656ffd3f72d"
+        },
+        {
+          "id": "prompt-injection-bench-587fa125b8a4435580ef",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-587fa125b8a4435580ef.py.txt",
+          "sha256": "96ce6a8317afe8361e9d742f0fcd62ec763418f7ffd53641edb2670afcedea45"
+        },
+        {
+          "id": "prompt-injection-bench-747b95bbb723aabc198b",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-747b95bbb723aabc198b.py.txt",
+          "sha256": "2602ed5ac9864fa081778de82008644df023b783c107a947151c466a138c9301"
+        },
+        {
+          "id": "prompt-injection-bench-f5b1e40e907c5aacdf6c",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-f5b1e40e907c5aacdf6c.py.txt",
+          "sha256": "3bf4ba0837fec31abfdd95d58d12680ac2e854a7d772826101ff24907c8e5228"
+        },
+        {
+          "id": "prompt-injection-bench-02ad65a9098ec3d8b4b4",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-02ad65a9098ec3d8b4b4.py.txt",
+          "sha256": "c94e3415c4e77609e0264002213fe0ecb90314fd98d00a839d2481d5461f16e9"
+        },
+        {
+          "id": "prompt-injection-bench-20a1c521c02f3ff1ae95",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-20a1c521c02f3ff1ae95.py.txt",
+          "sha256": "78cc52a6b41f801c56faa5ff6e04f74095c9bd95b489f5bf81aa3ae2f85e6a85"
+        },
+        {
+          "id": "prompt-injection-bench-d8d7be7a14bc0a506a30",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-d8d7be7a14bc0a506a30.py.txt",
+          "sha256": "4fc5c1175ac1e495ede1f72eeb3aeba486e4f2eac1f9eed74fb2508dda41d05f"
+        },
+        {
+          "id": "prompt-injection-bench-87ba0ebcfeec81ad38c3",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-87ba0ebcfeec81ad38c3.py.txt",
+          "sha256": "e8095a36a3cb06e2d4b6c95a66140dda161725e8e45ace77a03d625a77b92682"
+        },
+        {
+          "id": "prompt-injection-bench-6596202311a2abf84061",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-6596202311a2abf84061.py.txt",
+          "sha256": "4375f4b7ea909bf3dbb946f3c52041cb534329e60aad5512485db2ac79309ef5"
+        },
+        {
+          "id": "prompt-injection-bench-0be03e8aa857299f82cc",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-0be03e8aa857299f82cc.py.txt",
+          "sha256": "2d5dd80122a93aeaab48bd087feeb2a1a40743a9e19ec8f8345dd325107d4449"
+        },
+        {
+          "id": "prompt-injection-bench-ddfd66375656b2eb8a38",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-ddfd66375656b2eb8a38.py.txt",
+          "sha256": "cf74f87a589131f679c977d10907a3b80a1fabd8391644650cfe9b820c6031f4"
+        },
+        {
+          "id": "prompt-injection-bench-0625a8cfb1b6265aea53",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-0625a8cfb1b6265aea53.py.txt",
+          "sha256": "f789ee6ac1f260fd98f2ce75a1e66aab1a0c0eb7fb232f2704808cb93c654024"
+        },
+        {
+          "id": "prompt-injection-bench-ef7fe818654e8b2dec64",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-ef7fe818654e8b2dec64.py.txt",
+          "sha256": "42f7bd12b99c0d4f37156590df541e30d8386948bfcda06dd380c05ad36c33b1"
+        },
+        {
+          "id": "prompt-injection-bench-d3764b16c73814c093ba",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-d3764b16c73814c093ba.py.txt",
+          "sha256": "7098c0a8c8214254d46a0f185e16dcf628dd56fa6e6c6b34d828c4ea7f2480e0"
+        },
+        {
+          "id": "prompt-injection-bench-644034657fb5abf0573c",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-644034657fb5abf0573c.py.txt",
+          "sha256": "61c2bb7247a3b7217bd154bcea95b14ca20d0cfd7905279ba92aab92dd8fc777"
+        },
+        {
+          "id": "prompt-injection-bench-0f8a6097855c50167b95",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-0f8a6097855c50167b95.py.txt",
+          "sha256": "5e0e0b8c9ceccc91016cdfe3fe82c85a11ba257c224d77d9314c344c39aa0296"
+        },
+        {
+          "id": "prompt-injection-bench-66090512ebb0f2731b5b",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-66090512ebb0f2731b5b.py.txt",
+          "sha256": "56277c4bad52b95449ddef124b0e86a844f57fb8afe1c8db18088b41f910d6d1"
+        },
+        {
+          "id": "prompt-injection-bench-ddbd7d07cf068e2834ae",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-ddbd7d07cf068e2834ae.py.txt",
+          "sha256": "f6c17c760f0dcb55f3cdc67fbd3deac385918931250d653c70c19e1620d22911"
+        },
+        {
+          "id": "prompt-injection-bench-922ad192a9f1796b12cc",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-922ad192a9f1796b12cc.py.txt",
+          "sha256": "fda153ae5aa8c7c079275a4dede9d72721d624fd0dadae23979d5845c5b46eba"
+        },
+        {
+          "id": "prompt-injection-bench-5e051c507d5964b32c3a",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-5e051c507d5964b32c3a.py.txt",
+          "sha256": "206103eadd7b20e02b67cfba74e4386fe50d4780e39490522f21c834d148cdfd"
+        },
+        {
+          "id": "prompt-injection-bench-3840b5cb48b4480ec082",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-3840b5cb48b4480ec082.py.txt",
+          "sha256": "6a6adbd85241021b2c661c3189a28f4a1aca4569b6f092647e8de819ed67b59e"
+        },
+        {
+          "id": "prompt-injection-bench-422ef1cf6000b431b9bf",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-422ef1cf6000b431b9bf.py.txt",
+          "sha256": "5e6e479a9f35316473521c1cab0d214873a3e292fac39850655e0dea65c652e9"
+        },
+        {
+          "id": "prompt-injection-bench-dc217c884dbee3845b9d",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-dc217c884dbee3845b9d.py.txt",
+          "sha256": "5258408823ad713c11f543ff49ca331ff18644a386236f7242c61349722931b5"
+        },
+        {
+          "id": "prompt-injection-bench-a6668d4d3467b0720f1b",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-a6668d4d3467b0720f1b.py.txt",
+          "sha256": "6ff247bed6a2475ddf70e4cb823b7419aeeba106b5930e7c3cd8c8ad6566c7d3"
+        },
+        {
+          "id": "prompt-injection-bench-f6207c179429b1fb75aa",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-f6207c179429b1fb75aa.py.txt",
+          "sha256": "763c29843d111a50f4d769b71792c108a46d705957a81a4d90b704849eb4a817"
+        },
+        {
+          "id": "prompt-injection-bench-99a99ea5f4b41765fa3e",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-99a99ea5f4b41765fa3e.py.txt",
+          "sha256": "e9899a84d530d31b8ece299462901e3e9bbc4a471734e5b597d424ebadf49d31"
+        },
+        {
+          "id": "prompt-injection-bench-5eb69e5fe8f4fc6a6e3c",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-5eb69e5fe8f4fc6a6e3c.py.txt",
+          "sha256": "2d734e10d400d8d3febdcfaf8509f5613c934efc5b72903ca38071acef5e70d7"
+        },
+        {
+          "id": "prompt-injection-bench-f962d9a19e60c26feada",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-f962d9a19e60c26feada.py.txt",
+          "sha256": "c812155509186a3db38dc7591ed722bd2c130549e5d23bfff96f8ed308e7cce5"
+        },
+        {
+          "id": "prompt-injection-bench-8ed615b92b8b48f175aa",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-8ed615b92b8b48f175aa.py.txt",
+          "sha256": "6609f3a9f34a7f404e43acd1e7f454529725e3385b5b14d994ed9bcae3cc491d"
+        },
+        {
+          "id": "prompt-injection-bench-e0eb6814116b7dd6caa2",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-e0eb6814116b7dd6caa2.py.txt",
+          "sha256": "c7635f393b722b57a07c6c91c541fc76c847ec2a079c500dc7e264026c728c6e"
+        },
+        {
+          "id": "prompt-injection-bench-452b438a3399defd3378",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-452b438a3399defd3378.py.txt",
+          "sha256": "1db092281fac072288dbc7c42146e25d35725c18bcc60d64c4392c2e89f738ee"
+        },
+        {
+          "id": "prompt-injection-bench-0be4355418819503439d",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-0be4355418819503439d.py.txt",
+          "sha256": "efc4b24534d398d3bab2d32001d0449d914c16db90856038483733fd23ccae3a"
+        },
+        {
+          "id": "prompt-injection-bench-6b5c9923a4c73378a13d",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-6b5c9923a4c73378a13d.py.txt",
+          "sha256": "48e331afccbf9baebfa7c657716b1eb74ec2de7fe76653e764b3b7b1996b051a"
+        },
+        {
+          "id": "prompt-injection-bench-a67a18fb193ebc918991",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-a67a18fb193ebc918991.py.txt",
+          "sha256": "1a52bb78d5df61be811a8f375fea8f38c83e6ee706feb7db6c55c5e978d2eca4"
+        },
+        {
+          "id": "prompt-injection-bench-4ae23ad3b39c5667f928",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-4ae23ad3b39c5667f928.py.txt",
+          "sha256": "0848f37458898e71203b922082ffd1d3054e6954e4c29914571fbfd548ce97c3"
+        },
+        {
+          "id": "prompt-injection-bench-f198a5ee590adc91309e",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-f198a5ee590adc91309e.py.txt",
+          "sha256": "c5e2128bb7382279565ab416890512b1156688223d8cb4d7147a6036d6bb8a4b"
+        },
+        {
+          "id": "prompt-injection-bench-46c2daf105ab83760d46",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-46c2daf105ab83760d46.py.txt",
+          "sha256": "ca0db735ac1c7978739cfc6433d6e9828bad25d4f6074912558b6c148fde1cef"
+        },
+        {
+          "id": "prompt-injection-bench-12cc00ef535e151ac6f1",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-12cc00ef535e151ac6f1.py.txt",
+          "sha256": "bd59552fa46c03abeca923dd222a0a39392d883aab214350d382456542b54960"
+        },
+        {
+          "id": "prompt-injection-bench-91c2e2909c096a32b9bd",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-91c2e2909c096a32b9bd.py.txt",
+          "sha256": "4bf50e8b1a46493b6f42967fa00c2007526a15bcfe511af532697ac9edca0edc"
+        },
+        {
+          "id": "prompt-injection-bench-2b02f0a8655dea4b37bf",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-2b02f0a8655dea4b37bf.py.txt",
+          "sha256": "adeb8be461311b2fae4a3278734f2612d27c0d54c4bf71e4abc17886aa1d7843"
+        },
+        {
+          "id": "prompt-injection-bench-e15400230e0577cfe168",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-e15400230e0577cfe168.py.txt",
+          "sha256": "3879a2dbadb7cec2c4e6761d6a237d69a7758df511f4f2d5d0763d3a2eba19e1"
+        },
+        {
+          "id": "prompt-injection-bench-5d859f93ae50a7a8f305",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-5d859f93ae50a7a8f305.py.txt",
+          "sha256": "4e9e2e8e2f6a33678d5ab96eb580315075b379361eb87c90e10570f30ed9f14b"
+        },
+        {
+          "id": "prompt-injection-bench-4c07d430324ee23f2b9e",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-4c07d430324ee23f2b9e.py.txt",
+          "sha256": "dc57ad7af0d6921cc6a0cda415738f96c40aacd7288a05de1102445f348db799"
+        },
+        {
+          "id": "prompt-injection-bench-9da214d726f3c141530e",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-9da214d726f3c141530e.py.txt",
+          "sha256": "a3055e7f43735443c017ec562d8c7b68b105deaa27ce514191f886faddade7ee"
+        },
+        {
+          "id": "prompt-injection-bench-57df022da2468de2073b",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-57df022da2468de2073b.py.txt",
+          "sha256": "37d33f421890b0a653b5e11bdaed6246eeffa5b8ca049d62a092d8372326ba62"
+        },
+        {
+          "id": "prompt-injection-bench-70544afae56fb9ae4c7d",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-70544afae56fb9ae4c7d.py.txt",
+          "sha256": "3b1b0d44aa7579262220a7fcd99441e3c5a30a899a654f1c3006aea52de79fb3"
+        },
+        {
+          "id": "prompt-injection-bench-e50731640d411e551a89",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-e50731640d411e551a89.py.txt",
+          "sha256": "c49ef52a85437f95e60a89c096f6508fe58942c813ab35f24329e040168a92ed"
+        },
+        {
+          "id": "prompt-injection-bench-19f3bae73f372ff9c437",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-19f3bae73f372ff9c437.py.txt",
+          "sha256": "20c044c0c81f52ffc873fdfbdc9e07a0a0902bb4e89ee4d9ae1fdfdae4557499"
+        },
+        {
+          "id": "prompt-injection-bench-62e5a56f921309cecc9e",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-62e5a56f921309cecc9e.py.txt",
+          "sha256": "2d2e89fd415ff4034cb720007c0cb1e75592e1cd8641671a35f6aa441c7e677a"
+        },
+        {
+          "id": "prompt-injection-bench-048947364d4bf52709c5",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-048947364d4bf52709c5.py.txt",
+          "sha256": "1d9e20c33bbdd374e81eeb24f3e736c34b6f808147a55af2d65f04a78504ab23"
+        },
+        {
+          "id": "prompt-injection-bench-0954fce89be877fed336",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-0954fce89be877fed336.py.txt",
+          "sha256": "c49ba4954b25602a4988f636c46f90315c7f395121575e17e949e48313be8e43"
+        },
+        {
+          "id": "prompt-injection-bench-9f21a94b7bd16594bb6b",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-9f21a94b7bd16594bb6b.py.txt",
+          "sha256": "4dda0973bfb7736aa1695cee48ac64ed684321521c5594fa6992d4996163cee1"
+        },
+        {
+          "id": "prompt-injection-bench-74ea4e964ae3fc7565a6",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-74ea4e964ae3fc7565a6.py.txt",
+          "sha256": "d1cf05a51eea41175fc603ffa7eaa083eef7c5db58d62112f7b147beb6a1510b"
+        },
+        {
+          "id": "prompt-injection-bench-1e28647d6f26be59753c",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-1e28647d6f26be59753c.py.txt",
+          "sha256": "e122e07bb8ef588112e479955a5cf617299303a9d510d48ba27ae19691e8785f"
+        },
+        {
+          "id": "prompt-injection-bench-8118cd380086f2c178b4",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-8118cd380086f2c178b4.py.txt",
+          "sha256": "ca7fd4ee43dfd39292db4b117169c5987cf0205c776155ad5573e8898fbfe795"
+        },
+        {
+          "id": "prompt-injection-bench-cae7432d421cc9363865",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-cae7432d421cc9363865.py.txt",
+          "sha256": "3a3e2aa5a2463deaafa5808dfb2130aa3bf5d2d4802ae1415cbed794a35bc913"
+        },
+        {
+          "id": "prompt-injection-bench-07a7687310cd7c49424f",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-07a7687310cd7c49424f.py.txt",
+          "sha256": "01dc0b6e6f5a8588acda65c3c9142b520b8fa7b40944ebcd5b9df6223c877df2"
+        },
+        {
+          "id": "prompt-injection-bench-c91d0c651c6ad284fad7",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-c91d0c651c6ad284fad7.py.txt",
+          "sha256": "889a133d20dfc35876a561d06671bf915c2d9abf3a235b2cab6bbb9e17dbb092"
+        },
+        {
+          "id": "prompt-injection-bench-e9f515516b65c7c30251",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-e9f515516b65c7c30251.py.txt",
+          "sha256": "52737ae4be802b6a217724b289e6392246a73caffb1ea263effac1d79462204c"
+        },
+        {
+          "id": "prompt-injection-bench-7c03f9f47390855d7b02",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-7c03f9f47390855d7b02.py.txt",
+          "sha256": "56292fa89751e31f891768b7d8436f680f9f40a0f5d1312b4c1cdaedf387015a"
+        },
+        {
+          "id": "prompt-injection-bench-5ee845a43e8008d034f0",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-5ee845a43e8008d034f0.py.txt",
+          "sha256": "a11983bcc2ffe77f938e86b1275667b66e5b14ec60f6475e85f416fd8dfe459b"
+        },
+        {
+          "id": "prompt-injection-bench-f375073d992a355f198e",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-f375073d992a355f198e.py.txt",
+          "sha256": "1c463fbce9cf34ab082e02e233d968c817cb9219b469bebb870537c69f70d0b1"
+        },
+        {
+          "id": "prompt-injection-bench-1e96bfbd2ee30706f05a",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-1e96bfbd2ee30706f05a.py.txt",
+          "sha256": "1fcf1c70f93a30b737f922372389df37147149995ad81fa46710379a8f819ae5"
+        },
+        {
+          "id": "prompt-injection-bench-c2cebebcbedbe568cb77",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-c2cebebcbedbe568cb77.py.txt",
+          "sha256": "c94d2eb830a3e5b81b8e64f41551ea1b7341fe0b3c077f1df00f9e667289ff88"
+        },
+        {
+          "id": "prompt-injection-bench-392eb5881af6db6645cd",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-392eb5881af6db6645cd.py.txt",
+          "sha256": "3d1076add2e91c55b1a33f221fdee0321d459c9292dd2c32b806a828c38397ed"
+        },
+        {
+          "id": "prompt-injection-bench-6e3aa6a702aa1cd2f485",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-6e3aa6a702aa1cd2f485.py.txt",
+          "sha256": "01eefc562a6940053c0603879130041cea69843772d704f9a506f419f9aded51"
+        },
+        {
+          "id": "prompt-injection-bench-dbb6cb1406d576f6604d",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-dbb6cb1406d576f6604d.py.txt",
+          "sha256": "def97c294106abffc7dc70f288606e429c0c346ca46a7f5addcd4caf2a21d322"
+        },
+        {
+          "id": "prompt-injection-bench-2258f9793065fb476af5",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-2258f9793065fb476af5.py.txt",
+          "sha256": "80f49ff88c36a7292260911d260b1bc02e89ba5329db18f43680f76fdbd70651"
+        },
+        {
+          "id": "prompt-injection-bench-104d35445ac46bd42e13",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-104d35445ac46bd42e13.py.txt",
+          "sha256": "3a2016d3b9138c382a8742e2f44bba05a95ba464d75afc8ced0f7008de981508"
+        },
+        {
+          "id": "prompt-injection-bench-8c19f9116fd508e17862",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-8c19f9116fd508e17862.py.txt",
+          "sha256": "54287498cb0d40a1de955eeff13496aa38275fc1e7564c425a9dbfbcf7ba65a8"
+        },
+        {
+          "id": "prompt-injection-bench-71d5ecbb8d24b13e33f2",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-71d5ecbb8d24b13e33f2.py.txt",
+          "sha256": "1809da407d45c9efa51419884ab2ceb2526cef3d557f44d507c714cdd0022e9d"
+        },
+        {
+          "id": "prompt-injection-bench-b9db87ae0e601dff3c49",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-b9db87ae0e601dff3c49.py.txt",
+          "sha256": "55ae0153c354994765b09ad21c5b2ec6902bcfee3137f95edc6175b582ab84f4"
+        },
+        {
+          "id": "prompt-injection-bench-1c30c338894c7c28e2f5",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-1c30c338894c7c28e2f5.py.txt",
+          "sha256": "15cf2c58cb47155f8ecf95521a9c5689898b893fa9f66c4934bc562c822d00e3"
+        },
+        {
+          "id": "prompt-injection-bench-d5827e72925aaf8dd7fd",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-d5827e72925aaf8dd7fd.py.txt",
+          "sha256": "5dac5bafcc0705734a009e09270b3ad95e8b54b6052925272c31b910b589bfc5"
+        },
+        {
+          "id": "prompt-injection-bench-2b99ac3cb7398e7f7356",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-2b99ac3cb7398e7f7356.py.txt",
+          "sha256": "a971cc2f4c5a1cdd9fbf0253b583e1cbfff86e8782d2567aecf75be57bc2030b"
+        },
+        {
+          "id": "prompt-injection-bench-dd4a71babb1d79e2447b",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/prompt-injection-bench/prompt-injection-bench-dd4a71babb1d79e2447b.py.txt",
+          "sha256": "86b6ef715b3b6a4d501d8f0525ae0ea5afa580318ef9456bdbabcc737b3d6ec6"
+        }
+      ],
+      "first_run": "iteration-005/runs/baseline",
+      "latest_run": "iteration-005/runs/iteration007-regression"
+    },
+    {
+      "iteration": "iteration-006",
+      "role": "development-after-investigation",
+      "repository": "synthetic six-family pilot",
+      "related_family_policy": "All related records and derived wrappers remain development-only; no random split into final validation.",
+      "artifacts": [
+        {
+          "id": "synthetic-secret-output-inline-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-secret-output-inline-positive.py.txt",
+          "sha256": "2a14656de93211e87fc4bde06dccfa288ac2e81be91591708d379d8edd37ea5c"
+        },
+        {
+          "id": "synthetic-secret-output-inline-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-secret-output-inline-negative.py.txt",
+          "sha256": "7707854a929aa3a3fa234b92e300b49f0c09ff907e01ca145e8fd213513923ed"
+        },
+        {
+          "id": "synthetic-secret-output-helper-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-secret-output-helper-positive.py.txt",
+          "sha256": "e590bc2a9db70636c7820dc3461a462655e589cf5826c5539eba5065010a47db"
+        },
+        {
+          "id": "synthetic-secret-output-helper-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-secret-output-helper-negative.py.txt",
+          "sha256": "fddd321ce81659a6d1dae504036364f045b407592341bee52e5f51c87765054b"
+        },
+        {
+          "id": "synthetic-metadata-override-inline-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-metadata-override-inline-positive.py.txt",
+          "sha256": "200db8575c246a5a4733fc4c54b08fd6d1ec4f4dab7df58362fc14a40a673551"
+        },
+        {
+          "id": "synthetic-metadata-override-inline-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-metadata-override-inline-negative.py.txt",
+          "sha256": "8870e24c62065cd20ff15e36e8678d1ee2182a12a274d5be71964697045b5550"
+        },
+        {
+          "id": "synthetic-metadata-override-helper-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-metadata-override-helper-positive.py.txt",
+          "sha256": "8808b8d20fbaa4ea1f7c3e18899ee301269f10dda6fdade3dc89ac4cf77692ea"
+        },
+        {
+          "id": "synthetic-metadata-override-helper-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-metadata-override-helper-negative.py.txt",
+          "sha256": "c1838f934c294ef9fe50182c4b7a7f4143eac8434521a8a22ae37d558f19cee6"
+        },
+        {
+          "id": "synthetic-shell-input-inline-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-shell-input-inline-positive.py.txt",
+          "sha256": "2bb79b160e1789f4c7699b64be3f198b6eeafb0df2f707bc08d81f4d9dfbb330"
+        },
+        {
+          "id": "synthetic-shell-input-inline-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-shell-input-inline-negative.py.txt",
+          "sha256": "9e1c83a9e8cb31d92271f340e19064f52d90c271b45076d7b69525bf32fc87e9"
+        },
+        {
+          "id": "synthetic-shell-input-helper-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-shell-input-helper-positive.py.txt",
+          "sha256": "3ce2ce4c5ff5eff3cd8b978fba24fe3e71630564dd3aef3cdea370dd88971f33"
+        },
+        {
+          "id": "synthetic-shell-input-helper-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-shell-input-helper-negative.py.txt",
+          "sha256": "d92df7237c9869f49df3c73a22628424f77bdcdf2acdd49fd22b192819c228e9"
+        },
+        {
+          "id": "synthetic-dynamic-code-inline-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-dynamic-code-inline-positive.py.txt",
+          "sha256": "5d73f28a250027baf3df0b4a0d116f5e032ccc32ba6618778b731ee08e6dd4ef"
+        },
+        {
+          "id": "synthetic-dynamic-code-inline-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-dynamic-code-inline-negative.py.txt",
+          "sha256": "97fa5d71c4dd859848e01d4a2c8f476b5d9cb56b49504feadcc5e2b414d070a3"
+        },
+        {
+          "id": "synthetic-dynamic-code-helper-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-dynamic-code-helper-positive.py.txt",
+          "sha256": "31ad1b8e0cdf1f7eaf146246c1de52fdb6395057452643f8d2675cf61af10262"
+        },
+        {
+          "id": "synthetic-dynamic-code-helper-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-dynamic-code-helper-negative.py.txt",
+          "sha256": "fd43b0288e2f977186c209a09095b25a93c53eb9d78f31b01673ee3dfc7c2e08"
+        },
+        {
+          "id": "synthetic-url-target-inline-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-url-target-inline-positive.py.txt",
+          "sha256": "b505af1cd0da9decea45170f3f262533d2c00dd8d6c7d960aebf55f3feaec985"
+        },
+        {
+          "id": "synthetic-url-target-inline-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-url-target-inline-negative.py.txt",
+          "sha256": "4ad33f6df1533fe5daf1a0e5ea9debcd3b268db7b9eaf176ad6d72c0fd6a4b68"
+        },
+        {
+          "id": "synthetic-url-target-helper-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-url-target-helper-positive.py.txt",
+          "sha256": "a7265d6b7f10fb36fcb16c79bcfec9f7bf7ad42c45e08bbc19b8d2b7465db2e2"
+        },
+        {
+          "id": "synthetic-url-target-helper-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-url-target-helper-negative.py.txt",
+          "sha256": "fd15868ba72b2b27280cb762d1635e814c3eee605a8645a1100df42c0b2308fa"
+        },
+        {
+          "id": "synthetic-document-context-inline-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-document-context-inline-positive.py.txt",
+          "sha256": "a204a6cad0019b20be2e55f3cf1ecba2beb787e7ed1caa70934b22fbf94694cb"
+        },
+        {
+          "id": "synthetic-document-context-inline-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-document-context-inline-negative.py.txt",
+          "sha256": "420ec5c8015bc541b81ca3ea867b3a085737568746e048c7845bb077ed56958f"
+        },
+        {
+          "id": "synthetic-document-context-helper-positive",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-document-context-helper-positive.py.txt",
+          "sha256": "e7cc35b2c22247db8e622bcd0364f86b400dc59c00e901c3b91ec248e9f34736"
+        },
+        {
+          "id": "synthetic-document-context-helper-negative",
+          "path": "deliverables/data_expansion/snapshots/_derived/material-pilot-v1/synthetic/synthetic-document-context-helper-negative.py.txt",
+          "sha256": "529c67c69b2d0cb1e0821333c0e955dc5e11f4c893950eb050f4a62dc2827c58"
+        }
+      ],
+      "first_run": "iteration-006/runs/baseline",
+      "latest_run": "iteration-006/runs/iteration007-regression"
+    },
+    {
+      "iteration": "iteration-007",
+      "role": "development-after-investigation",
+      "repository": "vaultmcp/vault",
+      "related_family_policy": "All related records and derived wrappers remain development-only; no random split into final validation.",
+      "artifacts": [
+        {
+          "id": "vault-v2-91422529f707122fb3ff",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-91422529f707122fb3ff.py.txt",
+          "sha256": "fc726cb8793d699545442853da04770407db04ed2c0ad00b77a2be1196cf0429"
+        },
+        {
+          "id": "vault-v2-03fae011dafa2d113f47",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-03fae011dafa2d113f47.py.txt",
+          "sha256": "c9537396dcf61bc58a348d2fa4164c4cc90f0354c524ec029bfc8fa0cfac4663"
+        },
+        {
+          "id": "vault-v2-ea6dbc7b839ccf1a6877",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-ea6dbc7b839ccf1a6877.py.txt",
+          "sha256": "bd84bffcc953b097657e9b2dc40da05b05ecf28ddf34ab9499d81abbde0dddf8"
+        },
+        {
+          "id": "vault-v2-3487747d08e0c7d92f19",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-3487747d08e0c7d92f19.py.txt",
+          "sha256": "eede25b14a7f89cc6d1e749bad3e477ded261c9785f43e642ef675f1c863d681"
+        },
+        {
+          "id": "vault-v2-17660143c29bcd7be1d8",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-17660143c29bcd7be1d8.py.txt",
+          "sha256": "f7c5f7176429ee4684f6429866c45a6025422d2440b340d7a66b0db1ec4e3a6d"
+        },
+        {
+          "id": "vault-v2-eb252439f45d82fe4c8a",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-eb252439f45d82fe4c8a.py.txt",
+          "sha256": "048d387134d08de373da3b441f24769bff7928fa7e0e36f03e8ea31a11294c59"
+        },
+        {
+          "id": "vault-v2-6680073c691c255c9877",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-6680073c691c255c9877.py.txt",
+          "sha256": "6b2a235ab03ed98e552ca4d922985e5404a04ff58601b466dc48dad789b13924"
+        },
+        {
+          "id": "vault-v2-78d62d357bdbae295975",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-78d62d357bdbae295975.py.txt",
+          "sha256": "4c3039e3d17d27229d89a9ff373a293e47a117521034ef0e0a248282137846f5"
+        },
+        {
+          "id": "vault-v2-4e0479dd5592f7e5745d",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-4e0479dd5592f7e5745d.py.txt",
+          "sha256": "7e1d63979c587ca15b2b1bb6d18adc891b81c81f2893eef2b63987858cefe13f"
+        },
+        {
+          "id": "vault-v2-0dd36db1fdffb62547b8",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-0dd36db1fdffb62547b8.py.txt",
+          "sha256": "1c066fe5fedc26a59a0fc7fb930ccd0baf8dd6819006435d2a1c8ed4e51b4a94"
+        },
+        {
+          "id": "vault-v2-7bb11ba158d77eddbec5",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-7bb11ba158d77eddbec5.py.txt",
+          "sha256": "503a53dff9e04f833a9d069bf9e14e8430e988829bb8cec9661be0b6ab1410e1"
+        },
+        {
+          "id": "vault-v2-ae5ec3eed0e343b0ae02",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-ae5ec3eed0e343b0ae02.py.txt",
+          "sha256": "a51f59b72fda6b2a3bcf1e99432b889e53ad0c3d65ad7ac5efd9aa3ef55161df"
+        },
+        {
+          "id": "vault-v2-4648fec3be1267cc6eff",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-4648fec3be1267cc6eff.py.txt",
+          "sha256": "5c8bf391b4ccc0ca6cefc8f9d3ac8f35e67024b82a398c7f70c8a65bc390020c"
+        },
+        {
+          "id": "vault-v2-872c934a35299c2183c1",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-872c934a35299c2183c1.py.txt",
+          "sha256": "1bedb17d4f0f72be8d824e3168414de55d10e079d045731d9249f11b3d015dee"
+        },
+        {
+          "id": "vault-v2-f1ed037ca71a5b19973e",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-f1ed037ca71a5b19973e.py.txt",
+          "sha256": "4015cb81372960d5f1cc72f65f19550bd1a7fb45ab5f694a5e2c0d5d6b9188dc"
+        },
+        {
+          "id": "vault-v2-850ae1de07ee1105b1bd",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-850ae1de07ee1105b1bd.py.txt",
+          "sha256": "2e5d39d710482650b86f2c54d21ff00229db80525670befd8d5c67e85da8b2f0"
+        },
+        {
+          "id": "vault-v2-b38c12f30fb8bbd10c10",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-b38c12f30fb8bbd10c10.py.txt",
+          "sha256": "c11e0efcb7ad9b32e2b37d5b2aef02c878b4cd4f6203e850791f6b955c1c7333"
+        },
+        {
+          "id": "vault-v2-d70c9953ee33200ab866",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-d70c9953ee33200ab866.py.txt",
+          "sha256": "694caff1f928b91f563ac61f5fe3e445f04c7e65200f2a09f19c229586b76755"
+        },
+        {
+          "id": "vault-v2-c8ec1dd2c90908d83acc",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-c8ec1dd2c90908d83acc.py.txt",
+          "sha256": "368cc6d47986421fbb654acea8ea5999a97285a8f5d6e7d0a1dea6ba7f9e37f6"
+        },
+        {
+          "id": "vault-v2-34c5fdcd64d1c3ce91e6",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-34c5fdcd64d1c3ce91e6.py.txt",
+          "sha256": "3251beac10810d210b874560e70536fda3c722572b7a50265e9f187183f818c9"
+        }
+      ],
+      "first_run": "iteration-007/runs/baseline",
+      "latest_run": "iteration-007/runs/repaired-final"
+    },
+    {
+      "iteration": "iteration-008",
+      "repository": "consumed October 16 final set",
+      "role": "development-after-investigation",
+      "manifest": "evaluation/iterations/iteration-008/manifest.json",
+      "related_family_policy": "Exposed source families cannot be called unseen validation.",
+      "artifacts": [
+        {
+          "id": "agentinel--fixtures--clean--comms_only_server-py",
+          "sha256": "8fa7d06c818f0b86e2631f0782547a0676b5199130968026c334d5d13847c164",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/agentinel--fixtures--clean--comms_only_server-py.txt"
+        },
+        {
+          "id": "agentinel--fixtures--clean--echo_server-py",
+          "sha256": "c43a54c40570ab8d64f64b3b0a08ee1ef0fe31b3c007b98d04df0183a0eba979",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/agentinel--fixtures--clean--echo_server-py.txt"
+        },
+        {
+          "id": "agentinel--fixtures--clean--fetch_only_server-py",
+          "sha256": "6965a3bfc7a2c6a7ab43eb612bd4870956381117a1df5a6961aa937176faaaa0",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/agentinel--fixtures--clean--fetch_only_server-py.txt"
+        },
+        {
+          "id": "agentinel--fixtures--clean--files_only_server-py",
+          "sha256": "baddd354453e390feb0ba29195f60fc1604ce0a5ffe05b12442c649afc7832f3",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/agentinel--fixtures--clean--files_only_server-py.txt"
+        },
+        {
+          "id": "agentinel--fixtures--vulnerable--poisoned_server-py",
+          "sha256": "ad64a74254428be9b2752c3bddedc1069539234665d6c241596c1721ae84c0b3",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/agentinel--fixtures--vulnerable--poisoned_server-py.txt"
+        },
+        {
+          "id": "agentinel--fixtures--vulnerable--unicode_smuggle_server-py",
+          "sha256": "3051c35fb40ac0174d275d596719de2d71dd9f16a5abf80a323cd0789d5dab67",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/agentinel--fixtures--vulnerable--unicode_smuggle_server-py.txt"
+        },
+        {
+          "id": "allen-mcpaudit--test--fixtures--borderline-server--src--index-js",
+          "sha256": "cac2c9f1502e3a8722d1333251e5ad03ae9386fab115fc21cb648585814bea70",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/allen-mcpaudit--test--fixtures--borderline-server--src--index-js.txt"
+        },
+        {
+          "id": "allen-mcpaudit--test--fixtures--clean-server--src--index-js",
+          "sha256": "123878f813a0d9056bb9c2866383d515f42729e2a1659c2d154b68b39b528497",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/allen-mcpaudit--test--fixtures--clean-server--src--index-js.txt"
+        },
+        {
+          "id": "allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js",
+          "sha256": "73c704b3603649728fa6b483d7184c1ecd081b50d06247eb133afedc6ee2f3e0",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/allen-mcpaudit--test--fixtures--vulnerable-server--src--index-js.txt"
+        },
+        {
+          "id": "appsecco-labs--vulnerable-mcp-server-filesystem-workspace-actions--vulnerable-mcp-server-filesystem-workspace-actions-mcp-py",
+          "sha256": "da4976ca5740c5a4a35eeecf4758692f26be219672edadab3d3b13c7365264a8",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/appsecco-labs--vulnerable-mcp-server-filesystem-workspace-actions--vulnerable-mcp-server-filesystem-workspace-actions-mcp-py.txt"
+        },
+        {
+          "id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection--index-js",
+          "sha256": "1a681ee4d656a8c844788ba4f6c748f35233bb6ca1af3dcc008172b1001ec065",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection--index-js.txt"
+        },
+        {
+          "id": "appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection-remote-mcp--index-js",
+          "sha256": "df8d63889107cafe0d62a59781b8e53cf7fa37e2a16ed4a6212b94a9f03030dd",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/appsecco-labs--vulnerable-mcp-server-indirect-prompt-injection-remote-mcp--index-js.txt"
+        },
+        {
+          "id": "appsecco-labs--vulnerable-mcp-server-malicious-code-exec--index-js",
+          "sha256": "39fffe98fc4b3a5f50fc2b8388b8f82614ea63487b5c717b4ba98c54365cc221",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/appsecco-labs--vulnerable-mcp-server-malicious-code-exec--index-js.txt"
+        },
+        {
+          "id": "appsecco-labs--vulnerable-mcp-server-malicious-tools--index-js",
+          "sha256": "653ad3b61b36a0cdb0ea0c4523cf651a12d87f7ed00ed850d4bf486afb7244e6",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/appsecco-labs--vulnerable-mcp-server-malicious-tools--index-js.txt"
+        },
+        {
+          "id": "appsecco-labs--vulnerable-mcp-server-namespace-typosquatting--index-js",
+          "sha256": "7b293531170fff7f91b2df9908f7c3abe686bd8d4afd47e8d5d13e340dabaf9a",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/appsecco-labs--vulnerable-mcp-server-namespace-typosquatting--index-js.txt"
+        },
+        {
+          "id": "appsecco-labs--vulnerable-mcp-server-secrets-pii--index-js",
+          "sha256": "aa8197c417362ab6639680cbf94a932bc4e258640b56df3a536c0ef8f08d0e42",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/appsecco-labs--vulnerable-mcp-server-secrets-pii--index-js.txt"
+        },
+        {
+          "id": "appsecco-labs--vulnerable-mcp-server-wikipedia-http-streamable--wikipedia-mcp-py",
+          "sha256": "ad3d74fd2064ffbb49fcf9ea09e9df4c6e6682f4c113540e1dbf74b4bbb722a1",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/appsecco-labs--vulnerable-mcp-server-wikipedia-http-streamable--wikipedia-mcp-py.txt"
+        },
+        {
+          "id": "dvmcp--challenges--easy--challenge2--server-py",
+          "sha256": "3e878edf2457b171dc5e8f626d7162e466caceca5f293fa41b69cac646c1920d",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/dvmcp--challenges--easy--challenge2--server-py.txt"
+        },
+        {
+          "id": "dvmcp--challenges--easy--challenge3--server-py",
+          "sha256": "dc16ad40aeb20c33d222c5461080be1745cce0a859efd8701a1c9529db15d633",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/dvmcp--challenges--easy--challenge3--server-py.txt"
+        },
+        {
+          "id": "dvmcp--challenges--hard--challenge8--server-py",
+          "sha256": "21ae92e1c04121b2d20aada88af2f988da485a7c73f60f22c0bb7e96e431778b",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/dvmcp--challenges--hard--challenge8--server-py.txt"
+        },
+        {
+          "id": "dvmcp--challenges--hard--challenge9--server-py",
+          "sha256": "81cdc1a6632844400ac7f9c969fe299b5e66e4bc300eb592392a83da0534b76b",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/dvmcp--challenges--hard--challenge9--server-py.txt"
+        },
+        {
+          "id": "dvmcp--challenges--medium--challenge5--server-py",
+          "sha256": "e8dbc662bf24ee26ddd861b7c0aaf48781873be1773e90ac5f7204c014ddfef1",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/dvmcp--challenges--medium--challenge5--server-py.txt"
+        },
+        {
+          "id": "dvmcp--challenges--medium--challenge6--server-py",
+          "sha256": "d650962a0057709f31233404ed34abfe256183a64c82192978688587a18e7e5b",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/dvmcp--challenges--medium--challenge6--server-py.txt"
+        },
+        {
+          "id": "dvmcp--challenges--medium--challenge7--server-py",
+          "sha256": "96384ed9b3a95fd189a065efc4526ac92dfdc03a4fb49bbd95fe5b2ecb96ad95",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/dvmcp--challenges--medium--challenge7--server-py.txt"
+        },
+        {
+          "id": "glatinone-mcpscan--tests--fixtures--clean--server-py",
+          "sha256": "8c58f1f1a4685255ecdb3068f1417c5ed4d993156885a0d7e11e7ceadc8c7a99",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/glatinone-mcpscan--tests--fixtures--clean--server-py.txt"
+        },
+        {
+          "id": "glatinone-mcpscan--tests--fixtures--vulnerable--server-py",
+          "sha256": "3bbe475a436fc90b8a4c203c1b7d24b625ef69471d51d0667ed5c2528a64a092",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/glatinone-mcpscan--tests--fixtures--vulnerable--server-py.txt"
+        },
+        {
+          "id": "mception--tests--fixtures--servers--node_figma_plugin--code-js",
+          "sha256": "97e1ba0e47be7509d1c5ac7d3d6d610bbde5882cfd6bba44423ddadf568bac45",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/mception--tests--fixtures--servers--node_figma_plugin--code-js.txt"
+        },
+        {
+          "id": "mception--tests--fixtures--servers--node_real_exec--src--index-js",
+          "sha256": "17d423636e3d34a77f75ae060632a2fde88f9391f781ca0ed9108ce478fa3b3c",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/mception--tests--fixtures--servers--node_real_exec--src--index-js.txt"
+        },
+        {
+          "id": "mception--tests--fixtures--servers--node_regex_exec--src--index-js",
+          "sha256": "2e30164735b58e4646c43b5acb2114473590fe5897c613d04a7735e7ed74414b",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/mception--tests--fixtures--servers--node_regex_exec--src--index-js.txt"
+        },
+        {
+          "id": "mception--tests--fixtures--servers--python_method_exec--mcp_server-py",
+          "sha256": "2ed56e101427018281aebcf9483f202d04c4f5e4bc139e6e9d346f24695ea3dc",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/mception--tests--fixtures--servers--python_method_exec--mcp_server-py.txt"
+        },
+        {
+          "id": "mception--tests--fixtures--servers--python_subprocess--mcp_server-py",
+          "sha256": "0c01b9bf86c7aac22bdfe6b0bc1e60be3dcf61ec622fda19681e2c9d6a99413f",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/mception--tests--fixtures--servers--python_subprocess--mcp_server-py.txt"
+        },
+        {
+          "id": "sachin-mcpaudit--tests--fixtures--behavioral-eval--data--benign_add--server-py",
+          "sha256": "7b26967244efa72042396822adf466fe6ee4ce7059a7ab1c9eef53d770db65b7",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/sachin-mcpaudit--tests--fixtures--behavioral-eval--data--benign_add--server-py.txt"
+        },
+        {
+          "id": "sachin-mcpaudit--tests--fixtures--behavioral-eval--data--fake_encrypt--server-py",
+          "sha256": "54ccf234e3e924c5011b7b79614c8381b9e49ac3dcaa90e399bda9bf7b08008c",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/consumed-final/sachin-mcpaudit--tests--fixtures--behavioral-eval--data--fake_encrypt--server-py.txt"
+        }
+      ]
+    },
+    {
+      "iteration": "iteration-009",
+      "repository": "vaultmcp/vault",
+      "role": "development-after-investigation",
+      "manifest": "evaluation/iterations/iteration-009/manifest.json",
+      "related_family_policy": "Exposed source families cannot be called unseen validation.",
+      "artifacts": [
+        {
+          "id": "vault-v2-bdc596b03c3bd46dce5c",
+          "sha256": "f2a74cbfca0d30cc96d3b185c7048d535a2dc77ebdf6bc422c23a642817b736d",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-bdc596b03c3bd46dce5c.py.txt"
+        },
+        {
+          "id": "vault-v2-3d41b69baa1182f0105e",
+          "sha256": "36ca69805d2ed8179fb615fbfea6f4596896ac8bf04a3ecc123ccc0dbc318431",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-3d41b69baa1182f0105e.py.txt"
+        },
+        {
+          "id": "vault-v2-d1577a433d514df44634",
+          "sha256": "905fc0d96962b2a62718df9e37a7a199cec05ad9b68e23428b8f0804bb37040d",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-d1577a433d514df44634.py.txt"
+        },
+        {
+          "id": "vault-v2-321e00590d2faad92bda",
+          "sha256": "ecc92f60951d0e4dd48d62d3d29841abaa059c800a9e4aca6b7fe3ea1a85ec4c",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-321e00590d2faad92bda.py.txt"
+        },
+        {
+          "id": "vault-v2-872272d6c7e5d098c8c5",
+          "sha256": "504a2b0b24c5c28b262c57a984e4fefc3fd554e0ddd6dc2bc67bbf1aebe19a0c",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-872272d6c7e5d098c8c5.py.txt"
+        },
+        {
+          "id": "vault-v2-f289f4d8fc5f2a9bdb58",
+          "sha256": "441d349d2d5baf8d9ae64d18f57d8a98ba64341648cc6e1ce418bf9dab3e3d85",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-f289f4d8fc5f2a9bdb58.py.txt"
+        },
+        {
+          "id": "vault-v2-f05a6e3ab823d396bc8e",
+          "sha256": "f50a84120cc7a7ee8002f206b8c8dce78a8deb9e3d48223e6c3cbbbb384c3734",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-f05a6e3ab823d396bc8e.py.txt"
+        },
+        {
+          "id": "vault-v2-7e99960b4ecd18785a6d",
+          "sha256": "b056f31ec0ccd9c2fffc203e385c5dbfe97dbf66969d0c114206594121b8c639",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-7e99960b4ecd18785a6d.py.txt"
+        },
+        {
+          "id": "vault-v2-ea01da9521e4514a88a8",
+          "sha256": "37c4f8c85c3329a5812eb2c4c22c622743f5d6a85d60290fd2b824d0da200b75",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-ea01da9521e4514a88a8.py.txt"
+        },
+        {
+          "id": "vault-v2-2e29c1ce69c11b4c20d8",
+          "sha256": "ed86a5a7928ab962526ca7e02b40a4ae5ec62bd6672b7d94dbb8caa422afdcce",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-2e29c1ce69c11b4c20d8.py.txt"
+        },
+        {
+          "id": "vault-v2-dbcaa3824b4739c014af",
+          "sha256": "c61e4932c4630511f5764961f441ecc34d4d4dfdef26ecf0437121403b78c222",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-dbcaa3824b4739c014af.py.txt"
+        },
+        {
+          "id": "vault-v2-b6279eada53324ba656e",
+          "sha256": "52b999809b17a74b4b2414a7fcd719102e9401c6e918b42806d0a6ef15f3e1da",
+          "path": "deliverables/data_expansion/snapshots/_derived/campaign-v1/vault-v2/vault-v2-b6279eada53324ba656e.py.txt"
+        }
+      ]
+    },
+    {
+      "iteration": "iteration-010",
+      "repository": "synthetic paired source families",
+      "role": "development-after-investigation",
+      "manifest": "evaluation/iterations/iteration-010/manifest.json",
+      "related_family_policy": "Exposed source families cannot be called unseen validation.",
+      "artifacts": [
+        {
+          "id": "execfile-positive",
+          "sha256": "616f4214ef4216f81d76e682d2fd5f350a2fb04bfdccc0a4cc6ae21909e01ec7",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/execfile-positive.ts.txt"
+        },
+        {
+          "id": "execfile-negative",
+          "sha256": "ce25faf9a1a3335fec0d5c36c5575574dff1e2022296ce91e14f3f67fc01b200",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/execfile-negative.ts.txt"
+        },
+        {
+          "id": "shell-positive",
+          "sha256": "00dc0851ea5860212450d61efc288036b3520565b6ac019253ab8075cb859cb5",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/shell-positive.ts.txt"
+        },
+        {
+          "id": "shell-negative",
+          "sha256": "f2344c0a784a977277202ad263fcaaeec79f2f9843bf31a123fd34b99fb51718",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/shell-negative.ts.txt"
+        },
+        {
+          "id": "interpreter-positive",
+          "sha256": "fbd0ee65d1c00a586acc0b7fa8514c39d13d5a432cae0e5f43469d4277e2da9c",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/interpreter-positive.ts.txt"
+        },
+        {
+          "id": "interpreter-negative",
+          "sha256": "3a2cf47ee873b721ef5a008a1549787899ef9cae0b09fe151da274c631d13de7",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/interpreter-negative.ts.txt"
+        },
+        {
+          "id": "quoted-positive",
+          "sha256": "51b4746c7770c6e2c34d2be907ca58391c384d1223b97cff92f55fadbde9c2c4",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/quoted-positive.ts.txt"
+        },
+        {
+          "id": "quoted-negative",
+          "sha256": "da8a0cee8fa355385f06cf63735883c33ccda778f8b2a164b0e458fe23fe0899",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/quoted-negative.ts.txt"
+        },
+        {
+          "id": "filetext-positive",
+          "sha256": "1dec7774c1b3be72939484732050a6e32024453ac933513e63ae9accd84a8a90",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/filetext-positive.ts.txt"
+        },
+        {
+          "id": "filetext-negative",
+          "sha256": "7c5f9334a4306443ec9787abd53f8b900adea93032b4a1b4af92a98fb47d1a21",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/filetext-negative.ts.txt"
+        },
+        {
+          "id": "filealias-positive",
+          "sha256": "2b2f6a1ef4fdaf378eaede5af236ca49edcf2bac0009c1229dc0a7d266cb8902",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/filealias-positive.ts.txt"
+        },
+        {
+          "id": "filealias-negative",
+          "sha256": "c73bbc4d4c6f3310ce0ca5447fdbf4fd5d9d370d792279cfab6d09b4c0b0202c",
+          "path": "deliverables/data_expansion/snapshots/_derived/followup/filealias-negative.ts.txt"
+        }
+      ]
+    },
+    {
+      "iteration": "followup-final",
+      "repository": "autod3structeur/MCP-DecayBench",
+      "role": "consumed-final-no-subsequent-tuning",
+      "manifest": "evaluation/followup/final/manifest.json"
+    }
+  ]
+}

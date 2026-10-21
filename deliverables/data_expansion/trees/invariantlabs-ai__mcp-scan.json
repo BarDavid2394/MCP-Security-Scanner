@@ -1,0 +1,1740 @@
+{
+  "repository": "invariantlabs-ai/mcp-scan",
+  "revision": "2d3ca361e33452dcfb8e74f7b7db6db0ee08d59e",
+  "license": "Apache-2.0",
+  "truncated": false,
+  "files": [
+    {
+      "path": ".circleci/config.yml",
+      "size": 3684
+    },
+    {
+      "path": ".devcontainer/devcontainer.json",
+      "size": 807
+    },
+    {
+      "path": ".devcontainer/post-create.sh",
+      "size": 211
+    },
+    {
+      "path": ".flake8",
+      "size": 196
+    },
+    {
+      "path": ".github/CODEOWNERS",
+      "size": 49
+    },
+    {
+      "path": ".github/mcp-scan-cmd-banner.png",
+      "size": 334128
+    },
+    {
+      "path": ".github/mcp-scan-cmd-banner.png.url",
+      "size": 23
+    },
+    {
+      "path": ".github/reports/skills-report.pdf",
+      "size": 388902
+    },
+    {
+      "path": ".github/workflows/tests.yml",
+      "size": 1965
+    },
+    {
+      "path": ".gitignore",
+      "size": 688
+    },
+    {
+      "path": ".pre-commit-config.yaml",
+      "size": 787
+    },
+    {
+      "path": ".python-version",
+      "size": 5
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 10212
+    },
+    {
+      "path": "CONTRIBUTING.md",
+      "size": 332
+    },
+    {
+      "path": "LICENSE",
+      "size": 11347
+    },
+    {
+      "path": "Makefile",
+      "size": 3470
+    },
+    {
+      "path": "README.md",
+      "size": 25049
+    },
+    {
+      "path": "SECURITY.md",
+      "size": 155
+    },
+    {
+      "path": "TERMS.md",
+      "size": 18116
+    },
+    {
+      "path": "catalog-info.yaml",
+      "size": 163
+    },
+    {
+      "path": "demo-v0.6.svg",
+      "size": 3233
+    },
+    {
+      "path": "demo.svg",
+      "size": 15176
+    },
+    {
+      "path": "demoserver/.gitignore",
+      "size": 8
+    },
+    {
+      "path": "demoserver/README.md",
+      "size": 1446
+    },
+    {
+      "path": "demoserver/pyproject.toml",
+      "size": 176
+    },
+    {
+      "path": "demoserver/server.py",
+      "size": 1817
+    },
+    {
+      "path": "docs/README.md",
+      "size": 1538
+    },
+    {
+      "path": "docs/assets/scan.svg",
+      "size": 17115
+    },
+    {
+      "path": "docs/cli-reference.md",
+      "size": 31499
+    },
+    {
+      "path": "docs/failure-codes.md",
+      "size": 3623
+    },
+    {
+      "path": "docs/issue-codes.md",
+      "size": 14445
+    },
+    {
+      "path": "docs/json-output.md",
+      "size": 22650
+    },
+    {
+      "path": "docs/risks.md",
+      "size": 7394
+    },
+    {
+      "path": "docs/scanning.md",
+      "size": 5715
+    },
+    {
+      "path": "help/_about-this-project/snyk-code-signing-public.pgp",
+      "size": 742
+    },
+    {
+      "path": "pyproject.toml",
+      "size": 3952
+    },
+    {
+      "path": "src/agent_scan/__init__.py",
+      "size": 99
+    },
+    {
+      "path": "src/agent_scan/agents/__init__.py",
+      "size": 2825
+    },
+    {
+      "path": "src/agent_scan/agents/base.py",
+      "size": 34579
+    },
+    {
+      "path": "src/agent_scan/agents/claude_code.py",
+      "size": 26610
+    },
+    {
+      "path": "src/agent_scan/agents/claude_desktop.py",
+      "size": 8995
+    },
+    {
+      "path": "src/agent_scan/agents/claude_plugins.py",
+      "size": 6391
+    },
+    {
+      "path": "src/agent_scan/agents/codex.py",
+      "size": 25606
+    },
+    {
+      "path": "src/agent_scan/agents/github_copilot.py",
+      "size": 17447
+    },
+    {
+      "path": "src/agent_scan/agents/opencode.py",
+      "size": 34646
+    },
+    {
+      "path": "src/agent_scan/agents/vscode/__init__.py",
+      "size": 630
+    },
+    {
+      "path": "src/agent_scan/agents/vscode/antigravity.py",
+      "size": 9103
+    },
+    {
+      "path": "src/agent_scan/agents/vscode/base.py",
+      "size": 57386
+    },
+    {
+      "path": "src/agent_scan/agents/vscode/cursor.py",
+      "size": 8248
+    },
+    {
+      "path": "src/agent_scan/agents/vscode/extension_mcp.py",
+      "size": 21161
+    },
+    {
+      "path": "src/agent_scan/agents/vscode/kiro.py",
+      "size": 5908
+    },
+    {
+      "path": "src/agent_scan/agents/vscode/vscode.py",
+      "size": 5085
+    },
+    {
+      "path": "src/agent_scan/agents/vscode/windsurf.py",
+      "size": 4064
+    },
+    {
+      "path": "src/agent_scan/cli.py",
+      "size": 56261
+    },
+    {
+      "path": "src/agent_scan/consent.py",
+      "size": 6896
+    },
+    {
+      "path": "src/agent_scan/direct_scanner.py",
+      "size": 1869
+    },
+    {
+      "path": "src/agent_scan/guard.py",
+      "size": 75410
+    },
+    {
+      "path": "src/agent_scan/hook_events.py",
+      "size": 5259
+    },
+    {
+      "path": "src/agent_scan/hook_version.py",
+      "size": 183
+    },
+    {
+      "path": "src/agent_scan/hooks/__init__.py",
+      "size": 0
+    },
+    {
+      "path": "src/agent_scan/hooks/snyk-agent-guard-discover.ps1",
+      "size": 1793
+    },
+    {
+      "path": "src/agent_scan/hooks/snyk-agent-guard-discover.sh",
+      "size": 319
+    },
+    {
+      "path": "src/agent_scan/hooks/snyk-agent-guard.ps1",
+      "size": 5290
+    },
+    {
+      "path": "src/agent_scan/hooks/snyk-agent-guard.sh",
+      "size": 6586
+    },
+    {
+      "path": "src/agent_scan/inspect.py",
+      "size": 18449
+    },
+    {
+      "path": "src/agent_scan/mcp_client.py",
+      "size": 18259
+    },
+    {
+      "path": "src/agent_scan/models/__init__.py",
+      "size": 2455
+    },
+    {
+      "path": "src/agent_scan/models/api/__init__.py",
+      "size": 1178
+    },
+    {
+      "path": "src/agent_scan/models/api/common.py",
+      "size": 308
+    },
+    {
+      "path": "src/agent_scan/models/api/v20260710.py",
+      "size": 9223
+    },
+    {
+      "path": "src/agent_scan/models/errors.py",
+      "size": 3761
+    },
+    {
+      "path": "src/agent_scan/models/inspect.py",
+      "size": 2531
+    },
+    {
+      "path": "src/agent_scan/models/mcp.py",
+      "size": 18154
+    },
+    {
+      "path": "src/agent_scan/models/push.py",
+      "size": 2324
+    },
+    {
+      "path": "src/agent_scan/models/skill.py",
+      "size": 1513
+    },
+    {
+      "path": "src/agent_scan/pipelines.py",
+      "size": 13188
+    },
+    {
+      "path": "src/agent_scan/printer.py",
+      "size": 19649
+    },
+    {
+      "path": "src/agent_scan/pushkeys.py",
+      "size": 4952
+    },
+    {
+      "path": "src/agent_scan/redact.py",
+      "size": 37177
+    },
+    {
+      "path": "src/agent_scan/run.py",
+      "size": 294
+    },
+    {
+      "path": "src/agent_scan/signed_binary.py",
+      "size": 3554
+    },
+    {
+      "path": "src/agent_scan/skill_client.py",
+      "size": 12257
+    },
+    {
+      "path": "src/agent_scan/traffic_capture.py",
+      "size": 9236
+    },
+    {
+      "path": "src/agent_scan/utils.py",
+      "size": 15838
+    },
+    {
+      "path": "src/agent_scan/verify_api.py",
+      "size": 25144
+    },
+    {
+      "path": "src/agent_scan/version.py",
+      "size": 171
+    },
+    {
+      "path": "src/agent_scan/well_known_clients.py",
+      "size": 13381
+    },
+    {
+      "path": "tests/__init__.py",
+      "size": 33
+    },
+    {
+      "path": "tests/canary_specs/canary_test_supported_agents/__init__.py",
+      "size": 1938
+    },
+    {
+      "path": "tests/canary_specs/canary_test_supported_agents/base.py",
+      "size": 10454
+    },
+    {
+      "path": "tests/canary_specs/canary_test_supported_agents/claude_code.py",
+      "size": 6727
+    },
+    {
+      "path": "tests/canary_specs/canary_test_supported_agents/test_projects/proj/.claude/skills/canary-project-skill/SKILL.md",
+      "size": 478
+    },
+    {
+      "path": "tests/canary_specs/canary_test_supported_agents/test_projects/proj/.mcp.json",
+      "size": 119
+    },
+    {
+      "path": "tests/conftest.py",
+      "size": 9845
+    },
+    {
+      "path": "tests/e2e/__init__.py",
+      "size": 47
+    },
+    {
+      "path": "tests/e2e/test_guard_install.py",
+      "size": 10513
+    },
+    {
+      "path": "tests/e2e/test_inspect.py",
+      "size": 31418
+    },
+    {
+      "path": "tests/e2e/test_scan.py",
+      "size": 24030
+    },
+    {
+      "path": "tests/mcp_servers/.test-client-invalid/mcp.json",
+      "size": 102
+    },
+    {
+      "path": "tests/mcp_servers/.test-client-invalid/skills/invalid-skill/SKILL.md",
+      "size": 103
+    },
+    {
+      "path": "tests/mcp_servers/.test-client-invalid/skills/test-skill/SKILL.md",
+      "size": 197
+    },
+    {
+      "path": "tests/mcp_servers/.test-client-invalid/skills/test-skill/tricks/use.md",
+      "size": 62
+    },
+    {
+      "path": "tests/mcp_servers/.test-client/mcp.json",
+      "size": 891
+    },
+    {
+      "path": "tests/mcp_servers/.test-client/skills/test-skill/SKILL.md",
+      "size": 197
+    },
+    {
+      "path": "tests/mcp_servers/configs_files/all_config.json",
+      "size": 287
+    },
+    {
+      "path": "tests/mcp_servers/configs_files/math_config.json",
+      "size": 155
+    },
+    {
+      "path": "tests/mcp_servers/configs_files/multiple_transport.json",
+      "size": 305
+    },
+    {
+      "path": "tests/mcp_servers/configs_files/sbb_config.json",
+      "size": 162
+    },
+    {
+      "path": "tests/mcp_servers/configs_files/vs_code_settings_file_with_empty_mcp.json",
+      "size": 101
+    },
+    {
+      "path": "tests/mcp_servers/configs_files/vs_code_settings_file_without_mcp.json",
+      "size": 81
+    },
+    {
+      "path": "tests/mcp_servers/configs_files/weather_config.json",
+      "size": 161
+    },
+    {
+      "path": "tests/mcp_servers/ignored_server.py",
+      "size": 286
+    },
+    {
+      "path": "tests/mcp_servers/math_server.py",
+      "size": 1199
+    },
+    {
+      "path": "tests/mcp_servers/multiple_transport_server.py",
+      "size": 1702
+    },
+    {
+      "path": "tests/mcp_servers/sbb_server.py",
+      "size": 1174
+    },
+    {
+      "path": "tests/mcp_servers/signatures/math_server_signature.json",
+      "size": 6504
+    },
+    {
+      "path": "tests/mcp_servers/signatures/weather_server_signature.json",
+      "size": 3124
+    },
+    {
+      "path": "tests/mcp_servers/weather_server.py",
+      "size": 2180
+    },
+    {
+      "path": "tests/skills/algorithmic-art/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/algorithmic-art/SKILL.md",
+      "size": 19733
+    },
+    {
+      "path": "tests/skills/algorithmic-art/templates/generator_template.js",
+      "size": 7380
+    },
+    {
+      "path": "tests/skills/algorithmic-art/templates/viewer.html",
+      "size": 20729
+    },
+    {
+      "path": "tests/skills/brand-guidelines/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/brand-guidelines/SKILL.md",
+      "size": 2235
+    },
+    {
+      "path": "tests/skills/canvas-design/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/canvas-design/SKILL.md",
+      "size": 11938
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/ArsenalSC-OFL.txt",
+      "size": 4372
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/ArsenalSC-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/BigShoulders-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/BigShoulders-OFL.txt",
+      "size": 4396
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/BigShoulders-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Boldonse-OFL.txt",
+      "size": 4389
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Boldonse-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/BricolageGrotesque-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/BricolageGrotesque-OFL.txt",
+      "size": 4402
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/BricolageGrotesque-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/CrimsonPro-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/CrimsonPro-Italic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/CrimsonPro-OFL.txt",
+      "size": 4393
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/CrimsonPro-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/DMMono-OFL.txt",
+      "size": 4391
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/DMMono-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/EricaOne-OFL.txt",
+      "size": 4408
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/EricaOne-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/GeistMono-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/GeistMono-OFL.txt",
+      "size": 4387
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/GeistMono-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Gloock-OFL.txt",
+      "size": 4380
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Gloock-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/IBMPlexMono-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/IBMPlexMono-OFL.txt",
+      "size": 4362
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/IBMPlexMono-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/IBMPlexSerif-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/IBMPlexSerif-BoldItalic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/IBMPlexSerif-Italic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/IBMPlexSerif-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/InstrumentSans-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/InstrumentSans-BoldItalic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/InstrumentSans-Italic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/InstrumentSans-OFL.txt",
+      "size": 4402
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/InstrumentSans-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/InstrumentSerif-Italic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/InstrumentSerif-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Italiana-OFL.txt",
+      "size": 4393
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Italiana-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/JetBrainsMono-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/JetBrainsMono-OFL.txt",
+      "size": 4398
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/JetBrainsMono-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Jura-Light.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Jura-Medium.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Jura-OFL.txt",
+      "size": 4379
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/LibreBaskerville-OFL.txt",
+      "size": 4448
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/LibreBaskerville-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Lora-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Lora-BoldItalic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Lora-Italic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Lora-OFL.txt",
+      "size": 4422
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Lora-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/NationalPark-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/NationalPark-OFL.txt",
+      "size": 4398
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/NationalPark-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/NothingYouCouldDo-OFL.txt",
+      "size": 4362
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/NothingYouCouldDo-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Outfit-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Outfit-OFL.txt",
+      "size": 4388
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Outfit-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/PixelifySans-Medium.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/PixelifySans-OFL.txt",
+      "size": 4394
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/PoiretOne-OFL.txt",
+      "size": 4365
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/PoiretOne-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/RedHatMono-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/RedHatMono-OFL.txt",
+      "size": 4393
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/RedHatMono-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Silkscreen-OFL.txt",
+      "size": 4393
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Silkscreen-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/SmoochSans-Medium.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/SmoochSans-OFL.txt",
+      "size": 4395
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Tektur-Medium.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Tektur-OFL.txt",
+      "size": 4384
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/Tektur-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/WorkSans-Bold.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/WorkSans-BoldItalic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/WorkSans-Italic.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/WorkSans-OFL.txt",
+      "size": 4396
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/WorkSans-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/YoungSerif-OFL.txt",
+      "size": 4397
+    },
+    {
+      "path": "tests/skills/canvas-design/canvas-fonts/YoungSerif-Regular.ttf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/doc-coauthoring/SKILL.md",
+      "size": 15815
+    },
+    {
+      "path": "tests/skills/docx/LICENSE.txt",
+      "size": 1467
+    },
+    {
+      "path": "tests/skills/docx/SKILL.md",
+      "size": 10151
+    },
+    {
+      "path": "tests/skills/docx/docx-js.md",
+      "size": 16438
+    },
+    {
+      "path": "tests/skills/docx/ooxml.md",
+      "size": 23572
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chart.xsd",
+      "size": 74984
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd",
+      "size": 6956
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd",
+      "size": 51302
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd",
+      "size": 624
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-main.xsd",
+      "size": 152039
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-picture.xsd",
+      "size": 1231
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd",
+      "size": 8862
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd",
+      "size": 14795
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/pml.xsd",
+      "size": 83612
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd",
+      "size": 1269
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd",
+      "size": 7328
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd",
+      "size": 6382
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd",
+      "size": 1248
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd",
+      "size": 880
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd",
+      "size": 2608
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd",
+      "size": 3507
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd",
+      "size": 7507
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-math.xsd",
+      "size": 23313
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd",
+      "size": 1367
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/sml.xsd",
+      "size": 242276
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-main.xsd",
+      "size": 26148
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd",
+      "size": 25279
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd",
+      "size": 535
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd",
+      "size": 5712
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd",
+      "size": 4010
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/wml.xsd",
+      "size": 171367
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ISO-IEC29500-4_2016/xml.xsd",
+      "size": 4638
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ecma/fouth-edition/opc-contentTypes.xsd",
+      "size": 1963
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ecma/fouth-edition/opc-coreProperties.xsd",
+      "size": 2515
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ecma/fouth-edition/opc-digSig.xsd",
+      "size": 2856
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/ecma/fouth-edition/opc-relationships.xsd",
+      "size": 1344
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/mce/mc.xsd",
+      "size": 3127
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/microsoft/wml-2010.xsd",
+      "size": 26549
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/microsoft/wml-2012.xsd",
+      "size": 3745
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/microsoft/wml-2018.xsd",
+      "size": 901
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/microsoft/wml-cex-2018.xsd",
+      "size": 1778
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/microsoft/wml-cid-2016.xsd",
+      "size": 1002
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/microsoft/wml-sdtdatahash-2020.xsd",
+      "size": 600
+    },
+    {
+      "path": "tests/skills/docx/ooxml/schemas/microsoft/wml-symex-2015.xsd",
+      "size": 745
+    },
+    {
+      "path": "tests/skills/docx/ooxml/scripts/pack.py",
+      "size": 5538
+    },
+    {
+      "path": "tests/skills/docx/ooxml/scripts/unpack.py",
+      "size": 1038
+    },
+    {
+      "path": "tests/skills/docx/ooxml/scripts/validate.py",
+      "size": 1959
+    },
+    {
+      "path": "tests/skills/docx/ooxml/scripts/validation/__init__.py",
+      "size": 336
+    },
+    {
+      "path": "tests/skills/docx/ooxml/scripts/validation/base.py",
+      "size": 38245
+    },
+    {
+      "path": "tests/skills/docx/ooxml/scripts/validation/docx.py",
+      "size": 9442
+    },
+    {
+      "path": "tests/skills/docx/ooxml/scripts/validation/pptx.py",
+      "size": 11761
+    },
+    {
+      "path": "tests/skills/docx/ooxml/scripts/validation/redlining.py",
+      "size": 11017
+    },
+    {
+      "path": "tests/skills/docx/scripts/__init__.py",
+      "size": 65
+    },
+    {
+      "path": "tests/skills/docx/scripts/document.py",
+      "size": 49795
+    },
+    {
+      "path": "tests/skills/docx/scripts/templates/comments.xml",
+      "size": 2636
+    },
+    {
+      "path": "tests/skills/docx/scripts/templates/commentsExtended.xml",
+      "size": 2644
+    },
+    {
+      "path": "tests/skills/docx/scripts/templates/commentsExtensible.xml",
+      "size": 2740
+    },
+    {
+      "path": "tests/skills/docx/scripts/templates/commentsIds.xml",
+      "size": 2652
+    },
+    {
+      "path": "tests/skills/docx/scripts/templates/people.xml",
+      "size": 148
+    },
+    {
+      "path": "tests/skills/docx/scripts/utilities.py",
+      "size": 13586
+    },
+    {
+      "path": "tests/skills/frontend-design/LICENSE.txt",
+      "size": 10174
+    },
+    {
+      "path": "tests/skills/frontend-design/SKILL.md",
+      "size": 4440
+    },
+    {
+      "path": "tests/skills/internal-comms/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/internal-comms/SKILL.md",
+      "size": 1511
+    },
+    {
+      "path": "tests/skills/internal-comms/examples/3p-updates.md",
+      "size": 3274
+    },
+    {
+      "path": "tests/skills/internal-comms/examples/company-newsletter.md",
+      "size": 3295
+    },
+    {
+      "path": "tests/skills/internal-comms/examples/faq-answers.md",
+      "size": 2367
+    },
+    {
+      "path": "tests/skills/internal-comms/examples/general-comms.md",
+      "size": 603
+    },
+    {
+      "path": "tests/skills/malicious-skill/SKILL.md",
+      "size": 17666
+    },
+    {
+      "path": "tests/skills/mcp-builder/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/mcp-builder/SKILL.md",
+      "size": 9076
+    },
+    {
+      "path": "tests/skills/mcp-builder/reference/evaluation.md",
+      "size": 21658
+    },
+    {
+      "path": "tests/skills/mcp-builder/reference/mcp_best_practices.md",
+      "size": 7330
+    },
+    {
+      "path": "tests/skills/mcp-builder/reference/node_mcp_server.md",
+      "size": 28551
+    },
+    {
+      "path": "tests/skills/mcp-builder/reference/python_mcp_server.md",
+      "size": 25100
+    },
+    {
+      "path": "tests/skills/mcp-builder/scripts/connections.py",
+      "size": 4853
+    },
+    {
+      "path": "tests/skills/mcp-builder/scripts/evaluation.py",
+      "size": 12855
+    },
+    {
+      "path": "tests/skills/mcp-builder/scripts/example_evaluation.xml",
+      "size": 1194
+    },
+    {
+      "path": "tests/skills/mcp-builder/scripts/requirements.txt",
+      "size": 29
+    },
+    {
+      "path": "tests/skills/pdf/LICENSE.txt",
+      "size": 1467
+    },
+    {
+      "path": "tests/skills/pdf/SKILL.md",
+      "size": 7068
+    },
+    {
+      "path": "tests/skills/pdf/forms.md",
+      "size": 9438
+    },
+    {
+      "path": "tests/skills/pdf/reference.md",
+      "size": 16573
+    },
+    {
+      "path": "tests/skills/pdf/scripts/check_bounding_boxes.py",
+      "size": 3277
+    },
+    {
+      "path": "tests/skills/pdf/scripts/check_bounding_boxes_test.py",
+      "size": 8747
+    },
+    {
+      "path": "tests/skills/pdf/scripts/check_fillable_fields.py",
+      "size": 360
+    },
+    {
+      "path": "tests/skills/pdf/scripts/convert_pdf_to_images.py",
+      "size": 1118
+    },
+    {
+      "path": "tests/skills/pdf/scripts/create_validation_image.py",
+      "size": 1603
+    },
+    {
+      "path": "tests/skills/pdf/scripts/extract_form_field_info.py",
+      "size": 6264
+    },
+    {
+      "path": "tests/skills/pdf/scripts/fill_fillable_fields.py",
+      "size": 4912
+    },
+    {
+      "path": "tests/skills/pdf/scripts/fill_pdf_form_with_annotations.py",
+      "size": 3487
+    },
+    {
+      "path": "tests/skills/pptx/LICENSE.txt",
+      "size": 1467
+    },
+    {
+      "path": "tests/skills/pptx/SKILL.md",
+      "size": 25537
+    },
+    {
+      "path": "tests/skills/pptx/html2pptx.md",
+      "size": 19833
+    },
+    {
+      "path": "tests/skills/pptx/ooxml.md",
+      "size": 10388
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chart.xsd",
+      "size": 74984
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-chartDrawing.xsd",
+      "size": 6956
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-diagram.xsd",
+      "size": 51302
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-lockedCanvas.xsd",
+      "size": 624
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-main.xsd",
+      "size": 152039
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-picture.xsd",
+      "size": 1231
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-spreadsheetDrawing.xsd",
+      "size": 8862
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/dml-wordprocessingDrawing.xsd",
+      "size": 14795
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/pml.xsd",
+      "size": 83612
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-additionalCharacteristics.xsd",
+      "size": 1269
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-bibliography.xsd",
+      "size": 7328
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-commonSimpleTypes.xsd",
+      "size": 6382
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlDataProperties.xsd",
+      "size": 1248
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-customXmlSchemaProperties.xsd",
+      "size": 880
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesCustom.xsd",
+      "size": 2608
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesExtended.xsd",
+      "size": 3507
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-documentPropertiesVariantTypes.xsd",
+      "size": 7507
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-math.xsd",
+      "size": 23313
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/shared-relationshipReference.xsd",
+      "size": 1367
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/sml.xsd",
+      "size": 242276
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-main.xsd",
+      "size": 26148
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-officeDrawing.xsd",
+      "size": 25279
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-presentationDrawing.xsd",
+      "size": 535
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-spreadsheetDrawing.xsd",
+      "size": 5712
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/vml-wordprocessingDrawing.xsd",
+      "size": 4010
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/wml.xsd",
+      "size": 171367
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ISO-IEC29500-4_2016/xml.xsd",
+      "size": 4638
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ecma/fouth-edition/opc-contentTypes.xsd",
+      "size": 1963
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ecma/fouth-edition/opc-coreProperties.xsd",
+      "size": 2515
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ecma/fouth-edition/opc-digSig.xsd",
+      "size": 2856
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/ecma/fouth-edition/opc-relationships.xsd",
+      "size": 1344
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/mce/mc.xsd",
+      "size": 3127
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/microsoft/wml-2010.xsd",
+      "size": 26549
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/microsoft/wml-2012.xsd",
+      "size": 3745
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/microsoft/wml-2018.xsd",
+      "size": 901
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/microsoft/wml-cex-2018.xsd",
+      "size": 1778
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/microsoft/wml-cid-2016.xsd",
+      "size": 1002
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/microsoft/wml-sdtdatahash-2020.xsd",
+      "size": 600
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/schemas/microsoft/wml-symex-2015.xsd",
+      "size": 745
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/scripts/pack.py",
+      "size": 5538
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/scripts/unpack.py",
+      "size": 1038
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/scripts/validate.py",
+      "size": 1959
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/scripts/validation/__init__.py",
+      "size": 336
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/scripts/validation/base.py",
+      "size": 38245
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/scripts/validation/docx.py",
+      "size": 9442
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/scripts/validation/pptx.py",
+      "size": 11761
+    },
+    {
+      "path": "tests/skills/pptx/ooxml/scripts/validation/redlining.py",
+      "size": 11017
+    },
+    {
+      "path": "tests/skills/pptx/scripts/html2pptx.js",
+      "size": 37796
+    },
+    {
+      "path": "tests/skills/pptx/scripts/inventory.py",
+      "size": 37419
+    },
+    {
+      "path": "tests/skills/pptx/scripts/rearrange.py",
+      "size": 8353
+    },
+    {
+      "path": "tests/skills/pptx/scripts/replace.py",
+      "size": 13533
+    },
+    {
+      "path": "tests/skills/pptx/scripts/thumbnail.py",
+      "size": 15282
+    },
+    {
+      "path": "tests/skills/skill-creator/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/skill-creator/SKILL.md",
+      "size": 17837
+    },
+    {
+      "path": "tests/skills/skill-creator/references/output-patterns.md",
+      "size": 1813
+    },
+    {
+      "path": "tests/skills/skill-creator/references/workflows.md",
+      "size": 819
+    },
+    {
+      "path": "tests/skills/skill-creator/scripts/init_skill.py",
+      "size": 10810
+    },
+    {
+      "path": "tests/skills/skill-creator/scripts/package_skill.py",
+      "size": 3258
+    },
+    {
+      "path": "tests/skills/skill-creator/scripts/quick_validate.py",
+      "size": 3513
+    },
+    {
+      "path": "tests/skills/slack-gif-creator/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/slack-gif-creator/SKILL.md",
+      "size": 7841
+    },
+    {
+      "path": "tests/skills/slack-gif-creator/core/easing.py",
+      "size": 6265
+    },
+    {
+      "path": "tests/skills/slack-gif-creator/core/frame_composer.py",
+      "size": 4485
+    },
+    {
+      "path": "tests/skills/slack-gif-creator/core/gif_builder.py",
+      "size": 9529
+    },
+    {
+      "path": "tests/skills/slack-gif-creator/core/validators.py",
+      "size": 3564
+    },
+    {
+      "path": "tests/skills/slack-gif-creator/requirements.txt",
+      "size": 67
+    },
+    {
+      "path": "tests/skills/theme-factory/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/theme-factory/SKILL.md",
+      "size": 3124
+    },
+    {
+      "path": "tests/skills/theme-factory/theme-showcase.pdf",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/arctic-frost.md",
+      "size": 544
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/botanical-garden.md",
+      "size": 519
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/desert-rose.md",
+      "size": 496
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/forest-canopy.md",
+      "size": 506
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/golden-hour.md",
+      "size": 528
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/midnight-galaxy.md",
+      "size": 513
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/modern-minimalist.md",
+      "size": 549
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/ocean-depths.md",
+      "size": 555
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/sunset-boulevard.md",
+      "size": 558
+    },
+    {
+      "path": "tests/skills/theme-factory/themes/tech-innovation.md",
+      "size": 547
+    },
+    {
+      "path": "tests/skills/web-artifacts-builder/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/web-artifacts-builder/SKILL.md",
+      "size": 3067
+    },
+    {
+      "path": "tests/skills/web-artifacts-builder/scripts/bundle-artifact.sh",
+      "size": 1494
+    },
+    {
+      "path": "tests/skills/web-artifacts-builder/scripts/init-artifact.sh",
+      "size": 9822
+    },
+    {
+      "path": "tests/skills/web-artifacts-builder/scripts/shadcn-components.tar.gz",
+      "size": 0
+    },
+    {
+      "path": "tests/skills/webapp-testing/LICENSE.txt",
+      "size": 11358
+    },
+    {
+      "path": "tests/skills/webapp-testing/SKILL.md",
+      "size": 3907
+    },
+    {
+      "path": "tests/skills/webapp-testing/examples/console_logging.py",
+      "size": 1027
+    },
+    {
+      "path": "tests/skills/webapp-testing/examples/element_discovery.py",
+      "size": 1464
+    },
+    {
+      "path": "tests/skills/webapp-testing/examples/static_html_automation.py",
+      "size": 955
+    },
+    {
+      "path": "tests/skills/webapp-testing/scripts/with_server.py",
+      "size": 3699
+    },
+    {
+      "path": "tests/skills/xlsx/LICENSE.txt",
+      "size": 1467
+    },
+    {
+      "path": "tests/skills/xlsx/SKILL.md",
+      "size": 10623
+    },
+    {
+      "path": "tests/skills/xlsx/recalc.py",
+      "size": 6257
+    },
+    {
+      "path": "tests/test_configs.json",
+      "size": 852
+    },
+    {
+      "path": "tests/unit/__init__.py",
+      "size": 39
+    },
+    {
+      "path": "tests/unit/_secret_fixtures.py",
+      "size": 851
+    },
+    {
+      "path": "tests/unit/test_agent_discovery.py",
+      "size": 484401
+    },
+    {
+      "path": "tests/unit/test_canary.py",
+      "size": 7741
+    },
+    {
+      "path": "tests/unit/test_canary_contract.py",
+      "size": 5269
+    },
+    {
+      "path": "tests/unit/test_canary_covers_scopes.py",
+      "size": 4214
+    },
+    {
+      "path": "tests/unit/test_claude_desktop_connectors.py",
+      "size": 6523
+    },
+    {
+      "path": "tests/unit/test_claude_desktop_plugins.py",
+      "size": 10141
+    },
+    {
+      "path": "tests/unit/test_cli.py",
+      "size": 18629
+    },
+    {
+      "path": "tests/unit/test_cli_config_file.py",
+      "size": 26548
+    },
+    {
+      "path": "tests/unit/test_cli_control_server_no_consent.py",
+      "size": 4516
+    },
+    {
+      "path": "tests/unit/test_cli_interactivity.py",
+      "size": 61563
+    },
+    {
+      "path": "tests/unit/test_cli_logging.py",
+      "size": 1874
+    },
+    {
+      "path": "tests/unit/test_cli_parsing.py",
+      "size": 32042
+    },
+    {
+      "path": "tests/unit/test_config_scan.py",
+      "size": 22289
+    },
+    {
+      "path": "tests/unit/test_consent.py",
+      "size": 4227
+    },
+    {
+      "path": "tests/unit/test_entity_to_tool.py",
+      "size": 510
+    },
+    {
+      "path": "tests/unit/test_errors.py",
+      "size": 0
+    },
+    {
+      "path": "tests/unit/test_guard.py",
+      "size": 287704
+    },
+    {
+      "path": "tests/unit/test_hook_events.py",
+      "size": 8780
+    },
+    {
+      "path": "tests/unit/test_inspect.py",
+      "size": 35624
+    },
+    {
+      "path": "tests/unit/test_mcp_client.py",
+      "size": 13486
+    },
+    {
+      "path": "tests/unit/test_mcp_destination_guard.py",
+      "size": 5505
+    },
+    {
+      "path": "tests/unit/test_models.py",
+      "size": 17598
+    },
+    {
+      "path": "tests/unit/test_pipelines.py",
+      "size": 7571
+    },
+    {
+      "path": "tests/unit/test_printer.py",
+      "size": 22650
+    },
+    {
+      "path": "tests/unit/test_pushkeys.py",
+      "size": 4219
+    },
+    {
+      "path": "tests/unit/test_redact.py",
+      "size": 57550
+    },
+    {
+      "path": "tests/unit/test_redact_prefilter_equivalence.py",
+      "size": 4398
+    },
+    {
+      "path": "tests/unit/test_signed_binary.py",
+      "size": 3216
+    },
+    {
+      "path": "tests/unit/test_skill_client.py",
+      "size": 17204
+    },
+    {
+      "path": "tests/unit/test_upload.py",
+      "size": 1293
+    },
+    {
+      "path": "tests/unit/test_utils.py",
+      "size": 24672
+    },
+    {
+      "path": "tests/unit/test_verify_api.py",
+      "size": 80406
+    },
+    {
+      "path": "tests/unit/test_vscode_extension_mcp.py",
+      "size": 12941
+    },
+    {
+      "path": "tests/v4compatibility/test_inspect.py",
+      "size": 4516
+    },
+    {
+      "path": "uv.lock",
+      "size": 550454
+    }
+  ]
+}

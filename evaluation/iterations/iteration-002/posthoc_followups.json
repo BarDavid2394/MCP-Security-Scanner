@@ -1,0 +1,23 @@
+{
+  "scoring": "Not retroactively added to locked labels",
+  "items": [
+    {
+      "artifact_id": "clean_tool_scope_lowlevel--server",
+      "rule_id": "MCP10-OVER-SHARING",
+      "assessment": "suspected false positive",
+      "reason": "check_permission returns a boolean comparison of an environment value, not the environment object."
+    },
+    {
+      "artifact_id": "clean_tool_scope_same_file_gate--server",
+      "rule_id": "MCP10-OVER-SHARING",
+      "assessment": "suspected false positive",
+      "reason": "_write_enabled returns a boolean membership check, not an environment dump."
+    },
+    {
+      "artifact_id": "clean_tool_scope_same_file_gate--server",
+      "rule_id": "MCP08-MISSING-AUDIT",
+      "assessment": "unscored plausible finding",
+      "reason": "The executable-selecting tool has no visible audit logging."
+    }
+  ]
+}

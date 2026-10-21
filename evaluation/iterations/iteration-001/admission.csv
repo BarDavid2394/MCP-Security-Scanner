@@ -1,0 +1,26 @@
+artifact_id,upstream_path,status,reason
+safe--ai001_user_role_request_data,test-fixtures/safe/ai001_user_role_request_data.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+safe--ai003_fastapi_depends_param_auth,test-fixtures/safe/ai003_fastapi_depends_param_auth.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+safe--bm25_tool_catalog_index,test-fixtures/safe/bm25_tool_catalog_index.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+safe--docstring_example,test-fixtures/safe/docstring_example.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+safe--env_config,test-fixtures/safe/env_config.py,admitted,Explicit rule/scope labels; other rules unscored.
+safe--mcp-tool-sinks--fastmcp_helper_guarded,test-fixtures/safe/mcp-tool-sinks/fastmcp_helper_guarded.py,admitted,Explicit rule/scope labels; other rules unscored.
+safe--mcp-tool-sinks--guarded_ops,test-fixtures/safe/mcp-tool-sinks/guarded_ops.py,admitted,Explicit rule/scope labels; other rules unscored.
+safe--mcp-tool-sinks--not_mcp_script,test-fixtures/safe/mcp-tool-sinks/not_mcp_script.py,admitted,Explicit rule/scope labels; other rules unscored.
+safe--mcp001_module_scope_false_context,test-fixtures/safe/mcp001_module_scope_false_context.py,admitted,Explicit rule/scope labels; other rules unscored.
+safe--mcp_untrusted_tool_source,test-fixtures/safe/mcp_untrusted_tool_source.py,admitted,Explicit rule/scope labels; other rules unscored.
+safe--re_search_not_vector_search,test-fixtures/safe/re_search_not_vector_search.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+safe--system_prompt_field,test-fixtures/safe/system_prompt_field.py,admitted,Explicit rule/scope labels; other rules unscored.
+safe--tool_poisoning,test-fixtures/safe/tool_poisoning.py,admitted,Explicit rule/scope labels; other rules unscored.
+safe--typesafe_confidence_gate_checked,test-fixtures/safe/typesafe_confidence_gate_checked.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+safe--vec_chained_filter,test-fixtures/safe/vec_chained_filter.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+vulnerable--ai001_python_langchain_system_message,test-fixtures/vulnerable/ai001_python_langchain_system_message.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+vulnerable--ai001_python_system_kwarg,test-fixtures/vulnerable/ai001_python_system_kwarg.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+vulnerable--attribute_taint,test-fixtures/vulnerable/attribute_taint.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+vulnerable--mcp-tool-sinks--fastmcp_helper,test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_helper.py,admitted,Explicit rule/scope labels; other rules unscored.
+vulnerable--mcp-tool-sinks--fastmcp_ops,test-fixtures/vulnerable/mcp-tool-sinks/fastmcp_ops.py,admitted,Explicit rule/scope labels; other rules unscored.
+vulnerable--mcp-tool-sinks--lowlevel_server,test-fixtures/vulnerable/mcp-tool-sinks/lowlevel_server.py,admitted,Explicit rule/scope labels; other rules unscored.
+vulnerable--mcp_untrusted_tool_source,test-fixtures/vulnerable/mcp_untrusted_tool_source.py,admitted,Explicit rule/scope labels; other rules unscored.
+vulnerable--rag_app,test-fixtures/vulnerable/rag_app.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."
+vulnerable--tool_poisoning,test-fixtures/vulnerable/tool_poisoning.py,admitted,Explicit rule/scope labels; other rules unscored.
+vulnerable--typesafe_confidence_gate,test-fixtures/vulnerable/typesafe_confidence_gate.py,excluded,"Generic AI/vector/application fixture without an MCP path; excluded, not counted as negative."

@@ -1,0 +1,11 @@
+{
+  "findings_reviewed": 83,
+  "labels": {
+    "FP": 32,
+    "Needs context": 38,
+    "TP": 13
+  },
+  "precision_on_conclusive_labels": 0.28888888888888886,
+  "contextual_rate": 0.4578313253012048,
+  "method": "Finding-level manual source review encoded as repeatable decisions; contextual findings are excluded from precision."
+}

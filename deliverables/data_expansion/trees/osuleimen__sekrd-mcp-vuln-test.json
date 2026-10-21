@@ -1,0 +1,20 @@
+{
+  "repository": "osuleimen/sekrd-mcp-vuln-test",
+  "revision": "15b2defcb834399ca566e1b37e3ff54bb10f880f",
+  "license": null,
+  "truncated": false,
+  "files": [
+    {
+      "path": "README.md",
+      "size": 201
+    },
+    {
+      "path": "server.fixed.py",
+      "size": 1513
+    },
+    {
+      "path": "server.py",
+      "size": 1513
+    }
+  ]
+}

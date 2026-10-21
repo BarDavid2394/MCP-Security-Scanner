@@ -1,0 +1,2476 @@
+{
+  "repository": "n1ps/bordair-dataset",
+  "revision": "0e7dbe76ff8730312136019400becbe26d74e4ee",
+  "license": null,
+  "truncated": false,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 90
+    },
+    {
+      "path": "README.md",
+      "size": 95209
+    },
+    {
+      "path": "benign/_pool.json",
+      "size": 7731365
+    },
+    {
+      "path": "benign/multimodal_image_document.json",
+      "size": 601896
+    },
+    {
+      "path": "benign/multimodal_quad.json",
+      "size": 29399
+    },
+    {
+      "path": "benign/multimodal_text_audio.json",
+      "size": 1328020
+    },
+    {
+      "path": "benign/multimodal_text_document.json",
+      "size": 6319754
+    },
+    {
+      "path": "benign/multimodal_text_image.json",
+      "size": 2902489
+    },
+    {
+      "path": "benign/multimodal_triple.json",
+      "size": 153487
+    },
+    {
+      "path": "benign/summary.json",
+      "size": 3512
+    },
+    {
+      "path": "benign/text_only.json",
+      "size": 6583099
+    },
+    {
+      "path": "benign/v4cm_image_document.json",
+      "size": 789815
+    },
+    {
+      "path": "benign/v4cm_text_audio.json",
+      "size": 1443637
+    },
+    {
+      "path": "benign/v4cm_text_document.json",
+      "size": 4087019
+    },
+    {
+      "path": "benign/v4cm_text_image_full.json",
+      "size": 1153955
+    },
+    {
+      "path": "benign/v4cm_text_image_split.json",
+      "size": 497044
+    },
+    {
+      "path": "benign/v4cm_triple.json",
+      "size": 563739
+    },
+    {
+      "path": "benign/v5_text_only_001.json",
+      "size": 1605235
+    },
+    {
+      "path": "benign/v5_text_only_002.json",
+      "size": 1595281
+    },
+    {
+      "path": "benign/v5_text_only_003.json",
+      "size": 1590325
+    },
+    {
+      "path": "benign/v5_text_only_004.json",
+      "size": 1600545
+    },
+    {
+      "path": "benign/v5_text_only_005.json",
+      "size": 1605509
+    },
+    {
+      "path": "benign/v5_text_only_006.json",
+      "size": 1598625
+    },
+    {
+      "path": "benign/v5_text_only_007.json",
+      "size": 1601258
+    },
+    {
+      "path": "benign/v5_text_only_008.json",
+      "size": 1588335
+    },
+    {
+      "path": "benign/v5_text_only_009.json",
+      "size": 1607688
+    },
+    {
+      "path": "benign/v5_text_only_010.json",
+      "size": 1616061
+    },
+    {
+      "path": "benign/v5_text_only_011.json",
+      "size": 1600355
+    },
+    {
+      "path": "benign/v5_text_only_012.json",
+      "size": 1616925
+    },
+    {
+      "path": "benign/v5_text_only_013.json",
+      "size": 1600890
+    },
+    {
+      "path": "benign/v5_text_only_014.json",
+      "size": 1599475
+    },
+    {
+      "path": "benign/v5_text_only_015.json",
+      "size": 1589853
+    },
+    {
+      "path": "benign/v5_text_only_016.json",
+      "size": 1603897
+    },
+    {
+      "path": "benign/v5_text_only_017.json",
+      "size": 1604550
+    },
+    {
+      "path": "benign/v5_text_only_018.json",
+      "size": 1598516
+    },
+    {
+      "path": "benign/v5_text_only_019.json",
+      "size": 1601634
+    },
+    {
+      "path": "benign/v5_text_only_020.json",
+      "size": 1597314
+    },
+    {
+      "path": "benign/v5_text_only_021.json",
+      "size": 1615937
+    },
+    {
+      "path": "benign/v5_text_only_022.json",
+      "size": 1589257
+    },
+    {
+      "path": "benign/v5_text_only_023.json",
+      "size": 1589635
+    },
+    {
+      "path": "benign/v5_text_only_024.json",
+      "size": 1605630
+    },
+    {
+      "path": "benign/v5_text_only_025.json",
+      "size": 1613783
+    },
+    {
+      "path": "benign/v5_text_only_026.json",
+      "size": 1598975
+    },
+    {
+      "path": "benign/v5_text_only_027.json",
+      "size": 1593942
+    },
+    {
+      "path": "benign/v5_text_only_028.json",
+      "size": 1604236
+    },
+    {
+      "path": "benign/v5_text_only_029.json",
+      "size": 1595585
+    },
+    {
+      "path": "benign/v5_text_only_030.json",
+      "size": 1599768
+    },
+    {
+      "path": "benign/v5_text_only_031.json",
+      "size": 1592431
+    },
+    {
+      "path": "benign/v5_text_only_032.json",
+      "size": 1581334
+    },
+    {
+      "path": "benign/v5_text_only_033.json",
+      "size": 1620282
+    },
+    {
+      "path": "benign/v5_text_only_034.json",
+      "size": 1589195
+    },
+    {
+      "path": "benign/v5_text_only_035.json",
+      "size": 1599284
+    },
+    {
+      "path": "benign/v5_text_only_036.json",
+      "size": 1592623
+    },
+    {
+      "path": "benign/v5_text_only_037.json",
+      "size": 1602012
+    },
+    {
+      "path": "benign/v5_text_only_038.json",
+      "size": 1587564
+    },
+    {
+      "path": "benign/v5_text_only_039.json",
+      "size": 1610022
+    },
+    {
+      "path": "benign/v5_text_only_040.json",
+      "size": 1595577
+    },
+    {
+      "path": "benign/v5_text_only_041.json",
+      "size": 404372
+    },
+    {
+      "path": "bordair_cli/README.md",
+      "size": 3963
+    },
+    {
+      "path": "bordair_cli/install.sh",
+      "size": 2166
+    },
+    {
+      "path": "bordair_cli/pyproject.toml",
+      "size": 1575
+    },
+    {
+      "path": "bordair_cli/src/bordair/__init__.py",
+      "size": 112
+    },
+    {
+      "path": "bordair_cli/src/bordair/__main__.py",
+      "size": 11300
+    },
+    {
+      "path": "bordair_cli/src/bordair/evaluator.py",
+      "size": 6281
+    },
+    {
+      "path": "bordair_cli/src/bordair/judge.py",
+      "size": 5927
+    },
+    {
+      "path": "bordair_cli/src/bordair/loader.py",
+      "size": 10858
+    },
+    {
+      "path": "generate_benign.py",
+      "size": 22461
+    },
+    {
+      "path": "generate_benign_expanded.py",
+      "size": 42978
+    },
+    {
+      "path": "generate_benign_multimodal.py",
+      "size": 13419
+    },
+    {
+      "path": "generate_payloads.py",
+      "size": 44397
+    },
+    {
+      "path": "generate_v2_pyrit.py",
+      "size": 84441
+    },
+    {
+      "path": "generate_v3_payloads.py",
+      "size": 40484
+    },
+    {
+      "path": "generate_v4_crossmodal.py",
+      "size": 13895
+    },
+    {
+      "path": "generate_v4_payloads.py",
+      "size": 59340
+    },
+    {
+      "path": "generate_v5_payloads.py",
+      "size": 69034
+    },
+    {
+      "path": "ingest_v5_external.py",
+      "size": 13252
+    },
+    {
+      "path": "payloads/image_document/image_document_001.json",
+      "size": 309426
+    },
+    {
+      "path": "payloads/image_document/image_document_002.json",
+      "size": 311038
+    },
+    {
+      "path": "payloads/image_document/image_document_003.json",
+      "size": 229282
+    },
+    {
+      "path": "payloads/quad/quad_001.json",
+      "size": 28919
+    },
+    {
+      "path": "payloads/summary.json",
+      "size": 7180
+    },
+    {
+      "path": "payloads/text_audio/text_audio_001.json",
+      "size": 324184
+    },
+    {
+      "path": "payloads/text_audio/text_audio_002.json",
+      "size": 321312
+    },
+    {
+      "path": "payloads/text_audio/text_audio_003.json",
+      "size": 322164
+    },
+    {
+      "path": "payloads/text_audio/text_audio_004.json",
+      "size": 326428
+    },
+    {
+      "path": "payloads/text_audio/text_audio_005.json",
+      "size": 313040
+    },
+    {
+      "path": "payloads/text_audio/text_audio_006.json",
+      "size": 165684
+    },
+    {
+      "path": "payloads/text_document/text_document_001.json",
+      "size": 357036
+    },
+    {
+      "path": "payloads/text_document/text_document_002.json",
+      "size": 362984
+    },
+    {
+      "path": "payloads/text_document/text_document_003.json",
+      "size": 349684
+    },
+    {
+      "path": "payloads/text_document/text_document_004.json",
+      "size": 348156
+    },
+    {
+      "path": "payloads/text_document/text_document_005.json",
+      "size": 341028
+    },
+    {
+      "path": "payloads/text_document/text_document_006.json",
+      "size": 334432
+    },
+    {
+      "path": "payloads/text_document/text_document_007.json",
+      "size": 343508
+    },
+    {
+      "path": "payloads/text_document/text_document_008.json",
+      "size": 365144
+    },
+    {
+      "path": "payloads/text_document/text_document_009.json",
+      "size": 364800
+    },
+    {
+      "path": "payloads/text_document/text_document_010.json",
+      "size": 344192
+    },
+    {
+      "path": "payloads/text_document/text_document_011.json",
+      "size": 344564
+    },
+    {
+      "path": "payloads/text_document/text_document_012.json",
+      "size": 353736
+    },
+    {
+      "path": "payloads/text_document/text_document_013.json",
+      "size": 357920
+    },
+    {
+      "path": "payloads/text_document/text_document_014.json",
+      "size": 352896
+    },
+    {
+      "path": "payloads/text_document/text_document_015.json",
+      "size": 355492
+    },
+    {
+      "path": "payloads/text_document/text_document_016.json",
+      "size": 360528
+    },
+    {
+      "path": "payloads/text_document/text_document_017.json",
+      "size": 357176
+    },
+    {
+      "path": "payloads/text_document/text_document_018.json",
+      "size": 355880
+    },
+    {
+      "path": "payloads/text_document/text_document_019.json",
+      "size": 342876
+    },
+    {
+      "path": "payloads/text_document/text_document_020.json",
+      "size": 343200
+    },
+    {
+      "path": "payloads/text_document/text_document_021.json",
+      "size": 333996
+    },
+    {
+      "path": "payloads/text_document/text_document_022.json",
+      "size": 335140
+    },
+    {
+      "path": "payloads/text_document/text_document_023.json",
+      "size": 351428
+    },
+    {
+      "path": "payloads/text_document/text_document_024.json",
+      "size": 349120
+    },
+    {
+      "path": "payloads/text_document/text_document_025.json",
+      "size": 346904
+    },
+    {
+      "path": "payloads/text_document/text_document_026.json",
+      "size": 265284
+    },
+    {
+      "path": "payloads/text_image/text_image_001.json",
+      "size": 357629
+    },
+    {
+      "path": "payloads/text_image/text_image_002.json",
+      "size": 346597
+    },
+    {
+      "path": "payloads/text_image/text_image_003.json",
+      "size": 335449
+    },
+    {
+      "path": "payloads/text_image/text_image_004.json",
+      "size": 352034
+    },
+    {
+      "path": "payloads/text_image/text_image_005.json",
+      "size": 352208
+    },
+    {
+      "path": "payloads/text_image/text_image_006.json",
+      "size": 346845
+    },
+    {
+      "path": "payloads/text_image/text_image_007.json",
+      "size": 353144
+    },
+    {
+      "path": "payloads/text_image/text_image_008.json",
+      "size": 355629
+    },
+    {
+      "path": "payloads/text_image/text_image_009.json",
+      "size": 354205
+    },
+    {
+      "path": "payloads/text_image/text_image_010.json",
+      "size": 340757
+    },
+    {
+      "path": "payloads/text_image/text_image_011.json",
+      "size": 332269
+    },
+    {
+      "path": "payloads/text_image/text_image_012.json",
+      "size": 347965
+    },
+    {
+      "path": "payloads/text_image/text_image_013.json",
+      "size": 304149
+    },
+    {
+      "path": "payloads/triple/triple_001.json",
+      "size": 177007
+    },
+    {
+      "path": "payloads_v2/autodan_wrappers/autodan_wrappers_001.json",
+      "size": 847623
+    },
+    {
+      "path": "payloads_v2/autodan_wrappers/autodan_wrappers_002.json",
+      "size": 556483
+    },
+    {
+      "path": "payloads_v2/combined_multiturn_gcg/combined_multiturn_gcg_001.json",
+      "size": 134584
+    },
+    {
+      "path": "payloads_v2/encoding_attacks/encoding_attacks_001.json",
+      "size": 763919
+    },
+    {
+      "path": "payloads_v2/encoding_attacks/encoding_attacks_002.json",
+      "size": 620804
+    },
+    {
+      "path": "payloads_v2/gcg_literature_suffixes/gcg_literature_suffixes_001.json",
+      "size": 713134
+    },
+    {
+      "path": "payloads_v2/gcg_literature_suffixes/gcg_literature_suffixes_002.json",
+      "size": 715642
+    },
+    {
+      "path": "payloads_v2/gcg_literature_suffixes/gcg_literature_suffixes_003.json",
+      "size": 287314
+    },
+    {
+      "path": "payloads_v2/jailbreak_templates/jailbreak_templates_001.json",
+      "size": 4799898
+    },
+    {
+      "path": "payloads_v2/jailbreak_templates/jailbreak_templates_002.json",
+      "size": 5094072
+    },
+    {
+      "path": "payloads_v2/jailbreak_templates/jailbreak_templates_003.json",
+      "size": 2768272
+    },
+    {
+      "path": "payloads_v2/jailbreak_templates/jailbreak_templates_004.json",
+      "size": 2308974
+    },
+    {
+      "path": "payloads_v2/jailbreak_templates/jailbreak_templates_005.json",
+      "size": 2652722
+    },
+    {
+      "path": "payloads_v2/jailbreak_templates/jailbreak_templates_006.json",
+      "size": 1233022
+    },
+    {
+      "path": "payloads_v2/jailbreak_templates/jailbreak_templates_007.json",
+      "size": 1417085
+    },
+    {
+      "path": "payloads_v2/jailbreak_templates/jailbreak_templates_008.json",
+      "size": 1987922
+    },
+    {
+      "path": "payloads_v2/jailbreak_templates/jailbreak_templates_009.json",
+      "size": 213754
+    },
+    {
+      "path": "payloads_v2/multiturn_orchestration/multiturn_orchestration_001.json",
+      "size": 135652
+    },
+    {
+      "path": "payloads_v2/summary_v2.json",
+      "size": 12469
+    },
+    {
+      "path": "payloads_v3/agent_cot_manipulation/agent_cot_manipulation_001.json",
+      "size": 9820
+    },
+    {
+      "path": "payloads_v3/ascii_art_injection/ascii_art_injection_001.json",
+      "size": 7011
+    },
+    {
+      "path": "payloads_v3/code_switch_attacks/code_switch_attacks_001.json",
+      "size": 9443
+    },
+    {
+      "path": "payloads_v3/homoglyph_unicode_attacks/homoglyph_unicode_attacks_001.json",
+      "size": 7966
+    },
+    {
+      "path": "payloads_v3/indirect_injection/indirect_injection_001.json",
+      "size": 13736
+    },
+    {
+      "path": "payloads_v3/qr_barcode_injection/qr_barcode_injection_001.json",
+      "size": 7024
+    },
+    {
+      "path": "payloads_v3/structured_data_injection/structured_data_injection_001.json",
+      "size": 9319
+    },
+    {
+      "path": "payloads_v3/summary_v3.json",
+      "size": 7187
+    },
+    {
+      "path": "payloads_v3/system_prompt_extraction/system_prompt_extraction_001.json",
+      "size": 12816
+    },
+    {
+      "path": "payloads_v3/tool_call_injection/tool_call_injection_001.json",
+      "size": 8519
+    },
+    {
+      "path": "payloads_v4/audio_adversarial_asr/audio_adversarial_asr_001.json",
+      "size": 8542
+    },
+    {
+      "path": "payloads_v4/beast_suffixes/beast_suffixes_001.json",
+      "size": 17293
+    },
+    {
+      "path": "payloads_v4/chart_diagram_injection/chart_diagram_injection_001.json",
+      "size": 8707
+    },
+    {
+      "path": "payloads_v4/cipher_jailbreaks/cipher_jailbreaks_001.json",
+      "size": 9629
+    },
+    {
+      "path": "payloads_v4/computer_use_injection/computer_use_injection_001.json",
+      "size": 15857
+    },
+    {
+      "path": "payloads_v4/detector_evasion/detector_evasion_001.json",
+      "size": 8628
+    },
+    {
+      "path": "payloads_v4/instruction_hierarchy_bypass/instruction_hierarchy_bypass_001.json",
+      "size": 7862
+    },
+    {
+      "path": "payloads_v4/mcp_tool_injection/mcp_tool_injection_001.json",
+      "size": 14770
+    },
+    {
+      "path": "payloads_v4/memory_poisoning/memory_poisoning_001.json",
+      "size": 13793
+    },
+    {
+      "path": "payloads_v4/multi_agent_contagion/multi_agent_contagion_001.json",
+      "size": 10565
+    },
+    {
+      "path": "payloads_v4/pdf_active_content/pdf_active_content_001.json",
+      "size": 9203
+    },
+    {
+      "path": "payloads_v4/rag_chunk_boundary/rag_chunk_boundary_001.json",
+      "size": 11452
+    },
+    {
+      "path": "payloads_v4/reasoning_token_injection/reasoning_token_injection_001.json",
+      "size": 10998
+    },
+    {
+      "path": "payloads_v4/summary_v4.json",
+      "size": 5487
+    },
+    {
+      "path": "payloads_v4/unicode_tag_smuggling/unicode_tag_smuggling_001.json",
+      "size": 10383
+    },
+    {
+      "path": "payloads_v4_crossmodal/image_document/image_document_001.json",
+      "size": 371283
+    },
+    {
+      "path": "payloads_v4_crossmodal/image_document/image_document_002.json",
+      "size": 386663
+    },
+    {
+      "path": "payloads_v4_crossmodal/image_document/image_document_003.json",
+      "size": 113120
+    },
+    {
+      "path": "payloads_v4_crossmodal/summary_v4_crossmodal.json",
+      "size": 1412
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_audio/text_audio_001.json",
+      "size": 372654
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_audio/text_audio_002.json",
+      "size": 380795
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_audio/text_audio_003.json",
+      "size": 389397
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_audio/text_audio_004.json",
+      "size": 170444
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_001.json",
+      "size": 386197
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_002.json",
+      "size": 369817
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_003.json",
+      "size": 388657
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_004.json",
+      "size": 401497
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_005.json",
+      "size": 363797
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_006.json",
+      "size": 383157
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_007.json",
+      "size": 412717
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_008.json",
+      "size": 395517
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_009.json",
+      "size": 391277
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_010.json",
+      "size": 404637
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_011.json",
+      "size": 414057
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_document/text_document_012.json",
+      "size": 166030
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_image_full/text_image_full_001.json",
+      "size": 368036
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_image_full/text_image_full_002.json",
+      "size": 365662
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_image_full/text_image_full_003.json",
+      "size": 387138
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_image_full/text_image_full_004.json",
+      "size": 391429
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_image_split/text_image_split_001.json",
+      "size": 348334
+    },
+    {
+      "path": "payloads_v4_crossmodal/text_image_split/text_image_split_002.json",
+      "size": 259880
+    },
+    {
+      "path": "payloads_v4_crossmodal/triple/triple_001.json",
+      "size": 412818
+    },
+    {
+      "path": "payloads_v4_crossmodal/triple/triple_002.json",
+      "size": 61167
+    },
+    {
+      "path": "payloads_v5/agent_skill_supply_chain/agent_skill_supply_chain_001.json",
+      "size": 8418
+    },
+    {
+      "path": "payloads_v5/audio_native_llm_jailbreak/audio_native_llm_jailbreak_001.json",
+      "size": 10773
+    },
+    {
+      "path": "payloads_v5/coding_agent_injection/coding_agent_injection_001.json",
+      "size": 11484
+    },
+    {
+      "path": "payloads_v5/cross_modal_decomposition/cross_modal_decomposition_001.json",
+      "size": 7764
+    },
+    {
+      "path": "payloads_v5/lora_supply_chain/lora_supply_chain_001.json",
+      "size": 9260
+    },
+    {
+      "path": "payloads_v5/mcp_cross_server_exfil/mcp_cross_server_exfil_001.json",
+      "size": 7822
+    },
+    {
+      "path": "payloads_v5/rag_optimization_attack/rag_optimization_attack_001.json",
+      "size": 10301
+    },
+    {
+      "path": "payloads_v5/reasoning_dos_overthink/reasoning_dos_overthink_001.json",
+      "size": 15656
+    },
+    {
+      "path": "payloads_v5/serialization_boundary_rce/serialization_boundary_rce_001.json",
+      "size": 7787
+    },
+    {
+      "path": "payloads_v5/summary_v5.json",
+      "size": 13867
+    },
+    {
+      "path": "payloads_v5/video_generation_jailbreak/video_generation_jailbreak_001.json",
+      "size": 10796
+    },
+    {
+      "path": "payloads_v5/vla_robotic_injection/vla_robotic_injection_001.json",
+      "size": 8084
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_001.json",
+      "size": 221393
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_002.json",
+      "size": 227141
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_003.json",
+      "size": 225497
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_004.json",
+      "size": 223502
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_005.json",
+      "size": 224401
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_006.json",
+      "size": 227388
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_007.json",
+      "size": 226962
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_008.json",
+      "size": 223461
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_009.json",
+      "size": 223561
+    },
+    {
+      "path": "payloads_v5_external/audiobench/audiobench_010.json",
+      "size": 93139
+    },
+    {
+      "path": "payloads_v5_external/cyberseceval3_vpi/cyberseceval3_vpi_001.json",
+      "size": 400648
+    },
+    {
+      "path": "payloads_v5_external/cyberseceval3_vpi/cyberseceval3_vpi_002.json",
+      "size": 402264
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_001.json",
+      "size": 956536
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_002.json",
+      "size": 1178541
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_003.json",
+      "size": 1137233
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_004.json",
+      "size": 1182470
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_005.json",
+      "size": 1110156
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_006.json",
+      "size": 1119366
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_007.json",
+      "size": 1166507
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_008.json",
+      "size": 1082265
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_009.json",
+      "size": 1124014
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_010.json",
+      "size": 1156516
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_011.json",
+      "size": 1128826
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_012.json",
+      "size": 1112911
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_013.json",
+      "size": 1135363
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_014.json",
+      "size": 624030
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_015.json",
+      "size": 521790
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_016.json",
+      "size": 566904
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_017.json",
+      "size": 592480
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_018.json",
+      "size": 647011
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_019.json",
+      "size": 663259
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_020.json",
+      "size": 557972
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_021.json",
+      "size": 600556
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_022.json",
+      "size": 582636
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_023.json",
+      "size": 513613
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_024.json",
+      "size": 820650
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_025.json",
+      "size": 839895
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_026.json",
+      "size": 858928
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_027.json",
+      "size": 829089
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_028.json",
+      "size": 832971
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_029.json",
+      "size": 824626
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_030.json",
+      "size": 849628
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_031.json",
+      "size": 860836
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_032.json",
+      "size": 844670
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_033.json",
+      "size": 879555
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_034.json",
+      "size": 902753
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_035.json",
+      "size": 845799
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_036.json",
+      "size": 857207
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_037.json",
+      "size": 861101
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_038.json",
+      "size": 878405
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_039.json",
+      "size": 1072326
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_040.json",
+      "size": 1144619
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_041.json",
+      "size": 1359799
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_042.json",
+      "size": 1269489
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_043.json",
+      "size": 1514516
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_044.json",
+      "size": 1548103
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_045.json",
+      "size": 1616105
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_046.json",
+      "size": 1701158
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_047.json",
+      "size": 1668707
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_048.json",
+      "size": 1630233
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_049.json",
+      "size": 867880
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_050.json",
+      "size": 999162
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_051.json",
+      "size": 1004463
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_052.json",
+      "size": 650159
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_053.json",
+      "size": 362519
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_054.json",
+      "size": 374545
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_055.json",
+      "size": 408389
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_056.json",
+      "size": 461094
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_057.json",
+      "size": 571690
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_058.json",
+      "size": 602503
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_059.json",
+      "size": 1007516
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_060.json",
+      "size": 999711
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_061.json",
+      "size": 505547
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_062.json",
+      "size": 530659
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_063.json",
+      "size": 618200
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_064.json",
+      "size": 1955278
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_065.json",
+      "size": 1899943
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_066.json",
+      "size": 1870504
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_067.json",
+      "size": 1835515
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_068.json",
+      "size": 1850887
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_069.json",
+      "size": 1845758
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_070.json",
+      "size": 1815109
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_071.json",
+      "size": 1916214
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_072.json",
+      "size": 1935969
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_073.json",
+      "size": 1852610
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_074.json",
+      "size": 1912597
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_075.json",
+      "size": 1895833
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_076.json",
+      "size": 1902169
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_077.json",
+      "size": 1854812
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_078.json",
+      "size": 1933215
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_079.json",
+      "size": 1859200
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_080.json",
+      "size": 1872307
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_081.json",
+      "size": 1825638
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_082.json",
+      "size": 1844392
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_083.json",
+      "size": 1849455
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_084.json",
+      "size": 1903069
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_085.json",
+      "size": 1845497
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_086.json",
+      "size": 1834467
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_087.json",
+      "size": 1843989
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_088.json",
+      "size": 1930520
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_089.json",
+      "size": 1939397
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_090.json",
+      "size": 1892380
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_091.json",
+      "size": 1841454
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_092.json",
+      "size": 1927431
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_093.json",
+      "size": 1859498
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_094.json",
+      "size": 1904398
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_095.json",
+      "size": 1848766
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_096.json",
+      "size": 1945836
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_097.json",
+      "size": 1859177
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_098.json",
+      "size": 1851357
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_099.json",
+      "size": 1885543
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_100.json",
+      "size": 1871774
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_101.json",
+      "size": 1854555
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_102.json",
+      "size": 1885788
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_103.json",
+      "size": 1824535
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_104.json",
+      "size": 1790050
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_105.json",
+      "size": 1854744
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_106.json",
+      "size": 1881488
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_107.json",
+      "size": 1821432
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_108.json",
+      "size": 1879572
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_109.json",
+      "size": 1885075
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_110.json",
+      "size": 1865789
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_111.json",
+      "size": 1850893
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_112.json",
+      "size": 1903316
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_113.json",
+      "size": 1920816
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_114.json",
+      "size": 1894037
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_115.json",
+      "size": 1881346
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_116.json",
+      "size": 1891713
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_117.json",
+      "size": 1884867
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_118.json",
+      "size": 1925384
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_119.json",
+      "size": 1933522
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_120.json",
+      "size": 1853372
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_121.json",
+      "size": 1861337
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_122.json",
+      "size": 1926553
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_123.json",
+      "size": 1904242
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_124.json",
+      "size": 1926699
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_125.json",
+      "size": 1842260
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_126.json",
+      "size": 1952827
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_127.json",
+      "size": 1873440
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_128.json",
+      "size": 1952435
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_129.json",
+      "size": 1889052
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_130.json",
+      "size": 1907641
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_131.json",
+      "size": 1861225
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_132.json",
+      "size": 1981263
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_133.json",
+      "size": 1889874
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_134.json",
+      "size": 1928626
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_135.json",
+      "size": 1887135
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_136.json",
+      "size": 1833181
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_137.json",
+      "size": 1852672
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_138.json",
+      "size": 1859517
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_139.json",
+      "size": 1199270
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_140.json",
+      "size": 779551
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_141.json",
+      "size": 555248
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_142.json",
+      "size": 598316
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_143.json",
+      "size": 565812
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_144.json",
+      "size": 707988
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_145.json",
+      "size": 460048
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_146.json",
+      "size": 558378
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_147.json",
+      "size": 597093
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_148.json",
+      "size": 588118
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_149.json",
+      "size": 578989
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_150.json",
+      "size": 556740
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_151.json",
+      "size": 631999
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_152.json",
+      "size": 727509
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_153.json",
+      "size": 545100
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_154.json",
+      "size": 565134
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_155.json",
+      "size": 497471
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_156.json",
+      "size": 554492
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_157.json",
+      "size": 661862
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_158.json",
+      "size": 530922
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_159.json",
+      "size": 1478026
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_160.json",
+      "size": 1640130
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_161.json",
+      "size": 1673012
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_162.json",
+      "size": 1648298
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_163.json",
+      "size": 1844575
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_164.json",
+      "size": 2048778
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_165.json",
+      "size": 2190586
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_166.json",
+      "size": 2024629
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_167.json",
+      "size": 2548479
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_168.json",
+      "size": 2216742
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_169.json",
+      "size": 2412264
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_170.json",
+      "size": 2536290
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_171.json",
+      "size": 2506585
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_172.json",
+      "size": 2707188
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_173.json",
+      "size": 2801407
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_174.json",
+      "size": 2670453
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_175.json",
+      "size": 2707530
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_176.json",
+      "size": 2773074
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_177.json",
+      "size": 2934760
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_178.json",
+      "size": 2780018
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_179.json",
+      "size": 2818946
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_180.json",
+      "size": 2991715
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_181.json",
+      "size": 2212599
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_182.json",
+      "size": 682943
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_183.json",
+      "size": 649350
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_184.json",
+      "size": 667781
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_185.json",
+      "size": 674186
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_186.json",
+      "size": 667969
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_187.json",
+      "size": 647243
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_188.json",
+      "size": 687210
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_189.json",
+      "size": 661911
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_190.json",
+      "size": 648927
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_191.json",
+      "size": 663439
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_192.json",
+      "size": 657754
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_193.json",
+      "size": 652353
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_194.json",
+      "size": 647418
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_195.json",
+      "size": 642971
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_196.json",
+      "size": 642929
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_197.json",
+      "size": 592962
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_198.json",
+      "size": 1147446
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_199.json",
+      "size": 2048885
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_200.json",
+      "size": 2071776
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_201.json",
+      "size": 2074487
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_202.json",
+      "size": 2077310
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_203.json",
+      "size": 2020455
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_204.json",
+      "size": 2082309
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_205.json",
+      "size": 2064986
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_206.json",
+      "size": 2034189
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_207.json",
+      "size": 1947591
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_208.json",
+      "size": 494703
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_209.json",
+      "size": 555693
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_210.json",
+      "size": 570180
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_211.json",
+      "size": 571158
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_212.json",
+      "size": 575817
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_213.json",
+      "size": 569116
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_214.json",
+      "size": 565657
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_215.json",
+      "size": 599473
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_216.json",
+      "size": 631478
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_217.json",
+      "size": 572706
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_218.json",
+      "size": 3033131
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_219.json",
+      "size": 511351
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_220.json",
+      "size": 441090
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_221.json",
+      "size": 427562
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_222.json",
+      "size": 423744
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_223.json",
+      "size": 414808
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_224.json",
+      "size": 406613
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_225.json",
+      "size": 414346
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_226.json",
+      "size": 409524
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_227.json",
+      "size": 414306
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_228.json",
+      "size": 424378
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_229.json",
+      "size": 406998
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_230.json",
+      "size": 416987
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_231.json",
+      "size": 409924
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_232.json",
+      "size": 414763
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_233.json",
+      "size": 399757
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_234.json",
+      "size": 424866
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_235.json",
+      "size": 416465
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_236.json",
+      "size": 535707
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_237.json",
+      "size": 916651
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_238.json",
+      "size": 697022
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_239.json",
+      "size": 700848
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_240.json",
+      "size": 729807
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_241.json",
+      "size": 824271
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_242.json",
+      "size": 629713
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_243.json",
+      "size": 710827
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_244.json",
+      "size": 644983
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_245.json",
+      "size": 733300
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_246.json",
+      "size": 770364
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_247.json",
+      "size": 695685
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_248.json",
+      "size": 696986
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_249.json",
+      "size": 764997
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_250.json",
+      "size": 614565
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_251.json",
+      "size": 775625
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_252.json",
+      "size": 754957
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_253.json",
+      "size": 785787
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_254.json",
+      "size": 747758
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_255.json",
+      "size": 805767
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_256.json",
+      "size": 786152
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_257.json",
+      "size": 733268
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_258.json",
+      "size": 680945
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_259.json",
+      "size": 753205
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_260.json",
+      "size": 783563
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_261.json",
+      "size": 674251
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_262.json",
+      "size": 849581
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_263.json",
+      "size": 795498
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_264.json",
+      "size": 720347
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_265.json",
+      "size": 491288
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_266.json",
+      "size": 1227314
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_267.json",
+      "size": 3157561
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_268.json",
+      "size": 3117947
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_269.json",
+      "size": 600012
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_270.json",
+      "size": 539701
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_271.json",
+      "size": 1604960
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_272.json",
+      "size": 1760382
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_273.json",
+      "size": 717410
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_274.json",
+      "size": 567717
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_275.json",
+      "size": 588430
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_276.json",
+      "size": 429851
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_277.json",
+      "size": 457495
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_278.json",
+      "size": 666460
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_279.json",
+      "size": 767103
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_280.json",
+      "size": 793011
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_281.json",
+      "size": 368376
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_282.json",
+      "size": 344591
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_283.json",
+      "size": 359005
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_284.json",
+      "size": 871476
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_285.json",
+      "size": 863595
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_286.json",
+      "size": 904636
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_287.json",
+      "size": 914094
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_288.json",
+      "size": 906997
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_289.json",
+      "size": 2996356
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_290.json",
+      "size": 4191865
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_291.json",
+      "size": 4267707
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_292.json",
+      "size": 4367818
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_293.json",
+      "size": 3513321
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_294.json",
+      "size": 713212
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_295.json",
+      "size": 792034
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_296.json",
+      "size": 665392
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_297.json",
+      "size": 710009
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_298.json",
+      "size": 685750
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_299.json",
+      "size": 695888
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_300.json",
+      "size": 681068
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_301.json",
+      "size": 712250
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_302.json",
+      "size": 595858
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_303.json",
+      "size": 639719
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_304.json",
+      "size": 489925
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_305.json",
+      "size": 539362
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_306.json",
+      "size": 699595
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_307.json",
+      "size": 642864
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_308.json",
+      "size": 687810
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_309.json",
+      "size": 727848
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_310.json",
+      "size": 744369
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_311.json",
+      "size": 785261
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_312.json",
+      "size": 688283
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_313.json",
+      "size": 1109094
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_314.json",
+      "size": 804807
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_315.json",
+      "size": 819338
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_316.json",
+      "size": 849850
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_317.json",
+      "size": 806183
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_318.json",
+      "size": 810084
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_319.json",
+      "size": 807048
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_320.json",
+      "size": 830313
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_321.json",
+      "size": 841718
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_322.json",
+      "size": 892987
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_323.json",
+      "size": 528868
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_324.json",
+      "size": 531603
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_325.json",
+      "size": 509422
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_326.json",
+      "size": 714828
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_327.json",
+      "size": 833640
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_328.json",
+      "size": 867178
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_329.json",
+      "size": 851491
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_330.json",
+      "size": 880579
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_331.json",
+      "size": 815056
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_332.json",
+      "size": 497013
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_333.json",
+      "size": 1251238
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_334.json",
+      "size": 1317440
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_335.json",
+      "size": 1342179
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_336.json",
+      "size": 1248414
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_337.json",
+      "size": 1341640
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_338.json",
+      "size": 1261555
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_339.json",
+      "size": 1343826
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_340.json",
+      "size": 1315245
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_341.json",
+      "size": 1340802
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_342.json",
+      "size": 1300414
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_343.json",
+      "size": 1278267
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_344.json",
+      "size": 657394
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_345.json",
+      "size": 1250191
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_346.json",
+      "size": 1191590
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_347.json",
+      "size": 1315813
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_348.json",
+      "size": 1338829
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_349.json",
+      "size": 580123
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_350.json",
+      "size": 449128
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_351.json",
+      "size": 448734
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_352.json",
+      "size": 442272
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_353.json",
+      "size": 448797
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_354.json",
+      "size": 442424
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_355.json",
+      "size": 449691
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_356.json",
+      "size": 443200
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_357.json",
+      "size": 444940
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_358.json",
+      "size": 451171
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_359.json",
+      "size": 450282
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_360.json",
+      "size": 443193
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_361.json",
+      "size": 440805
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_362.json",
+      "size": 447667
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_363.json",
+      "size": 447288
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_364.json",
+      "size": 448267
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_365.json",
+      "size": 454435
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_366.json",
+      "size": 448831
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_367.json",
+      "size": 442495
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_368.json",
+      "size": 442679
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_369.json",
+      "size": 429402
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_370.json",
+      "size": 1605968
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_371.json",
+      "size": 1344760
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_372.json",
+      "size": 981793
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_373.json",
+      "size": 626330
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_374.json",
+      "size": 1100635
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_375.json",
+      "size": 1220583
+    },
+    {
+      "path": "payloads_v5_external/llmail_inject/llmail_inject_376.json",
+      "size": 695868
+    },
+    {
+      "path": "payloads_v5_external/overthink/overthink_001.json",
+      "size": 18374392
+    },
+    {
+      "path": "payloads_v5_external/overthink/overthink_002.json",
+      "size": 8600584
+    },
+    {
+      "path": "payloads_v5_external/overthink/overthink_003.json",
+      "size": 1601954
+    },
+    {
+      "path": "payloads_v5_external/overthink/overthink_004.json",
+      "size": 3504898
+    },
+    {
+      "path": "payloads_v5_external/overthink/overthink_005.json",
+      "size": 2382185
+    },
+    {
+      "path": "payloads_v5_external/summary_v5_external.json",
+      "size": 1437
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_001.json",
+      "size": 258113
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_002.json",
+      "size": 260093
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_003.json",
+      "size": 253035
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_004.json",
+      "size": 277919
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_005.json",
+      "size": 406463
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_006.json",
+      "size": 283356
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_007.json",
+      "size": 265707
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_008.json",
+      "size": 268948
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_009.json",
+      "size": 264346
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_010.json",
+      "size": 268221
+    },
+    {
+      "path": "payloads_v5_external/t2vsafetybench/t2vsafetybench_011.json",
+      "size": 86058
+    },
+    {
+      "path": "scale_benign_v5.py",
+      "size": 10873
+    }
+  ]
+}

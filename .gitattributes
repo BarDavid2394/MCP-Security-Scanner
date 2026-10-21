@@ -1,0 +1,6 @@
+# Preserve submission documents byte-for-byte on every platform.
+deliverables/*.pdf binary
+deliverables/*.docx binary
+
+# Matplotlib writes significant-looking whitespace in generated SVG paths.
+deliverables/assets/*.svg -whitespace

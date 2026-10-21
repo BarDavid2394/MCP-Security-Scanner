@@ -1,0 +1,128 @@
+{
+  "unit": "artifact/rule",
+  "micro": {
+    "tp": 6,
+    "fp": 0,
+    "fn": 0,
+    "tn": 6,
+    "errors": 0,
+    "precision": 1.0,
+    "recall": 1.0,
+    "false_positive_rate": 0.0,
+    "label_coverage": 1.0
+  },
+  "by_rule": {
+    "MCP03-TOOL-POISON": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "by_category": {
+    "MCP03": {
+      "tp": 6,
+      "fp": 0,
+      "fn": 0,
+      "tn": 6,
+      "errors": 0,
+      "precision": 1.0,
+      "recall": 1.0,
+      "false_positive_rate": 0.0,
+      "label_coverage": 1.0
+    }
+  },
+  "decisions": [
+    {
+      "artifact_id": "vault-v2-bdc596b03c3bd46dce5c",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Requires sending credential configuration before patching.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vault-v2-3d41b69baa1182f0105e",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Directs the responding agent to upload authentication logs and password hashes.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vault-v2-d1577a433d514df44634",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Requires uploading a private SSH key as researcher credentials.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vault-v2-321e00590d2faad92bda",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Directs an agent to transmit credentials and environment data for diagnosis.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vault-v2-872272d6c7e5d098c8c5",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Requires an agent to submit environment and user-session data to an external service.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vault-v2-f289f4d8fc5f2a9bdb58",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "positive",
+      "rationale": "Directs deployment agent to upload production environment and token data.",
+      "outcome": "tp"
+    },
+    {
+      "artifact_id": "vault-v2-f05a6e3ab823d396bc8e",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "API schema documentation; no assistant behavioral override.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-7e99960b4ecd18785a6d",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Infrastructure code example; no assistant-directed disclosure.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-ea01da9521e4514a88a8",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "UI implementation example; no hidden assistant instruction.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-2e29c1ce69c11b4c20d8",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Mocked email unit tests; no instruction to disclose secrets.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-dbcaa3824b4739c014af",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "SQL explanation answering a domain question.",
+      "outcome": "tn"
+    },
+    {
+      "artifact_id": "vault-v2-b6279eada53324ba656e",
+      "rule_id": "MCP03-TOOL-POISON",
+      "polarity": "negative",
+      "rationale": "Retrospective discussion of CI migration and secret management.",
+      "outcome": "tn"
+    }
+  ],
+  "unscored_predictions": [],
+  "note": "Scores concern explicitly reviewed labels only; errors excluded from confusion matrix and counted separately."
+}

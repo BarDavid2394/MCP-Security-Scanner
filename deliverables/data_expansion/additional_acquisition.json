@@ -1,0 +1,32 @@
+[
+  {
+    "repository": "gautamvarmadatla/mcp-security-benchmark",
+    "revision": "9d7df73618c3f7b54211860edc2e3061279fe07d",
+    "files": 5,
+    "bytes": 61762
+  },
+  {
+    "repository": "jspillers10/mcp-security-scanner",
+    "revision": "9bfc641ec37607025b2dae63d0f96cb7b85dbc92",
+    "files": 138,
+    "bytes": 569989
+  },
+  {
+    "repository": "jaimenbell/mcp-security-scanner",
+    "revision": "7d9352e4c10f725aeeeca92b05f015049d887dac",
+    "files": 228,
+    "bytes": 639953
+  },
+  {
+    "repository": "andyscott88/prompt-injection-bench",
+    "revision": "6f7a123074781fef5bc0ec4d8864e83145cff856",
+    "files": 4,
+    "bytes": 158727
+  },
+  {
+    "repository": "yatuk/mcpradar",
+    "revision": "ca9ae44083f11e7a7051a224a4ab9a14a7f30cbd",
+    "files": 346,
+    "bytes": 6417494
+  }
+]

@@ -1,0 +1,30 @@
+{
+  "scanner": "MCP Security Scanner",
+  "version": "2.0.0",
+  "catalog_version": "2026.1",
+  "timestamp": "2026-10-11T12:07:32.758983",
+  "scan_info": {
+    "target_id": "official-time",
+    "target": "evaluation\\corpus\\official-servers\\src\\time",
+    "files_scanned": 6,
+    "tools_analyzed": 2,
+    "servers_found": 1,
+    "total_findings": 0,
+    "critical_count": 0,
+    "high_count": 0,
+    "parse_errors": [],
+    "status": "completed"
+  },
+  "summary": {
+    "total": 0,
+    "by_severity": {},
+    "by_type": {},
+    "by_attack": {},
+    "by_rule": {},
+    "by_confidence": {},
+    "fixable": 0,
+    "risk_score": 0,
+    "risk_level": "NONE"
+  },
+  "findings": []
+}
